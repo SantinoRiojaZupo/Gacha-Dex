@@ -4,7 +4,6 @@
     <script src="registro-js.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <img src="" alt="Logo" class="logo" />
   <title>Registrarse</title>
   <style>
     * {
@@ -29,6 +28,7 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       width: 100%;
       max-width: 400px;
+      text-align: center;
     }
 
     .login-container h2 {
@@ -94,17 +94,17 @@
     .logo {
   max-width: 150px;
   height: auto;
-  display: block;
+  text-align: center;
 }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <img src="GachaDEx/recursos/gachadex.png" alt="Logo" class="logo" />
+    <img src="../imagenes/bola.webp" alt="Logo" class="logo" />
     <h2>Registrarse</h2>
 
     <!-- Formulario de registro -->
-    <form action="registro.php" method="POST">
+    <form action="../php/registro.php" method="POST">
       <div class="form-group">
         <label for="email">Nombre de Usuario</label>
         <input type="email" name="Usuario" required />
