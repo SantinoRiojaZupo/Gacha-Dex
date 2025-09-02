@@ -1,0 +1,9 @@
+#menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#menu.activo {
+  max-height: 300px; /* o el tamaño máximo que necesites */
+}
