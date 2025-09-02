@@ -2,9 +2,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
       background: linear-gradient(to bottom, 
                   #000000 0 35%,   /* parte superior negra */
                   #f3c95e 35% 45%,/* franja amarilla */
@@ -12,66 +9,64 @@
       );
     }
 
-    /* Botón central tipo ultraball */
-    .ultraball-boton {
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: white;
-      border: 10px solid #000000;
-      box-shadow: 0px 0px 25px #f3c95e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      color: #000;
-    }
-
     header {
       text-align: center;
       padding: 20px;
       color: #f3c95e;
+    }
+    .barraInicio {
+        display: flex left;
+        content: left;
+      background-color: #000000;
+      padding: 10px;
+      text-align: left;
     }
 
     h1 {
       margin: 0;
     }
 
-    .contenedor {
-      flex: 1;
+    .contenedores {
+      max-width: 1300px; /* ancho total de los cuadrados */ 
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       padding: 40px;
-      position: relative;
-      z-index: 2; /* que quede sobre el fondo */
     }
 
     .card {
       background-color: white;
+      border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       transition: transform 0.2s;
     }
 
     .card:hover {
       transform: scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
     }
 
     .card img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       margin-bottom: 15px;
       object-fit: cover;
       border: 4px solid #000000;
-      box-shadow: 0px 0px 10px #f3c95e;
+      box-shadow: 0px 0px 8px #f3c95e;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #333;
     }
 
     footer {
@@ -80,3 +75,5 @@
       background-color: #000000;
       color: #f3c95e;
     }
+
+    
