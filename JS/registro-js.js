@@ -3,12 +3,12 @@ function inSesion() {
     const usDir = document.getElementByName("Usuario").value;
     const contraDir = document.getElementByName("contraseña").value;
     if (usDir && contraDir) {
-        fetch("agregarDirector.php", {
+        fetch("../PHP/registro.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "nombre=" + encodeURIComponent(usDir) + "&pais=" + encodeURIComponent(contraDir)
+            body: "usuario=" + encodeURIComponent(usDir) + "&contraseña=" + encodeURIComponent(contraDir)
         }) //GET
             .then(res => res.json())
             .then(res => {
