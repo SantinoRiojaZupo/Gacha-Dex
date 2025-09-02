@@ -16,29 +16,25 @@ header {
   color: #f3c95e;
 }
 
-.barraInicio {
-  display: flex;
-  justify-content: space-between; /* menú a la izquierda, volver a la derecha */
-  align-items: center;
-  background-color: #000000;
-  padding: 10px 20px;
+#barraInicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Estilo de los botones */
+#barraInicio button,
 .barraInicio button {
-  background-color: transparent; /* sin fondo */
-  border: 2px solid #f3c95e; /* borde amarillo ultraball */
-  border-radius: 6px;
-  padding: 8px 15px;
-  font-size: 16px;
-  font-weight: bold;
+  background-color: rgba(243, 201, 94, 0.15); /* sin fondo */
+  border: 2px solid rgba(243, 201, 94, 0.5); /* borde amarillo ultraball */
   color: white; /* texto blanco */
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+#barraInicio button:hover,
 .barraInicio button:hover {
-  background-color: #f3c95e; /* amarillo al pasar */
+  background-color: rgba(243, 201, 94, 0.5); /* amarillo al pasar */
   color: #000000; /* texto negro */
 }
 
