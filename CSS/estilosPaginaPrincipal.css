@@ -1,7 +1,14 @@
 /* esto tambien es editable */
+        @font-face {
+            font-family: 'PokemonGB';
+            src: url('../font/Pokemon\ Classic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'PokemonGB', monospace, sans-serif;
             background-color: rgb(255, 255, 255);
+            background-image: url(../imagenes/fondoPaginaPrincipal.jpg);
         }
         main {
             margin-top: 100px; 
@@ -9,11 +16,40 @@
         #barraInicio{
             width: 100%;
             height: 80px;
-            background-color: rgb(239, 102, 102);
+            background-color: #fd9595;
             top: 0;
             position: fixed;
             left: 0;
+            display: flex; 
+            background: linear-gradient(to left, #f78c6b, #ffd966, #b4f8c8, #a0e7e5);
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Arial', sans-serif; 
+
+        }
+        #buscadorPokemon{
+            font-family: 'PokemonGB', monospace, sans-serif;
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            right: 485px;
+            top: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            padding-left: 10px;
+            background-color: white;
+        }
+        #buscarPokemon{
+            font-family: 'PokemonGB', monospace, sans-serif;
+            width: 123px;
+            height: 40px;
+            position: absolute;
+            right: 350px;
+            top: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: white;
         }
         #botonRegister{
             width: 150px;
@@ -23,32 +59,35 @@
             top: 20px;
             text-align: center;
             border-radius: 10px;
-            font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
             cursor: pointer;
             display: inline;
             border: 2px solid black;
+            background-color: white;
+        }
+        button{
+            font-family: 'PokemonGB', monospace, sans-serif;
         }
         #botonLogin{
-            width: 150px;
+            width: 161px;
             height: 40px;
             position: absolute;
             right: 180px;
             top: 20px;
             text-align: center;
             border-radius: 10px;
-            font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
             cursor: pointer;
             display: inline;
             border: 2px solid black;
+            background-color: white;
         }
         #menu{
             width: 50px;
-            height: 30px;
+            height: 40px;
             position: absolute;
             left: 20px;
-            top: 25px;
+            top: 20px;
             flex-direction: column;
             cursor: pointer;
             border: none;
@@ -57,4 +96,14 @@
             cursor: pointer;
             font-weight: bold;
             border: 2px solid black;
+        }
+        #barraFinal{
+            width: 100%;
+            height: 60px;
+            bottom: 0;
+            position: fixed;
+            left: 0;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 20px;
         }
