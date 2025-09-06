@@ -29,7 +29,10 @@
 
         ?>
 </main>
-    <script src="../JS/botonMenu.js"></script>    
+<script src="<?= $vistaJsBoton ?>"></script> 
+<script src="<?= $vistaBotonRegistro
+
+?>" > </script>
 </body>
 <footer>
   <?php

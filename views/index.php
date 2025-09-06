@@ -3,14 +3,25 @@
 define('VIEWS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 
 
-$page=$_GET['page'] ?? "paginaPrincipal";
+$page=$_GET['page'] ?? "main";
 
 switch ($page) {
-  case 'paginaPrincipal':
-    $vista = VIEWS_PATH . 'paginaPrincipal.php';
+  case 'main':
+    $vista = VIEWS_PATH . 'main.php';
+    $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
+    break; 
+
+    case 'registro':
+    $vista=VIEWS_PATH . 'registro.php';
+    $vistaJsBoton="../JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     break;
+
     default: 
-    $vista = VIEWS_PATH . 'paginaPrincipal.php';
+    $vista = VIEWS_PATH . 'main.php';
+    $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     break;
 }
 
