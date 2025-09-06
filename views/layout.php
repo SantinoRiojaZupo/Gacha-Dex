@@ -29,7 +29,7 @@
 
         ?>
 </main>
-        
+    <script src="../JS/botonMenu.js"></script>    
 </body>
 <footer>
   <?php

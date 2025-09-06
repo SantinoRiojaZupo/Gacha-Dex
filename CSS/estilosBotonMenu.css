@@ -1,9 +1,41 @@
-#menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+#barraInicio {
+  position: relative; /* contenedor relativo para posicionar el menú */
 }
 
-#menu.activo {
-  max-height: 300px; /* o el tamaño máximo que necesites */
+#menu {
+  position: absolute;
+  top: calc(100% + 10px); /* justo debajo del botón con un pequeño espacio */
+  left: 0;
+  width: 250px;       /* ancho del menú */
+  height: 0;          /* menú cerrado */
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background: linear-gradient(135deg, #006400, #ff0000, #ffff00, #0000ff); /* verde oscuro, rojo, amarillo, azul */
+  background-size: 400% 400%;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+  animation: gradientMove 8s ease infinite; /* animación de gradiente */
+  
+}
+
+#menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000000; /* para contraste con el fondo */
+}
+
+#menu li:hover {
+  background-color: rgba(255,255,255,0.2); /* efecto hover suave */
+}
+
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
