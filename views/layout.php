@@ -33,11 +33,10 @@
 <script src="<?= $vistaBotonRegistro
 
 ?>" > </script>
-<script src="<?= 
-$registroFunciones 
-?>">
 
-</script>
+<?php if (isset($registroFunciones)) : ?>
+    <script src="<?= $registroFunciones ?>"></script>
+<?php endif; ?>
 
 </body>
 <footer>
