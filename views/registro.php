@@ -23,7 +23,6 @@
       </div>
 
       <button type="submit" id= "botonRegistro">Registrarse</button>
-    </form>
 
     <div class="register-link">
       ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
