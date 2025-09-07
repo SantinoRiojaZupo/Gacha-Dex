@@ -37,8 +37,6 @@ if(!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])){
    } else {
         echo json_encode(["error" => "Fallo la consulta","msj" => "Fallo la consulta"]);
     }
-} else {
-   echo json_encode(["error" => "No se recibieron parametros", "msj" => "faltan Usuario o Contraseña"]);
 }
 
 ?>
