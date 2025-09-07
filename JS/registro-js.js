@@ -1,7 +1,7 @@
 function inSesion() {
     document.getElementById("botonRegistro").addEventListener("click", () => {
-    const Usua = document.getElementsByName("Usuario").value;
-    const Contra = document.getElementsByName("contraseña").value;
+    const Usua = document.querySelector('[name="Usuario"]').value;
+    const Contra = document.querySelector('[name="contraseña"]').value;
     if (Usua && Contra) {
         fetch("registro.php", {
             method: "POST",
@@ -23,3 +23,4 @@ function inSesion() {
     }
 });
 }
+inSesion();

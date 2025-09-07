@@ -38,5 +38,4 @@ if(!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])){
         echo json_encode(["error" => "Fallo la consulta","msj" => "Fallo la consulta"]);
     }
 }
-
 ?>
