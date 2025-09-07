@@ -1,9 +1,13 @@
-function Registrarse(){
     document.getElementById("botonRegistro").addEventListener("click", () => {
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
+    const Contra2 = document.querySelector('[name="contraseña-2"]').value;
     if (Usua && Contra) {
-        fetch("../views/registro-backend.php", {
+    if (Contra !== Contra2) {
+        console.log("Las contraseñas no coinciden");
+        return;
+    }
+        fetch("registro-backend.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -22,5 +26,3 @@ function Registrarse(){
         console.log("Escribi algo");
     }
 });
-}
-Registrarse()

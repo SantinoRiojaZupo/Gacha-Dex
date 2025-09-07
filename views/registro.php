@@ -6,9 +6,9 @@
     <h2>Registrarse</h2>
 
     <!-- Formulario de registro -->
+    <form id="formRegistro" autocomplete="off">
       <div class="form-group">
         <label for="Usuario">Nombre de Usuario</label>
-
         <input name="Usuario" required />
       </div>
 
@@ -22,8 +22,8 @@
         <input type="password" name="contraseña-2" placeholder="Repite tu contraseña" required />
       </div>
 
-      <button type="submit" id= "botonRegistro">Registrarse</button>
-
+      <button type="button" id= "botonRegistro">Registrarse</button>
+    </form>
     <div class="register-link">
       ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
     </div>
