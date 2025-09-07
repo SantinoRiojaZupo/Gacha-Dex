@@ -28,7 +28,7 @@
     </div>
   </div>
   <?php
-include 'conexion.php';
+include '../config/conexion.php';//con los dos puntos subis una carpeta, luego entras a config, y luego haces referencia a conexion
 if(!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])){
     $usuario = $_POST["Usuario"];
     $contraseña = $_POST["contraseña"];
