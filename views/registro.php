@@ -1,4 +1,4 @@
-
+  <link rel="stylesheet" href="../CSS/Registro.css" /><!-- cambie la conexion -->
   <div class="login-container">
     <img src="recursos/Master-Ball.webp" alt="Logo" class="logo" />
     <h2>Registrarse</h2>
