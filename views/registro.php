@@ -28,6 +28,7 @@
     </div>
   </div>
   <?php
+include 'conexion.php';
 if(!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])){
     $usuario = $_POST["Usuario"];
     $contraseña = $_POST["contraseña"];
