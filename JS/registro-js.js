@@ -1,15 +1,15 @@
 function inSesion() {
-    document.getElementByClassName("login-button").addEventListener("click", () => {
-    const usDir = document.getElementByName("Usuario").value;
-    const contraDir = document.getElementByName("contraseña").value;
-    if (usDir && contraDir) {
-        fetch("agregarDirector.php", {
+    document.getElementById("botonRegistro").addEventListener("click", () => {
+    const Usua = document.getElementsByName("Usuario").value;
+    const Contra = document.getElementsByName("contraseña").value;
+    if (Usua && Contra) {
+        fetch("registro.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "nombre=" + encodeURIComponent(usDir) + "&pais=" + encodeURIComponent(contraDir)
-        }) //GET
+            body: "Usuario=" + encodeURIComponent(Usua) + "&contraseña=" + encodeURIComponent(Contra)
+        }) //POST
             .then(res => res.json())
             .then(res => {
                 if (res.error) {
