@@ -33,6 +33,12 @@
 <script src="<?= $vistaBotonRegistro
 
 ?>" > </script>
+<script src="<?= 
+$registroFunciones 
+?>">
+
+</script>
+
 </body>
 <footer>
   <?php
