@@ -14,7 +14,7 @@
     <header>
         <div id="barraInicio">
             <button id="menu">☰</button>
-            <button id="volverInicio" onclick="location.href='../html/paginaPrincipal.html'">Volver al inicio</button>
+            <button id="volverInicio" onclick="location.href='index.php'">Volver al inicio</button>
         </div>
         <h1>Creadores de la pagina:</h1>
     </header>
