@@ -20,7 +20,7 @@
         <input type="password" name="contraseña-2" placeholder="Repite tu contraseña" required />
       </div>
 
-      <button id= "botonRegistro">Registrarse</button>
+      <button type="submit" id= "botonRegistro">Registrarse</button>
     </form>
 
     <div class="register-link">
@@ -28,12 +28,14 @@
     </div>
   </div>
   <?php
-include '../config/conexion.php';//con los dos puntos subis una carpeta, luego entras a config, y luego haces referencia a conexion
+//include '../config/conexion.php';//con los dos puntos subis una carpeta, luego entras a config, y luego haces referencia a conexion
+require_once "../config/conexion.php";
 if(!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])){
     $usuario = $_POST["Usuario"];
     $contraseña = $_POST["contraseña"];
-    $sql = "INSERT INTO usuarios (usuario, contraseña) VALUES ('$usuario', '$contraseña')";
-    if(mysqli_query($conexion, $sql)) { 
+    $sql = $conexion->prepare ("INSERT INTO users (Name_User, User_Password) VALUES (?,?)");
+    $stmt->bind_param("ss", $usuario, $contraseña);
+    if($stmt->execute()) { 
         echo json_encode(["msj" => "Todo bien"]);
    } else {
         echo json_encode(["error" => "Fallo la consulta","msj" => "Fallo la consulta"]);

@@ -1,9 +1,9 @@
-function inSesion() {
+function Registrarse(){
     document.getElementById("botonRegistro").addEventListener("click", () => {
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
     if (Usua && Contra) {
-        fetch("registro.php", {
+        fetch("registro-backend.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -23,4 +23,4 @@ function inSesion() {
     }
 });
 }
-inSesion();
+Registrarse()
