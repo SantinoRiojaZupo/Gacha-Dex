@@ -1,4 +1,5 @@
-    document.getElementById("botonRegistro").addEventListener("click", () => {
+  document.getElementById("botonRegistro").addEventListener("click", () => {
+        console.log("hola gorda")
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
     const Contra2 = document.querySelector('[name="contraseña-2"]').value;
@@ -25,4 +26,4 @@
     } else {
         console.log("Escribi algo");
     }
-});
+})
