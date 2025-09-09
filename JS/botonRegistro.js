@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     botonRegistro.addEventListener("click", () => {
       // Redirige a la misma URL pero con page=registro
       // window.location.href = "index.php?page=registro";
-      window.location.href = "registro.php"; //cambia a otra pagina distinta y soluciona lo  de superponer todo
+      window.location.href = "../views/registro.php"; //cambia a otra pagina distinta y soluciona lo  de superponer todo
     });
   }
 });
