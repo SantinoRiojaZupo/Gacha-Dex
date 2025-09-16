@@ -7,6 +7,7 @@ $page=$_GET['page'] ?? "main";
 
 switch ($page) {
   case 'main':
+    $vistaHeader = VIEWS_PATH . 'header.php';
     $vista = VIEWS_PATH . 'main.php';
     $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
@@ -41,14 +42,14 @@ switch ($page) {
 
 $pageHeader=$_GET['header'] ?? "header";
 
-switch ($pageHeader) {
-  case 'header':
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    break;
-    default: 
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    break;
-}
+// switch ($pageHeader) {
+//   case 'header':
+//     $vistaHeader = VIEWS_PATH . 'header.php';
+//     break;
+//     default: 
+//     $vistaHeader = VIEWS_PATH . 'header.php';
+//     break;
+// }
 
 $pageHead=$_GET['head'] ?? "head";
 

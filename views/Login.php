@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="../CSS/estiloLogin.css" />
   <div class="login-container">
     <img src="../imagenes/Master-Ball.png" alt="Logo" class="logo" />
     <h2>Iniciar Sesión</h2>
