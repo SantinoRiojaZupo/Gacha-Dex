@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2025 a las 14:22:58
+-- Tiempo de generación: 16-09-2025 a las 15:58:07
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -45,9 +45,16 @@ CREATE TABLE `datepokemonall` (
 --
 
 INSERT INTO `datepokemonall` (`PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+('Blastoise', 'Water', '', 'Grass, Electric', 'Aumenta de peso deliberadamente para contrarrestar la fuerza de los chorros de agua que dispara.', 'Torrent', '', 'Rain Dish', 'https://archives.bulbagarden.net/media/upload/0/0a/0009Blastoise.png', 'Male/Female'),
 ('Bulbasaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Tras nacer, crece alimentándose durante un tiempo de los nutrientes que contiene el bulbo de su lomo.', 'Overgrow', '', 'Chlorophyll', 'https://static.wikia.nocookie.net/pokemon/images/f/fb/0001Bulbasaur.png/revision/latest?cb=20240903144321%27,%27', 'Male/Female'),
+('Caterpie', 'Bug', '', 'Fire, Flying, Rock', 'Para protegerse, despide un hedor horrible por las antenas con el que repele a sus enemigos.', 'Shield Dust', '', 'Run Away', 'https://archives.bulbagarden.net/media/upload/5/5e/0010Caterpie.png', 'Male/Female'),
+('Charizard', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Cuando se enfurece de verdad, la llama de la punta de su cola se vuelve de color azul claro.', 'Blaze', '', 'Solar Power', 'https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png', 'Male/Female'),
+('Charmander', 'Fire', '', 'Water, Ground, Rock', 'La llama de su cola indica su fuerza vital. Si está débil, la llama arderá más tenue.', 'Blaze', '', 'Solar Power', 'https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png', 'Male/Female'),
+('Charmeleon', 'Fire', '', 'Water, Ground, Rock', 'Al agitar su ardiente cola, eleva poco a poco la temperatura a su alrededor para sofocar a sus rivales.', 'Blaze', '', 'Solar Power', 'https://archives.bulbagarden.net/media/upload/0/05/0005Charmeleon.png', 'Male/Female'),
 ('Ivysaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Cuanta más luz solar recibe, más aumenta su fuerza y más se desarrolla el capullo que tiene en el lomo.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/8/81/0002Ivysaur.png/250px-0002Ivysaur.png', 'Male/Female'),
-('Venusaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Puede convertir la luz del sol en energía. Por esa razón, es más poderoso en verano.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/250px-0003Venusaur.png', 'Male/Female');
+('Squirtle', 'Water', '', 'Grass, Electric', 'Tras nacer, se le hincha el lomo y se le forma un caparazón. Escupe poderosa espuma por la boca.', 'Torrent', '', 'Rain Dish', 'https://archives.bulbagarden.net/media/upload/5/54/0007Squirtle.png', 'Male/Female'),
+('Venusaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Puede convertir la luz del sol en energía. Por esa razón, es más poderoso en verano.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/250px-0003Venusaur.png', 'Male/Female'),
+('Wartortle', 'Water', '', 'Grass, Electric', 'Tiene una cola larga y peluda que simboliza la longevidad y lo hace popular entre los mayores.', 'Torrent', '', 'Rain Dish', 'https://archives.bulbagarden.net/media/upload/0/0f/0008Wartortle.png', 'Male/Female');
 
 -- --------------------------------------------------------
 
