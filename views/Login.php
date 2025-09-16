@@ -17,3 +17,4 @@
       ¿No tienes cuenta? <a href="http://localhost/Gacha-Dex/views/index.php?page=registro">Regístrate</a>
     </div>
   </div>
+  <script src="../JS/login.js"></script>
