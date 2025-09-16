@@ -1,5 +1,4 @@
-
-document.getElementById("botonRegistro").addEventListener("click", () => {
+function registrarse(){
     console.log("hola")
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
@@ -28,7 +27,7 @@ document.getElementById("botonRegistro").addEventListener("click", () => {
     } else {
         console.log("Escribi algo");
     }
-})
+}
 function mostrarMensaje(mensaje, exito) {
     const container = document.querySelector(".login-container");
     if (!container) return;

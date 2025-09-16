@@ -11,7 +11,7 @@
         <label for="password">Contraseña</label>
         <input type="password" id="passwordLogin" name="password" required />
       </div>
-      <button type="submit" class="login-button">Entrar</button>
+      <button type="button" id="boton-Login">Entrar</button>
     </form>
     <div class="register-link">
       ¿No tienes cuenta? <a href="http://localhost/Gacha-Dex/views/index.php?page=registro">Regístrate</a>
