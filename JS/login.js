@@ -10,7 +10,8 @@ document.getElementById("botonLogin").addEventListener("click", () => {
             },
             body: "UsuarioLogin=" + encodeURIComponent(usuarioLogin) + "&contraseñaLogin=" + encodeURIComponent(passwordLogin)
         }) //POST
-        .then(res=>res.json()).then(res=>{
+        .then(res=>res.json())
+        .then(res=>{
             if(res.error){
                 console.log(res.error + ": " + res.msj);
             }
