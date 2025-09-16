@@ -22,10 +22,10 @@
         <input type="password" id="contraseña-2" name="contraseña-2" placeholder="Repite tu contraseña" required />
       </div>
 
-      <button type="button" id="botonRegistro">Registrarse</button>
+      <button type="button" id="botonRegistro" onclick="registrarse()">Registrarse</button>
     </form>
     <div class="register-link">
-      ¿Ya tienes cuenta? <a href="Login.php">Inicia sesión</a>
+      ¿Ya tienes cuenta? <a href="/Gacha-Dex/views/index.php?page=Login">Inicia sesión</a>
     </div>
     <?php if (isset($_GET['exito'])): ?>
     <div class="success-message">

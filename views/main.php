@@ -12,6 +12,9 @@
             <p id="probabilidad"><!--de tener Shiny/Legendario --></p>
         </div>
         <div class="center-box">
+            <div id="pokemonDisplay"><!--Aca va a aparecer el pokemon--></div>
+        </div>
+        <div class="center-box">
             <button id="rolls">Roll</button>
         </div>
     </div>

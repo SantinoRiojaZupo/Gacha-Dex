@@ -17,4 +17,3 @@ require_once "../config/conexion.php";
 else {
     echo json_encode(["error" => "Faltan datos requeridos"]);
 }
-?>

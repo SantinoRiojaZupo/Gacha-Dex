@@ -52,7 +52,7 @@ body {
   outline: none;
 }
 
-.login-button {
+#boton-Login {
   width: 100%;
       padding: 12px;
       background-color: #5613fe;
@@ -64,7 +64,7 @@ body {
       transition: background-color 0.3s ease;
 }
 
-.login-button:hover {
+#boton-Login:hover {
   background-color: #9013fe;
 
 }
