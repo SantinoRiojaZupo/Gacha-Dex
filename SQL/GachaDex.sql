@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2025 a las 03:12:52
--- Versión del servidor: 10.4.6-MariaDB
--- Versión de PHP: 8.4.2
+-- Tiempo de generación: 16-09-2025 a las 14:22:58
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,72 +18,83 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `GachaDex`
+-- Base de datos: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `DatePokemonAll`
+-- Estructura de tabla para la tabla `datepokemonall`
 --
 
-CREATE TABLE `DatePokemonAll` (
+CREATE TABLE `datepokemonall` (
   `PokemonName` varchar(255) NOT NULL,
   `Type` varchar(255) DEFAULT NULL,
+  `Second_Type` varchar(255) DEFAULT NULL,
   `Weaknesses` varchar(255) DEFAULT NULL,
   `Description` varchar(255) DEFAULT NULL,
   `Abilities` varchar(255) DEFAULT NULL,
+  `Second_Abilities` varchar(255) DEFAULT NULL,
   `Abilities_Hidden` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
   `Gender` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `datepokemonall`
+--
+
+INSERT INTO `datepokemonall` (`PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+('Bulbasaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Tras nacer, crece alimentándose durante un tiempo de los nutrientes que contiene el bulbo de su lomo.', 'Overgrow', '', 'Chlorophyll', 'https://static.wikia.nocookie.net/pokemon/images/f/fb/0001Bulbasaur.png/revision/latest?cb=20240903144321%27,%27', 'Male/Female'),
+('Ivysaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Cuanta más luz solar recibe, más aumenta su fuerza y más se desarrolla el capullo que tiene en el lomo.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/8/81/0002Ivysaur.png/250px-0002Ivysaur.png', 'Male/Female'),
+('Venusaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Puede convertir la luz del sol en energía. Por esa razón, es más poderoso en verano.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/250px-0003Venusaur.png', 'Male/Female');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `PokemonCatched`
+-- Estructura de tabla para la tabla `pokemoncatched`
 --
 
-CREATE TABLE `PokemonCatched` (
+CREATE TABLE `pokemoncatched` (
   `Id_User` int(11) NOT NULL,
   `PokemonName` varchar(255) NOT NULL,
   `Id_PokemonCatched` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Users`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `Users` (
+CREATE TABLE `users` (
   `Id_User` int(11) NOT NULL,
   `Name_User` varchar(255) NOT NULL,
   `User_Password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `DatePokemonAll`
+-- Indices de la tabla `datepokemonall`
 --
-ALTER TABLE `DatePokemonAll`
+ALTER TABLE `datepokemonall`
   ADD PRIMARY KEY (`PokemonName`);
 
 --
--- Indices de la tabla `PokemonCatched`
+-- Indices de la tabla `pokemoncatched`
 --
-ALTER TABLE `PokemonCatched`
+ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_User`,`PokemonName`),
   ADD UNIQUE KEY `Id_PokemonCatched` (`Id_PokemonCatched`),
   ADD KEY `PokemonName` (`PokemonName`);
 
 --
--- Indices de la tabla `Users`
+-- Indices de la tabla `users`
 --
-ALTER TABLE `Users`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`),
   ADD UNIQUE KEY `Name_User` (`Name_User`);
 
@@ -92,15 +103,15 @@ ALTER TABLE `Users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `PokemonCatched`
+-- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
-ALTER TABLE `PokemonCatched`
+ALTER TABLE `pokemoncatched`
   MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Users`
+-- AUTO_INCREMENT de la tabla `users`
 --
-ALTER TABLE `Users`
+ALTER TABLE `users`
   MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -108,11 +119,11 @@ ALTER TABLE `Users`
 --
 
 --
--- Filtros para la tabla `PokemonCatched`
+-- Filtros para la tabla `pokemoncatched`
 --
-ALTER TABLE `PokemonCatched`
-  ADD CONSTRAINT `PokemonCatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `Users` (`Id_User`),
-  ADD CONSTRAINT `PokemonCatched_ibfk_2` FOREIGN KEY (`PokemonName`) REFERENCES `DatePokemonAll` (`PokemonName`);
+ALTER TABLE `pokemoncatched`
+  ADD CONSTRAINT `PokemonCatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
+  ADD CONSTRAINT `PokemonCatched_ibfk_2` FOREIGN KEY (`PokemonName`) REFERENCES `datepokemonall` (`PokemonName`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
