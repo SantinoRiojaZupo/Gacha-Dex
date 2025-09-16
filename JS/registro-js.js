@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-document.getElementById("botonRegister").addEventListener("click", () => {
-        console.log("hola")
-=======
+
 document.getElementById("botonRegistro").addEventListener("click", () => {
     console.log("hola")
->>>>>>> 5d239f981a45ed7328f8a20d3eb2d344cbd5af67
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
     const Contra2 = document.querySelector('[name="contraseña-2"]').value;
