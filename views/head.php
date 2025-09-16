@@ -4,5 +4,6 @@
         <!-- conexiones -->
         <link rel="stylesheet" href="../CSS/estilosPaginaPrincipal.css">
         <link rel="stylesheet" href="../CSS/estilosBotonMenu.css">
+      
         <link rel="icon" type="image/png" href="../imagenes/gachadex.png">
         

@@ -11,6 +11,7 @@ switch ($page) {
     $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js";
     break; 
 
     case 'registro':
@@ -18,6 +19,7 @@ switch ($page) {
     $vistaJsBoton="../JS/botonMenu.js";
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js";
     break;
 
     default: 
@@ -25,6 +27,15 @@ switch ($page) {
     $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js";
+    break;
+
+    case 'Login':
+    $vista=VIEWS_PATH . 'Login.php';
+    $vistaJsBoton="../JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
+    $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js"; 
     break;
 }
 
