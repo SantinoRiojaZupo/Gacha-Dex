@@ -20,17 +20,17 @@
     </header>
     <main class="contenedores">
         <!-- Creadores -->
-        <div class="card">
+        <div class="card" onclick="window.location.href='benja.php'">
             <img src="../imagenes/Benja.png" alt="Foto Creador 1">
             <h2>Dario Montero</h2>
             <p>Roles: Scrum Master-Programador</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='Santi.php'">
             <img src="../imagenes/Santi.png" alt="Foto Creador 2">
             <h2>Santino Rioja</h2>
             <p>Roles: Segundo Scrum Master-Programador-Base de Datos</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='emiliano.php'">
             <img src="../imagenes/Emiliano.png" alt="Foto Creador">
             <h2>Emiliano Estrada</h2>
             <p>Rol: Programador</p>

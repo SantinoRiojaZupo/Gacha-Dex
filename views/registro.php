@@ -27,5 +27,10 @@
     <div class="register-link">
       ¿Ya tienes cuenta? <a href="Login.php">Inicia sesión</a>
     </div>
+    <?php if (isset($_GET['exito'])): ?>
+    <div class="success-message">
+      <p>Registro exitoso. ¡Ahora puedes iniciar sesión!</p>
+    </div>
+    <?php endif; ?>
     <script src="../JS/registro-js.js"></script>
   </div>

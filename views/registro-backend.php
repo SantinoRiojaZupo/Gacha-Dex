@@ -23,6 +23,7 @@ if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
         $sql->bind_param("ss", $usuario, $contraseña);
         if ($sql->execute()) {
             echo json_encode(["msj" => "Todo bien"]);
+            exit();
         } else {
             echo json_encode(["error" => "Fallo la consulta", "msj" => "Fallo la consulta"]);
         }
