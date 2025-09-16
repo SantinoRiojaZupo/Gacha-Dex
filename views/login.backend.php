@@ -12,6 +12,8 @@ if (!empty($_POST["UsuarioLogin"]) && !empty($_POST["contraseñaLogin"])) {
     $res = mysqli_stmt_get_result($stmt);
     if (mysqli_num_rows($res) > 0) {
         $user = mysqli_fetch_assoc($res);
+        $_SESSION['user_id'] = $user['Id_User'];
+        $_SESSION['username'] = $user['Name_User'];
         echo json_encode(["success" => true, "user" => $user]);
     } else {
         echo json_encode(["error" => "Usuario o contraseña incorrectos"]);
