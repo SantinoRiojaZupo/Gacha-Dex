@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json');
 require_once "../config/conexion.php";
+
 if (!empty($_POST["UsuarioLogin"]) && !empty($_POST["contraseñaLogin"])) {
     $usuario = $_POST["UsuarioLogin"];
     $password = $_POST["contraseñaLogin"];
@@ -20,3 +21,4 @@ if (!empty($_POST["UsuarioLogin"]) && !empty($_POST["contraseñaLogin"])) {
 else {
     echo json_encode(["error" => "Faltan datos requeridos"]);
 }
+?>
