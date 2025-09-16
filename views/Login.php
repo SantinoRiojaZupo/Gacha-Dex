@@ -14,6 +14,6 @@
       <button type="submit" class="login-button">Entrar</button>
     </form>
     <div class="register-link">
-      ¿No tienes cuenta? <a href="#">Regístrate</a>
+      ¿No tienes cuenta? <a href="http://localhost/Gacha-Dex/views/index.php?page=registro">Regístrate</a>
     </div>
   </div>
