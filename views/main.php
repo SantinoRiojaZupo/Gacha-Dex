@@ -16,6 +16,18 @@
         </div>
         <div class="center-box">
             <button id="rolls">Roll</button>
+                  <select id="generacionSelect">
+                <option value="0" selected>Todas las generaciones</option>
+                <option value="1">Generación 1</option>
+                <option value="2">Generación 2</option>
+                <option value="3">Generación 3</option>
+                <option value="4">Generación 4</option>
+                <option value="5">Generación 5</option>
+                <option value="6">Generación 6</option>
+                <option value="7">Generación 7</option>
+                <option value="8">Generación 8</option>
+                <option value="9">Generación 9</option>
+            </select>
         </div>
     </div>
     <div class="side-box right-box">
@@ -23,3 +35,4 @@
         <p id="pokemonesConseguidos"><!--Aca van a apareces los nombres o x cosa de los pokemons conseguidos--></p>
     </div>
 </main>
+<script src="../JS/rolls.js"></script>
