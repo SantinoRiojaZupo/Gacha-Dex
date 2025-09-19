@@ -88,3 +88,23 @@ body {
 max-width: 150px;
 height: auto;
 text-align: center;}
+
+#barraInicio {
+    display: flex; /* Convierte el contenedor en un Flexbox */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los elementos de cada grupo */
+}
+
+/* Opcional: Estilos para el perfil del usuario */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

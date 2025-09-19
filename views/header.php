@@ -2,6 +2,15 @@
 require_once "../config/conexion.php";
 ?>
 <div id="barraInicio">
+    <div class="header-left">
+        <button id="botonMenu">Menú</button>
+    <ul id="menu">
+        <li>Pagina Principal</li>
+        <li>Registro</li>
+        <li>INICIO DE SESION</li>
+    </ul>
+</div>
+    <div class="header-right">
     <?php if (isset($_SESSION['user_id'])): ?>
         <div class="user-profile">
             <span>¡Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
@@ -13,14 +22,5 @@ require_once "../config/conexion.php";
     <?php endif; ?>
     <input type="search" id="buscadorPokemon" placeholder="Buscar...">
     <button id="buscarPokemon">Busca ya!</button>
-
-    <!-- Botón para desplegar menú -->
-    <button id="botonMenu">Menú</button>
-
-    <!-- Menú separado -->
-    <ul id="menu">
-        <li>Pagina Principal</li>
-        <li>Registro</li>
-        <li>INICIO DE SESION</li>
-    </ul>
+</div>
 </div>
