@@ -17,13 +17,12 @@
     <div class="card" style="max-width:400px;margin:80px auto 40px auto;">
         <img src="../imagenes/gael.png" alt="Foto de Benja"
             style="width:100%;height:340px;object-fit:cover;border-radius:10px 10px 0 0;">
-        <h2>Gael Baez</h2>
+        <h2>Gael Baez Sakin</h2>
         <p>Roles: CSS, frontEnd designer</p>
-        <p>Description: He has a passion for programming and teamwork.He is in charge of the organization and
-            developement of the project Gacha-Dex.</p>
+        <p>Description: A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH BIG FATASS TETO FAN</p>
         <div style="margin-top:15px;">
-            <a href="https://github.com/DarioBenjaminMontero" target="_blank" class="btn-link">GitHub</a>
-            <a href="mailto:dariomontero2008@gmail.com" class="btn-link">Email:dariomontero2008@gmail.com</a>
+            <a href="https://github.com/Gael-Baez-Sak" target="_blank" class="btn-link">GitHub</a>
+            <a href="mailto:dariomontero2008@gmail.com" class="btn-link">Email: gaelbaezsakin@gmail.com</a>
             <a href="https://www.linkedin.com/in/santino-rioja-zupo-44208b327" target="_blank"
                 class="btn-link">Linkedin</a>
             <!-- se pueden agregar mas links si queremos, el linkedin es temporal porque nose los suyos -->
