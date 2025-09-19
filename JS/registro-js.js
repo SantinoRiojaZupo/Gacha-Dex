@@ -22,7 +22,7 @@ function registrarse(){
                     mostrarMensaje(res.msj, false);
                 } else {
                     mostrarMensaje("Registro exitoso. ¡Ahora puedes iniciar sesión!", true);
-                    window.location.href = "index.php?page=main";
+                    window.location.href = "login.php";
                 }
             });
     } else {
