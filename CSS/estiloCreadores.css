@@ -32,6 +32,8 @@ header {
   transition: all 0.3s ease;
 }
 
+
+
 #barraInicioCreadores button:hover,
 .barraInicioCreadores button:hover {
   background-color: rgba(243, 201, 94, 0.5); /* amarillo al pasar */
