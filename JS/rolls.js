@@ -33,8 +33,15 @@ let pokemonActual = null;
 
 // Función para mostrar el sobre según la generación
 function mostrarSobre() {
+    pokemonDisplay.innerHTML = '<img src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">';
+    if (pokemonActual==null){
+        pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`
+    }
     const gen = generacionSelect.value;
     pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+    generacionSelect.disabled = true; // Deshabilita el select al mostrar el sobre
+    rolls.disabled = true; // Deshabilita el botón de roll al mostrar el sobre
+    // Añade el evento para abrir el sobre
     document.getElementById('sobreImg').onclick = mostrarPokemon;
 }
 
@@ -47,6 +54,10 @@ function mostrarPokemon() {
             <strong>${pokemonActual}</strong>
         </div>
     `;
+    pokemonActual = null; // Resetea el Pokémon actual para evitar reabrir el mismo sobre
+        generacionSelect.disabled = false; // Deshabilita el select al mostrar el sobre
+    rolls.disabled = false; // Deshabilita el botón de roll al mostrar el sobre
+    // Añade el evento para abrir el sobre
 }
 
 // Al cambiar la generación, cambia el sobre
