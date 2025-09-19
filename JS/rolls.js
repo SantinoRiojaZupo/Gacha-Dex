@@ -81,7 +81,6 @@ rollsBtn.addEventListener('click', function () {
                 return;
             }
             else {
-                alert(res.mensaje + " " + res.pokemon);//la idea es mostrar el pokemon que toco
                 console.log(res);
             }
         });
