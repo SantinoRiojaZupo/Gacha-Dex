@@ -11,7 +11,7 @@
 <body>
     <div id="barraInicio"
         style="width:100%;display:flex;justify-content:flex-end;align-items:center;position:fixed;top:0;right:0;background:transparent;z-index:10;">
-        <button id="volverCreadores" onclick="location.href='creadores.php'" style="margin:20px 30px 0 0;">Volver a
+        <button id="volverCreadores" onclick="location.href='../views/index.php?page=creadores'" style="margin:20px 30px 0 0;">Volver a
             creadores</button>
     </div>
     <div class="card" style="max-width:400px;margin:80px auto 40px auto;">

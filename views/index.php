@@ -41,6 +41,32 @@ switch ($page) {
 
     case 'creadores':
     $vista='creadores.php';
+    break;
+
+    case 'benja': 
+      $vista='benja.php';
+      break;
+    case 'santi':
+      $vista='santi.php';
+      break;
+    case 'emiliano':
+      $vista='emiliano.php';
+      break;
+    case 'agus':
+      $vista='agus.php';
+      break;
+    case 'thiago':
+      $vista='thiago.php';
+      break;
+    case 'samuel':
+      $vista='samuel.php'; 
+      break;
+    case 'gael':
+      $vista='gael.php'; 
+      break;
+    case 'ignacio':
+      $vista='ignacio.php';
+      break;
     
 }
 

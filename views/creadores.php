@@ -20,44 +20,44 @@
     </header>
     <main class="contenedores">
         <!-- Creadores -->
-        <div class="card" onclick="window.location.href='benja.php'">
+        <div class="card" onclick="window.location.href='../views/index.php?page=benja'">
             <img src="../imagenes/Benja.png" alt="Foto Creador 1">
             <h2>Dario Montero</h2>
             <p>Roles: Scrum Master-Programador</p>
         </div>
-        <div class="card" onclick="window.location.href='Santi.php'">
+        <div class="card" onclick="window.location.href='../views/index.php?page=santi'">
             <img src="../imagenes/Santi.png" alt="Foto Creador 2">
-            <h2>Santino Rioja</h2>
+            <h2>Santino Rioja Zupo</h2>
             <p>Roles: Segundo Scrum Master-Programador-Base de Datos</p>
         </div>
-        <div class="card" onclick="window.location.href='emiliano.php'">
+        <div class="card" onclick="window.location.href='../views/index.php?page=emiliano'">
             <img src="../imagenes/Emiliano.png" alt="Foto Creador">
             <h2>Emiliano Estrada</h2>
             <p>Rol: Programador</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='../views/index.php?page=agus'">
             <img src="../imagenes/Agus.png" alt="Foto Creador">
             <h2>Agustin Castro</h2>
             <p>Rol: Programador</p>
         </div>
-        <div class="card" onclick="window.location.href='thiago.php'">
+        <div class="card" onclick="window.location.href='../views/index.php?page=thiago'">
             <img src="../imagenes/Thiago.png" alt="Foto Creador">
             <h2>Thiago Anzaldo</h2>
             <p>Rol: Programador</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='../views/index.php?page=samuel'">
             <img src="../imagenes/Samuel.png" alt="Foto Creador">
             <h2>Samuel Serrezuela</h2>
             <p>Rol: Stylesheet</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='../views/index.php?page=gael'">
             <img src="../imagenes/Gael.png" alt="Foto Creador">
             <h2>Gael Baez</h2>
             <p>Rol: Stylesheet</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='../views/index.php?page=ignacio'">
             <img src="../imagenes/Ignacio.png" alt="Foto Creador">
-            <h2>Ignacio Gonzales</h2>
+            <h2>Ignacio Gonzalez</h2>
             <p>Rol: Base de Datos</p>
         </div>
     </main>
