@@ -12,9 +12,9 @@
 <body>
 
     <header>
-        <div id="barraInicio">
-            <button id="menu">☰</button>
-            <button id="volverInicio" onclick="location.href='index.php'">Volver al inicio</button>
+        <div id="barraInicioCreadores">
+            <button id="menuCreadores">☰</button>
+            <button id="volverInicioCreadores" onclick="location.href='index.php'">Volver al inicio</button>
         </div>
         <h1>Creadores de la pagina:</h1>
     </header>

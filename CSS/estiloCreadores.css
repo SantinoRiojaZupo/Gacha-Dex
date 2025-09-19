@@ -16,15 +16,15 @@ header {
   color: #f3c95e;
 }
 
-#barraInicio {
+#barraInicioCreadores {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 /* Estilo de los botones */
-#barraInicio button,
-.barraInicio button {
+#barraInicioCreadores button,
+.barraInicioCreadores button {
   background-color: rgba(243, 201, 94, 0.15); /* sin fondo */
   border: 2px solid rgba(243, 201, 94, 0.5); /* borde amarillo ultraball */
   color: white; /* texto blanco */
@@ -32,14 +32,14 @@ header {
   transition: all 0.3s ease;
 }
 
-#barraInicio button:hover,
-.barraInicio button:hover {
+#barraInicioCreadores button:hover,
+.barraInicioCreadores button:hover {
   background-color: rgba(243, 201, 94, 0.5); /* amarillo al pasar */
   color: #000000; /* texto negro */
 }
 
 /* Botón de menú más compacto */
-#menu {
+#menuCreadores {
   font-size: 20px;
   padding: 6px 12px;
 }

@@ -38,6 +38,10 @@ switch ($page) {
     $registroFunciones="../JS/registro-js.js";
     $vistaBotonLogin="../JS/botonLogin.js"; 
     break;
+
+    case 'creadores':
+    $vista='creadores.php';
+    
 }
 
 $pageHeader=$_GET['header'] ?? "header";
