@@ -22,8 +22,8 @@
         <p>Description: He has a passion for programming and teamwork.He is in charge of the organization and
             developement of the project Gacha-Dex.</p>
         <div style="margin-top:15px;">
-            <a href="https://github.com/DarioBenjaminMontero" target="_blank" class="btn-link">GitHub</a>
-            <a href="mailto:dariomontero2008@gmail.com" class="btn-link">Email:dariomontero2008@gmail.com</a>
+            <a href="https://github.com/agustincastro1" target="_blank" class="btn-link">GitHub</a>
+            <a href="mailto:agus.castro.sosa@gmail.com" class="btn-link">Email:agus.castro.sosa@gmail.com</a>
             <a href="https://www.linkedin.com/in/santino-rioja-zupo-44208b327" target="_blank"
                 class="btn-link">Linkedin</a>
             <!-- se pueden agregar mas links si queremos, el linkedin es temporal porque nose los suyos -->

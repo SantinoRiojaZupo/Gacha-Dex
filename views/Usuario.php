@@ -46,7 +46,5 @@
       <div class="sprite-box">Sprite tu pkmn4</div>
     </div>
   </div>
-
-  
 </body>
 </html>
