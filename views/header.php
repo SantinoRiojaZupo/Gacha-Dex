@@ -13,8 +13,11 @@ require_once "../config/conexion.php";
     <div class="header-right">
     <?php if (isset($_SESSION['user_id'])): ?>
         <div class="user-profile">
+            <button id="botonPerfil">Perfil</button>
             <span>¡Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
+
             <a href="logout.php">Cerrar Sesión</a>
+
         </div>
     <?php else: ?>
     <button id="botonRegister">Registrate!</button>

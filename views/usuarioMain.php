@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perfil de Usuario - Pokémon</title>
-  <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
-</head>
-<body>
-  <div class="header">
-    <button class="menu-btn">☰ Menu</button>
-    <div class="search-box">
-      <input type="text" placeholder="Buscar...">
-      <button>Busca ya!</button>
-    </div>
-  </div>
+ <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
 
   <div class="perfil-container">
     <div class="perfil-info">
@@ -46,5 +31,5 @@
       <div class="sprite-box">Sprite tu pkmn4</div>
     </div>
   </div>
-</body>
-</html>
+
+  

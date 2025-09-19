@@ -36,6 +36,9 @@
 <script src="<?= $vistaBotonLogin
 
 ?>" > </script>
+<script src="<?= $vistaBotonPerfil
+
+?>" > </script>
 
 <?php if (isset($registroFunciones)) : ?>
     <script src="<?= $registroFunciones ?>"></script>

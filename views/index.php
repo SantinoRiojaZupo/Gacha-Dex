@@ -13,6 +13,7 @@ switch ($page) {
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
     $vistaBotonLogin="../JS/botonLogin.js";
+    $vistaBotonPerfil="../JS/botonPerfil.js";
     break; 
 
     case 'registro':
@@ -37,6 +38,12 @@ switch ($page) {
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
     $vistaBotonLogin="../JS/botonLogin.js"; 
+    break;
+
+    case 'perfil':
+    $vista=VIEWS_PATH . 'usuarioMain.php';
+    $vistaHeader = VIEWS_PATH . 'usuarioHeader.php';
+
     break;
 
     case 'creadores':
