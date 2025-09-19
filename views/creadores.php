@@ -40,7 +40,7 @@
             <h2>Agustin Castro</h2>
             <p>Rol: Programador</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="window.location.href='thiago.php'">
             <img src="../imagenes/Thiago.png" alt="Foto Creador">
             <h2>Thiago Anzaldo</h2>
             <p>Rol: Programador</p>
