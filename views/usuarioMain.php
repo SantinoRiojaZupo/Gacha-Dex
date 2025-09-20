@@ -1,17 +1,17 @@
  <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
-
+  <div class="login-container"></div>
   <div class="perfil-container">
     <div class="perfil-info">
       <h2>Información del Usuario</h2>
-      <img src="https://via.placeholder.com/100" alt="Foto de perfil" id="profile-pic">
+      <h5>Foto de perfil</h5>
       <br>
       <button>Seleccionar Imagen</button>
       <h2>Username </h2> 
       <p>visible para todos (obligatorio)</p>
-      <input type="text" placeholder="Username" required>
+      <input type="text" placeholder="Username" required name="nuevoNombre">
       <h2>Bio </h2>
       <textarea rows="4" placeholder="Bio (opcional)"></textarea>
-      <button>Guardar cambios</button>
+      <button onclick="cambiarNombre()">Guardar cambios</button>
     </div>
 
     <div class="pokemons">
@@ -30,6 +30,7 @@
       <div class="sprite-box">Sprite tu pkmn3</div>
       <div class="sprite-box">Sprite tu pkmn4</div>
     </div>
+    <script src="../JS/perfil.js"></script>
   </div>
 
   
