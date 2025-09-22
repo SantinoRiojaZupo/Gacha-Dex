@@ -1,14 +1,63 @@
-<?php require_once "../config/conexion.php";
+<?php
+require_once "../config/conexion.php";
 session_start();
 
 header('Content-Type: application/json');
-// Verifica si el usuario ha iniciado sesión
 
+// Verificar sesión
 if (!isset($_SESSION['user_id'])) {
-    $mensaje =(json_encode(['error' => 'Inicia Sesion']));
-    echo $mensaje;
-    exit();
+    echo json_encode(['error' => 'Inicia Sesión']);
+    exit;
 }
-echo json_encode(['ok' => true, 'mensaje' => 'Roll ejecutado correctamente']);;
 
-?>
+// Obtener generación desde el frontend
+$gen = isset($_POST['gen']) ? intval($_POST['gen']) : 0;
+
+// Rangos de pokédex por generación
+$rangosGen = [
+    1 => [1, 151],
+    2 => [152, 251],
+    3 => [252, 386],
+    4 => [387, 493],
+    5 => [494, 649],
+    6 => [650, 721],
+    7 => [722, 809],
+    8 => [810, 905],
+    9 => [906, 1025]
+];
+
+// Definir rango según generación (0 = todas)
+if ($gen === 0) {
+    $from = 1;
+    $to   = 1025;
+} else {
+    [$from, $to] = $rangosGen[$gen];
+}
+
+// Obtener un Pokémon random en SQL
+$stmt = $pdo->prepare("
+    SELECT Id_Pokedex, PokemonName 
+    FROM DATEPOKEMONALL 
+    WHERE Id_Pokedex BETWEEN ? AND ? 
+    ORDER BY RAND() 
+    LIMIT 1
+");
+$stmt->execute([$from, $to]);
+$pokemon = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$pokemon) {
+    echo json_encode(['error' => 'No se encontró ningún Pokémon en este rango']);
+    exit;
+}
+
+// ✅ OPCIONAL: guardar la captura en la DB
+/*
+$stmtInsert = $pdo->prepare("INSERT INTO capturas (user_id, pokemon_id) VALUES (?, ?)");
+$stmtInsert->execute([$_SESSION['user_id'], $pokemon['Id_Pokedex']]);
+*/
+
+echo json_encode([
+    'ok' => true,
+    'mensaje' => 'Roll ejecutado correctamente',
+    'pokemon' => $pokemon
+]);

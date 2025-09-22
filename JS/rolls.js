@@ -1,15 +1,20 @@
-fetch()
-// Simulación de pokémon por generación
-const pokemonsPorGen = {
-    1: ["Bulbasaur", "Charmander", "Squirtle"],
-    2: ["Chikorita", "Cyndaquil", "Totodile"],
-    3: ["Treecko", "Torchic", "Mudkip"],
-    4: ["Turtwig", "Chimchar", "Piplup"],
-    5: ["Snivy", "Tepig", "Oshawott"],
-    6: ["Chespin", "Fennekin", "Froakie"],
-    7: ["Rowlet", "Litten", "Popplio"],
-    8: ["Grookey", "Scorbunny", "Sobble"],
-    9: ["Sprigatito", "Fuecoco", "Quaxly"]
+const pokemonDisplay = document.getElementById('pokemonDisplay');
+const generacionSelect = document.getElementById('generacionSelect');
+const rollsBtn = document.getElementById('rolls');
+
+let pokemonActual = null;
+
+// Pokémons organizados por generación(id_pokedex)
+const rangosGen = {
+    1: [1, 151],
+    2: [152, 251],
+    3: [252, 386],
+    4: [387, 493],
+    5: [494, 649],
+    6: [650, 721],
+    7: [722, 809],
+    8: [810, 905],
+    9: [906, 1025]
 };
 
 // Cambia la imagen del sobre según la generación
@@ -26,23 +31,14 @@ const sobrePorGen = {
     9: "../imagenes/sobre9.png"
 };
 
-const pokemonDisplay = document.getElementById('pokemonDisplay');
-const generacionSelect = document.getElementById('generacionSelect');
-const rollsBtn = document.getElementById('rolls');
-
-let pokemonActual = null;
-
 // Función para mostrar el sobre según la generación
 function mostrarSobre() {
-    pokemonDisplay.innerHTML = '<img src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">';
-    if (pokemonActual == null) {
-        pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`
-    }
     const gen = generacionSelect.value;
-    pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
-    generacionSelect.disabled = true; // Deshabilita el select al mostrar el sobre
-    rolls.disabled = true; // Deshabilita el botón de roll al mostrar el sobre
-    // Añade el evento para abrir el sobre
+    if (pokemonActual == null) {
+        pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
+    } else {
+        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+    }
     document.getElementById('sobreImg').onclick = mostrarPokemon;
 }
 
@@ -51,51 +47,49 @@ function mostrarPokemon() {
     if (!pokemonActual) return;
     pokemonDisplay.innerHTML = `
         <div style="text-align:center;">
-            <img src="../imagenes/${pokemonActual}.png" alt="${pokemonActual}" style="width:120px;"><br>
-            <strong>${pokemonActual}</strong>
+            <img src="../imagenes/${pokemonActual.Id_Pokedex}.png" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
+            <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
-    pokemonActual = null; // Resetea el Pokémon actual para evitar reabrir el mismo sobre
-    generacionSelect.disabled = false; // Deshabilita el select al mostrar el sobre
-    rolls.disabled = false; // Deshabilita el botón de roll al mostrar el sobre
-    // Añade el evento para abrir el sobre
+    pokemonActual = null;
+    generacionSelect.disabled = false;
+    rollsBtn.disabled = false;
 }
 
 // Al cambiar la generación, cambia el sobre
 generacionSelect.addEventListener('change', mostrarSobre);
 
-// Al hacer roll, elige un Pokémon y muestra el sobre
+// Al hacer roll, pide al backend un Pokémon
 rollsBtn.addEventListener('click', function () {
-    fetch("../views/rollsBackend.php", {
-        method: "GET"
-    })
-        .then(res => res.json())
-        .then(res => {
-            if (res.error) {
-                pokemonActual = null; // Resetea el Pokémon actual para evitar reabrir el mismo sobre
-                pokemonDisplay.innerHTML = '';
-                generacionSelect.disabled = false;
-                rolls.disabled = false;
-                alert(res.error);
-                mostrarSobre();
-                return;
-            }
-            else {
-                console.log(res);
-            }
-        });
     const gen = generacionSelect.value;
-    let pokemons;
-    if (gen == 0) {
-        // Si es "Todas las generaciones", combina todos los pokémon
-        pokemons = [].concat(...Object.values(pokemonsPorGen));
-    } else {
-        pokemons = pokemonsPorGen[gen];
-    }
-    const randomIndex = Math.floor(Math.random() * pokemons.length);
-    pokemonActual = pokemons[randomIndex];
-    mostrarSobre();
+
+    fetch("../views/rollsBackend.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "gen=" + gen
+    })
+    .then(res => res.json())
+    .then(res => {
+        if (res.error) {
+            pokemonActual = null;
+            pokemonDisplay.innerHTML = '';
+            generacionSelect.disabled = false;
+            rollsBtn.disabled = false;
+            alert(res.error);
+            mostrarSobre();
+            return;
+        }
+
+        console.log("Respuesta del backend:", res);
+
+        // Guardamos el Pokémon que eligió el backend
+        pokemonActual = res.pokemon;
+        mostrarSobre();
+    })
+    .catch(err => console.error("Error en la petición fetch:", err));
 });
 
 // Inicializa el sobre al cargar la página
-window.onload = mostrarSobre;
+window.onload = () => {
+    mostrarSobre();
+};
