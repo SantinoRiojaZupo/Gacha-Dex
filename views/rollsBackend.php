@@ -2,7 +2,7 @@
 require_once "../config/conexion.php";
 session_start();
 
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
 
 // Verificar sesión
 if (!isset($_SESSION['user_id'])) {
@@ -35,15 +35,15 @@ if ($gen === 0) {
 }
 
 // Obtener un Pokémon random en SQL
-$stmt = $pdo->prepare("
-    SELECT Id_Pokedex, PokemonName 
-    FROM DATEPOKEMONALL 
-    WHERE Id_Pokedex BETWEEN ? AND ? 
-    ORDER BY RAND() 
-    LIMIT 1
-");
-$stmt->execute([$from, $to]);
-$pokemon = $stmt->fetch(PDO::FETCH_ASSOC);
+$sql= "SELECT Id_Pokedex, PokemonName, Image FROM DATEPOKEMONALL WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1";
+$stmt = mysqli_prepare($conexion, $sql);
+mysqli_stmt_bind_param($stmt,"ii",$from,$to);
+mysqli_stmt_execute($stmt);
+
+$res =mysqli_stmt_get_result($stmt);
+$pokemon = mysqli_fetch_assoc($res);
+
+// $pokemon = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$pokemon) {
     echo json_encode(['error' => 'No se encontró ningún Pokémon en este rango']);
@@ -59,5 +59,6 @@ $stmtInsert->execute([$_SESSION['user_id'], $pokemon['Id_Pokedex']]);
 echo json_encode([
     'ok' => true,
     'mensaje' => 'Roll ejecutado correctamente',
-    'pokemon' => $pokemon
+    'pokemon' => $pokemon,
+    'img_url' => $pokemon['Image'] // Usa el campo Image de la base de datos
 ]);

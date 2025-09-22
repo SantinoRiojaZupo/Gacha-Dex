@@ -32,22 +32,22 @@ const sobrePorGen = {
 };
 
 // Función para mostrar el sobre según la generación
-function mostrarSobre() {
+function mostrarSobre(pokemonActual) {
     const gen = generacionSelect.value;
     if (pokemonActual == null) {
         pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
     } else {
-        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}.png" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
     }
-    document.getElementById('sobreImg').onclick = mostrarPokemon;
+    document.getElementById('sobreImg').onclick = mostrarPokemon(pokemonActual);
 }
 
 // Función para mostrar el Pokémon al abrir el sobre
-function mostrarPokemon() {
+function mostrarPokemon(pokemonActual) {
     if (!pokemonActual) return;
     pokemonDisplay.innerHTML = `
         <div style="text-align:center;">
-            <img src="../imagenes/${pokemonActual.Id_Pokedex}.png" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
+            <img src="${pokemonActual.Image}" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
             <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
@@ -66,7 +66,7 @@ rollsBtn.addEventListener('click', function () {
     fetch("../views/rollsBackend.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "gen=" + gen
+        body: "gen=" + encodeURIComponent(gen)
     })
     .then(res => res.json())
     .then(res => {
@@ -83,10 +83,10 @@ rollsBtn.addEventListener('click', function () {
         console.log("Respuesta del backend:", res);
 
         // Guardamos el Pokémon que eligió el backend
-        pokemonActual = res.pokemon;
-        mostrarSobre();
+        pokemonActual = res.pokemon ;
+        mostrarSobre(pokemonActual);
     })
-    .catch(err => console.error("Error en la petición fetch:", err));
+    // .catch(err => console.error("Error en la petición fetch:", err));
 });
 
 // Inicializa el sobre al cargar la página
