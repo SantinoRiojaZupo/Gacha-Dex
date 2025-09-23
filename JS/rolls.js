@@ -36,15 +36,18 @@ function mostrarSobre(pokemonActual) {
     const gen = generacionSelect.value;
     if (pokemonActual == null) {
         pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
+                document.getElementById('sobreImg').onclick = () =>  alert("Please select a Category");
     } else {
-        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}.png" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+        document.getElementById('sobreImg').onclick = () => mostrarPokemon(pokemonActual);
     }
-    document.getElementById('sobreImg').onclick = mostrarPokemon(pokemonActual);
 }
 
 // Función para mostrar el Pokémon al abrir el sobre
 function mostrarPokemon(pokemonActual) {
-    if (!pokemonActual) return;
+    rollsBtn.disabled = true;
+    generacionSelect.disabled = true;
+    if (!pokemonActual.PokemonName) alert("use a roll first"), pokemonActual = null, generacionSelect.disabled = false, rollsBtn.disabled = false, mostrarSobre();
     pokemonDisplay.innerHTML = `
         <div style="text-align:center;">
             <img src="${pokemonActual.Image}" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
@@ -68,28 +71,32 @@ rollsBtn.addEventListener('click', function () {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: "gen=" + encodeURIComponent(gen)
     })
-    .then(res => res.json())
-    .then(res => {
-        if (res.error) {
-            pokemonActual = null;
-            pokemonDisplay.innerHTML = '';
-            generacionSelect.disabled = false;
-            rollsBtn.disabled = false;
-            alert(res.error);
-            mostrarSobre();
-            return;
-        }
+        .then(res => res.json())
+        .then(res => {
+            if (res.error) {
+                pokemonActual = null;
+                pokemonDisplay.innerHTML = '';
+                generacionSelect.disabled = false;
+                rollsBtn.disabled = false;
+                alert(res.error);
+                mostrarSobre();
+                return;
+            }
 
-        console.log("Respuesta del backend:", res);
+            console.log("Respuesta del backend:", res);
 
-        // Guardamos el Pokémon que eligió el backend
-        pokemonActual = res.pokemon ;
-        mostrarSobre(pokemonActual);
-    })
+            // Guardamos el Pokémon que eligió el backend
+            pokemonActual = res.pokemon;
+            mostrarSobre(pokemonActual);
+        })
     // .catch(err => console.error("Error en la petición fetch:", err));
 });
 
 // Inicializa el sobre al cargar la página
 window.onload = () => {
+    generacionSelect.value = 0; // Selección por defecto "Todas las generaciones"
+    generacionSelect.disabled = false;
+    rollsBtn.disabled = false;
+    pokemonActual = null;
     mostrarSobre();
 };
