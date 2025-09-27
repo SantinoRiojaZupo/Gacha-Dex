@@ -55,6 +55,10 @@ if (!$pokemon) {
 $stmtInsert = $pdo->prepare("INSERT INTO capturas (user_id, pokemon_id) VALUES (?, ?)");
 $stmtInsert->execute([$_SESSION['user_id'], $pokemon['Id_Pokedex']]);
 */
+$sql2 = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex) VALUES (?, ?)";
+$stmtInsertar=mysqli_prepare($conexion, $sql2);
+mysqli_stmt_bind_param($stmtInsertar, "ii", $_SESSION['user_id'], $pokemon['Id_Pokedex']);
+mysqli_stmt_execute($stmtInsertar);
 
 echo json_encode([
     'ok' => true,
