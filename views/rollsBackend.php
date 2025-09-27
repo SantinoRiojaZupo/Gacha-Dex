@@ -35,7 +35,7 @@ if ($gen === 0) {
 }
 
 // Obtener un Pokémon random en SQL
-$sql= "SELECT Id_Pokedex, PokemonName, Image FROM DATEPOKEMONALL WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1";
+$sql= "SELECT Id_Pokedex, PokemonName, Image FROM DATAPOKEMONALL WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1";
 $stmt = mysqli_prepare($conexion, $sql);
 mysqli_stmt_bind_param($stmt,"ii",$from,$to);
 mysqli_stmt_execute($stmt);
