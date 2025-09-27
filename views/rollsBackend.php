@@ -49,20 +49,16 @@ if (!$pokemon) {
     echo json_encode(['error' => 'No se encontró ningún Pokémon en este rango']);
     exit;
 }
+echo json_encode([
+    'ok' => true,
+    'mensaje' => 'Roll ejecutado correctamente',
+    'pokemon' => $pokemon,
+    'img_url' => $pokemon['Image'] ,// Usa el campo Image de la base de datos
+    'idPokemon' => $pokemon['Id_Pokedex']
+]);
 
 // ✅ OPCIONAL: guardar la captura en la DB
 /*
 $stmtInsert = $pdo->prepare("INSERT INTO capturas (user_id, pokemon_id) VALUES (?, ?)");
 $stmtInsert->execute([$_SESSION['user_id'], $pokemon['Id_Pokedex']]);
 */
-$sql2 = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex) VALUES (?, ?)";
-$stmtInsertar=mysqli_prepare($conexion, $sql2);
-mysqli_stmt_bind_param($stmtInsertar, "ii", $_SESSION['user_id'], $pokemon['Id_Pokedex']);
-mysqli_stmt_execute($stmtInsertar);
-
-echo json_encode([
-    'ok' => true,
-    'mensaje' => 'Roll ejecutado correctamente',
-    'pokemon' => $pokemon,
-    'img_url' => $pokemon['Image'] // Usa el campo Image de la base de datos
-]);

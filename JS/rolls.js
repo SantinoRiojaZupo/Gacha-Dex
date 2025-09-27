@@ -55,6 +55,21 @@ function mostrarPokemon(pokemonActual) {
             <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
+    fetch("../views/guardarPokemones.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: "Id_Pokedex=" + encodeURIComponent(pokemonActual.Id_Pokedex)
+})
+.then(res => res.json())
+.then(res => {
+    if (!res.ok) {
+        console.error("Error guardando Pokémon:", res.error);
+    } else {
+        console.log(res.mensaje);
+    }
+})
+.catch(err => console.error("Error en fetch guardarPokemones:", err));
+
     pokemonActual = null;
     generacionSelect.disabled = false;
     rollsBtn.disabled = false;
