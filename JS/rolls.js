@@ -35,19 +35,20 @@ const sobrePorGen = {
 function mostrarSobre(pokemonActual) {
     const gen = generacionSelect.value;
     if (pokemonActual == null) {
-        pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
+                pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
+
                 document.getElementById('sobreImg').onclick = () =>  alert("Please select a Category");
     } else {
-        pokemonDisplay.innerHTML = `<img id="sobreImg" src="${sobrePorGen[gen]}" alt="Sobre Gen ${gen}" style="width:120px;cursor:pointer;">`;
         document.getElementById('sobreImg').onclick = () => mostrarPokemon(pokemonActual);
     }
 }
 
 // Función para mostrar el Pokémon al abrir el sobre
 function mostrarPokemon(pokemonActual) {
+    
     rollsBtn.disabled = true;
     generacionSelect.disabled = true;
-    if (!pokemonActual.PokemonName) alert("use a roll first"), pokemonActual = null, generacionSelect.disabled = false, rollsBtn.disabled = false, mostrarSobre();
+    if (!pokemonActual.PokemonName) alert("use a roll first"), pokemonActual = null, generacionSelect.disabled = false, rollsBtn.disabled = false;
     pokemonDisplay.innerHTML = `
         <div style="text-align:center;">
             <img src="${pokemonActual.Image}" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
@@ -60,11 +61,14 @@ function mostrarPokemon(pokemonActual) {
 }
 
 // Al cambiar la generación, cambia el sobre
-generacionSelect.addEventListener('change', mostrarSobre);
+generacionSelect.addEventListener('change',() => mostrarSobre(pokemonActual));
 
 // Al hacer roll, pide al backend un Pokémon
 rollsBtn.addEventListener('click', function () {
+    rollsBtn.disabled =true;
+    generacionSelect.disabled =true;
     const gen = generacionSelect.value;
+            pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
 
     fetch("../views/rollsBackend.php", {
         method: "POST",
