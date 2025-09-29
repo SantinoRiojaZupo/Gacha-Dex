@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="../CSS/Registro.css" /><!-- cambie la conexion -->
+  <link rel="stylesheet" href="../CSS/Registro.css" />
   
   <div class="login-container">
     <img src="../imagenes/Master-Ball.png" alt="Logo" class="logo" />
