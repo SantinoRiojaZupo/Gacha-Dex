@@ -32,7 +32,7 @@
     </div>
     <div class="side-box right-box">
         <h2>Últimos PKMN conseguidos</h2>
-        <p id="pokemonesConseguidos"><!--Aca van a apareces los nombres o x cosa de los pokemons conseguidos--></p>
+        <div id="pokemonesConseguidos"><!--Aca van a apareces los nombres o x cosa de los pokemons conseguidos--></div>
     </div>
 </main>
 <script src="../JS/rolls.js"></script>

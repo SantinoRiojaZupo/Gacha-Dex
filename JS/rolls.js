@@ -66,6 +66,7 @@ function mostrarPokemon(pokemonActual) {
         console.error("Error guardando Pokémon:", res.error);
     } else {
         console.log(res.mensaje);
+        cargarUltimosPokemones();
     }
 })
 .catch(err => console.error("Error en fetch guardarPokemones:", err));
@@ -111,6 +112,34 @@ rollsBtn.addEventListener('click', function () {
     // .catch(err => console.error("Error en la petición fetch:", err));
 });
 
+function cargarUltimosPokemones() {
+    fetch("../views/ultimosPokemones.php")
+        .then(res => res.json())
+        .then(data => {
+            if (!data.ok) {
+                console.error("Error cargando últimos pokemones:", data.error);
+                return;
+            }
+
+            const contenedor = document.getElementById("pokemonesConseguidos");
+            contenedor.innerHTML = "";
+
+            data.pokemones.forEach(p => {
+                const div = document.createElement("div");
+                div.style.display = "inline-block";
+                div.style.margin = "5px";
+                div.style.textAlign = "center";
+                div.innerHTML = `
+                    <img src="${p.Image}" alt="${p.PokemonName}" style="width:50px;"><br>
+                    <small>${p.PokemonName}</small>
+                `;
+                contenedor.appendChild(div);
+            });
+        })
+        .catch(err => console.error("Error fetch ultimosPokemones:", err));
+}
+
+
 // Inicializa el sobre al cargar la página
 window.onload = () => {
     generacionSelect.value = 0; // Selección por defecto "Todas las generaciones"
@@ -118,4 +147,5 @@ window.onload = () => {
     rollsBtn.disabled = false;
     pokemonActual = null;
     mostrarSobre();
+    cargarUltimosPokemones();
 };
