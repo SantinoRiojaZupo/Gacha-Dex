@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2025 a las 05:27:06
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Sep 30, 2025 at 01:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gachadex`
+-- Database: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datapokemonall`
+-- Table structure for table `datapokemonall`
 --
 
 CREATE TABLE `datapokemonall` (
@@ -42,7 +42,7 @@ CREATE TABLE `datapokemonall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `datapokemonall`
+-- Dumping data for table `datapokemonall`
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -201,7 +201,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pokemoncatched`
+-- Table structure for table `pokemoncatched`
 --
 
 CREATE TABLE `pokemoncatched` (
@@ -213,7 +213,7 @@ CREATE TABLE `pokemoncatched` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -226,17 +226,17 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `datapokemonall`
+-- Indexes for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indices de la tabla `pokemoncatched`
+-- Indexes for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_PokemonCatched`),
@@ -244,27 +244,33 @@ ALTER TABLE `pokemoncatched`
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `pokemoncatched`
+-- AUTO_INCREMENT for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Restricciones para tablas volcadas
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `pokemoncatched`
+-- Constraints for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
