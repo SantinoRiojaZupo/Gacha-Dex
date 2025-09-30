@@ -20,7 +20,7 @@
         <h2>Thiago Anzaldo</h2>
         <p>Roles: Programer</p>
         <p>Description: He has a passion for programming and teamwork.He is in charge of the organization and
-            developement of the project Gacha-Dex and admin of the mudae server <br>卐 黑色的, <br>Alias: Mierdown1.</p>
+            developement of the project Gacha-Dex and admin of the mudae server <br> 黑色的, <br>Alias: Mierdown1.</p>
         <div style="margin-top:15px;">
             <a href="https://github.com/Thiago-Anzaldo" target="_blank" class="btn-link">GitHub</a>
             <a href="mailto:thiagoanzaldo008@gmail.com" class="btn-link">Email:thiagoanzaldo008@gmail.com</a>
