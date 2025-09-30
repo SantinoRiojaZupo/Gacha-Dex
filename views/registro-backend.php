@@ -8,7 +8,7 @@ if (!$conexion) {
 if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
     $usuario = $_POST["Usuario"];
     $contraseña = $_POST["contraseña"];
-    $sql1 = "SELECT name_user FROM users WHERE name_user = ?";
+    $sql1 = "SELECT name_user FROM users WHERE Name_User = ?";
     $stmt = mysqli_prepare($conexion, $sql1);
     mysqli_stmt_bind_param($stmt, "s", $usuario);
     mysqli_stmt_execute($stmt);

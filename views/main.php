@@ -8,7 +8,7 @@
     </div>
     <div class="center-boxes">
         <div class="center-box">
-            <h2>Posibilidad shiny/legendario:</h2>
+            <h2>Pity:</h2>
             <p id="probabilidad"><!--de tener Shiny/Legendario --></p>
         </div>
         <div class="center-box">

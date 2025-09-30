@@ -1,6 +1,7 @@
 const pokemonDisplay = document.getElementById('pokemonDisplay');
 const generacionSelect = document.getElementById('generacionSelect');
 const rollsBtn = document.getElementById('rolls');
+const pityBox = document.getElementById ('probabilidad');
 
 let pokemonActual = null;
 
@@ -66,6 +67,7 @@ function mostrarPokemon(pokemonActual) {
         console.error("Error guardando Pokémon:", res.error);
     } else {
         console.log(res.mensaje);
+        pityBox.innerHTML = `"${pityActual}"`;
         cargarUltimosPokemones();
     }
 })
@@ -107,6 +109,7 @@ rollsBtn.addEventListener('click', function () {
 
             // Guardamos el Pokémon que eligió el backend
             pokemonActual = res.pokemon;
+            pityActual = res.pity;
             mostrarSobre(pokemonActual);
         })
     // .catch(err => console.error("Error en la petición fetch:", err));
@@ -124,6 +127,12 @@ function cargarUltimosPokemones() {
             const contenedor = document.getElementById("pokemonesConseguidos");
             contenedor.innerHTML = "";
 
+            // Actualizar pity desde el backend
+            if (data.pity !== undefined) {
+                pityActual = data.pity;
+                pityBox.innerHTML = `"${pityActual}"`;
+            }
+
             data.pokemones.forEach(p => {
                 const div = document.createElement("div");
                 div.style.display = "inline-block";
@@ -138,7 +147,6 @@ function cargarUltimosPokemones() {
         })
         .catch(err => console.error("Error fetch ultimosPokemones:", err));
 }
-
 
 // Inicializa el sobre al cargar la página
 window.onload = () => {
