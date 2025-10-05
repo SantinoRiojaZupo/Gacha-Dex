@@ -6,6 +6,16 @@ define('VIEWS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 $page=$_GET['page'] ?? "main";
 
 switch ($page) {
+  case 'pokedex':
+    $vista=VIEWS_PATH . 'pokedex.php';
+    $vistaHeader = VIEWS_PATH . 'header.php';
+    $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
+    $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js";
+    $vistaBotonPerfil="../JS/botonPerfil.js";
+    $vistaPokedexFunciones="../JS/pokedex.js";
+    break;
   case 'main':
     $vistaHeader = VIEWS_PATH . 'header.php';
     $vista = VIEWS_PATH . 'main.php';

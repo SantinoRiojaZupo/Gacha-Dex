@@ -8,14 +8,14 @@ if (!$conexion) {
 if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
     $usuario = $_POST["Usuario"];
     $contraseña = $_POST["contraseña"];
-    $sql1 = "SELECT name_user FROM users WHERE Name_User = ?";
+    $sql1 = "SELECT Name_User FROM users WHERE Name_User = ?";
     $stmt = mysqli_prepare($conexion, $sql1);
     mysqli_stmt_bind_param($stmt, "s", $usuario);
     mysqli_stmt_execute($stmt);
     $res = mysqli_stmt_get_result($stmt);
     $fila = mysqli_fetch_assoc($res);
 
-    if ($fila && $usuario == $fila['name_user']) {
+    if ($fila && $usuario == $fila['Name_User']) {
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
     } else {
         // Hashear la contraseña antes de guardar

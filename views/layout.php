@@ -30,6 +30,7 @@
         ?>
 </main>
 <script src="<?= $vistaJsBoton ?>"></script> 
+<script src="<?=$vistaPokedexFunciones?>"></script>
 <script src="<?= $vistaBotonRegistro
 
 ?>" > </script>

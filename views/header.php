@@ -1,4 +1,5 @@
 <?php
+
 require_once "../config/conexion.php";
 ?>
 <div id="barraInicio">
@@ -8,6 +9,7 @@ require_once "../config/conexion.php";
         <li>Pagina Principal</li>
         <li>Registro</li>
         <li>INICIO DE SESION</li>
+        <li><a href="index.php?page=pokedex">pokedex</a></li>
     </ul>
 </div>
     <div class="header-right">
