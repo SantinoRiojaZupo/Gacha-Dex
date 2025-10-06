@@ -1,13 +1,15 @@
-function cambiarNombre() {
+function cambiarDescripcion() {
     console.log("click en perfil");
     nuevoNombre = document.querySelector('[name="nuevoNombre"]');
-    if(nuevoNombre){
+    bios = document.querySelector('[name="bios"]');
+    
+    if(nuevoNombre!=="" & bios!==""){
     fetch("../views/usuario-backend.php", {
         method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "nuevoNombre=" + encodeURIComponent(nuevoNombre.value)
+            body: "nuevoNombre=" + encodeURIComponent(nuevoNombre.value) + "&bios=" + encodeURIComponent(bios.value)
         }) //POST
             .then(res => res.json())
             .then(res => {
@@ -15,6 +17,7 @@ function cambiarNombre() {
                     // Muestra el error en la página
                     mostrarMensaje(res.msj, false);
                 } else {
+                    console.log("puto")
                     mostrarMensaje("Cambio de nombre exitoso.", true);
                 }
             });

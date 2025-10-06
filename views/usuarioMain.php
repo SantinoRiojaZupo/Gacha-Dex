@@ -10,8 +10,8 @@
       <p>visible para todos (obligatorio)</p>
       <input type="text" placeholder="Username" required name="nuevoNombre">
       <h2>Bio </h2>
-      <textarea rows="4" placeholder="Bio (opcional)"></textarea>
-      <button onclick="cambiarNombre()">Guardar cambios</button>
+      <textarea rows="4" placeholder="Bio (opcional)" name="bios"></textarea>
+      <button onclick="cambiarDescripcion()">Guardar cambios</button>
     </div>
 
     <div class="pokemons">

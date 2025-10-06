@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+   margin: 0;
   font-family: 'PokemonGB', monospace, sans-serif;
   background: url('../imagenes/pokedexfondo1.jpg') center/cover no-repeat;
   min-height: 100vh;
@@ -85,6 +85,7 @@ main {
 /* --- POKEMON CARD --- */
 .pokemon-card {
   height: 180px;
+  width: 100px; 
   border: 2px solid #555;
   border-radius: 12px;
   text-align: center;
@@ -117,12 +118,10 @@ main {
     flex-direction: column;
     align-items: center;
   }
-
-  .search-box input {
+  }
+ .search-box input {
     width: 90%;
   }
-
-  .main-title {
+    .main-title {
     font-size: 1.8em;
   }
-}

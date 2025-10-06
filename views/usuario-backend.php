@@ -6,9 +6,10 @@ if (!$conexion) {
     echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
     exit;
 }
-if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"])) {
+if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) && !empty($_POST["bios"])) {
     $usuario = $_POST["nuevoNombre"];
     $user_id = $_SESSION["user_id"];
+    $bios = $_POST["bios"];
 
     // Verificar si el nombre ya existe para otro usuario
     $sql1 = "SELECT name_user FROM users WHERE name_user = ? AND id_user != ?";
@@ -22,8 +23,8 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"])) {
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
     } else {
         // Actualizar el nombre del usuario actual
-        $sql = $conexion->prepare("UPDATE users SET name_user = ? WHERE id_user = ?");
-        $sql->bind_param("si", $usuario, $user_id);
+        $sql = $conexion->prepare("UPDATE users SET name_user = ?, Bio= ?  WHERE id_user = ?");
+        $sql->bind_param("ssi", $usuario, $bios, $user_id);
         if ($sql->execute()) {
             echo json_encode(["msj" => "Cambio de nombre exitoso."]);
         } else {
