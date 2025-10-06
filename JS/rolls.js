@@ -1,3 +1,4 @@
+
 const pokemonDisplay = document.getElementById('pokemonDisplay');
 const generacionSelect = document.getElementById('generacionSelect');
 const rollsBtn = document.getElementById('rolls');
@@ -46,6 +47,15 @@ function mostrarSobre(pokemonActual) {
 
 // Función para mostrar el Pokémon al abrir el sobre
 function mostrarPokemon(pokemonActual) {
+    pokemonDisplay.innerHTML = `
+    <div style="text-align:center;">
+        <img id="pokemonImg" crossorigin="anonymous"
+             src="${pokemonActual.Image}" 
+             alt="${pokemonActual.PokemonName}" 
+             style="width:120px;"><br>
+        <strong>${pokemonActual.PokemonName}</strong>
+    </div>
+`;
     
     rollsBtn.disabled = true;
     generacionSelect.disabled = true;
@@ -133,17 +143,23 @@ function cargarUltimosPokemones() {
                 pityBox.innerHTML = `"${pityActual}"`;
             }
 
-            data.pokemones.forEach(p => {
-                const div = document.createElement("div");
-                div.style.display = "inline-block";
-                div.style.margin = "5px";
-                div.style.textAlign = "center";
-                div.innerHTML = `
-                    <img src="${p.Image}" alt="${p.PokemonName}" style="width:50px;"><br>
-                    <small>${p.PokemonName}</small>
-                `;
-                contenedor.appendChild(div);
-            });
+data.pokemones.forEach(p => {
+    const div = document.createElement("div");
+    div.style.display = "inline-block";
+    div.style.margin = "5px";
+    div.style.textAlign = "center";
+
+    const id = p.Id_Pokedex; 
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+
+    div.innerHTML = `
+        <img src="${imageUrl}" alt="${p.PokemonName}" style="width:50px;"><br>
+        <small>${p.PokemonName}</small>
+    `;
+
+    contenedor.appendChild(div);
+});
+
         })
         .catch(err => console.error("Error fetch ultimosPokemones:", err));
 }

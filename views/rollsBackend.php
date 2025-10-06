@@ -109,6 +109,8 @@ if ($random < $probShiny) {
     $res = mysqli_stmt_get_result($stmt);
     $pokemon = mysqli_fetch_assoc($res);
 }
+$idPokemon = $pokemon['Id_Pokedex'];
+$pokemon['Image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$idPokemon}.png";
     
 
 
@@ -136,3 +138,6 @@ echo json_encode([
 ]);
 
 ?>
+
+
+

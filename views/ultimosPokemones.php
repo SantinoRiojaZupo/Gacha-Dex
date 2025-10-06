@@ -17,6 +17,7 @@ $userId = $_SESSION['user_id'];
 $sql = "
     SELECT 
         pc.Id_PokemonCatched, 
+        pc.Id_Pokedex, 
         d.PokemonName, 
         d.Image
     FROM pokemoncatched pc
@@ -45,7 +46,6 @@ $resPity = mysqli_stmt_get_result($stmtPity);
 $pityData = mysqli_fetch_assoc($resPity);
 $pityActual = intval($pityData['Pity']);
 
-// Devolver JSON
 echo json_encode([
     'ok'        => true,
     'pokemones' => $pokemones,
