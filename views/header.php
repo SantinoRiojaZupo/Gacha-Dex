@@ -16,7 +16,8 @@ require_once "../config/conexion.php";
     <?php if (isset($_SESSION['user_id'])): ?>
         <div class="user-profile">
             <button id="botonPerfil">Perfil</button>
-            <span>¡Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
+            <span class="saludo">¡Hola, <?php echo htmlspecialchars($_SESSION['username']); ?>!</span>
+
 
             <a href="logout.php">Cerrar Sesión</a>
 
