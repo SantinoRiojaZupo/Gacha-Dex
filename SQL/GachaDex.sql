@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2025 at 03:29 PM
+-- Generation Time: Oct 06, 2025 at 03:36 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -233,7 +233,8 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 CREATE TABLE `pokemoncatched` (
   `Id_PokemonCatched` int(11) NOT NULL,
   `Id_User` int(11) NOT NULL,
-  `Id_Pokedex` int(11) NOT NULL
+  `Id_Pokedex` int(11) NOT NULL,
+  `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
