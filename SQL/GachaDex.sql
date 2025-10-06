@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2025 at 01:24 PM
+-- Generation Time: Oct 06, 2025 at 03:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -46,7 +46,7 @@ CREATE TABLE `datapokemonall` (
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
-(1, 'Bulbasaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Tras nacer, crece alimentándose durante un tiempo de los nutrientes que contiene el bulbo de su lomo.', 'Overgrow', '', 'Chlorophyll', 'https://static.wikia.nocookie.net/pokemon/images/f/fb/0001Bulbasaur.png/revision/latest?cb=20240903144321%27,%27', 'Male/Female'),
+(1, 'Bulbasaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Tras nacer, crece alimentándose durante un tiempo de los nutrientes que contiene el bulbo de su lomo.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/f/fb/0001Bulbasaur.png', 'Male/Female'),
 (2, 'Ivysaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Cuanta más luz solar recibe, más aumenta su fuerza y más se desarrolla el capullo que tiene en el lomo.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/8/81/0002Ivysaur.png/250px-0002Ivysaur.png', 'Male/Female'),
 (3, 'Venusaur', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Puede convertir la luz del sol en energía. Por esa razón, es más poderoso en verano.', 'Overgrow', '', 'Chlorophyll', 'https://archives.bulbagarden.net/media/upload/thumb/6/6b/0003Venusaur.png/250px-0003Venusaur.png', 'Male/Female'),
 (4, 'Charmander', 'Fire', '', 'Water, Ground, Rock', 'La llama de su cola indica su fuerza vital. Si está débil, la llama arderá más tenue.', 'Blaze', '', 'Solar Power', 'https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png', 'Male/Female'),
@@ -196,7 +196,33 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (148, 'Dragonair', 'Dragon', '', 'Ice, Dragon, Fairy', 'Dicen que, cuando su cuerpo desprende un aura, el tiempo empieza a cambiar inmediatamente.', 'Shed Skin', '', 'Marvel Scale', 'https://archives.bulbagarden.net/media/upload/0/0d/0148Dragonair.png', 'Male/Female'),
 (149, 'Dragonite', 'Dragon', 'Flying', 'Ice(X4), Rock, Dragon, Fairy', 'Dicen que viven en una isla en algún lugar del océano que solo ellos habitan.', 'Inner Focus', '', 'Multiscale', 'https://archives.bulbagarden.net/media/upload/1/1c/0149Dragonite.png', 'Male/Female'),
 (150, 'Mewtwo', 'Psychic', '', 'Bug, Ghost, Dark', 'Su ADN es casi el mismo que el de Mew. Sin embargo, su tamaño y carácter son muy diferentes.', 'Pressure', '', 'Unnerve', 'https://archives.bulbagarden.net/media/upload/8/89/0150Mewtwo.png', 'N/A'),
-(151, 'Mew', 'Psychic', '', 'Bug, Ghost, Dark', 'Si se observa a través de un microscopio, puede distinguirse cuán corto, fino y delicado es el pelaje de este Pokémon.', 'Synchronize', '', '', 'https://archives.bulbagarden.net/media/upload/9/9a/0151Mew.png', 'N/A');
+(151, 'Mew', 'Psychic', '', 'Bug, Ghost, Dark', 'Si se observa a través de un microscopio, puede distinguirse cuán corto, fino y delicado es el pelaje de este Pokémon.', 'Synchronize', '', '', 'https://archives.bulbagarden.net/media/upload/9/9a/0151Mew.png', 'N/A'),
+(152, 'Chikorita', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Le encanta tomar el sol. Usa la hoja que tiene en la cabeza para localizar sitios cálidos.', 'Overgrow', '', 'Leaf Guard', 'https://archives.bulbagarden.net/media/upload/b/bc/0152Chikorita.png', 'Male/Female'),
+(153, 'Bayleef', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Su cuello desprende un aroma especiado que, por alguna razón, incita a combatir a quienes lo huelen.', 'Overgrow', '', 'Leaf Guard', 'https://archives.bulbagarden.net/media/upload/8/85/0153Bayleef.png', 'Male/Female'),
+(154, 'Meganium', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Estar a su lado produce una sensación de frescor similar a la de un relajante paseo por el bosque.', 'Overgrow', '', 'Leaf Guard', 'https://archives.bulbagarden.net/media/upload/8/8b/0154Meganium.png', 'Male/Female'),
+(155, 'Cyndaquil', 'Fire', '', 'Water, Ground, Rock', 'Suele estar encorvado. Si se enfada o se asusta, lanzará llamas por el lomo.', 'Blaze', '', 'Flash Fire', 'https://archives.bulbagarden.net/media/upload/9/97/0155Cyndaquil.png', 'Male/Female'),
+(156, 'Quilava', 'Fire', '', 'Water, Ground, Rock', 'Antes de empezar a luchar, le da la espalda al rival para alardear del alcance y la fuerza de sus llamas.', 'Blaze', '', 'Flash Fire', 'https://archives.bulbagarden.net/media/upload/3/3f/0156Quilava.png', 'Male/Female'),
+(157, 'Typhlosion', 'Fire', '', 'Water, Ground, Rock', 'Posee una técnica secreta y devastadora que consiste en atacar frotando su pelaje ardiente para provocar explosiones.', 'Blaze', '', 'Flash Fire', 'https://archives.bulbagarden.net/media/upload/1/13/0157Typhlosion.png', 'Male/Female'),
+(158, 'Totodile', 'Water', '', 'Grass, Electric', 'Sus desarrolladas y potentes mandíbulas pueden triturar cualquier cosa, por lo que hasta su propio Entrenador debe andarse con cuidado.', 'Torrent', '', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/f/f7/0158Totodile.png', 'Male/Female'),
+(159, 'Croconaw', 'Water', '', 'Grass, Electric', 'Sus colmillos están curvados hacia dentro, por lo que, una vez que muerde a una presa, esta no tiene forma de escapar.', 'Torrent', '', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/0/03/0159Croconaw.png', 'Male/Female'),
+(160, 'Feraligatr', 'Water', '', 'Grass, Electric', 'Tras morder a su víctima con sus enormes y potentes mandíbulas, agita la cabeza con fuerza para despedazarla.', 'Torrent', '', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/2/29/0160Feraligatr.png', 'Male/Female'),
+(161, 'Sentret', 'Normal', '', 'Fighting', 'Un Pokémon muy precavido. Su cola se mueve grácilmente, pero al ser tan musculosa resulta dura al tacto.', 'Run Away', 'Keen Eye', 'Frisk', 'https://archives.bulbagarden.net/media/upload/3/34/0161Sentret.png', 'Male/Female'),
+(162, 'Furret', 'Normal', '', 'Fighting', 'Cuida de sus crías en una madriguera larga y estrecha. Cuando crecen, las lleva al exterior y les enseña a vivir de forma independiente.', 'Run Away', 'Keen Eye', 'Frisk', '', 'Male/Female'),
+(163, 'Hoothoot', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Mece la cabeza a un ritmo constante gracias a su reloj interno, el cual no pierde su extraordinaria precisión en ningún momento.', 'Insomnia', 'Keen Eye', 'Tinted Lens', 'https://archives.bulbagarden.net/media/upload/3/38/0163Hoothoot.png', 'Male/Female'),
+(164, 'Noctowl', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Posee unos ojos especialmente adaptados que le permiten aprovechar incluso la luz más tenue para ver en la oscuridad con total claridad.', 'Insomnia', 'Keen Eye', 'Tinted Lens', 'https://archives.bulbagarden.net/media/upload/1/14/0164Noctowl.png', 'Male/Female'),
+(165, 'Ledyba', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Este Pokémon no soporta el frío. En Alola, sin embargo, se encuentra en su elemento y se lo puede ver revoloteando vivaracho por doquier.', 'Swarm', 'Early Bird', 'Rattled', 'https://archives.bulbagarden.net/media/upload/9/91/0165Ledyba.png', 'Male/Female'),
+(166, 'Ledian', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Se dice que los motivos que luce en el dorso guardan relación con las estrellas, aunque esta teoría sigue siendo todo un misterio.', 'Swarm', 'Early Bird', 'Iron Fist', 'https://archives.bulbagarden.net/media/upload/4/4f/0166Ledian.png', 'Male/Female'),
+(167, 'Spinarak', 'Bug', 'Poison', 'Fire, Flying, Psychic, Rock', 'Espera inmóvil hasta que se hace de noche, incluso cuando hay una presa atrapada en la telaraña que teje con su hilo.', 'Swarm', 'Insomnia', 'Sniper', 'https://archives.bulbagarden.net/media/upload/2/2b/0167Spinarak.png', 'Male/Female'),
+(168, 'Ariados', 'Bug', 'Poison', 'Fire, Flying, Psychic, Rock', 'Segrega de forma continua por el abdomen una hebra de un hilo especial cuyo extremo conecta con el nido.', 'Swarm', 'Insomnia', 'Sniper', 'https://archives.bulbagarden.net/media/upload/5/5c/0168Ariados.png', 'Male/Female'),
+(169, 'Crobat', 'Poison', 'Flying', 'Electric, Ice, Psychic, Rock', 'Sus patas se han convertido en alas. Se lanza sobre su presa en un vuelo silencioso a alta velocidad y le clava los colmillos en la nuca.', 'Inner Focus', '', 'Infiltrator', 'https://archives.bulbagarden.net/media/upload/3/35/0169Crobat.png', 'Male/Female'),
+(170, 'Chinchou', 'Water', 'Electric', 'Grass, Ground', 'Vive en lo más profundo del océano, donde ya no alcanza la luz. Se comunica con los de su especie emitiendo luces con las antenas.', 'Volt Absorb', 'Illuminate', 'Water Absorb', 'https://archives.bulbagarden.net/media/upload/c/ca/0170Chinchou.png', 'Male/Female'),
+(171, 'Lanturn', 'Water', 'Electric', 'Grass, Ground', 'Las esferas luminiscentes con las que atrae a sus presas son en realidad el resultado de la mutación parcial de su aleta dorsal.', 'Volt Absorb', 'Illuminate', 'Water Absorb', 'https://archives.bulbagarden.net/media/upload/0/09/0171Lanturn.png', 'Male/Female');
+INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+(172, 'Pichu', 'Electric', '', 'Ground', 'No se le da muy bien el almacenamiento de electricidad. A la mínima, descarga energía sin darse cuenta.', 'Static', '', 'Lightning Rod', 'https://archives.bulbagarden.net/media/upload/f/f3/0172Pichu.png', 'Male/Female'),
+(173, 'Cleffa', 'Fairy', '', 'Poison, Steel', 'Se dice que, cuando este Pokémon observa atentamente el cielo nocturno durante una lluvia de estrellas, está rememorando su hogar natal.', 'Cute Charm', 'Magic Guard', 'Friend Guard', 'https://archives.bulbagarden.net/media/upload/7/73/0173Cleffa.png', 'Male/Female'),
+(174, 'Igglybuff', 'Normal', 'Fairy', 'Poison, Steel', 'Su cuerpo suave y elástico desprende un aroma ligeramente dulce. Cuando empieza a botar, no puede parar.', 'Cute Charm', 'Competitive', 'Friend Guard', 'https://archives.bulbagarden.net/media/upload/0/06/0174Igglybuff.png', 'Male/Female'),
+(175, 'Togepi', 'Fairy', '', 'Poison, Steel', 'El cascarón parece estar lleno de alegría. Dicen que trae buena suerte si se le trata con cariño.', 'Hustle', 'Serene Grace', 'Super Luck', 'https://archives.bulbagarden.net/media/upload/0/01/0175Togepi.png', 'Male/Female'),
+(176, 'Togetic', 'Fairy', 'Flying', 'Electric, Ice, Poison, Rock, Steel', 'Dicen que se le aparece a la gente de buen corazón y la inunda de felicidad.', 'Hustle', 'Serene Grace', 'Super Luck', 'https://archives.bulbagarden.net/media/upload/3/3b/0176Togetic.png', 'Male/Female');
 
 -- --------------------------------------------------------
 
@@ -252,6 +278,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `datapokemonall`
+--
+ALTER TABLE `datapokemonall`
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 
 --
 -- AUTO_INCREMENT for table `pokemoncatched`
