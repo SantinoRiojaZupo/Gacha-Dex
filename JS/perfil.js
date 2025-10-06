@@ -1,7 +1,7 @@
 function cambiarDescripcion() {
     console.log("click en perfil");
     nuevoNombre = document.querySelector('[name="nuevoNombre"]');
-    bios = document.querySelector('[name="bios"]');
+    bios = document.getElementById('bios');
     
     if(nuevoNombre!=="" & bios!==""){
     fetch("../views/usuario-backend.php", {
@@ -17,7 +17,6 @@ function cambiarDescripcion() {
                     // Muestra el error en la página
                     mostrarMensaje(res.msj, false);
                 } else {
-                    console.log("puto")
                     mostrarMensaje("Cambio de nombre exitoso.", true);
                 }
             });

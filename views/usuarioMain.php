@@ -10,7 +10,7 @@
       <p>visible para todos (obligatorio)</p>
       <input type="text" placeholder="Username" required name="nuevoNombre">
       <h2>Bio </h2>
-      <textarea rows="4" placeholder="Bio (opcional)" name="bios"></textarea>
+      <textarea rows="4" placeholder="Bio (opcional)" id="bios"></textarea>
       <button onclick="cambiarDescripcion()">Guardar cambios</button>
     </div>
 
