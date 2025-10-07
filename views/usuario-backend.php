@@ -26,6 +26,9 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) && !empty($_PO
         $sql = $conexion->prepare("UPDATE users SET name_user = ?, Bio= ?  WHERE id_user = ?");
         $sql->bind_param("ssi", $usuario, $bios, $user_id);
         if ($sql->execute()) {
+            $_SESSION['username'] = $usuario;
+            //print_r($_SESSION);
+            session_write_close();
             echo json_encode(["msj" => "Cambio de nombre exitoso."]);
         } else {
             echo json_encode(["error" => "Fallo la consulta", "msj" => "Fallo la consulta"]);
@@ -37,4 +40,3 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) && !empty($_PO
 } else {
     echo json_encode(["error" => "Faltan datos", "msj" => "No se recibió el nombre o el usuario no está logueado"]);
 }
-?>
