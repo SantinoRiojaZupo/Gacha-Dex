@@ -1,5 +1,10 @@
  <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
  <div class="login-container"></div>
+   <div id=inventario>
+    <a href="index.php?page=thiago">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfqQz8O3t1-dAgYt3KkRNkgwTbdshrkU2BQ&s" alt="mateo chompi">
+    </a>
+    </div>
  <div class="perfil-container">
    <div class="perfil-info">
      <h2>Información del Usuario</h2>
@@ -31,23 +36,4 @@
      <div class="sprite-box">Sprite tu pkmn4</div>
    </div>
    <script src="../JS/perfil.js"></script>
- </div>
-
- <div class="pokemons">
-   <div>
-     <h3>Tus Shiny</h3>
-     <p>[Espacio vacío para futuros shiny]</p>
-   </div>
-   <div>
-     <h3>Pokémon Favoritos</h3>
-   </div>
- </div>
-
- <div class="sidebar">
-   <div class="sprite-box">Sprite tu pkmn1</div>
-   <div class="sprite-box">Sprite tu pkmn2</div>
-   <div class="sprite-box">Sprite tu pkmn3</div>
-   <div class="sprite-box">Sprite tu pkmn4</div>
- </div>
- <script src="../JS/perfil.js"></script>
  </div>
