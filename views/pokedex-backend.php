@@ -19,6 +19,7 @@ $idusuario = $_SESSION['user_id'];
 // y marcar cuáles el usuario ya atrapó
 $sql1= "
 SELECT 
+datapokemonall.Id_Pokedex,
     datapokemonall.PokemonName,        -- Nombre del Pokémon
     datapokemonall.image,              -- URL de la imagen del Pokémon
     CASE 
@@ -38,11 +39,15 @@ $result=mysqli_query($conexion, $sql1);
 
 // Array para almacenar los resultados de la consulta
 $arr=[];
+$idpokedex=0;
 
 // Si la consulta devuelve al menos una fila
 if(mysqli_num_rows($result) > 0){
     // Recorre todas las filas y las agrega al array
     while($fila=mysqli_fetch_assoc($result)){
+        $idpokedex=$fila['Id_Pokedex'];
+        $fila['image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+
         $arr[]=$fila;
     }
 }

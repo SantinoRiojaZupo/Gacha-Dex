@@ -77,15 +77,15 @@ main {
 /* --- INVENTORY GRID --- */
 .inventory {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
   justify-items: center;
 }
 
 /* --- POKEMON CARD --- */
 .pokemon-card {
   height: 180px;
-  width: 100px; 
+  width: 200px; 
   border: 2px solid #555;
   border-radius: 12px;
   text-align: center;

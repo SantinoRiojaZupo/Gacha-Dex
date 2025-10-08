@@ -7,7 +7,7 @@ fetch('../views/pokedex-backend.php')
         inventory.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevos elementos
  
         if (!Array.isArray(data)) {
-                inventory.innerHTML = '<div>Error al cargar pokedex</div>';
+                inventory.innerHTML = '<div>NO ESTAS LOGUEADOOOOOOOO</div>';
                 return;
             }
 
