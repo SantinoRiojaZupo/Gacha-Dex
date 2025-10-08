@@ -6,6 +6,7 @@ define('VIEWS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 $page=$_GET['page'] ?? "main";
 
 switch ($page) {
+
   case 'pokedex':
     $vista=VIEWS_PATH . 'pokedex.php';
     $vistaHeader = VIEWS_PATH . 'header.php';
@@ -55,6 +56,12 @@ switch ($page) {
     $vistaHeader = VIEWS_PATH . 'usuarioHeader.php';
 
     break;
+      case 'inventario':
+    $vista=VIEWS_PATH . 'inventario.php';
+    $vistaHeader = VIEWS_PATH . 'inventarioHeader.php';
+
+    break;
+
 
     case 'creadores':
     $vista='creadores.php';

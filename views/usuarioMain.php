@@ -1,7 +1,7 @@
  <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
  <div class="login-container"></div>
    <div id=inventario>
-    <a href="index.php?page=thiago">
+    <a href="index.php?page=inventario">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfqQz8O3t1-dAgYt3KkRNkgwTbdshrkU2BQ&s" alt="mateo chompi">
     </a>
     </div>
