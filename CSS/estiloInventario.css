@@ -2,8 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'PokemonGB', monospace, sans-serif;
-  background: linear-gradient(180deg, #001f3f, #0074D9);
-  color: white;
+  /* background: linear-gradient(180deg, #001f3f, #0074D9); */
+  color: rgb(255, 255, 255);
+    background: linear-gradient(
+    to bottom,
+    #000000 0 35%,   /* parte superior negra */
+    #f3c95e 35% 45%, /* franja amarilla */
+    #ffffff 45% 100% /* parte inferior blanca */
+  );
 }
 
 /* HEADER PRINCIPAL */
@@ -72,18 +78,6 @@ body {
   transform: scale(1.05);
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(
-    to bottom,
-    #000000 0 35%,   /* parte superior negra */
-    #f3c95e 35% 45%, /* franja amarilla */
-    #ffffff 45% 100% /* parte inferior blanca */
-  );
-}
-
 header {
   text-align: center;
   padding: 20px;
@@ -121,7 +115,7 @@ header {
 }
 
 h1 {
-  margin: 0;
+  margin-bottom: 70px;
 }
 
 .contenedores {
@@ -187,7 +181,7 @@ main {
 main h1 {
   font-size: 28px;
   background: linear-gradient(to right, #a0e7e5, #b4f8c8);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   color: transparent;
 }
 
