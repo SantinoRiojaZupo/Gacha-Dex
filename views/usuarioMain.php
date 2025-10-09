@@ -1,4 +1,22 @@
- <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
+<?php
+require_once "../config/conexion.php";
+$bios = "";
+if (!empty($_SESSION['user_id'])) {
+  $user_id = $_SESSION['user_id'];
+  $sql = "SELECT Bio FROM users WHERE id_user = ?";
+  if ($stmt = $conexion->prepare($sql)) {
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $stmt->bind_result($bio_db);
+    if ($stmt->fetch()) {
+      $bios = $bio_db;
+    }
+    $stmt->close();
+  }
+  $conexion->close();
+}
+?>
+<link rel="stylesheet" href="../CSS/estilosUsuarios.css">
  <div class="login-container"></div>
    <div id=inventario>
     <a href="index.php?page=inventario">
@@ -15,7 +33,7 @@
      <p>visible para todos (obligatorio)</p>
      <input type="text" placeholder=<?php echo htmlspecialchars($_SESSION['username']); ?> required name="nuevoNombre">
      <h2>Bio </h2>
-     <textarea rows="4" value="" id="bios"></textarea>
+  <textarea rows="4" id="bios"><?php echo htmlspecialchars($bios); ?></textarea>
      <button onclick="cambiarDescripcion()">Guardar cambios</button>
    </div>
 

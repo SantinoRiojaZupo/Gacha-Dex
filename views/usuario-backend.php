@@ -6,7 +6,10 @@ if (!$conexion) {
     echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
     exit;
 }
-if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) && !empty($_POST["bios"])) {
+if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_POST["bios"])) {
+    if(empty($_POST["nuevoNombre"]) && !empty($_POST["bios"])){
+        $_POST["nuevoNombre"] = $_SESSION['username'];
+    }
     $usuario = $_POST["nuevoNombre"];
     $user_id = $_SESSION["user_id"];
     $bios = $_POST["bios"];
