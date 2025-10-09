@@ -84,7 +84,7 @@
             width: 100px;
             height: 40px;
             position: absolute;
-            left: 20px;
+            left: 100px;
             top: 20px;
             text-align: center;
             border-radius: 10px;
@@ -215,4 +215,8 @@
 .center-box:has(#rolls) {
     background: transparent;
     box-shadow: none;
+}
+.logo-img{ 
+    width: 82px;
+    height: auto;
 }

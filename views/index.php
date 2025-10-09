@@ -53,12 +53,19 @@ switch ($page) {
 
     case 'perfil':
     $vista=VIEWS_PATH . 'usuarioMain.php';
-    $vistaHeader = VIEWS_PATH . 'usuarioHeader.php';
+    $vistaHeader = VIEWS_PATH . 'header.php';
+      $vistaJsBoton="/Gacha-Dex/JS/botonMenu.js";
+    $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
+    $registroFunciones="../JS/registro-js.js";
+    $vistaBotonLogin="../JS/botonLogin.js";
+    $vistaBotonPerfil="../JS/botonPerfil.js";
+    
 
     break;
       case 'inventario':
     $vista=VIEWS_PATH . 'inventario.php';
     $vistaHeader = VIEWS_PATH . 'inventarioHeader.php';
+  
 
     break;
 
