@@ -14,6 +14,7 @@ require_once "../config/conexion.php";
         <li>Registro</li>
         <li>INICIO DE SESION</li>
         <li><a href="index.php?page=pokedex">pokedex</a></li>
+        <li><a href="index.php?page=chat">Chat</a></li>
     </ul>
     
 </div>
