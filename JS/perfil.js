@@ -25,11 +25,11 @@ function cambiarDescripcion() {
     }
 };
 function mostrarMensaje(mensaje, exito) {
-    const container = document.querySelector(".login-container");
+    const container = document.querySelector(".login-container"); //esperen un momento
     if (!container) return;
     // Elimina mensajes anteriores
     const oldMsg = container.querySelector(".success-message, .error-message");
-    if (oldMsg) oldMsg.remove();
+    if (oldMsg) oldMsg.remove(); 
     // Crea y agrega el nuevo mensaje
     const div = document.createElement("div");
     div.className = exito ? "success-message" : "error-message";

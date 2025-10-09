@@ -21,7 +21,7 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) && !empty($_PO
 
     if ($fila) {
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
-    } else {
+    } else {//
         // Actualizar el nombre del usuario actual
         $sql = $conexion->prepare("UPDATE users SET name_user = ?, Bio= ?  WHERE id_user = ?");
         $sql->bind_param("ssi", $usuario, $bios, $user_id);
