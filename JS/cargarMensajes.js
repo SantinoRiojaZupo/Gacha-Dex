@@ -12,14 +12,14 @@ fetch('chatCargar.php?receptor=' + receptor)
     data.forEach(mensaje => {
         
             const mensajeDiv = document.createElement("div");
-            if(m.idReceptor === receptor){
-                const mensajeDiv = document.createElement('div');
-                mensajeDiv.classList.add('message-left')
-            }
-            else {
+            if(mensaje.idEmisor === usuarioActual){
+                
                 mensajeDiv.classList.add('message-right')
             }
-             mensajeDiv.textContent = m.message;
+            else {
+                mensajeDiv.classList.add('message-left')
+            }
+             mensajeDiv.textContent = mensaje.message;
              contenedorMensaje.appendChild(mensajeDiv);
             
         

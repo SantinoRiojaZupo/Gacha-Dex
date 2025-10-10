@@ -15,7 +15,7 @@ $emisor = $_SESSION['user_id'];
 $receptor = $_POST['receptor'];
 $mensaje = $_POST['mensaje'];
 
-$sql= "INSERT INTO mensajes (emisor, receptor, mensaje) VALUES (?, ?, ?)";
+$sql= "INSERT INTO mensajes (idEmisor, idReceptor, message) VALUES (?, ?, ?)";
 $stmt= mysqli_prepare($conexion, $sql);
 mysqli_stmt_bind_param($stmt, "iis", $emisor, $receptor, $mensaje);
 if (mysqli_stmt_execute($stmt)) {
@@ -23,6 +23,5 @@ if (mysqli_stmt_execute($stmt)) {
 } else {
   echo json_encode(["error" => "Error al enviar el mensaje"]);
 }
-
 
 ?>

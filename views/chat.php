@@ -15,8 +15,8 @@
 
   <div class="container">
     <div class="users-list">
-      <div id="1" class="user-item">Usuario 1</div>
-      <div  class="user-item">Usuario 2</div>
+      <div id="5" class="user-item">Usuario 1</div>
+      <div id="4" class="user-item">Usuario 2</div>
       <div  class="user-item">Usuario 3</div>
       <div  class="user-item">Usuario 4</div>
       <div  class="user-item">Usuario 5</div>
@@ -48,5 +48,8 @@
       </div>
     </div>
   </div>
+  <script> const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
+  
+  </script>
 </body>
 </html>
