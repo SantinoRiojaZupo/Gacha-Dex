@@ -32,7 +32,12 @@ require_once "../config/conexion.php";
     <button id="botonRegister">Registrate!</button>
     <button id="botonLogin">Inicie sesion!</button>
     <?php endif; ?>
-    <input type="search" id="buscadorPokemon" placeholder="Buscar...">
-    <button id="buscarPokemon">Busca ya!</button>
+    <div class="busqueda">
+    <input type="search" id="buscadorUsuario" placeholder="Buscar...">
+    <ul id="resultadosBusqueda">
+
+    </ul>
+    </div>
+    <button id="buscarUsuario">Busca ya!</button>
 </div>
 </div>

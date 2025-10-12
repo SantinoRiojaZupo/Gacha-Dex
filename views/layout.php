@@ -33,6 +33,7 @@
 <script src="<?=$vistaPokedexFunciones?>"></script>
 <script src="<?=$vistaChatCargar?>"></script>
 <script src="<?=$vistaChatMandar?>"></script>
+<script src="<?=$vistaBuscarUsuario?>"></script>
 <script src="<?= $vistaBotonRegistro
 
 ?>" > </script>

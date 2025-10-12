@@ -35,6 +35,7 @@ switch ($page) {
     $registroFunciones="../JS/registro-js.js";
     $vistaBotonLogin="../JS/botonLogin.js";
     $vistaBotonPerfil="../JS/botonPerfil.js";
+    $vistaBuscarUsuario="../JS/buscarUsuario.js";
     break; 
 
     case 'registro':
