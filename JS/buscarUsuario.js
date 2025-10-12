@@ -34,7 +34,8 @@ document.getElementById('buscarUsuario').addEventListener('click', () => {
          data.forEach(element => {
             const li = document.createElement('li');
             li.classList.add('resultado')
-            li.innerHTML = `<a href="#">${element.Name_User}</a>`;
+            
+            li.innerHTML = `<a href="index.php?page=perfil&id=${element.Id_User}">${element.Name_User}</a>`; //aca esta lo q dije
             resultados.appendChild(li)
             
          });
