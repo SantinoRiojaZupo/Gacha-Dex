@@ -98,7 +98,7 @@ rollsBtn.addEventListener('click', function () {
     const gen = generacionSelect.value;
             pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
 
-    fetch("/Gacha-Dex/rollsBackend.php", {
+    fetch("/Gacha-Dex/rolls.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: "gen=" + encodeURIComponent(gen)

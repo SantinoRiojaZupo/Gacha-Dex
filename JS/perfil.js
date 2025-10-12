@@ -4,7 +4,7 @@ function cambiarDescripcion() {
     bios = document.getElementById('bios');
     
     if(nuevoNombre!=="" & bios!==""){
-    fetch("/Gacha-Dex/usuario-backend.php", {
+    fetch("/Gacha-Dex/usuario.php", {
         method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"

@@ -1,5 +1,5 @@
 function acutalizarPokedex() {
-fetch('/Gacha-Dex/pokedex-backend.php')
+fetch('/Gacha-Dex/pokedex.php')
     .then(response => response.json())
     .then(data => {
         console.log(data);
