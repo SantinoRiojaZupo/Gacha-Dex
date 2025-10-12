@@ -1,3 +1,4 @@
+
 resultados=document.getElementById('resultadosBusqueda');
 resultados.classList.add('resultadosInvisibles');
 
@@ -19,7 +20,7 @@ document.getElementById('buscarUsuario').addEventListener('click', () => {
 
     if (query.length > 0) {
         
-        fetch('buscarUsuario.php?query=' + encodeURIComponent(query))
+        fetch('../buscarUsuario.php?query=' + encodeURIComponent(query))
         .then(res => res.json())
         .then(data => {
             if (!Array.isArray(data)) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../config/conexion.php";
+require_once __DIR__ . '/config/conexion.php';
 header('Content-Type: application/json');
 
 
@@ -15,10 +15,10 @@ $userid = $_SESSION['user_id'];
 $receptorid = $_GET['receptor'] ?? null;
 $mensajes = [];
 
-$sql = "SELECT idEmisor, idReceptor, message, timestamp
-        FROM mensajes
-        WHERE (idEmisor = ? AND idReceptor = ?)
-           OR (idEmisor = ? AND idReceptor = ?)
+$sql = "SELECT sender_id, receiver_id, message, timestamp
+        FROM messages
+        WHERE (sender_id = ? AND receiver_id = ?)
+           OR (sender_id = ? AND receiver_id = ?)
         ORDER BY timestamp ASC";
 
         $stmt=mysqli_prepare($conexion, $sql);

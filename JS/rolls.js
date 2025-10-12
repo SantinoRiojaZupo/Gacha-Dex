@@ -66,7 +66,7 @@ function mostrarPokemon(pokemonActual) {
             <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
-    fetch("../views/guardarPokemones.php", {
+    fetch("/Gacha-Dex/guardarPokemones.php", {
     method: "POST",
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     body: "Id_Pokedex=" + encodeURIComponent(pokemonActual.Id_Pokedex)
@@ -98,7 +98,7 @@ rollsBtn.addEventListener('click', function () {
     const gen = generacionSelect.value;
             pokemonDisplay.innerHTML = `<img id="sobreImg" src="../imagenes/sobreCerrado.png" alt="Sobre Cerrado" style="width:120px;cursor:pointer;">`;
 
-    fetch("../views/rollsBackend.php", {
+    fetch("/Gacha-Dex/rollsBackend.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: "gen=" + encodeURIComponent(gen)
@@ -126,7 +126,7 @@ rollsBtn.addEventListener('click', function () {
 });
 
 function cargarUltimosPokemones() {
-    fetch("../views/ultimosPokemones.php")
+    fetch("/Gacha-Dex/ultimosPokemones.php")
         .then(res => res.json())
         .then(data => {
             if (!data.ok) {

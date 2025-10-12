@@ -1,8 +1,9 @@
+
 let receptor = null;
 function cargarMensajes() {
 if (!receptor) return;
 
-fetch('chatCargar.php?receptor=' + receptor)
+fetch('../chatCargar.php?receptor=' + receptor)
 .then(response => response.json())
 .then (data => {
     
@@ -12,7 +13,7 @@ fetch('chatCargar.php?receptor=' + receptor)
     data.forEach(mensaje => {
         
             const mensajeDiv = document.createElement("div");
-            if(mensaje.idEmisor === usuarioActual){
+            if(mensaje.sender_id === usuarioActual){
                 
                 mensajeDiv.classList.add('message-right')
             }

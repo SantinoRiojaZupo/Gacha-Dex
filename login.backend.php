@@ -1,7 +1,7 @@
 <?php
 session_start();
 header('Content-Type: application/json');
-require_once "../config/conexion.php";
+require_once __DIR__ . '/config/conexion.php';
 
 if (!empty($_POST["UsuarioLogin"]) && !empty($_POST["contraseñaLogin"])) {
     $usuario = $_POST["UsuarioLogin"];

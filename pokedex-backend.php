@@ -3,7 +3,7 @@
 session_start();
 
 // Incluye la conexión a la base de datos
-require_once("../config/conexion.php");
+require_once __DIR__ . '/config/conexion.php';
 
 // Verifica si el usuario está logueado
 if (!isset($_SESSION['user_id'])) {

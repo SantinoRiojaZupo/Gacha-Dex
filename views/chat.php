@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <link rel="stylesheet" href="../CSS/chat.css" />
@@ -48,7 +49,7 @@
       </div>
     </div>
   </div>
-  <script> const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
+  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
   
   </script>
 </body>

@@ -8,7 +8,7 @@ function registrarse(){
             console.log("Las contraseñas no coinciden");
             return;
         }
-        fetch("../views/registro-backend.php", {
+        fetch("/Gacha-Dex/registro-backend.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"

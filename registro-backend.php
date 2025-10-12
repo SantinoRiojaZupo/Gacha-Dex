@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require_once "../config/conexion.php";
+require_once __DIR__ . '/config/conexion.php';
 if (!$conexion) {
     echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
     exit;
