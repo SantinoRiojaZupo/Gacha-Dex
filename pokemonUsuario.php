@@ -9,8 +9,8 @@ if (!$conexion) {
 $user_id=$_SESSION["user_id"];
  $sql1= "
 SELECT datapokemonall.Id_Pokedex,datapokemonall.PokemonName,datapokemonall.image, CASE 
-WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN END AS tiene
-FROM datapokemonall INNER JOIN pokemoncatched ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex
+WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN 1 ELSE 0 END AS tiene
+FROM datapokemonall LEFT JOIN pokemoncatched ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex
  AND pokemoncatched.Id_User = $user_id GROUP BY datapokemonall.Id_Pokedex ORDER BY datapokemonall.Id_Pokedex;";
 $result=mysqli_query($conexion, $sql1);
 
@@ -19,7 +19,7 @@ $idpokedex=0;
 if(mysqli_num_rows($result) > 0){
     while($fila=mysqli_fetch_assoc($result)){
         $idpokedex=$fila['Id_Pokedex'];
-        $fila['image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+        $fila['Image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
 
         $arr[]=$fila;
     }

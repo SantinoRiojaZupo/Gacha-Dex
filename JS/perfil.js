@@ -44,11 +44,12 @@ fetch('/Gacha-Dex/pokemonUsuario.php')
         const inventory = document.getElementById("sidebar");
         inventory.innerHTML = '';
         data.forEach(pokemon => {
+            let sidebar = document.getElementById("sidebar");
             const pokemonDiv = document.createElement('div');
             pokemonDiv.classList.add("sprite-box");
             if (pokemon.tiene == 1) {
                 pokemonDiv.innerHTML = `
-                <img src="${pokemon.image}" alt="${pokemon.PokemonName}">
+                <img src="${pokemon.Image}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>
                 <button onclick="agregar_o_eliminarDeFavoritos(pokemon.id_Pokedex)">♡</button>
                 `
@@ -57,7 +58,7 @@ fetch('/Gacha-Dex/pokemonUsuario.php')
             else{
                 pokemonDiv.innerHTML=`???`
             }
-            inventory.appendChild(pokemonDiv);
+            sidebar.appendChild(pokemonDiv);
         })
 }
     )
