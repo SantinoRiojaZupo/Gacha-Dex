@@ -17,7 +17,8 @@ $userId = $_SESSION['user_id'];
 $sql = "
     SELECT 
         pc.Id_PokemonCatched, 
-        pc.Id_Pokedex, 
+        pc.Id_Pokedex,
+        pc.Is_Shiny, 
         d.PokemonName, 
         d.Image
     FROM pokemoncatched pc

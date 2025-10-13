@@ -38,7 +38,7 @@ if (!isset($_POST['Id_Pokedex']) || !is_numeric($_POST['Id_Pokedex'])) {
 
 $idUser = (int) $_SESSION['user_id'];
 $idPokedex = (int) $_POST['Id_Pokedex'];
-$is_Shiny = (int) $_POST['Is_Shiny']
+$is_Shiny = (int) $_POST['Is_Shiny'];
 
 // 3) insertar
 

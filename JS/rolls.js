@@ -71,7 +71,8 @@ function mostrarPokemon(pokemonActual) {
     method: "POST",
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     body: "Id_Pokedex=" + encodeURIComponent(pokemonActual.Id_Pokedex) + 
-    "&Is_Shiny=" + (pokemonActual.Is_Shiny)
+  " &Is_Shiny=" + (pokemonActual.Is_Shiny ? 1 : 0)
+
 })
 .then(res => res.json())
 .then(res => {
@@ -152,8 +153,13 @@ data.pokemones.forEach(p => {
     div.style.textAlign = "center";
 
     const id = p.Id_Pokedex; 
-    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-
+    const imgaeUrl=null
+    if(p.Is_Shiny==1){
+         imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${id}.png`;
+    }
+    else{
+         imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+    }
     div.innerHTML = `
         <img src="${imageUrl}" alt="${p.PokemonName}" style="width:50px;"><br>
         <small>${p.PokemonName}</small>

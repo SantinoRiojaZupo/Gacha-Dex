@@ -3,12 +3,13 @@ require_once __DIR__ . '/config/conexion.php';
 session_start();
 header('Content-Type: application/json');
 
+// 🧩 Verificar sesión
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(['error' => 'Inicia Sesión']);
     exit;
 }
 
-// Rangos por generación
+// 🧩 Rangos por generación
 $rangosGen = [
     1 => [1, 151],
     2 => [152, 251],
@@ -34,7 +35,7 @@ $legendariosPorGen = [
     9 => [984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010]
 ];
 
-// Obtener generación seleccionada
+// 🧩 Obtener generación seleccionada
 $gen = isset($_POST['gen']) ? intval($_POST['gen']) : 0;
 if ($gen === 0) {
     $from = 1;
@@ -43,7 +44,7 @@ if ($gen === 0) {
     [$from, $to] = $rangosGen[$gen];
 }
 
-// Obtener pity del usuario
+// 🧩 Obtener pity del usuario
 $sql = "SELECT Pity FROM users WHERE Id_User = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bind_param("i", $_SESSION['user_id']);
@@ -53,55 +54,35 @@ $pity = intval($stmt->get_result()->fetch_assoc()['Pity'] ?? 0);
 // --- Probabilidades ---
 $rangeSize = $to - $from + 1;
 $pityFactor = $rangeSize / 1025;
-$probShinyBase = 0.01;
-$probLegendarioBase = 0.03;
+$probShinyBase = 0.01;         // 3% base
+$probLegendarioBase = 0.03;    // 3% base
 $probShiny = $probShinyBase + ($pity * 0.001 * $pityFactor);
 $probLegendario = $probLegendarioBase + ($pity * 0.002 * $pityFactor);
 
-$random = mt_rand() / mt_getrandmax();
-$resultado = "normal";
-$idPokemon = null;
+// --- Calcular banderas por separado ---
+$randomShiny = mt_rand() / mt_getrandmax();
+$randomLegend = mt_rand() / mt_getrandmax();
 
-// --- Sorteo ---
-$isShiny = $random < $probShiny;
-$isLegendario = false;
+$isShiny = $randomShiny < $probShiny;
+$isLegendario = $randomLegend < $probLegendario;
 
-if ($isShiny) {
-    // Decide si además es legendario
-    $randomLegend = mt_rand() / mt_getrandmax();
-    if ($randomLegend < $probLegendario) {
-        $isLegendario = true;
-    }
-} else {
-    // No shiny, solo legendario posible
-    if ($random < ($probShiny + $probLegendario)) {
-        $isLegendario = true;
-    }
-}
-
-// Asignar Pokémon según resultado
+// --- Asignar Pokémon según resultado ---
 if ($isLegendario) {
     $resultado = $isShiny ? "shiny_legendario" : "legendario";
-    $listaLegend = ($gen !== 0 && isset($legendariosPorGen[$gen])) 
-        ? $legendariosPorGen[$gen] 
+    $listaLegend = ($gen !== 0 && isset($legendariosPorGen[$gen]))
+        ? $legendariosPorGen[$gen]
         : array_merge(...array_values($legendariosPorGen));
     $idPokemon = $listaLegend[array_rand($listaLegend)];
     $pity = 0;
-
-} elseif ($isShiny) {
-    $resultado = "shiny";
-    $idPokemon = mt_rand($from, $to);
-    $Is_Shiny = $pokemon['Is_Shiny'] = 1;
-    $pity = 0; // ✅ Reinicia pity aunque sea solo shiny
-
 } else {
-    // Pokémon normal (excluye legendarios)
+    // No legendario → cualquier Pokémon normal del rango
     $listaLegend = array_merge(...array_values($legendariosPorGen));
     $placeholders = implode(',', array_fill(0, count($listaLegend), '?'));
     $sql = "SELECT Id_Pokedex FROM datapokemonall 
             WHERE Id_Pokedex BETWEEN ? AND ? 
             AND Id_Pokedex NOT IN ($placeholders)
             ORDER BY RAND() LIMIT 1";
+
     $params = array_merge([$from, $to], $listaLegend);
     $types = str_repeat('i', count($params));
     $stmt = $conexion->prepare($sql);
@@ -110,21 +91,21 @@ if ($isLegendario) {
     $res = $stmt->get_result();
     $pokemonData = $res->fetch_assoc();
 
-    // Fallback
     if (!$pokemonData) {
         $stmt = $conexion->prepare("SELECT Id_Pokedex FROM datapokemonall WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1");
         $stmt->bind_param("ii", $from, $to);
         $stmt->execute();
         $pokemonData = $stmt->get_result()->fetch_assoc();
     }
+
     $idPokemon = $pokemonData['Id_Pokedex'] ?? mt_rand($from, $to);
-    $pity++;
+    $resultado = $isShiny ? "shiny" : "normal";
+    $pity = $isShiny ? 0 : $pity + 1;
 }
 
-
 // --- Obtener datos del Pokémon ---
-$stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, Is_Shiny, image FROM datapokemonall WHERE Id_Pokedex = ?");
-$stmt->bind_param("ii", $idPokemon, $isShiny);
+$stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, image FROM datapokemonall WHERE Id_Pokedex = ?");
+$stmt->bind_param("i", $idPokemon);
 $stmt->execute();
 $pokemon = $stmt->get_result()->fetch_assoc();
 
@@ -133,14 +114,19 @@ if (!$pokemon) {
     exit;
 }
 
-$pokemon['Image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$idPokemon}.png";
+// --- Asignar imagen e indicador shiny ---
+$pokemon['Image'] = $isShiny
+    ? "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${idPokemon}.png"
+    : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$idPokemon}.png";
 
-// Actualizar pity
+$pokemon['Is_Shiny'] = $isShiny ? 1 : 0;
+
+// --- Actualizar pity del usuario ---
 $stmt = $conexion->prepare("UPDATE users SET Pity = ? WHERE Id_User = ?");
 $stmt->bind_param("ii", $pity, $_SESSION['user_id']);
 $stmt->execute();
 
-
+// --- Respuesta final ---
 echo json_encode([
     'ok' => true,
     'mensaje' => 'Roll ejecutado correctamente',

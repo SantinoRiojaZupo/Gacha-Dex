@@ -16,9 +16,10 @@ function mostrarPokemones(lista) {
 
     lista.forEach(pokemon => {
         const card = document.createElement("div");
-        card.classList.add("card-pokemon");
 
-        if(pokemon.shiny==1){
+        if(pokemon.shiny===1){
+
+        card.classList.add("card-pokemon-shiny");
             card.innerHTML = `
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id_pokedex}.png" alt="${pokemon.nombre}">
             <h3>${pokemon.nombre}</h3>
@@ -26,14 +27,16 @@ function mostrarPokemones(lista) {
             <p>Generación: ${pokemon.generacion}</p>
         `;
         }
+        else{
 
+        card.classList.add("card-pokemon");
         card.innerHTML = `
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id_pokedex}.png" alt="${pokemon.nombre}">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id_pokedex}.png" alt="${pokemon.nombre}">
             <h3>${pokemon.nombre}</h3>
             <p>Tipo: ${pokemon.tipo}${pokemon.tipo_secundario ? " / " + pokemon.tipo_secundario : ""}</p>
             <p>Generación: ${pokemon.generacion}</p>
         `;
-
+        }
         contenedor.appendChild(card);
     });
 }
