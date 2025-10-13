@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2025 a las 03:06:59
+-- Tiempo de generación: 13-10-2025 a las 04:22:48
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -473,7 +473,8 @@ CREATE TABLE `pokemoncatched` (
   `Id_PokemonCatched` int(11) NOT NULL,
   `Id_User` int(11) NOT NULL,
   `Id_Pokedex` int(11) NOT NULL,
-  `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0
+  `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0,
+  `Is_Shiny` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -541,13 +542,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
