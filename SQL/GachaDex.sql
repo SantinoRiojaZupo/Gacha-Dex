@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2025 a las 15:47:55
+-- Tiempo de generación: 13-10-2025 a las 16:55:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -479,7 +479,45 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (429, 'Mismagius', 'Ghost', '', 'Ghost, Dark', 'Sus gritos parecen cánticos. Se dice que, en alguna rara ocasión, han imbuido felicidad a quien los oía.', 'Levitate', '', '', '.', 'Male/Female'),
 (430, 'Honchkrow', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'No perdona ni se apiada nunca. No consiente fallos ni a los propios Murkrow que lo siguen.', 'Insomnia', 'Super Luck', 'Moxie', '.', 'Male/Female'),
 (431, 'Glameow', 'Normal', '', 'Fighting', 'Araña cuando está enfadado y ronronea cuando está cariñoso. Su imprevisibilidad es famosa.', 'Limber', 'Own Tempo', 'Keen Eye', '.', 'Male/Female'),
-(432, 'Purugly', 'Normal', '', 'Fighting', 'Si se siente a gusto, no tiene ningún reparo en apropiarse de las moradas de otros Pokémon.', 'Thick Fat', 'Own Tempo', 'Defiant', '.', 'Male/Female');
+(432, 'Purugly', 'Normal', '', 'Fighting', 'Si se siente a gusto, no tiene ningún reparo en apropiarse de las moradas de otros Pokémon.', 'Thick Fat', 'Own Tempo', 'Defiant', '.', 'Male/Female'),
+(433, 'Chingling', 'Psychic', '', 'Bug, Ghost, Dark', 'Emite un tintineo cuando salta, ya que la esfera que tiene en la boca rebota de un lado a otro.', 'Levitate', '', '', '.', 'Male/Female'),
+(434, 'Stunky', 'Poison', 'Dark', 'Ground', 'Expulsa un fluido maloliente por sus cuartos traseros. El hedor repele Pokémon en un radio de 2 km.', 'Stench', 'Aftermath', 'Keen Eye', '.', 'Male/Female'),
+(435, 'Skuntank', 'Poison', 'Dark', 'Ground', 'Ataca emitiendo un fluido maloliente por la punta de la cola. Los ataques aéreos lo confunden.', 'Stench', 'Aftermath', 'Keen Eye', '.', 'Male/Female'),
+(436, 'Bronzor', 'Steel', 'Psychic', 'Fire, Ground, Ghost, Dark', 'Antaño se creía que en el dibujo de su parte posterior residía una fuerza misteriosa.', 'Levitate', 'Heatproof', 'Heavy Metal', '.', 'N/A'),
+(437, 'Bronzong', 'Steel', 'Psychic', 'Fire, Ground, Ghost, Dark', 'Antaño se adoraba a este Pokémon para que propiciara lluvias abundantes. A veces, puede encontrarse enterrado bajo tierra.', 'Levitate', 'Heatproof', 'Heavy Metal', '.', 'N/A'),
+(438, 'Bonsly', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Aunque parece que llora, realmente lo que hace es expulsar el exceso de fluidos corporales por los ojos.', 'Sturdy', 'Rock Head', 'Rattled', '.', 'Male/Female'),
+(439, 'Mime Jr.', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Imita todo lo que ve, especialmente los gráciles pasos de baile de Mr. Rime, que practica con gran tesón.', 'Soundproof', 'Filter', 'Technician', '.', 'Male/Female'),
+(440, 'Happiny', 'Normal', '', 'Fighting', 'En la bolsa de su panza transporta una roca redonda y blanca. Cuando hace amigos puede llegar a regalársela.', 'Natural Cure', 'Serene Grace', 'Friend Guard', '.', 'Female'),
+(441, 'Chatot', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Imita los sonidos de sus rivales, haciéndoles creer que son amigos e impidiendo que le ataquen.', 'Keen Eye', 'Tangled Feet', 'Big Pecks', '.', 'Male/Female'),
+(442, 'Spiritomb', 'Ghost', 'Dark', 'Fairy', 'Por sus constantes fechorías se le acabó uniendo a una Piedra Espíritu con un misterioso hechizo.', 'Pressure', '', 'Infiltrator', '.', 'Male/Female'),
+(443, 'Gible', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Permanece oculto en cuevas y, cuando pasa una presa, se abalanza sobre ella y la muerde con tanta fuerza que hasta se le rompen los dientes.', 'Sand Veil', '', 'Rough Skin', '.', 'Male/Female'),
+(444, 'Gabite', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Muy ocasionalmente puede mudar la piel y perder las escamas. Las medicinas que las usan como ingrediente son muy reconstituyentes.', 'Sand Veil', '', 'Rough Skin', '.', 'Male/Female'),
+(445, 'Garchomp', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Se dice que, cuando va a velocidad máxima, sus alas crean cuchillas de viento que talan cualquier árbol.', 'Sand Veil', '', 'Rough Skin', '.', 'Male/Female'),
+(446, 'Munchlax', 'Normal', '', 'Fighting', 'Necesita ingerir cada día el equivalente a su peso corporal en comida. Le importa poco el sabor que pueda tener.', 'Pickup', 'Thick Fat', 'Gluttony', '.', 'Male/Female'),
+(447, 'Riolu', 'Fighting', '', 'Flying, Psychic, Fairy', 'Se comunica con los suyos emitiendo ondas. Puede pasarse toda una noche corriendo.', 'Steadfast', 'Inner Focus', 'Prankster', '.', 'Male/Female'),
+(448, 'Lucario', 'Fighting', 'Steel', 'Fire, Fighting, Ground', 'Dicen que, como es capaz de detectar auras, puede percibir a sus rivales aunque no los vea.', 'Steadfast', 'Inner Focus', 'Justified', '.', 'Male/Female'),
+(449, 'Hippopotas', 'Ground', '', 'Water, Grass, Ice', 'Cierra los orificios nasales y luego se desplaza por la arena con total tranquilidad. Suele formar colonias de diez individuos.', 'Sand Stream', '', 'Sand Force', '.', 'Male/Female'),
+(450, 'Hippowdon', 'Ground', '', 'Water, Grass, Ice', 'Mantiene la boca abierta para mostrar su fuerza. Se enfada con sorprendente rapidez.', 'Sand Stream', '', 'Sand Force', '.', 'Male/Female'),
+(451, 'Skorupi', 'Poison', 'Bug', 'Fire, Flying, Psychic, Rock', 'Se entierra en la arena y aguarda inmóvil a sus presas. Sus antepasados están relacionados con los de Sizzlipede.', 'Battle Armor', 'Sniper', 'Keen Eye', '.', 'Male/Female'),
+(452, 'Drapion', 'Poison', 'Dark', 'Ground', 'Posee un veneno muy potente, pero que usa muy poco. Con la extraordinaria fuerza que concentra al enfurecerse podría hacer añicos un coche.', 'Battle Armor', 'Sniper', 'Keen Eye', '.', 'Male/Female'),
+(453, 'Croagunk', 'Poison', 'Fighting', 'Ground, Flying, Psychic(X4)', 'Infla sus bolsas venenosas para emitir un sonido macabro a su alrededor y envenena al rival en cuanto se amedrenta.', 'Anticipation', 'Dry Skin', 'Poison Touch', '.', 'Male/Female'),
+(454, 'Toxicroak', 'Poison', 'Fighting', 'Ground, Flying, Psychic(X4)', 'Esquiva ágilmente los ataques de sus enemigos mientras va acortando distancias para contraatacar con sus garras venenosas.', 'Anticipation', 'Dry Skin', 'Poison Touch', '.', 'Male/Female'),
+(455, 'Carnivine', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Atrae a sus presas con saliva de olor dulce y las mastica. Tarda todo un día en comérselas.', 'Levitate', '', '', '.', 'Male/Female'),
+(456, 'Finneon', 'Water', '', 'Grass, Electric', 'La línea que le recorre el costado puede almacenar luz solar. Brilla con mucha fuerza por la noche.', 'Swift Swim', 'Storm Drain', 'Water Veil', '.', 'Male/Female'),
+(457, 'Lumineon', 'Water', '', 'Grass, Electric', 'Atrae a sus presas con el destello que emite, aunque eso también llama la atención de sus feroces depredadores marinos.', 'Swift Swim', 'Storm Drain', 'Water Veil', '.', 'Male/Female'),
+(458, 'Mantyke', 'Water', 'Flying', 'Electric(X4), Rock', 'Los Mantyke que habitan en los mares de Galar se mueven con lentitud, posiblemente por la baja temperatura de las aguas de la región.', 'Swift Swim', 'Water Absorb', 'Water Veil', '.', 'Male/Female'),
+(459, 'Snover', 'Grass', 'Ice', 'Fire(X4), Fighting, Poison, Flying, Bug, Rock, Steel', 'En las estaciones frías baja al pie de la montaña, pero regresa a las cimas nevadas en primavera.', 'Snow Warning', '', 'Soundproof', '.', 'Male/Female'),
+(460, 'Abomasnow', 'Grass', 'Ice', 'Fire(X4), Fighting, Poison, Flying, Bug, Rock, Steel', 'Vive en paz en cordilleras de nieves eternas. Genera ventiscas para ocultarse.', 'Snow Warning', '', 'Soundproof', '.', 'Male/Female'),
+(461, 'Weavile', 'Dark', 'Ice', 'Fire, Fighting(X4), Bug, Rock, Steel, Fairy', 'Su carácter se volvió aún más vil con la evolución. Se comunica marcando rocas con sus garras.', 'Pressure', '', 'Pickpocket', '.', 'Male/Female'),
+(462, 'Magnezone', 'Electric', 'Steel', 'Fire, Fighting, Ground(X4)', 'Se dice que mientras vuela emite unas ondas eléctricas misteriosas, a la vez que recibe otras ondas desconocidas.', 'Magnet Pull', 'Sturdy', 'Analytic', '.', 'N/A'),
+(463, 'Lickilicky', 'Normal', '', 'Fighting', 'Su lengua es un misterio sin resolver: no se sabe cómo puede extenderla hasta alcanzar longitudes que superan varias veces la de su propio cuerpo.', 'Own Tempo', 'Oblivious', 'Cloud Nine', '.', 'Male/Female'),
+(464, 'Rhyperior', 'Ground', 'Rock', 'Water(X4), Grass(X4), Ice, Fighting, Ground, Steel', 'Repele erupciones volcánicas con sus robustos protectores. Dispara con fuerza rocas redondas a través de las cavidades de las manos.', 'Lightning Rod', 'Solid Rock', 'Reckless', '.', 'Male/Female'),
+(465, 'Tangrowth', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Se ha descubierto recientemente que los dos brazos que estira a voluntad son en realidad lianas enredadas entre sí.', 'Chlorophyll', 'Leaf Guard', 'Regenerator', '.', 'Male/Female'),
+(466, 'Electivire', 'Electric', '', 'Ground', '', 'Motor Drive', 'Al exaltarse, se golpea con ímpetu el pecho. Cada vez que lo hace, saltan chispas y un trueno resuena por la zona.', 'Vital Spirit', '.', 'Male/Female'),
+(467, 'Magmortar', 'Fire', '', 'Water, Ground, Rock', 'Al lanzar bolas de fuego a 2000 ºC por los extremos de los brazos, su cuerpo adopta un tono blanquecino debido a la temperatura.', 'Flame Body', '', 'Vital Spirit', '.', 'Male/Female'),
+(468, 'Togekiss', 'Fairy', 'Flying', 'Electric, Ice, Poison, Rock, Steel', 'Este Pokémon jamás se muestra en lugares donde reine la discordia y la disensión. Últimamente apenas se avistan ejemplares.', 'Hustle', 'Serene Grace', 'Super Luck', '.', 'Male/Female'),
+(469, 'Yanmega', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Bate las alas con tal fuerza que, cuando alza el vuelo, es capaz de abatir los árboles a su alrededor.', 'Speed Boost', 'Tinted Lens', 'Frisk', '.', 'Male/Female'),
+(470, 'Leafeon', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'En días soleados, duerme y hace la fotosíntesis, con la que emite aire puro a su alrededor.', 'Leaf Guard', '', 'Chlorophyll', '.', 'Male/Female');
 
 -- --------------------------------------------------------
 
@@ -563,7 +601,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=433;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=471;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
