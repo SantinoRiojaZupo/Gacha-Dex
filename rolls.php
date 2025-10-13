@@ -91,6 +91,7 @@ if ($isLegendario) {
 } elseif ($isShiny) {
     $resultado = "shiny";
     $idPokemon = mt_rand($from, $to);
+    $Is_Shiny = $pokemon['Is_Shiny'] = 1;
     $pity = 0; // ✅ Reinicia pity aunque sea solo shiny
 
 } else {
@@ -122,8 +123,8 @@ if ($isLegendario) {
 
 
 // --- Obtener datos del Pokémon ---
-$stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, Image FROM datapokemonall WHERE Id_Pokedex = ?");
-$stmt->bind_param("i", $idPokemon);
+$stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, Is_Shiny, image FROM datapokemonall WHERE Id_Pokedex = ?");
+$stmt->bind_param("ii", $idPokemon, $isShiny);
 $stmt->execute();
 $pokemon = $stmt->get_result()->fetch_assoc();
 
@@ -139,12 +140,13 @@ $stmt = $conexion->prepare("UPDATE users SET Pity = ? WHERE Id_User = ?");
 $stmt->bind_param("ii", $pity, $_SESSION['user_id']);
 $stmt->execute();
 
+
 echo json_encode([
     'ok' => true,
     'mensaje' => 'Roll ejecutado correctamente',
     'pokemon' => $pokemon,
     'idPokemon' => $idPokemon,
     'resultado' => $resultado,
-    'pity' => $pity
+    'pity' => $pity,
 ]);
 ?>

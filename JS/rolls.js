@@ -66,10 +66,12 @@ function mostrarPokemon(pokemonActual) {
             <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
+    console.log (pokemonActual.Is_Shiny)
     fetch("/Gacha-Dex/guardarPokemones.php", {
     method: "POST",
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
-    body: "Id_Pokedex=" + encodeURIComponent(pokemonActual.Id_Pokedex)
+    body: "Id_Pokedex=" + encodeURIComponent(pokemonActual.Id_Pokedex) + 
+    "&Is_Shiny=" + (pokemonActual.Is_Shiny)
 })
 .then(res => res.json())
 .then(res => {

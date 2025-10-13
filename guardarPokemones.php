@@ -38,16 +38,18 @@ if (!isset($_POST['Id_Pokedex']) || !is_numeric($_POST['Id_Pokedex'])) {
 
 $idUser = (int) $_SESSION['user_id'];
 $idPokedex = (int) $_POST['Id_Pokedex'];
+$is_Shiny = (int) $_POST['Is_Shiny']
 
 // 3) insertar
-$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex) VALUES (?, ?)";
+
+$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex, Is_Shiny) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($conexion, $sql);
 if (!$stmt) {
     $response['error'] = 'Error preparando query: ' . mysqli_error($conexion);
     finish($response);
 }
 
-mysqli_stmt_bind_param($stmt, "ii", $idUser, $idPokedex);
+mysqli_stmt_bind_param($stmt, "iii", $idUser, $idPokedex, $is_Shiny);
 $executed = mysqli_stmt_execute($stmt);
 if (!$executed) {
     $response['error'] = 'Error al ejecutar INSERT: ' . mysqli_error($conexion);
