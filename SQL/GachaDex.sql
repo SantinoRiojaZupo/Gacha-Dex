@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2025 a las 04:22:48
+-- Tiempo de generación: 13-10-2025 a las 13:36:10
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -306,7 +306,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (257, 'Blaziken', 'Fire', '', 'Water, Ground, Flying, Psychic', 'Ante un rival difícil, expulsa llamas por las muñecas. Tiene mucha fuerza en las patas; hasta puede saltar edificios.', 'Blaze', '', 'Speed Boost', '.', 'Male/Female'),
 (258, 'Mudkip', 'Water', '', 'Grass, Electric', 'Puede reducir a añicos grandes rocas. Descansa enterrado en el lodo del lecho de los ríos.', 'Torrent', '', 'Damp', '.', 'Male/Female'),
 (259, 'Marshtomp', 'Water', 'Ground', 'Grass(X4)', 'Vive en terrenos cubiertos de lodo viscoso, lo que contribuye a que sus patas se fortalezcan y se vuelvan extremadamente robustas.', 'Torrent', '', 'Damp', '.', 'Male/Female'),
-(260, 'Mudkip', 'Water', 'Ground', 'Grass(X4)', 'Con sus brazos duros como una roca puede partir pedruscos gigantescos en mil pedazos de un solo golpe.', 'Torrent', '', 'Damp', '.', 'Male/Female'),
+(260, 'Swampert', 'Water', 'Ground', 'Grass(X4)', 'Con sus brazos duros como una roca puede partir pedruscos gigantescos en mil pedazos de un solo golpe.', 'Torrent', '', 'Damp', '.', 'Male/Female'),
 (261, 'Poochyena', 'Dark', '', 'Fighting, Bug, Fairy', 'Enseña sus enormes colmillos y ladra con fuerza para intimidar a sus rivales, lo cual no es más que una manera de esconder su cobardía.', 'Run Away', 'Quick Feet', 'Rattled', '.', 'Male/Female'),
 (262, 'Mightyena', 'Dark', '', 'Fighting, Bug, Fairy', 'Siguen las órdenes del líder al pie de la letra. Gracias a la eficacia de su trabajo en equipo, ninguna presa se les escapa.', 'Intimidate', 'Quick Feet', 'Moxie', '.', 'Male/Female'),
 (263, 'Zigzagoon', 'Normal', '', 'Fighting', 'Se mueve en zigzag. Se le da bien encontrar objetos ocultos en la hierba e incluso enterrados.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
@@ -449,49 +449,6 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (399, 'Bidoof', 'Normal', '', 'Fighting', 'Tiene nervios de acero y nada puede perturbarlo. Es más ágil y activo de lo que aparenta.', 'Simple', 'Unaware', 'Moody', '.', 'Male/Female'),
 (400, 'Bibarel', 'Normal', 'Water', 'Grass, Electric, Fighting', 'Con sus incisivos roe ramas y raíces y las apila para construir sus madrigueras junto al río.', 'Simple', 'Unaware', 'Moody', '.', 'Male/Female');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `messages`
---
-
-CREATE TABLE `messages` (
-  `id` int(11) NOT NULL,
-  `sender_id` int(11) NOT NULL,
-  `receiver_id` int(11) NOT NULL,
-  `message` text NOT NULL,
-  `timestamp` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pokemoncatched`
---
-
-CREATE TABLE `pokemoncatched` (
-  `Id_PokemonCatched` int(11) NOT NULL,
-  `Id_User` int(11) NOT NULL,
-  `Id_Pokedex` int(11) NOT NULL,
-  `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0,
-  `Is_Shiny` tinyint(1) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
-
-CREATE TABLE `users` (
-  `Id_User` int(11) NOT NULL,
-  `Name_User` varchar(255) NOT NULL,
-  `User_Password` varchar(255) NOT NULL,
-  `Bio` varchar(255) DEFAULT NULL,
-  `Profile_Photo` varchar(255) DEFAULT NULL,
-  `Pity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Índices para tablas volcadas
 --
@@ -503,26 +460,6 @@ ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indices de la tabla `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `pokemoncatched`
---
-ALTER TABLE `pokemoncatched`
-  ADD PRIMARY KEY (`Id_PokemonCatched`),
-  ADD KEY `Id_User` (`Id_User`),
-  ADD KEY `Id_Pokedex` (`Id_Pokedex`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`Id_User`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -531,35 +468,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `datapokemonall`
   MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=401;
-
---
--- AUTO_INCREMENT de la tabla `messages`
---
-ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `pokemoncatched`
---
-ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `pokemoncatched`
---
-ALTER TABLE `pokemoncatched`
-  ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
-  ADD CONSTRAINT `pokemoncatched_ibfk_2` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
