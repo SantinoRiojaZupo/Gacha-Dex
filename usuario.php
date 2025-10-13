@@ -43,3 +43,43 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
 } else {
     echo json_encode(["error" => "Faltan datos", "msj" => "No se recibió el nombre o el usuario no está logueado"]);
 }
+$user_id=$_SESSION["user_id"];
+ $sql1= "
+SELECT 
+datapokemonall.Id_Pokedex,
+    datapokemonall.PokemonName,        
+    datapokemonall.image,              
+    CASE 
+        WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN 1                                                  
+    END AS tiene
+FROM datapokemonall
+inner JOIN pokemoncatched 
+    ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex 
+    AND pokemoncatched.Id_User = $user_id                  
+GROUP BY datapokemonall.Id_Pokedex                            
+ORDER BY datapokemonall.Id_Pokedex;";
+$result=mysqli_query($conexion, $sql1);
+
+// Array para almacenar los resultados de la consulta
+$arr=[];
+$idpokedex=0;
+
+// Si la consulta devuelve al menos una fila
+if(mysqli_num_rows($result) > 0){
+    // Recorre todas las filas y las agrega al array
+    while($fila=mysqli_fetch_assoc($result)){
+        $idpokedex=$fila['Id_Pokedex'];
+        $fila['image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+
+        $arr[]=$fila;
+    }
+}
+
+// Si el array tiene datos, los devuelve en formato JSON
+if($arr){
+    echo json_encode($arr);
+}
+// Si no hay datos, devuelve un mensaje de error
+else{
+    echo json_encode(["msj"=>"mal ahi amigo"]);
+}

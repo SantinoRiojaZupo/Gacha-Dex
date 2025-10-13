@@ -36,3 +36,50 @@ function mostrarMensaje(mensaje, exito) {
     div.innerHTML = `<p>${mensaje}</p>`;
     container.appendChild(div);
 }
+function pokedexUsuario() {
+fetch('/Gacha-Dex/pokemonUsuario.php')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        const inventory = document.getElementById("sidebar");
+        inventory.innerHTML = '';
+        data.forEach(pokemon => {
+            const pokemonDiv = document.createElement('div');
+            pokemonDiv.classList.add("sprite-box");
+            if (pokemon.tiene == 1) {
+                pokemonDiv.innerHTML = `
+                <img src="${pokemon.image}" alt="${pokemon.PokemonName}">
+                <h3>${pokemon.PokemonName}</h3>
+                <button onclick="agregar_o_eliminarDeFavoritos(pokemon.id_Pokedex)">♡</button>
+                `
+            
+            }
+            else{
+                pokemonDiv.innerHTML=`???`
+            }
+            inventory.appendChild(pokemonDiv);
+        })
+}
+    )
+}
+ pokedexUsuario();
+
+function agregar_o_eliminarDeFavoritos(id_Pokedex) {
+fetch('/Gacha-Dex/pokemonUsuario.php',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "id_Pokedex=" + encodeURIComponent(id_Pokedex)
+        })
+        .then(res=>res.json())
+        .then(res=>{
+            if(res.error){
+                console.log(res.error + ": " + res.msj);
+            }
+            else{
+                console.log(res.msj);
+                console.log(res);  
+            }
+        } )
+}

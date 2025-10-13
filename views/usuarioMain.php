@@ -16,7 +16,7 @@ if($_SESSION['user_id'] == $idPerfil){
   mysqli_stmt_bind_param($stmt, "i", $user_id);
   mysqli_stmt_execute($stmt);
   $biosResult = mysqli_stmt_get_result($stmt);
-    if(!$biosResult){
+   if(!$biosResult){
       echo json_encode(["error" => "Error en la consulta"]);
       exit; 
     }
@@ -115,11 +115,11 @@ $conexion->close();
      </div>
    </div>
 
-   <div class="sidebar">
-     <div class="sprite-box">Sprite tu pkmn1</div>
-     <div class="sprite-box">Sprite tu pkmn2</div>
-     <div class="sprite-box">Sprite tu pkmn3</div>
-     <div class="sprite-box">Sprite tu pkmn4</div>
+   <div id="sidebar" class="sidebar">
+     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
+     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
+     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
+     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
    </div>
    <?php if ($_SESSION['user_id'] == $idPerfil): ?>
 
