@@ -8,23 +8,24 @@
   <div class="filtros-contenedor">
     <select id="filtro-tipo">
       <option value="">Filtrar por tipo</option>
-      <option value="acero"> acero</option>
-      <option value="volador"> volador</option>
-      <option value="hielo"> hielo</option>
-      <option value="bicho"> bicho</option>
-      <option value="normal"> normal</option>
-      <option value="roca"> roca</option>
-      <option value="lucha"> lucha</option>
-      <option value="hada"> hada</option>
-      <option value="veneno"> veneno</option>
-      <option value="fuego"> Fuego</option>
-      <option value="agua"> Agua</option>
-      <option value="planta"> Planta</option>
-      <option value="electrico"> Eléctrico</option>
-      <option value="tierra"> Tierra</option>
-      <option value="dragon"> dragon</option>
-      <option value="fantasma"> fantasma</option>
-      <option value="siniestro"> siniestro</option>
+      <option value="Steel"> Steel</option>
+      <option value="Flying"> Flying</option>
+      <option value="Ice"> Ice</option>
+      <option value="Bug"> Bug</option>
+      <option value="Normal"> Normal</option>
+      <option value="Rock"> Rock</option>
+      <option value="Fighting"> Fighting</option>
+      <option value="Fairy"> Fairy</option>
+      <option value="Poison"> Poison</option>
+      <option value="Fire"> Fire</option>
+      <option value="Water"> Water</option>
+      <option value="Grass"> Grass</option>
+      <option value="Electric"> Electric</option>
+      <option value="Ground"> Ground</option>
+      <option value="Dragon"> Dragon</option>
+      <option value="Ghost"> Ghost</option>
+      <option value="Psychic"> Psychic</option>
+      <option value="Dark"> Dark</option>
     </select>
 
     <select id="filtro-generacion">
@@ -54,3 +55,4 @@
     <!-- más pokémon dinámicos -->
   </div>
 </main>
+<script src="../JS/inventario.js"></script>

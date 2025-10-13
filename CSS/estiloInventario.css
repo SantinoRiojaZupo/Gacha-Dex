@@ -283,3 +283,69 @@ main h1 {
   font-size: 12px;
   color: #444;
 }
+
+.shiny {
+  color: gold;
+  font-weight: bold;
+  text-shadow: 0 0 5px yellow;
+}
+
+.card-pokemon h3{
+  color: #000000;
+}
+
+.contenido-inventario {
+  position: relative;
+  background-image: url('../IMG/pc-box-bg.png'); /* tu fondo */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+/* Contenedor de los pokémon */
+.contenedor-pokemones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* tarjetas más grandes */
+  grid-gap: 70px;
+  padding: 30px;
+  border-radius: 12px;
+  background: transparent; /* quitamos la transparencia blanca */
+  width: 90%; /* ocupa más ancho */
+  max-width: 1200px;
+}
+
+/* Tarjetas de cada pokémon */
+.card-pokemon {
+  width: 120px; /* más grande */
+  height: 180px; /* más alto para que entren nombre y tipo */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  box-shadow: none; /* quitamos sombras si querés */
+}
+
+.card-pokemon img {
+  width: 90px; /* más grande */
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.card-pokemon h3 {
+  color: #000; /* texto visible sobre el fondo */
+  font-size: 12px;
+}
+
+.card-pokemon p {
+  color: #000;
+  font-size: 10px;
+}

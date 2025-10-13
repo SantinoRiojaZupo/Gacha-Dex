@@ -1,58 +1,50 @@
+<?php
+// Evitar errores por variables indefinidas
+$vistaHead = $vistaHead ?? "";
+$vistaHeader = $vistaHeader ?? "";
+$vista = $vista ?? "";
+$vistaJsBoton = $vistaJsBoton ?? "";
+$vistaPokedexFunciones = $vistaPokedexFunciones ?? "";
+$vistaChatCargar = $vistaChatCargar ?? "";
+$vistaChatMandar = $vistaChatMandar ?? "";
+$vistaBuscarUsuario = $vistaBuscarUsuario ?? "";
+$vistaBotonRegistro = $vistaBotonRegistro ?? "";
+$vistaBotonLogin = $vistaBotonLogin ?? "";
+$vistaBotonPerfil = $vistaBotonPerfil ?? "";
+$vistaBotonMain = $vistaBotonMain ?? "";
+$vistaJsInventario = $vistaJsInventario ?? "";
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <?php
-   include($vistaHead);
- ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha-Dex</title>
+    
+    <!-- Archivos HEAD opcionales -->
+    <?php if (!empty($vistaHead)) include $vistaHead; ?>
 </head>
 
 <body>
-<header>
-  <?php
- if(isset($vistaHeader)){
-           include($vistaHeader);
-          } 
-          else {
-            "<p>Página no encontrada</p>";
-          }
-          ?>
-</header>    
+    <!-- Header -->
+    <?php if (!empty($vistaHeader)) include $vistaHeader; ?>
+
+    <!-- Contenido principal -->
     <main>
-        <?php
-          if(isset($vista)){
-           include($vista);
-          } 
-          else {
-            "<p>Página no encontrada</p>";
-          }
+        <?php if (!empty($vista)) include $vista; ?>
+    </main>
 
-
-        ?>
-</main>
-<script src="<?= $vistaJsBoton ?>"></script> 
-<script src="<?=$vistaPokedexFunciones?>"></script>
-<script src="<?=$vistaChatCargar?>"></script>
-<script src="<?=$vistaChatMandar?>"></script>
-<script src="<?=$vistaBuscarUsuario?>"></script>
-<script src="<?= $vistaBotonRegistro
-
-?>" > </script>
-<script src="<?= $vistaBotonLogin
-
-?>" > </script>
-<script src="<?= $vistaBotonPerfil
-
-?>" > </script>
-
-<?php if (isset($registroFunciones)) : ?>
-    <script src="<?= $registroFunciones ?>"></script>
-<?php endif; ?>
-
+    <!-- Archivos JS opcionales -->
+    <?php if (!empty($vistaJsBoton)) echo "<script src='{$vistaJsBoton}'></script>"; ?>
+    <?php if (!empty($vistaPokedexFunciones)) echo "<script src='{$vistaPokedexFunciones}'></script>"; ?>
+    <?php if (!empty($vistaChatCargar)) echo "<script src='{$vistaChatCargar}'></script>"; ?>
+    <?php if (!empty($vistaChatMandar)) echo "<script src='{$vistaChatMandar}'></script>"; ?>
+    <?php if (!empty($vistaBuscarUsuario)) echo "<script src='{$vistaBuscarUsuario}'></script>"; ?>
+    <?php if (!empty($vistaBotonRegistro)) echo "<script src='{$vistaBotonRegistro}'></script>"; ?>
+    <?php if (!empty($vistaBotonLogin)) echo "<script src='{$vistaBotonLogin}'></script>"; ?>
+    <?php if (!empty($vistaBotonPerfil)) echo "<script src='{$vistaBotonPerfil}'></script>"; ?>
+    <?php if (!empty($vistaBotonMain)) echo "<script src='{$vistaBotonMain}'></script>"; ?>
+    <?php if (!empty($vistaJsInventario)) echo "<script src='{$vistaJsInventario}'></script>"; ?>
 </body>
-<footer>
-  <?php
-  include($vistafooter);
-  ?>
-        </footer>
 </html>
-
