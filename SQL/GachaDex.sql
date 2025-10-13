@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2025 a las 13:36:10
+-- Tiempo de generación: 13-10-2025 a las 15:47:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -447,7 +447,83 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (397, 'Staravia', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Son conscientes de su debilidad, así que siempre viven en grupo. Si se encuentran solos, lloran a gritos.', 'Intimidate', '', 'Reckless', '.', 'Male/Female'),
 (398, 'Staraptor', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Al evolucionar a Staraptor, deja su bandada y pasa a vivir en soledad. Sus alas son inmensas.', 'Intimidate', '', 'Reckless', '.', 'Male/Female'),
 (399, 'Bidoof', 'Normal', '', 'Fighting', 'Tiene nervios de acero y nada puede perturbarlo. Es más ágil y activo de lo que aparenta.', 'Simple', 'Unaware', 'Moody', '.', 'Male/Female'),
-(400, 'Bibarel', 'Normal', 'Water', 'Grass, Electric, Fighting', 'Con sus incisivos roe ramas y raíces y las apila para construir sus madrigueras junto al río.', 'Simple', 'Unaware', 'Moody', '.', 'Male/Female');
+(400, 'Bibarel', 'Normal', 'Water', 'Grass, Electric, Fighting', 'Con sus incisivos roe ramas y raíces y las apila para construir sus madrigueras junto al río.', 'Simple', 'Unaware', 'Moody', '.', 'Male/Female'),
+(401, 'Kricketot', 'Bug', '', 'Fire, Flying, Rock', 'Tiene las patas cortas. Cada vez que se tropieza, sus antenas chocan y suenan como un xilófono.', 'Shed Skin', '', 'Run Away', '.', 'Male/Female'),
+(402, 'Kricketune', 'Bug', '', 'Fire, Flying, Rock', 'Puede hacer que el sonido resuene en las cavidades de su cuerpo y producir un hermoso canto.', 'Swarm', '', 'Technician', '.', 'Male/Female'),
+(403, 'Shinx', 'Electric', '', 'Ground', 'La extensión y contracción de sus músculos genera electricidad. Brilla cuando está en peligro.', 'Rivalry', 'Intimidate', 'Guts', '.', 'Male/Female'),
+(404, 'Luxio', 'Electric', '', 'Ground', 'Por las puntas de sus garras pasa una fuerte corriente eléctrica. El mínimo roce debilita al enemigo.', 'Rivalry', 'Intimidate', 'Guts', '.', 'Male/Female'),
+(405, 'Luxray', 'Electric', '', 'Ground', 'Puede ver claramente a través de las paredes para buscar a las presas huidas o a sus crías si se pierden.', 'Rivalry', 'Intimidate', 'Guts', '.', 'Male/Female'),
+(406, 'Budew', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Conforme más pura y cristalina sea el agua de su entorno, más venenoso resulta el polen que esparce.', 'Natural Cure', 'Poison Point', 'Leaf Guard', '.', 'Male/Female'),
+(407, 'Roserade', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Aturde a los rivales con la fragancia de sus flores para luego azotarlos sin piedad con sus cepas espinosas.', 'Natural Cure', 'Poison Point', 'Technician', '.', 'Male/Female'),
+(408, 'Cranidos', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Vivía en la jungla hace cien millones de años. Gracias a su destreza propinando cabezazos, podía hacer frente a los Aerodactyl.', 'Mold Breaker', '', 'Sheer Force', '.', 'Male/Female'),
+(409, 'Rampardos', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Su cerebro no ha podido desarrollarse al verse limitado por el espesor de su cráneo, capaz de soportar cualquier golpe.', 'Mold Breaker', '', 'Sheer Force', '.', 'Male/Female'),
+(410, 'Shieldon', 'Rock', 'Steel', 'Water, Fighting(X4), Ground(X4)', 'Su imponente protección le exime de tener que combatir, por lo que pasa el tiempo comiendo hierba y bayas.', 'Sturdy', '', 'Soundproof', '.', 'Male/Female'),
+(411, 'Bastiodon', 'Rock', 'Steel', 'Water, Fighting(X4), Ground(X4)', 'Es capaz de repeler cualquier ataque frontal, pero se encuentra totalmente a merced de los ataques por la retaguardia.', 'Sturdy', '', 'Soundproof', '.', 'Male/Female'),
+(412, 'Burmy', 'Bug', '', 'Fire, Flying, Rock', 'Para protegerse de los vientos fríos invernales, se cubre con un caparazón de ramas y hojas.', 'Shed Skin', '', 'Overcoat', '.', 'Male/Female'),
+(413, 'Wormadam', 'Bug', 'Grass', 'Fire(X4), Ice, Poison, Flying(X4), Bug, Rock', 'Su apariencia varía según dónde evolucione. Los materiales que haya pasan a formar parte de su cuerpo.', 'Anticipation', '', 'Overcoat', '.', 'Female'),
+(414, 'Mothim', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Le encanta la miel de las flores y roba la que recoge Combee.', 'Swarm', '', 'Tinted Lens', '.', 'Male'),
+(415, 'Combee', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Cuando llega la noche, se juntan unos cien Combee y duermen formando una gran colmena.', 'Honey Gather', '', 'Hustle', '.', 'Male/Female'),
+(416, 'Vespiquen', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Cría larvas en los panales de su cuerpo y segrega diversas feromonas para controlarlas.', 'Pressure', '', 'Unnerve', '.', 'Female'),
+(417, 'Pachirisu', 'Electric', '', 'Ground', 'Forma parte del grupo de Pokémon que posee bolsas de electricidad en las mejillas. Descarga por la cola la electricidad que acumula.', 'Run Away', 'Pickup', 'Volt Absorb', '.', 'Male/Female'),
+(418, 'Buizel', 'Water', '', 'Grass, Electric', 'Para impulsarse por el agua, gira sus dos colas como una hélice. Así también corta las algas del camino.', 'Swift Swim', '', 'Water Veil', '.', 'Male/Female'),
+(419, 'Floatzel', 'Water', '', 'Grass, Electric', 'Con la vejiga natatoria inflada, puede llevar a personas sobre su espalda. Antes de bucear, la desinfla.', 'Swift Swim', '', 'Water Veil', '.', 'Male/Female'),
+(420, 'Cherubi', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Se ve obligado a huir constantemente de los Pokémon pájaro, pues su pequeña esfera repleta de nutrientes es su manjar predilecto.', 'Chlorophyll', '', '', '.', 'Male/Female'),
+(421, 'Cherrim', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Antiguamente cargaba con un caparazón al lomo. Es un Pokémon estrechamente emparentado con los Shellder y otras especies similares.', 'Flower Gift', '', '', '.', 'Male/Female'),
+(422, 'Shellos', 'Water', '', 'Grass, Electric', 'Antiguamente cargaba con un caparazón al lomo. Es un Pokémon estrechamente emparentado con los Shellder y otras especies similares.', 'Sticky Hold', 'Storm Drain', 'Sand Force', '.', 'Male/Female'),
+(423, 'Gastrodon', 'Water', 'Ground', 'Grass(X4)', 'Tiene la totalidad del cuerpo recubierta de una sustancia viscosa. Antiguamente, esta había sido con creces su forma más numerosa.', 'Sticky Hold', 'Storm Drain', 'Sand Force', '.', 'Male/Female'),
+(424, 'Ambipom', 'Normal', '', 'Fighting', 'Viven en los árboles más grandes. Se dice que comunican sus emociones uniendo las colas con sus congéneres.', 'Technician', 'Pickup', 'Skill Link', '.', 'Male/Female'),
+(425, 'Drifloon', 'Ghost', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Se dice que a veces desaparecen niños que agarran un Drifloon pensando que es un globo.', 'Aftermath', 'Unburden', 'Flare Boost', '.', 'Male/Female'),
+(426, 'Drifblim', 'Ghost', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Crea en su interior gases y los expulsa. De esta forma es capaz de volar y controlar su altura.', 'Aftermath', 'Unburden', 'Flare Boost', '.', 'Male/Female'),
+(427, 'Buneary', 'Normal', '', 'Fighting', 'Cuando enrolla ambas orejas, es señal de que tiene algún tipo de malestar físico o emocional y necesita cuidados.', 'Run Away', 'Klutz', 'Limber', '.', 'Male/Female'),
+(428, 'Lopunny', 'Normal', '', 'Fighting', 'Está siempre atento a lo que ocurre a su alrededor. Si advierte peligro, se defenderá con patadas de potencia devastadora.', 'Cute Charm', 'Klutz', 'Limber', '.', 'Male/Female'),
+(429, 'Mismagius', 'Ghost', '', 'Ghost, Dark', 'Sus gritos parecen cánticos. Se dice que, en alguna rara ocasión, han imbuido felicidad a quien los oía.', 'Levitate', '', '', '.', 'Male/Female'),
+(430, 'Honchkrow', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'No perdona ni se apiada nunca. No consiente fallos ni a los propios Murkrow que lo siguen.', 'Insomnia', 'Super Luck', 'Moxie', '.', 'Male/Female'),
+(431, 'Glameow', 'Normal', '', 'Fighting', 'Araña cuando está enfadado y ronronea cuando está cariñoso. Su imprevisibilidad es famosa.', 'Limber', 'Own Tempo', 'Keen Eye', '.', 'Male/Female'),
+(432, 'Purugly', 'Normal', '', 'Fighting', 'Si se siente a gusto, no tiene ningún reparo en apropiarse de las moradas de otros Pokémon.', 'Thick Fat', 'Own Tempo', 'Defiant', '.', 'Male/Female');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `sender_id` int(11) NOT NULL,
+  `receiver_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pokemoncatched`
+--
+
+CREATE TABLE `pokemoncatched` (
+  `Id_PokemonCatched` int(11) NOT NULL,
+  `Id_User` int(11) NOT NULL,
+  `Id_Pokedex` int(11) NOT NULL,
+  `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0,
+  `Is_Shiny` tinyint(1) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `Id_User` int(11) NOT NULL,
+  `Name_User` varchar(255) NOT NULL,
+  `User_Password` varchar(255) NOT NULL,
+  `Bio` varchar(255) DEFAULT NULL,
+  `Profile_Photo` varchar(255) DEFAULT NULL,
+  `Pity` int(11) DEFAULT NULL,
+  `Rol` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -460,6 +536,26 @@ ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
+-- Indices de la tabla `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `pokemoncatched`
+--
+ALTER TABLE `pokemoncatched`
+  ADD PRIMARY KEY (`Id_PokemonCatched`),
+  ADD KEY `Id_User` (`Id_User`),
+  ADD KEY `Id_Pokedex` (`Id_Pokedex`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`Id_User`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -467,7 +563,36 @@ ALTER TABLE `datapokemonall`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=401;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=433;
+
+--
+-- AUTO_INCREMENT de la tabla `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `pokemoncatched`
+--
+ALTER TABLE `pokemoncatched`
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `pokemoncatched`
+--
+ALTER TABLE `pokemoncatched`
+  ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
+  ADD CONSTRAINT `pokemoncatched_ibfk_2` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
