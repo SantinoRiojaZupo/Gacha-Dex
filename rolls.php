@@ -60,24 +60,38 @@ $probLegendario = $probLegendarioBase + ($pity * 0.002 * $pityFactor);
 
 $random = mt_rand() / mt_getrandmax();
 $resultado = "normal";
+$idPokemon = null;
 
 // --- Sorteo ---
-if ($random < $probShiny) {
-    $resultado = "shiny";
-    $idPokemon = mt_rand($from, $to);
-    $pity = 0;
+$isShiny = $random < $probShiny;
+$isLegendario = false;
 
-} elseif ($random < ($probShiny + $probLegendario)) {
-    $resultado = "legendario";
-    // ✅ Si hay legendarios en esa generación, usamos esos
-    if ($gen !== 0 && isset($legendariosPorGen[$gen])) {
-        $listaLegend = $legendariosPorGen[$gen];
-    } else {
-        // Si es "todas", usamos todos juntos
-        $listaLegend = array_merge(...array_values($legendariosPorGen));
+if ($isShiny) {
+    // Decide si además es legendario
+    $randomLegend = mt_rand() / mt_getrandmax();
+    if ($randomLegend < $probLegendario) {
+        $isLegendario = true;
     }
+} else {
+    // No shiny, solo legendario posible
+    if ($random < ($probShiny + $probLegendario)) {
+        $isLegendario = true;
+    }
+}
+
+// Asignar Pokémon según resultado
+if ($isLegendario) {
+    $resultado = $isShiny ? "shiny_legendario" : "legendario";
+    $listaLegend = ($gen !== 0 && isset($legendariosPorGen[$gen])) 
+        ? $legendariosPorGen[$gen] 
+        : array_merge(...array_values($legendariosPorGen));
     $idPokemon = $listaLegend[array_rand($listaLegend)];
     $pity = 0;
+
+} elseif ($isShiny) {
+    $resultado = "shiny";
+    $idPokemon = mt_rand($from, $to);
+    $pity = 0; // ✅ Reinicia pity aunque sea solo shiny
 
 } else {
     // Pokémon normal (excluye legendarios)
@@ -105,6 +119,7 @@ if ($random < $probShiny) {
     $idPokemon = $pokemonData['Id_Pokedex'] ?? mt_rand($from, $to);
     $pity++;
 }
+
 
 // --- Obtener datos del Pokémon ---
 $stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, Image FROM datapokemonall WHERE Id_Pokedex = ?");
