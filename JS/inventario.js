@@ -18,8 +18,17 @@ function mostrarPokemones(lista) {
         const card = document.createElement("div");
         card.classList.add("card-pokemon");
 
+        if(pokemon.shiny==1){
+            card.innerHTML = `
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id_pokedex}.png" alt="${pokemon.nombre}">
+            <h3>${pokemon.nombre}</h3>
+            <p>Tipo: ${pokemon.tipo}${pokemon.tipo_secundario ? " / " + pokemon.tipo_secundario : ""}</p>
+            <p>Generación: ${pokemon.generacion}</p>
+        `;
+        }
+
         card.innerHTML = `
-            <img src="${pokemon.imagen}" alt="${pokemon.nombre}">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id_pokedex}.png" alt="${pokemon.nombre}">
             <h3>${pokemon.nombre}</h3>
             <p>Tipo: ${pokemon.tipo}${pokemon.tipo_secundario ? " / " + pokemon.tipo_secundario : ""}</p>
             <p>Generación: ${pokemon.generacion}</p>

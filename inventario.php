@@ -79,7 +79,7 @@ while ($fila = mysqli_fetch_assoc($res)) {
     if ((int)$fila['shiny'] === 1) {
         $fila['imagen'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{$id}.png";
     } else {
-        $fila['imagen'] = $fila['imagen_normal'] ?: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png";
+        $fila['imagen'] = $fila['imagen_normal'] ?: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png`;
     }
 
     unset($fila['imagen_normal']);

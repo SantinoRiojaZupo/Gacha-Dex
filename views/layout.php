@@ -13,6 +13,7 @@ $vistaBotonLogin = $vistaBotonLogin ?? "";
 $vistaBotonPerfil = $vistaBotonPerfil ?? "";
 $vistaBotonMain = $vistaBotonMain ?? "";
 $vistaJsInventario = $vistaJsInventario ?? "";
+$vistafooter = $vistafooter ?? "";
 ?>
 
 <!DOCTYPE html>
@@ -47,4 +48,7 @@ $vistaJsInventario = $vistaJsInventario ?? "";
     <?php if (!empty($vistaBotonMain)) echo "<script src='{$vistaBotonMain}'></script>"; ?>
     <?php if (!empty($vistaJsInventario)) echo "<script src='{$vistaJsInventario}'></script>"; ?>
 </body>
+<footer>
+    <?php if (!empty($vistafooter)) include $vistafooter; ?>
+</footer>
 </html>

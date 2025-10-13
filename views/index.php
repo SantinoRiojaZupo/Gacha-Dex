@@ -52,6 +52,7 @@ switch ($page) {
     $vistaBotonRegistro="/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones="../JS/registro-js.js";
     $vistaBotonLogin="../JS/botonLogin.js";
+    $vistafooter="footer.php";
     break;
 
     case 'Login':

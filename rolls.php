@@ -38,7 +38,7 @@ if ($gen === 0) {
 $rangeSize = $to - $from + 1;
 $pityFactor = $rangeSize / 1025; // cuanto más pequeño el rango, más lento sube el pity
 
-    $legendarios = [144, 145, 146, 150, 151];
+    $legendarios = [144, 145, 146, 150, 151, 243, 244, 245, 249, 250, 251 , 377, 378, 379, 380, 381, 382, 383, 384, 385, 386];
 
 // Obtener un Pokémon random en SQL
 $sql= "SELECT Id_Pokedex, PokemonName, Image FROM DATAPOKEMONALL WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1";
