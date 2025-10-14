@@ -42,7 +42,9 @@ $sql = "
         d.Type AS tipo,
         d.Second_Type AS tipo_secundario,
         d.Image AS imagen_normal,
-        c.Is_Shiny AS shiny
+        c.Favorite_Pokemon AS favorito,
+        c.Is_Shiny AS shiny,
+        c.Id_PokemonCatched AS atrapado
     FROM pokemoncatched c
     INNER JOIN datapokemonall d ON c.Id_Pokedex = d.Id_Pokedex
     WHERE c.Id_User = ?
