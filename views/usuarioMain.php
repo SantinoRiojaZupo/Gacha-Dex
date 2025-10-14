@@ -174,13 +174,12 @@ if (!empty($_SESSION['user_id'])) {
         <button onclick="cambiarDescripcion()">Guardar cambios</button>
       <?php endif; ?>
   </div>
-
   <div class="pokemons">
-    <div>
+    <div id="espacioShiny">
       <h3>Tus Shiny</h3>
       <p>[Espacio vacío para futuros shiny]</p>
     </div>
-    <div>
+    <div id="espacioFavorito">
       <h3>Pokémon Favoritos</h3>
     </div>
   </div>
