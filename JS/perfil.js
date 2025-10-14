@@ -3,10 +3,10 @@ function cambiarDescripcion() {
     console.log("click en perfil");
     nuevoNombre = document.querySelector('[name="nuevoNombre"]');
     bios = document.getElementById('bios');
-
-    if (nuevoNombre !== "" & bios !== "") {
-        fetch("/Gacha-Dex/usuario.php", {
-            method: "POST",
+    
+    if(nuevoNombre!=="" & bios!==""){
+    fetch("/Gacha-Dex/usuario.php", {
+        method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
@@ -30,60 +30,41 @@ function mostrarMensaje(mensaje, exito) {
     if (!container) return;
     // Elimina mensajes anteriores
     const oldMsg = container.querySelector(".success-message, .error-message");
-    if (oldMsg) oldMsg.remove();
+    if (oldMsg) oldMsg.remove(); 
     // Crea y agrega el nuevo mensaje
     const div = document.createElement("div");
     div.className = exito ? "success-message" : "error-message";
     div.innerHTML = `<p>${mensaje}</p>`;
     container.appendChild(div);
 }
-function pokedexUsuario() {
-    fetch('/Gacha-Dex/pokemonUsuario.php')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            const inventory = document.getElementById("sidebar");
-            inventory.innerHTML = '';
-            data.forEach(pokemon => {
-                let sidebar = document.getElementById("sidebar");
-                const pokemonDiv = document.createElement('div');
-                pokemonDiv.classList.add("sprite-box");
-                if (pokemon.tiene == 1) {
-                    pokemonDiv.innerHTML = `
+function pokedexUsuario(idUsuario) {
+fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        const inventory = document.getElementById("sidebar");
+        inventory.innerHTML = '';
+        data.forEach(pokemon => {
+            let sidebar = document.getElementById("sidebar");
+            const pokemonDiv = document.createElement('div');
+            pokemonDiv.classList.add("sprite-box");
+            if (pokemon.tiene == 1) {
+                pokemonDiv.innerHTML = `
                 <img src="${pokemon.Image}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>
+                <button onclick="agregar_o_eliminarDeFavoritos(pokemon.id_Pokedex)">♡</button>
                 `
-
-                }
-                else {
-                    pokemonDiv.innerHTML = `???`
-                }
-                sidebar.appendChild(pokemonDiv);
-            })
-        }
-        )
-}
-pokedexUsuario();
-
-function agregar_o_eliminarDeFavoritos(id_Pokedex) {
-    fetch('/Gacha-Dex/pokemonUsuario.php', {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: "id_Pokedex=" + encodeURIComponent(id_Pokedex)
-    })
-        .then(res => res.json())
-        .then(res => {
-            if (res.error) {
-                console.log(res.error + ": " + res.msj);
+            
             }
-            else {
-                console.log(res.msj);
-                console.log(res);
+            else{
+                pokemonDiv.innerHTML=`???`
             }
+            sidebar.appendChild(pokemonDiv);
         })
 }
+    )
+}
+ pokedexUsuario(idUsuario);
 function cargarPokemones() {
         fetch("../inventario.php")
         .then(res => res.text()) // leer respuesta cruda
