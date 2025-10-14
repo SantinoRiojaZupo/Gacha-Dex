@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2025 at 04:54 PM
+-- Generation Time: Oct 14, 2025 at 05:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -552,7 +552,28 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (502, 'Dewott', 'Water', '', 'Grass, Electric', 'Se dice que sus movimientos al manejar las dos cuchilleiras, fluidos cual corriente de agua, se tomaron como modelo para el arte de la espada.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
 (503, 'Samurott', 'Water', '', 'Grass, Electric', 'Un maestro en el arte del desenvaine. Zanja sus combates con un tajo de los grandes sables que guarda en la coraza de las patas delanteras.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
 (504, 'Patrat', 'Normal', '', 'Fighting', 'Almacena víveres en unas bolsas en sus mofletes y vigila durante días. Hace señales con la cola a sus compañeros.', 'Run Away', 'Keen Eye', 'Analytic', '.', 'Male/Female'),
-(505, 'Watchog', 'Normal', '', 'Fighting', 'Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.', 'Illuminate', 'Keen Eye', 'Analytic', '.', 'Male/Female');
+(505, 'Watchog', 'Normal', '', 'Fighting', 'Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.', 'Illuminate', 'Keen Eye', 'Analytic', '.', 'Male/Female'),
+(506, 'Lillipup', 'Normal', '', 'Fighting', 'Es valiente pero cauto. Usa el suave pelaje que le recubre el rostro para obtener información sobre su entorno.', 'Vital Spirit', 'Pickup', 'Run Away', '.', 'Male/Female'),
+(507, 'Herdier', 'Normal', '', 'Fighting', 'Es muy inteligente y cariñoso. Existen ciertas teorías que lo consideran el primer Pokémon que se convirtió en compañero de los humanos.', 'Intimidate', 'Sand Rush', 'Scrappy', '.', 'Male/Female'),
+(508, 'Stoutland', 'Normal', '', 'Fighting', 'Parece ser que le gusta vivir con personas. En tan solo tres días ya le coge cariño a cualquiera que lo haya atrapado en estado salvaje.', 'Intimidate', 'Sand Rush', 'Scrappy', '.', 'Male/Female'),
+(509, 'Purrloin', 'Dark', '', 'Fighting, Bug, Fairy', 'Sustrae las pertenencias de las personas solo para verlas pasar apuros. Es un rival encarnizado de Nickit.', 'Limber', 'Unburden', 'Prankster', '.', 'Male/Female'),
+(510, 'Liepard', 'Dark', '', 'Fighting, Bug, Fairy', 'Bajo su hermoso pelaje y cautivador estilo, que puede llevar fácilmente a engaño, se oculta un carácter imprevisible y agresivo.', 'Limber', 'Unburden', 'Prankster', '.', 'Male/Female'),
+(511, 'Pansage', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Comparte las hojas de su cabeza con Pokémon agotados. Posee la facultad de aliviar el cansancio.', 'Gluttony', '', 'Overgrow', '.', 'Male/Female'),
+(512, 'Simisage', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Ataca estampando las espinas de su cola en el enemigo. Es un Pokémon con mucho temperamento.', 'Gluttony', '', 'Overgrow', '.', 'Male/Female'),
+(513, 'Pansear', 'Fire', '', 'Water, Ground, Rock', 'Pokémon muy inteligente que tiene la costumbre de tostar las bayas antes de comérselas. Ayuda mucho a los humanos.', 'Gluttony', '', 'Blaze', '.', 'Male/Female'),
+(514, 'Simisear', 'Fire', '', 'Water, Ground, Rock', 'Achicharra a sus enemigos desprendiendo llamas por la cola y la cabeza, fruto de su desmesurado calor interno.', 'Gluttony', '', 'Blaze', '.', 'Male/Female'),
+(515, 'Panpour', 'Water', '', 'Grass, Electric', 'El agua acumulada en su mata de pelo es rica en nutrientes. Usa su cola para regar plantas con esa misma agua.', 'Gluttony', '', 'Torrent', '.', 'Male/Female'),
+(516, 'Simipour', 'Water', '', 'Grass, Electric', 'Cuando lanza agua a alta presión con su cola, puede incluso resquebrajar una pared de cemento.', 'Gluttony', '', 'Torrent', '.', 'Male/Female'),
+(517, 'Munna', 'Psychic', '', 'Bug, Ghost, Dark', 'Aparece en plena noche junto a la almohada de la gente. Cuando devora los sueños, los motivos de su cuerpo emiten una luz tenue.', 'Forewarn', 'Synchronize', 'Telepathy', '.', 'Male/Female'),
+(518, 'Musharna', 'Psychic', '', 'Bug, Ghost, Dark', 'Cuando el humo que desprende es de un color negruzco, conviene no acercarse, ya que puede hacer realidad las pesadillas.', 'Forewarn', 'Synchronize', 'Telepathy', '.', 'Male/Female'),
+(519, 'Pidove', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Aparece en lugares habitados por humanos. Conviene tener cuidado al darles de comer, ya que esto podría atraer a cientos de ejemplares.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(520, 'Tranquill', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Posee una velocidad de vuelo nada desdeñable. Por más que se aleje, siempre recuerda el camino de regreso a su nido o hasta su Entrenador.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(521, 'Unfezant', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Hacen gala de una soberbia destreza al volar. La hembra posee una mayor resistencia, mientras que el macho la supera en velocidad.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(522, 'Blitzle', 'Electric', '', 'Ground', 'El latido de su corazón genera electricidad, cuyo voltaje aumenta cuando se sobresalta y se acelera su ritmo cardíaco.', 'Lightning Rod', 'Motor Drive', 'Sap Sipper', '.', 'Male/Female'),
+(523, 'Zebstrika', 'Electric', '', 'Ground', 'Posee un temperamento salvaje y agresivo. Cuando se solivianta, su crin desprende un fulgor dorado y lanza rayos.', 'Lightning Rod', 'Motor Drive', 'Sap Sipper', '.', 'Male/Female'),
+(524, 'Roggenrola', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Su cuerpo es casi tan duro como el acero, pero al parecer puede reblandecerse levemente si permanece sumergido en agua mucho tiempo.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female'),
+(525, 'Boldore', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Cuando sus cristales anaranjados comienzan a brillar, conviene tener cuidado, pues es señal de que está a punto de liberar energía.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female'),
+(526, 'Gigalith', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Su robustez le permite colaborar con humanos y Copperajah en labores de construcción y minería.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female');
 
 -- --------------------------------------------------------
 
@@ -681,7 +702,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=506;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=527;
 
 --
 -- AUTO_INCREMENT for table `messages`
