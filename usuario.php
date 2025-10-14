@@ -7,7 +7,7 @@ if (!$conexion) {
     exit;
 }
 if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_POST["bios"])) {
-    if(empty($_POST["nuevoNombre"]) && !empty($_POST["bios"])){
+    if (empty($_POST["nuevoNombre"]) && !empty($_POST["bios"])) {
         $_POST["nuevoNombre"] = $_SESSION['username'];
     }
     $usuario = $_POST["nuevoNombre"];
@@ -24,7 +24,7 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
 
     if ($fila) {
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
-    } else {//
+    } else { //
         // Actualizar el nombre del usuario actual
         $sql = $conexion->prepare("UPDATE users SET name_user = ?, Bio= ?  WHERE id_user = ?");
         $sql->bind_param("ssi", $usuario, $bios, $user_id);
@@ -43,8 +43,8 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
 } else {
     echo json_encode(["error" => "Faltan datos", "msj" => "No se recibió el nombre o el usuario no está logueado"]);
 }
-$user_id=$_SESSION["user_id"];
- $sql1= "
+$user_id = $_SESSION["user_id"];
+$sql1 = "
 SELECT 
 datapokemonall.Id_Pokedex,
     datapokemonall.PokemonName,        
@@ -58,28 +58,35 @@ inner JOIN pokemoncatched
     AND pokemoncatched.Id_User = $user_id                  
 GROUP BY datapokemonall.Id_Pokedex                            
 ORDER BY datapokemonall.Id_Pokedex;";
-$result=mysqli_query($conexion, $sql1);
+$result = mysqli_query($conexion, $sql1);
 
 // Array para almacenar los resultados de la consulta
-$arr=[];
-$idpokedex=0;
+$arr = [];
+$idpokedex = 0;
 
 // Si la consulta devuelve al menos una fila
-if(mysqli_num_rows($result) > 0){
+if (mysqli_num_rows($result) > 0) {
     // Recorre todas las filas y las agrega al array
-    while($fila=mysqli_fetch_assoc($result)){
-        $idpokedex=$fila['Id_Pokedex'];
-        $fila['image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+    while ($fila = mysqli_fetch_assoc($result)) {
+        $idpokedex = $fila['Id_Pokedex'];
+        $fila['image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $idpokedex . ".png";
 
-        $arr[]=$fila;
+        $arr[] = $fila;
     }
+}
+if (!empty($_POST["foto"]) && !empty($_SESSION["user_id"])) {
+    $foto = $_POST["foto"];
+    $sql = "UPDATE users SET Profile_Photo = ?  WHERE id_user = ?";
+    $stmt = mysqli_prepare($conexion, $sql);
+    mysqli_stmt_bind_param($stmt, "si", $foto, $user_id);
+    mysqli_stmt_execute($stmt);
 }
 
 // Si el array tiene datos, los devuelve en formato JSON
-if($arr){
+if ($arr) {
     echo json_encode($arr);
 }
 // Si no hay datos, devuelve un mensaje de error
-else{
-    echo json_encode(["msj"=>"mal ahi amigo"]);
+else {
+    echo json_encode(["msj" => "mal ahi amigo"]);
 }

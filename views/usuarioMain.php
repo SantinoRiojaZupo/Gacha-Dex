@@ -4,6 +4,14 @@ $idPerfil = isset($_GET['id']) && (int)$_GET['id'] > 0 ? (int)$_GET['id'] : $_SE
 
 $filaNombre = null; // 🔹 valor por defecto
 $bios = '';
+$id = $_SESSION["user_id"];
+
+$sql = "SELECT Profile_Photo FROM users WHERE id_user = '$id'";
+$resultado = mysqli_query($conexion, $sql);
+
+if ($fila = mysqli_fetch_assoc($resultado)) {
+  $foto = $fila["Profile_Photo"];
+}
 
 if (!empty($_SESSION['user_id'])) {
   if ($idPerfil) {
@@ -78,7 +86,6 @@ if (!empty($_SESSION['user_id'])) {
   <div class="perfil-info">
     <h2>Información del Usuario</h2>
     <h5>Foto de perfil</h5>
-    <br>
     <style>
       /* Fondo gris difuminado */
       #fondo {
@@ -135,6 +142,7 @@ if (!empty($_SESSION['user_id'])) {
     </head>
 
     <body>
+      <div id=imagenPerfil><img src="<?php echo $foto; ?>"></div>
 
       <button onclick="abrirPanel()">Seleccionar imagen</button>
 
@@ -142,9 +150,9 @@ if (!empty($_SESSION['user_id'])) {
         <div id="panel">
           <div id="imagenes">
             <!-- Agregá o quitá imágenes libremente -->
-            <div><img src=../imagenes/fotoPerfil1.jpg alt="Imagen 1"></div>
-            <div><img src=../imagenes/fotoPerfil2.jpg alt="Imagen 2"></div>
-            <div><img src=../imagenes/fotoPerfil3.jpg alt="Imagen 3"></div>
+            <div><button onclick="ponerFotoPerfil(1)"><img src=../imagenes/fotoPerfil1.jpg alt="Imagen 1" id="1"></button></div>
+            <div><button onclick="ponerFotoPerfil(2)"><img src=../imagenes/fotoPerfil2.jpg alt="Imagen 2" id="2"></div>
+            <div><button onclick="ponerFotoPerfil(3)"><img src=../imagenes/fotoPerfil3.jpg alt="Imagen 3" id="3"></div>
           </div>
           <button id="cerrarBtn" onclick="cerrarPanel()">Cerrar</button>
         </div>
@@ -194,6 +202,7 @@ if (!empty($_SESSION['user_id'])) {
 
 
     <script src="../JS/perfil.js"></script>
+    <script src="../JS/ponerFotoPerfil.js"></script>
 
   <?php endif; ?>
 
