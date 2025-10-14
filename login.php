@@ -20,8 +20,6 @@ if (!empty($_POST["UsuarioLogin"]) && !empty($_POST["contraseñaLogin"])) {
         echo json_encode(["error" => "Usuario o contraseña incorrectos"]);
     }
     mysqli_close($conexion);
-}
-else {
+} else {
     echo json_encode(["error" => "Faltan datos requeridos"]);
 }
-?>
