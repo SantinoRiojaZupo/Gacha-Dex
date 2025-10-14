@@ -52,7 +52,6 @@ fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
                 pokemonDiv.innerHTML = `
                 <img src="${pokemon.Image}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>
-                <button onclick="agregar_o_eliminarDeFavoritos(pokemon.id_Pokedex)">♡</button>
                 `
             
             }
