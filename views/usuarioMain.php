@@ -199,8 +199,8 @@ if (!empty($_SESSION['user_id'])) {
     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
   </div>
   <?php if ($_SESSION['user_id'] == $idPerfil): ?>
-
-
+<script>const idUsuario = <?php echo json_encode($idPerfil); ?></script>
+ 
     <script src="../JS/perfil.js"></script>
     <script src="../JS/ponerFotoPerfil.js"></script>
 
