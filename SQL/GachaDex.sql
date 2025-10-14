@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2025 a las 16:55:47
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Oct 14, 2025 at 04:54 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gachadex`
+-- Database: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datapokemonall`
+-- Table structure for table `datapokemonall`
 --
 
 CREATE TABLE `datapokemonall` (
@@ -42,7 +42,7 @@ CREATE TABLE `datapokemonall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `datapokemonall`
+-- Dumping data for table `datapokemonall`
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -517,12 +517,47 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (467, 'Magmortar', 'Fire', '', 'Water, Ground, Rock', 'Al lanzar bolas de fuego a 2000 ºC por los extremos de los brazos, su cuerpo adopta un tono blanquecino debido a la temperatura.', 'Flame Body', '', 'Vital Spirit', '.', 'Male/Female'),
 (468, 'Togekiss', 'Fairy', 'Flying', 'Electric, Ice, Poison, Rock, Steel', 'Este Pokémon jamás se muestra en lugares donde reine la discordia y la disensión. Últimamente apenas se avistan ejemplares.', 'Hustle', 'Serene Grace', 'Super Luck', '.', 'Male/Female'),
 (469, 'Yanmega', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Bate las alas con tal fuerza que, cuando alza el vuelo, es capaz de abatir los árboles a su alrededor.', 'Speed Boost', 'Tinted Lens', 'Frisk', '.', 'Male/Female'),
-(470, 'Leafeon', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'En días soleados, duerme y hace la fotosíntesis, con la que emite aire puro a su alrededor.', 'Leaf Guard', '', 'Chlorophyll', '.', 'Male/Female');
+(470, 'Leafeon', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'En días soleados, duerme y hace la fotosíntesis, con la que emite aire puro a su alrededor.', 'Leaf Guard', '', 'Chlorophyll', '.', 'Male/Female'),
+(471, 'Glaceon', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Controla a su antojo la temperatura corporal y congela las partículas de agua que flotan en el aire para provocar ráfagas de nieve en polvo.', 'Snow Cloak', '', 'Ice Body', '.', 'Male/Female'),
+(472, 'Gliscor', 'Ground', 'Flying', 'Water, Ice(X4)', 'Si consigue aprovechar bien las leves corrientes del aire, puede dar la vuelta al globo sin aletear ni una sola vez.', 'Hyper Cutter', 'Sand Veil', 'Poison Heal', '.', 'Male/Female'),
+(473, 'Mamoswine', 'Ice', 'Ground', 'Fire, Water, Grass, Fighting, Steel', 'Existe desde tiempos tan remotos que incluso se halló uno bajo hielo formado hace diez mil años.', 'Oblivious', 'Snow Cloak', 'Thick Fat', '.', 'Male/Female'),
+(474, 'Porygon-Z', 'Normal', '', 'Fighting', 'Se le instaló un software para convertirlo en un Pokémon más avanzado. Sin embargo, algo salió mal y por eso se mueve de manera extraña.', 'Adaptability', 'Download', 'Analytic', '.', 'N/A'),
+(475, 'Gallade', 'Psychic', 'Fighting', 'Flying, Ghost, Fairy', 'Cuando quiere proteger a alguien, extiende los codos como si fueran espadas y lucha con fiereza.', 'Steadfast', 'Sharpness', 'Justified', '.', 'Male'),
+(476, 'Probopass', 'Rock', 'Steel', 'Water, Fighting(X4), Ground(X4)', 'Controla magnéticamente tres unidades llamadas mininarices, con las que ataca al rival desde tres direcciones diferentes.', 'Sturdy', 'Magnet Pull', 'Sand Force', '.', 'Male/Female'),
+(477, 'Dusknoir', 'Ghost', '', 'Ghost, Dark', 'Se dice que recoge en su cuerpo flexible a los espíritus extraviados y los guía hasta el más allá.', 'Pressure', '', 'Frisk', '.', 'Male/Female'),
+(478, 'Froslass', 'Ice', 'Ghost', 'Fire, Rock, Ghost, Dark, Steel', 'Con su gélido aliento congela a todo Pokémon o humano que le llame la atención y se lo lleva a su guarida para usarlo como objeto decorativo.', 'Snow Cloak', '', 'Cursed Body', '.', 'Female'),
+(479, 'Rotom', 'Electric', 'Ghost', 'Ghost, Dark', 'Con su cuerpo eléctrico puede infiltrarse en algunos aparatos para controlarlos y hacer travesuras.', 'Levitate', '', '', '.', 'N/A'),
+(480, 'Uxie', 'Psychic', '', 'Ghost, Dark', 'Se le conoce como el ser de la sabiduría. Se dice que puede borrar la memoria con una mirada.', 'Levitate', '', '', '.', 'N/A'),
+(481, 'Mesprit', 'Psychic', '', 'Ghost, Dark', 'Se le conoce como el ser de la emoción. Enseñó a los humanos la nobleza del dolor y la alegría.', 'Levitate', '', '', '.', 'N/A'),
+(482, 'Azelf', 'Psychic', '', 'Ghost, Dark', 'Se le conoce como el Ser de la Voluntad. Duerme en el fondo de un lago para equilibrar el mundo.', 'Levitate', '', '', '.', 'N/A'),
+(483, 'Dialga', 'Dragon', 'Steel', 'Fighting, Ground', 'Tiene el poder de controlar el tiempo. Aparece en los mitos de Sinnoh como una vieja deidad.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(484, 'Palkia', 'Water', 'Dragon', 'Dragon, Fairy', 'Tiene la habilidad de distorsionar el espacio. La mitología de Sinnoh lo describe como una deidad.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(485, 'Heatran', 'Fire', 'Steel', 'Water, Fighting, Ground(X4)', 'Habita cuevas volcánicas. Cava con sus pies en forma de cruz para trepar por techos y paredes.', 'Flash Fire', '', 'Flame Body', '.', 'Male/Female'),
+(486, 'Regigigas', 'Normal', '', 'Fighting', 'Una antigua leyenda afirma que este Pokémon arrastraba continentes con cuerdas.', 'Slow Start', '', '', '.', 'N/A'),
+(487, 'Giratina', 'Ghost', 'Dragon', 'Ghost, Dragon, Fairy, Ice, Dark', 'Vive en el Mundo Distorsión, un mundo opuesto al nuestro y cuyas leyes desafían el sentido común.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(488, 'Cresselia', 'Psychic', '', 'Bug, Ghost, Dark', 'Sus alas, semejantes a un velo, emiten partículas brillantes al volar. Se dice que encarna el creciente lunar.', 'Levitate', '', '', '.', 'Female'),
+(489, 'Phione', 'Water', '', 'Grass, Electric', 'Si sube la temperatura del mar, infla el flotador de su cabeza y flota en grupo en la superficie.', 'Hydration', '', '', '.', 'N/A'),
+(490, 'Manaphy', 'Water', '', 'Grass, Electric', 'Nace con un maravilloso poder que le permite establecer vínculos con cualquier tipo de Pokémon.', 'Hydration', '', '', '.', 'N/A'),
+(491, 'Darkrai', 'Dark', '', 'Fighting, Bug, Fairy', 'Defiende su territorio de personas y Pokémon haciéndoles dormir y provocándoles pesadillas.', 'Bad Dreams', '', '', '.', 'N/A'),
+(492, 'Shaymin', 'Grass', '', 'Bug, Fire, Ice, Flying, Poison', 'Se dice que, cuando florecen las Gracídeas, Shaymin alza el vuelo para mostrar su gratitud.', 'Natural Cure', '', '', '.', 'N/A'),
+(493, 'Arceus', 'Normal', '', 'Fighting', 'Según la mitología de Sinnoh, Arceus surgió de un huevo y después creó todo el mundo.', 'Multitype', '', '', '.', 'N/A'),
+(494, 'Victini', 'Psychic', 'Fire', 'Water, Ground, Rock, Ghost, Dark', 'Pokémon que atrae la victoria. Dicen que el Entrenador que lo lleve saldrá vencedor de cualquier batalla.', 'Victory Star', '', '', '.', 'N/A'),
+(495, 'Snivy', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Cuando genera energía exponiendo la hoja de la cola a la luz solar, su agilidad aumenta y sus movimientos se vuelven más precisos.', 'Overgrow', '', 'Contrary', '.', 'Male/Female'),
+(496, 'Servine', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Se mantiene agachado para abrirse camino entre la hierba mientras corre y, luego, fustiga sin piedad al objetivo con sus látigos de lianas.', 'Overgrow', '', 'Contrary', '.', 'Male/Female'),
+(497, 'Serperior', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Amplifica decenas de veces en el interior de su largo cuerpo la energía que genera a partir de la luz solar.', 'Overgrow', '', 'Contrary', '.', 'Male/Female'),
+(498, 'Tepig', 'Fire', '', 'Water, Ground, Rock', 'Maneja a su rival moviéndose con una agilidad sorprendente para su apariencia. Lanza ráfagas de bolas de fuego por ambas fosas nasales.', 'Blaze', '', 'Thick Fat', '.', 'Male/Female'),
+(499, 'Pignite', 'Fire', 'Fighting', 'Water, Ground, Flying, Psychic', 'En cuanto entra en combate, su temperatura corporal se dispara hasta el punto de convertirse en una bola de fuego candente.', 'Blaze', '', 'Thick Fat', '.', 'Male/Female'),
+(500, 'Emboar', 'Fire', 'Fighting', 'Water, Ground, Flying, Psychic', 'Las llamas que le arden en el interior del pecho emanan con ímpetu hacia el exterior a través de la barbilla y le confieren una barba flamígera.', 'Blaze', '', 'Reckless', '.', 'Male/Female'),
+(501, 'Oshawott', 'Water', '', 'Grass, Electric', 'Blande la cuchilleira del vientre a modo de daga. Tras bloquear con ella los movimientos del rival, contraataca asestando ágiles cuchilladas.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
+(502, 'Dewott', 'Water', '', 'Grass, Electric', 'Se dice que sus movimientos al manejar las dos cuchilleiras, fluidos cual corriente de agua, se tomaron como modelo para el arte de la espada.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
+(503, 'Samurott', 'Water', '', 'Grass, Electric', 'Un maestro en el arte del desenvaine. Zanja sus combates con un tajo de los grandes sables que guarda en la coraza de las patas delanteras.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
+(504, 'Patrat', 'Normal', '', 'Fighting', 'Almacena víveres en unas bolsas en sus mofletes y vigila durante días. Hace señales con la cola a sus compañeros.', 'Run Away', 'Keen Eye', 'Analytic', '.', 'Male/Female'),
+(505, 'Watchog', 'Normal', '', 'Fighting', 'Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.', 'Illuminate', 'Keen Eye', 'Analytic', '.', 'Male/Female');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `messages`
+-- Table structure for table `messages`
 --
 
 CREATE TABLE `messages` (
@@ -536,7 +571,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pokemoncatched`
+-- Table structure for table `pokemoncatched`
 --
 
 CREATE TABLE `pokemoncatched` (
@@ -547,10 +582,48 @@ CREATE TABLE `pokemoncatched` (
   `Is_Shiny` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `pokemoncatched`
+--
+
+INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
+(56, 6, 333, 0, 0),
+(57, 6, 343, 0, 0),
+(58, 6, 354, 0, 0),
+(59, 6, 223, 0, 0),
+(60, 6, 446, 0, 0),
+(61, 6, 271, 0, 0),
+(62, 6, 189, 0, 0),
+(63, 6, 464, 0, 0),
+(64, 6, 435, 0, 0),
+(65, 6, 159, 0, 0),
+(66, 6, 61, 0, 0),
+(67, 6, 102, 0, 0),
+(68, 6, 139, 0, 0),
+(69, 6, 303, 0, 0),
+(70, 6, 114, 0, 0),
+(71, 6, 345, 0, 0),
+(72, 6, 172, 0, 0),
+(73, 6, 154, 0, 0),
+(74, 6, 119, 0, 0),
+(75, 6, 131, 0, 0),
+(76, 6, 139, 0, 0),
+(77, 6, 128, 0, 0),
+(78, 6, 132, 0, 0),
+(79, 6, 56, 0, 0),
+(80, 6, 143, 0, 0),
+(81, 6, 46, 0, 0),
+(82, 6, 100, 0, 0),
+(83, 6, 61, 0, 0),
+(84, 6, 141, 0, 0),
+(85, 6, 455, 0, 1),
+(86, 6, 70, 0, 0),
+(87, 6, 137, 0, 0);
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -558,29 +631,36 @@ CREATE TABLE `users` (
   `Name_User` varchar(255) NOT NULL,
   `User_Password` varchar(255) NOT NULL,
   `Bio` varchar(255) DEFAULT NULL,
-  `Profile_Photo` varchar(255) DEFAULT NULL,
+  `Profile_Photo` varchar(255) DEFAULT 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg',
   `Pity` int(11) DEFAULT NULL,
   `Rol` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
+(6, '123', '123', '123', NULL, 2, 0);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `datapokemonall`
+-- Indexes for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indices de la tabla `messages`
+-- Indexes for table `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `pokemoncatched`
+-- Indexes for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_PokemonCatched`),
@@ -588,45 +668,45 @@ ALTER TABLE `pokemoncatched`
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `datapokemonall`
+-- AUTO_INCREMENT for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=471;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=506;
 
 --
--- AUTO_INCREMENT de la tabla `messages`
+-- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `pokemoncatched`
+-- AUTO_INCREMENT for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `pokemoncatched`
+-- Constraints for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
