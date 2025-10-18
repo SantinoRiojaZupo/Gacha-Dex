@@ -161,3 +161,29 @@
 #sidebar::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+
+#espacioShiny,
+#espacioFavorito {
+  max-height: 600px;        /* ← Ajusta la altura visible */
+  overflow-y: auto;         /* ← Activa el scroll vertical */
+  overflow-x: hidden;       /* ← Evita scroll horizontal */
+  scrollbar-width: thin;    /* ← Scroll más fino en Firefox */
+  scrollbar-color: #00bfff #1a1a1a; /* color del scroll */
+}
+
+/* Para navegadores WebKit (Chrome, Edge, Opera, etc.) */
+.espacioShiny::-webkit-scrollbar,
+.espacioFavorito::-webkit-scrollbar {
+  width: 8px;
+}
+
+.espacioShiny::-webkit-scrollbar-thumb,
+.espacioFavorito::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 8px;
+}
+
+.espacioShiny::-webkit-scrollbar-track,
+.espacioFavorito::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}

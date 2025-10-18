@@ -1,4 +1,5 @@
    const espacioFavorito = document.getElementById('espacioFavorito');
+   const espacioShiny= document.getElementById('espacioShiny');
 function cambiarDescripcion() {
     console.log("click en perfil");
     nuevoNombre = document.querySelector('[name="nuevoNombre"]');
@@ -93,7 +94,7 @@ function cargarPokemones() {
 
 function mostrarPokemones(lista) {
     let contenedor=document.getElementById("espacioFavorito");
-    contenedor.innerHTML = "";
+    contenedor.innerHTML = "<h3>Tus Pokemon favoritos</h3>";
 
     if (lista.length === 0) {
         contenedor.innerHTML = "<p>No se encontraron Pokémon.</p>";
@@ -117,11 +118,23 @@ function mostrarPokemones(lista) {
         // Botón con estado actual
         const corazon = esFavorito ? "❤️" : "♡";
 
-        espacioFavorito.innerHTML = `
-            <img src="${imagen}" alt="${pokemon.nombre}">
-            <h3>${pokemon.nombre}</h3>
-        `;
+        if (esShiny)
+{
 
+        espacioShiny.innerHTML += `
+            <img src="${imagen}" alt="${pokemon.nombre}">
+            <p>${pokemon.nombre}</p>
+        `;
+    }
+
+if (esFavorito)
+{
+
+        espacioFavorito.innerHTML += `
+            <img src="${imagen}" alt="${pokemon.nombre}">
+            <p>${pokemon.nombre}</p>
+        `;
+    }
         contenedor.appendChild(card);
     });
 }

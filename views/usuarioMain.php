@@ -187,10 +187,11 @@ if (!empty($_SESSION['user_id'])) {
   <div class="pokemons">
     <div id="espacioShiny">
       <h3>Tus Shiny</h3>
-      <p>[Espacio vacío para futuros shiny]</p>
+      <p></p>
     </div>
     <div id="espacioFavorito">
       <h3>Pokémon Favoritos</h3>
+      <p></p>
     </div>
   </div>
 

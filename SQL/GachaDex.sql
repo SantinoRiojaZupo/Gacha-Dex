@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2025 a las 07:21:52
+-- Tiempo de generación: 18-10-2025 a las 21:40:33
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -736,44 +736,6 @@ CREATE TABLE `pokemoncatched` (
   `Is_Shiny` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `pokemoncatched`
---
-
-INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
-(56, 6, 333, 0, 0),
-(57, 6, 343, 0, 0),
-(58, 6, 354, 0, 0),
-(59, 6, 223, 0, 0),
-(60, 6, 446, 0, 0),
-(61, 6, 271, 0, 0),
-(62, 6, 189, 0, 0),
-(63, 6, 464, 0, 0),
-(64, 6, 435, 0, 0),
-(65, 6, 159, 0, 0),
-(66, 6, 61, 0, 0),
-(67, 6, 102, 0, 0),
-(68, 6, 139, 0, 0),
-(69, 6, 303, 0, 0),
-(70, 6, 114, 0, 0),
-(71, 6, 345, 0, 0),
-(72, 6, 172, 0, 0),
-(73, 6, 154, 0, 0),
-(74, 6, 119, 0, 0),
-(75, 6, 131, 0, 0),
-(76, 6, 139, 0, 0),
-(77, 6, 128, 0, 0),
-(78, 6, 132, 0, 0),
-(79, 6, 56, 0, 0),
-(80, 6, 143, 0, 0),
-(81, 6, 46, 0, 0),
-(82, 6, 100, 0, 0),
-(83, 6, 61, 0, 0),
-(84, 6, 141, 0, 0),
-(85, 6, 455, 0, 1),
-(86, 6, 70, 0, 0),
-(87, 6, 137, 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -789,13 +751,6 @@ CREATE TABLE `users` (
   `Pity` int(11) DEFAULT NULL,
   `Rol` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
-(6, '123', '123', '123', NULL, 2, 0);
 
 --
 -- Índices para tablas volcadas
@@ -847,13 +802,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
