@@ -65,6 +65,7 @@ fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
 }
  pokedexUsuario(idUsuario);
 function cargarPokemones() {
+    let contenedor=document.getElementById("espacioFavorito");
         fetch("../inventario.php")
         .then(res => res.text()) // leer respuesta cruda
         .then(texto => {
@@ -91,6 +92,7 @@ function cargarPokemones() {
 }
 
 function mostrarPokemones(lista) {
+    let contenedor=document.getElementById("espacioFavorito");
     contenedor.innerHTML = "";
 
     if (lista.length === 0) {
@@ -126,4 +128,21 @@ function mostrarPokemones(lista) {
 
 window.onload = () => {
     cargarPokemones();
+}
+
+
+function mostrarImagenPerfil(idUsuario){
+fetch('/Gacha-Dex/usuarioImagen.php?id=' + encodeURIComponent(idUsuario))
+.then(res => res.json())
+.then(data => { 
+    console.log(data)
+    if (data.error) {
+        console.error("Error al obtener la imagen de perfil:", data.error);
+        return;
+    }
+    document.getElementById("imagenPerfil").innerHTML= `<img src="${data.foto}" alt="imagen1"></img>`
+
+
+})
+
 }

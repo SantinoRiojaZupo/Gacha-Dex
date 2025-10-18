@@ -143,9 +143,11 @@ if (!empty($_SESSION['user_id'])) {
 
     <body>
       <div id=imagenPerfil><img src="<?php echo $foto; ?>"></div>
+            <?php  if($idPerfil == $_SESSION['user_id']):  ?> 
 
       <button onclick="abrirPanel()">Seleccionar imagen</button>
 
+<?php endif; ?>
       <div id="fondo">
         <div id="panel">
           <div id="imagenes">
@@ -202,8 +204,17 @@ if (!empty($_SESSION['user_id'])) {
     const idUsuario = <?php echo json_encode((int)$idPerfil); ?>;
   </script>
   <script src="../JS/perfil.js"></script>
+<script>
+  console.log("ID de usuario:", idUsuario);
+mostrarImagenPerfil(idUsuario);
+</script>  
   <?php if ($_SESSION['user_id'] == $idPerfil): ?>
-<script>const idUsuario = <?php echo json_encode($idPerfil); ?></script>
+<script>
+  
+    console.log("ID de usuario:", idUsuario);
+mostrarImagenPerfil(idUsuario);
+  
+</script>
  
     
     <script src="../JS/ponerFotoPerfil.js"></script>

@@ -74,13 +74,15 @@ if (mysqli_num_rows($result) > 0) {
         $arr[] = $fila;
     }
 }
-if (!empty($_POST["foto"]) && !empty($_SESSION["user_id"])) {
+ if (!empty($_POST["foto"]) && !empty($_SESSION["user_id"])) {
     $foto = $_POST["foto"];
     $sql = "UPDATE users SET Profile_Photo = ?  WHERE id_user = ?";
     $stmt = mysqli_prepare($conexion, $sql);
     mysqli_stmt_bind_param($stmt, "si", $foto, $user_id);
     mysqli_stmt_execute($stmt);
 }
+
+
 
 // Si el array tiene datos, los devuelve en formato JSON
 if ($arr) {
