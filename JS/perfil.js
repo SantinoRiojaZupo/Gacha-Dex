@@ -65,10 +65,10 @@ fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
     )
 }
  pokedexUsuario(idUsuario);
-function cargarPokemones() {
-    let contenedor=document.getElementById("espacioFavorito");
-        fetch("../inventario.php")
-        .then(res => res.text()) // leer respuesta cruda
+function cargarPokemones(idUsuario) {
+    let contenedor = document.getElementById("espacioFavorito");
+    fetch(`/Gacha-Dex/inventario.php?id=${encodeURIComponent(idUsuario)}`)
+        .then(res => res.text())
         .then(texto => {
             console.log("Respuesta cruda del servidor:", texto);
             try {
@@ -94,7 +94,6 @@ function cargarPokemones() {
 
 function mostrarPokemones(lista) {
     let contenedor=document.getElementById("espacioFavorito");
-    contenedor.innerHTML = "<h3>Tus Pokemon favoritos</h3>";
 
     if (lista.length === 0) {
         contenedor.innerHTML = "<p>No se encontraron Pokémon.</p>";
@@ -140,7 +139,7 @@ if (esFavorito)
 }
 
 window.onload = () => {
-    cargarPokemones();
+    cargarPokemones(idUsuario);
 }
 
 
