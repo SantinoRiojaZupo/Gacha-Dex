@@ -37,6 +37,7 @@ document.getElementById('buscarUsuario').addEventListener('click', () => {
             
             li.innerHTML = `<a href="index.php?page=perfil&id=${element.Id_User}">${element.Name_User}</a>`; //aca esta lo q dije
             resultados.appendChild(li)
+          
             
          });
         
