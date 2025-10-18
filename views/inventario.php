@@ -55,4 +55,8 @@
     <!-- más pokémon dinámicos -->
   </div>
 </main>
-<script src="../JS/inventario.js"></script>
+
+<script>
+  const idUsuario = <?= json_encode($idUsuarioPerfil); ?>;
+</script>
+<script src="/Gacha-Dex/js/inventario.js"></script>

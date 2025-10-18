@@ -78,9 +78,10 @@ if (!empty($_SESSION['user_id'])) {
 <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
 <div class="login-container"></div>
 <div id=inventario>
-  <a href="index.php?page=inventario">
+<a href="index.php?page=inventario&id=<?php echo $idPerfil; ?>">
+  
     <img src="../imagenes/inventario.png" alt="mateo chompi">
-  </a>
+</a>
 </div>
 <div class="perfil-container">
   <div class="perfil-info">

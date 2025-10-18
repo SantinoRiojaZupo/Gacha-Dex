@@ -76,6 +76,7 @@ switch ($page) {
 
     break;
       case 'inventario':
+            $idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : ($_SESSION['user_id'] ?? 0);
     $vista=VIEWS_PATH . 'inventario.php';
     $vistaHeader = VIEWS_PATH . 'inventarioHeader.php';
   

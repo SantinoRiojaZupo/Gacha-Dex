@@ -69,7 +69,7 @@ function aplicarFiltros() {
 
 // Cargar pokemones desde PHP
 function cargarPokemones() {
-    fetch("../inventario.php")
+     fetch(`/Gacha-Dex/inventario.php?id=${encodeURIComponent(idUsuario)}`)
         .then(res => res.text()) // leer respuesta cruda
         .then(texto => {
             console.log("Respuesta cruda del servidor:", texto);
