@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2025 a las 21:40:33
+-- Tiempo de generación: 19-10-2025 a las 05:35:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -706,7 +706,49 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (655, 'Delphox', 'Fire', 'Psychic', 'Water, Ground, Rock, Ghost, Dark', 'Deja marcas en el suelo con la punta candente de su varita. Las gentes de antaño practicaban la adivinación interpretando dichas marcas.', 'Blaze', '', 'Magician', '.', 'Male/Female'),
 (656, 'Froakie', 'Water', '', 'Grass, Electric', 'Su aire despreocupado no es más que una fachada con la que engaña a sus enemigos para después arrollarlos a una velocidad abrumadora.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
 (657, 'Frogadier', 'Water', '', 'Grass, Electric', 'Es muy hábil ideando tácticas que usan el terreno a su favor. Dispara piedras envueltas en burbujas con tal puntería que no falla nunca.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
-(658, 'Greninja', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'Puede detectar enemigos fuera de su campo visual al captar los movimientos del aire con su larga lengua enroscada alrededor del cuello.', 'Torrent', '', 'Protean', '.', 'Male/Female');
+(658, 'Greninja', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'Puede detectar enemigos fuera de su campo visual al captar los movimientos del aire con su larga lengua enroscada alrededor del cuello.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
+(659, 'Bunnelby', 'Normal', '', 'Fighting', 'Usa hábilmente las orejas para hacer hoyos. Es capaz de excavar una madriguera a 10 m bajo tierra en una sola noche.', 'Pickup', 'Cheek Pouch', 'Huge Power', '.', 'Male/Female'),
+(660, 'Diggersby', 'Normal', 'Ground', 'Water, Grass, Ice, Fighting', 'Puede horadar incluso el duro sustrato rocoso con la fuerza de una excavadora, por lo que su ayuda resulta inestimable para construir túneles.', 'Pickup', 'Cheek Pouch', 'Huge Power', '.', 'Male/Female'),
+(661, 'Fletchling', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Por lo general se muestra calmado, pero, al entrar en combate, su equilibrio hormonal se altera y se vuelve agresivo.', 'Big Pecks', '', 'Gale Wings', '.', 'Male/Female'),
+(662, 'Fletchinder', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Lanza chispas en zonas de hierba alta donde podrían habitar Pokémon de tipo Bicho y, en cuanto intentan escapar, los atrapa.', 'Flame Body', '', 'Gale Wings', '.', 'Male/Female'),
+(663, 'Talonflame', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Su pericia en vuelo es excepcional. Revolotea sin inmutarse aun llevando en sus garras presas de más de 100 kg.', 'Flame Body', '', 'Gale Wings', '.', 'Male/Female'),
+(664, 'Scatterbug', 'Bug', '', 'Fire, Flying, Rock', 'Puede alimentarse de hojas y raíces venenosas, ya que todo el veneno que ingiere lo expulsa tras haberlo transformado en un polvo negro.', 'Shield Dust', 'Compound Eyes', 'Friend Guard', '.', 'Male/Female'),
+(665, 'Spewpa', 'Bug', '', 'Fire, Flying, Rock', 'Cuando los Rufflet lo atacan picoteándolo, se defiende erizando su afilado pelaje y expulsando un polvo negro y venenoso.', 'Shed Skin', '', 'Friend Guard', '.', 'Male/Female'),
+(666, 'Vivillon', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Sus motivos cambian en función del clima y el terreno de su lugar de origen. Adopta esta forma en tierras floridas.', 'Shield Dust', 'Compound Eyes', 'Friend Guard', '.', 'Male/Female'),
+(667, 'Litleo', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Mientras es un cachorro, los Pyroar hembra lo instruyen en la caza, pero, en cuanto madura, se separa de la manada y se independiza.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
+(668, 'Pyroar', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Las hembras colaboran para dar caza y abatir a las presas. De este modo, aseguran el sustento y la supervivencia de la manada.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
+(669, 'Flabébé', 'Fairy', '', 'Poison, Steel', 'Posee el don de extraer el poder oculto de las flores silvestres. Siente una predilección especial por las flores rojas.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(670, 'Floette', 'Fairy', '', 'Poison, Steel', 'Puede extraer la fuerza que les resta a las flores marchitas para reanimarlas. Lleva consigo una flor de color rojo.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(671, 'Florges', 'Fairy', '', 'Poison, Steel', 'Hace de su territorio un jardín esplendoroso. Extrae su poder de las flores rojas que lleva en torno al cuello.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(672, 'Skiddo', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Hasta hace bien poco, los habitantes de las montañas se desplazaban por sus senderos a lomos de este Pokémon.', 'Sap Sipper', '', 'Grass Pelt', '.', 'Male/Female'),
+(673, 'Gogoat', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Puede percibir cómo se siente alguien tocándolo con los cuernos. Lleva ayudando a los humanos en sus labores desde hace 5000 años.', 'Sap Sipper', '', 'Grass Pelt', '.', 'Male/Female'),
+(674, 'Pancham', 'Fighting', '', 'Flying, Psychic, Fairy', 'Sigue los pasos de Pangoro, a quien considera su mentor. A base de imitarlo, aprende a combatir y a cazar presas.', 'Iron Fist', 'Mold Breaker', 'Scrappy', '.', 'Male/Female'),
+(675, 'Pangoro', 'Fighting', 'Dark', 'Fighting, Flying, Fairy(X4)', 'Este Pokémon de carácter agresivo lo soluciona todo a golpes. Desata su espíritu combativo al enfrentarse a los Obstagoon.', 'Iron Fist', 'Mold Breaker', 'Scrappy', '.', 'Male/Female'),
+(676, 'Furfrou', 'Normal', '', 'Fighting', 'Hubo una época en la que los aristócratas competían entre ellos procurando que el corte de pelo de su Furfrou fuera el mejor de todos.', 'Fur Coat', '', '', '.', 'Male/Female'),
+(677, 'Espurr', 'Psychic', '', 'Bug, Ghost, Dark', 'Pliega las orejas en un esfuerzo por contener el inmenso poder psíquico en su interior, pero, si acumula demasiado, pierde la consciencia.', 'Keen Eye', 'Infiltrator', 'Own Tempo', '.', 'Male/Female'),
+(678, 'Meowstic', 'Psychic', '', 'Bug, Ghost, Dark', 'Su poder psíquico podría mandar volando a cualquier rival, pero prefiere emplearlo para proteger a los suyos antes que para atacar.', 'Keen Eye', 'Infiltrator', 'Prankster', '.', 'Male/Female'),
+(679, 'Honedge', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su alma es la de un ser humano que poseyó la misma espada que lo abatió en tiempos remotos.', 'No Guard', '', '', '.', 'Male/Female'),
+(680, 'Doublade', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su espada se duplicó durante su proceso de evolución. Intimida a los rivales con el chirrido metálico que produce al frotar ambas hojas.', 'No Guard', '', '', '.', 'Male/Female'),
+(681, 'Aegislash', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Gracias a su cuerpo de acero y a una barrera de poder espectral, crea una defensa que le permite mitigar prácticamente cualquier ataque.', 'Stance Change', '', '', '.', 'Male/Female'),
+(682, 'Spritzee', 'Fairy', '', 'Poison, Steel', 'Posee un órgano interno con el cual produce una fragancia que varía en función de los alimentos que ingiere.', 'Healer', '', 'Aroma Veil', '.', 'Male/Female'),
+(683, 'Aromatisse', 'Fairy', '', 'Poison, Steel', 'La fragancia que despide su pelaje es tan potente que puede dejar sin olfato a su Entrenador.', 'Healer', '', 'Aroma Veil', '.', 'Male/Female'),
+(684, 'Swirlix', 'Fairy', '', 'Poison, Steel', 'Ingiere diariamente una cantidad de azúcar equivalente a su peso corporal. De lo contrario, se pone de muy mal humor.', 'Sweet Veil', '', 'Unburden', '.', 'Male/Female'),
+(685, 'Slurpuff', 'Fairy', '', 'Poison, Steel', 'Puede percibir el estado físico y mental de alguien solo con olerlo, lo que podría tener aplicaciones útiles en el campo de la medicina.', 'Sweet Veil', '', 'Unburden', '.', 'Male/Female'),
+(686, 'Inkay', 'Dark', 'Psychic', 'Bug(X4), Fairy', 'Los destellos de luz intermitente que emiten sus órganos luminosos aplacan el ánimo del rival, lo que le permite protegerse de enemigos fuertes.', 'Contrary', 'Suction Cups', 'Infiltrator', '.', 'Male/Female'),
+(687, 'Malamar', 'Dark', 'Psychic', 'Bug(X4), Fairy', 'Sus potentes poderes hipnóticos no tienen rival. Aquellos a los que controla no recuerdan en absoluto haber estado sometidos a su voluntad.', 'Contrary', 'Suction Cups', 'Infiltrator', '.', 'Male/Female'),
+(688, 'Binacle', 'Rock', 'Water', 'Grass(X4), Electric, Fighting, Ground', 'Dos Binacle conviven adheridos a una misma roca a orillas del mar y colaboran para atrapar a sus presas cuando sube la marea.', 'Tough Claws', 'Sniper', 'Pickpocket', '.', 'Male/Female'),
+(689, 'Barbaracle', 'Rock', 'Water', 'Grass(X4), Electric, Fighting, Ground', 'Su cuerpo está formado por siete Binacle. El situado en la posición central a modo de cabeza suele impartir las órdenes a las extremidades.', 'Tough Claws', 'Sniper', 'Pickpocket', '.', 'Male/Female'),
+(690, 'Skrelp', 'Poison', 'Water', 'Electric, Ground, Psychic', 'Se oculta de sus enemigos mezclándose con las algas que flotan a la deriva. Elabora su veneno a partir de las algas podridas que ingiere.', 'Poison Point', 'Poison Touch', 'Adaptability', '.', 'Male/Female'),
+(691, 'Dragalge', 'Poison', 'Dragon', 'Ice, Ground, Psychic, Dragon', 'Ataca indiscriminadamente a quien ose invadir su territorio escupiéndole un veneno tan cáustico que es capaz de corroer el casco de un barco.', 'Poison Point', 'Poison Touch', 'Adaptability', '.', 'Male/Female'),
+(692, 'Clauncher', 'Water', '', 'Grass, Electric', 'Dispara balas de agua a Pokémon voladores haciendo estallar el gas de su pinza derecha.', 'Mega Launcher', '', '', '.', 'Male/Female'),
+(693, 'Clawitzer', 'Water', '', 'Grass, Electric', 'Emplea el gas de su cuerpo para lanzar chorros de agua por la parte trasera de su pinza que le permiten nadar a una velocidad de 60 nudos.', 'Mega Launcher', '', '', '.', 'Male/Female'),
+(694, 'Helioptile', 'Electric', 'Normal', 'Fighting, Ground', 'Extiende los pliegues de la cabeza para absorber la luz del sol y convertirla en electricidad, con la que realiza potentes ataques de tipo Eléctrico.', 'Dry Skin', 'Sand Veil', 'Solar Power', '.', 'Male/Female'),
+(695, 'Heliolisk', 'Electric', 'Normal', 'Fighting, Ground', 'Venerado por una antigua civilización del desierto, ahora desaparecida, llegó a Galar junto a sus tesoros y reliquias.', 'Dry Skin', 'Sand Veil', 'Solar Power', '.', 'Male/Female'),
+(696, 'Tyrunt', 'Rock', 'Dragon', 'Ice, Fighting, Ground, Dragon, Steel, Fairy', 'Pokémon prehistórico recreado a partir de un fósil. De carácter violento y egoísta, sus enormes mandíbulas pueden triturar cualquier cosa.', 'Strong Jaw', '', 'Sturdy', '.', 'Male/Female'),
+(697, 'Tyrantrum', 'Rock', 'Dragon', 'Ice, Fighting, Ground, Dragon, Steel, Fairy', 'Este Pokémon vivió hace cien millones de años. A pesar de su ferocidad, posee una firmeza y una presencia dignas de un rey.', 'Strong Jaw', '', 'Sturdy', '.', 'Male/Female'),
+(698, 'Amaura', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Este Pokémon ha sido regenerado a partir de un fósil. Habitaba en manadas en lugares fríos donde los depredadores escaseaban.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
+(699, 'Aurorus', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Fue regenerado a partir de un fósil. Dicen que el rugido de Aurorus hace aparecer la aurora boreal en el cielo nocturno.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
+(700, 'Sylveon', 'Fairy', '', 'Poison, Steel', 'Con sus apéndices sensoriales con forma de cinta, emite unas ondas tranquilizadoras capaces de neutralizar la hostilidad de sus rivales.', 'Cute Charm', '', 'Pixilate', '.', 'Male/Female');
 
 -- --------------------------------------------------------
 
@@ -790,7 +832,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=659;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=701;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
