@@ -38,6 +38,7 @@ $vistafooter = $vistafooter ?? "";
 
     <!-- Archivos JS opcionales -->
     <?php if (!empty($vistaJsBoton)) echo "<script src='{$vistaJsBoton}'></script>"; ?>
+    <?php if (!empty($vistaIniciarChat)) echo "<script src='{$vistaIniciarChat}'></script>"; ?>
     <?php if (!empty($vistaPokedexFunciones)) echo "<script src='{$vistaPokedexFunciones}'></script>"; ?>
     <?php if (!empty($vistaChatCargar)) echo "<script src='{$vistaChatCargar}'></script>"; ?>
     <?php if (!empty($vistaChatMandar)) echo "<script src='{$vistaChatMandar}'></script>"; ?>

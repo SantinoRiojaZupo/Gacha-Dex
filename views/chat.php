@@ -12,10 +12,15 @@
 
 </head>
 <body>
+  <script>
+    idUsuariologueado= <?php echo $_GET['idLogueado']; ?>;
+    idUsuario= <?php echo $_GET['id']; ?>;
+    nombreUsuario= "<?php echo $_GET['usuario']; ?>";
+  </script>
 
 
   <div class="container">
-    <div class="users-list">
+    <div class="users-list" id="usersList">
       <div id="5" class="user-item">Usuario 1</div>
       <div id="4" class="user-item">Usuario 2</div>
       <div  class="user-item">Usuario 3</div>
@@ -50,7 +55,7 @@
     </div>
   </div>
   <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
-  
-  </script>
+<script src="../JS/AgregarChat.js"></script>
+
 </body>
 </html>

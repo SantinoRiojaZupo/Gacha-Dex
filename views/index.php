@@ -72,6 +72,7 @@ switch ($page) {
     $vistaBotonLogin="../JS/botonLogin.js";
     $vistaBotonPerfil="../JS/botonPerfil.js";
     $vistaBuscarUsuario="../JS/buscarUsuario.js";
+    $vistaIniciarChat="../JS/botonIniciarChat.js";
     
 
     break;

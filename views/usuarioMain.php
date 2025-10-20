@@ -2,6 +2,8 @@
 require_once "../config/conexion.php";
 $idPerfil = isset($_GET['id']) && (int)$_GET['id'] > 0 ? (int)$_GET['id'] : $_SESSION['user_id'];
 
+$idPerfilNombre = isset($_GET['nombre']) ? (string)$_GET['nombre'] : '';
+
 $filaNombre = null; // 🔹 valor por defecto
 $bios = '';
 $id = $_SESSION["user_id"];
@@ -144,7 +146,12 @@ if (!empty($_SESSION['user_id'])) {
 
     <body>
       <div id=imagenPerfil><img src="<?php echo $foto; ?>"></div>
-            <?php  if($idPerfil == $_SESSION['user_id']):  ?> 
+                 <?php  if($idPerfil !== $_SESSION['user_id']):?> 
+
+      <button id="iniciarChat">Mandar Mensaje</button>
+
+<?php endif; ?>
+            <?php  if($idPerfil == $_SESSION['user_id']):?> 
 
       <button onclick="abrirPanel()">Seleccionar imagen</button>
 
@@ -203,7 +210,9 @@ if (!empty($_SESSION['user_id'])) {
     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
   </div>
   <script>
+    const nombreUsuario = <?php echo json_encode((string)$idPerfilNombre); ?>;
     const idUsuario = <?php echo json_encode((int)$idPerfil); ?>;
+    const idUsuarioLogueado = <?php echo json_encode((int)$_SESSION['user_id']); ?>;
   </script>
   <script src="../JS/perfil.js"></script>
 <script>
