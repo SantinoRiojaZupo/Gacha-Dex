@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/config/conexion.php';
 session_start();
+require_once __DIR__ . '/config/conexion.php';
+
+$idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : $_SESSION['user_id'];
+$idLogueado = $_SESSION['user_id'];
 header('Content-Type: application/json; charset=utf-8');
 
 // 🔒 Verificar sesión
@@ -12,7 +15,10 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$userid = $_SESSION['user_id'];
+// 🧠 Si se pasa ?id= por GET, usar ese. Si no, usar el de la sesión.
+$userid = isset($_GET['id']) && is_numeric($_GET['id'])
+    ? (int)$_GET['id']
+    : (int)$_SESSION['user_id'];
 
 // 🧩 Función para calcular la generación según el ID del pokémon
 function obtenerGeneracion($id) {
@@ -27,7 +33,6 @@ function obtenerGeneracion($id) {
         8 => [810, 905],
         9 => [906, 1025]
     ];
-
     foreach ($rangos as $gen => [$min, $max]) {
         if ($id >= $min && $id <= $max) return $gen;
     }
@@ -81,7 +86,8 @@ while ($fila = mysqli_fetch_assoc($res)) {
     if ((int)$fila['shiny'] === 1) {
         $fila['imagen'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{$id}.png";
     } else {
-        $fila['imagen'] = $fila['imagen_normal'] ?: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png`;
+        $fila['imagen'] = $fila['imagen_normal'] 
+            ?: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png";
     }
 
     unset($fila['imagen_normal']);
@@ -91,5 +97,6 @@ while ($fila = mysqli_fetch_assoc($res)) {
 // ✅ Salida JSON final
 echo json_encode([
     'ok' => true,
-    'pokemones' => $pokemones
+    'pokemones' => $pokemones,
+    'idLogueado' => $idLogueado
 ], JSON_UNESCAPED_UNICODE);

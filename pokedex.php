@@ -15,12 +15,32 @@ if (!isset($_SESSION['user_id'])) {
 // Guarda el ID del usuario logueado en una variable
 $idusuario = $_SESSION['user_id'];
 
+// Obtener la gen dependiendo del id
+function obtenerGeneracion($id) {
+    $rangos = [
+        1 => [1, 151],
+        2 => [152, 251],
+        3 => [252, 386],
+        4 => [387, 493],
+        5 => [494, 649],
+        6 => [650, 721],
+        7 => [722, 809],
+        8 => [810, 905],
+        9 => [906, 1025]
+    ];
+    foreach ($rangos as $gen => [$min, $max]) {
+        if ($id >= $min && $id <= $max) return $gen;
+    }
+    return null;
+}
+
 // Consulta SQL para obtener todos los Pokémon de la Pokedex
 // y marcar cuáles el usuario ya atrapó
 $sql1= "
 SELECT 
 datapokemonall.Id_Pokedex,
     datapokemonall.PokemonName,        -- Nombre del Pokémon
+        datapokemonall.Type,
     datapokemonall.image,              -- URL de la imagen del Pokémon
     CASE 
         WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN 1  -- Si el usuario atrapó al menos uno

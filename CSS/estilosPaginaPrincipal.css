@@ -9,6 +9,8 @@
             font-family: 'PokemonGB', monospace, sans-serif;
             background-color: rgb(255, 255, 255);
             background-image: url(../imagenes/fondoPaginaPrincipal.jpg);
+             margin-top: -5px;
+             padding: -10px 10px;
         }
         main {
             margin-top: 100px;
@@ -41,6 +43,8 @@
     align-items: center;
     gap: 10px;
 }
+
+
 
 
         #buscadorUsuario {
@@ -158,6 +162,8 @@
 }
 
 
+
+
 .saludo {
     font-weight: bold;
     color: #2c3e50;
@@ -166,6 +172,10 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+
+
+
 
 
 
@@ -180,8 +190,12 @@
 }
 
 
+
+
 .left-box { order: 1; }
 .right-box { order: 3; }
+
+
 
 
 .center-boxes {
@@ -193,12 +207,16 @@
 }
 
 
+
+
 .center-box {
     background: #e0e0e0;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
+
 
 
 @media (max-width: 900px) {
@@ -225,6 +243,8 @@
     font-weight: bold;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
+
 
 
 #rolls:hover {

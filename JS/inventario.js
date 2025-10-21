@@ -32,16 +32,21 @@ function mostrarPokemones(lista) {
         // Botón con estado actual
         const corazon = esFavorito ? "❤️" : "♡";
 
+                const botonFavoritoHTML =
+            idLogueado === idUsuario
+                ? `<button class="boton-favorito" 
+                            data-id="${pokemon.atrapado}" 
+                            data-fav="${pokemon.favorito}">
+                        ${corazon}
+                   </button>`
+                : "";
+
         card.innerHTML = `
             <img src="${imagen}" alt="${pokemon.nombre}">
             <h3>${pokemon.nombre}</h3>
             <p>Tipo: ${pokemon.tipo}${pokemon.tipo_secundario ? " / " + pokemon.tipo_secundario : ""}</p>
             <p>Generación: ${pokemon.generacion}</p>
-            <button class="boton-favorito" 
-                    data-id="${pokemon.atrapado}" 
-                    data-fav="${pokemon.favorito}">
-                ${corazon}
-            </button>
+                ${botonFavoritoHTML}
         `;
 
         contenedor.appendChild(card);
@@ -69,7 +74,7 @@ function aplicarFiltros() {
 
 // Cargar pokemones desde PHP
 function cargarPokemones() {
-    fetch("../inventario.php")
+     fetch(`/Gacha-Dex/inventario.php?id=${encodeURIComponent(idUsuario)}`)
         .then(res => res.text()) // leer respuesta cruda
         .then(texto => {
             console.log("Respuesta cruda del servidor:", texto);
@@ -81,6 +86,7 @@ function cargarPokemones() {
                     return;
                 }
                 pokemonesUsuario = data.pokemones || [];
+                idLogueado = data.idLogueado
                 mostrarPokemones(pokemonesUsuario);
             } catch (e) {
                 console.error("❌ Error al parsear JSON:", e);
@@ -94,7 +100,10 @@ function cargarPokemones() {
 }
 
 //  Cambiar favorito
+
 function cambiarFavorito(idPokemonCatched, estadoActual, boton) {
+      if (idUsuario == idLogueado ){
+  
     fetch("../favorito.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -113,6 +122,7 @@ function cambiarFavorito(idPokemonCatched, estadoActual, boton) {
             }
         })
         .catch(err => console.error("Error al cambiar favorito:", err));
+    }
 }
 
 //  cambio de corazon

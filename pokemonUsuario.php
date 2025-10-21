@@ -66,7 +66,7 @@ $user_id=$_SESSION["user_id"];
  $sql1= "
 SELECT datapokemonall.Id_Pokedex,datapokemonall.PokemonName,datapokemonall.image, CASE 
 WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN 1 ELSE 0 END AS tiene
-FROM datapokemonall LEFT JOIN pokemoncatched ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex
+FROM datapokemonall INNER JOIN pokemoncatched ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex
  AND pokemoncatched.Id_User = $user_id GROUP BY datapokemonall.Id_Pokedex ORDER BY datapokemonall.Id_Pokedex;";
 $result=mysqli_query($conexion, $sql1);
 

@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <link rel="stylesheet" href="../CSS/chat.css" />
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,8 +9,13 @@
 
 
 
+
+
+
 </head>
 <body>
+
+
 
 
   <div class="container">
@@ -27,6 +31,7 @@
       <div  class="user-item">Usuario 9</div>
       <div  class="user-item">Usuario 10</div>
     </div>
+
 
     <div class="chat-area">
       <div class="messages">
@@ -49,8 +54,7 @@
       </div>
     </div>
   </div>
-  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
-  
+  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script>
   </script>
 </body>
 </html>

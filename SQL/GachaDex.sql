@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 14, 2025 at 04:54 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 21-10-2025 a las 14:19:00
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gachadex`
+-- Base de datos: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datapokemonall`
+-- Estructura de tabla para la tabla `datapokemonall`
 --
 
 CREATE TABLE `datapokemonall` (
@@ -42,7 +42,7 @@ CREATE TABLE `datapokemonall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `datapokemonall`
+-- Volcado de datos para la tabla `datapokemonall`
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -552,12 +552,229 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (502, 'Dewott', 'Water', '', 'Grass, Electric', 'Se dice que sus movimientos al manejar las dos cuchilleiras, fluidos cual corriente de agua, se tomaron como modelo para el arte de la espada.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
 (503, 'Samurott', 'Water', '', 'Grass, Electric', 'Un maestro en el arte del desenvaine. Zanja sus combates con un tajo de los grandes sables que guarda en la coraza de las patas delanteras.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
 (504, 'Patrat', 'Normal', '', 'Fighting', 'Almacena víveres en unas bolsas en sus mofletes y vigila durante días. Hace señales con la cola a sus compañeros.', 'Run Away', 'Keen Eye', 'Analytic', '.', 'Male/Female'),
-(505, 'Watchog', 'Normal', '', 'Fighting', 'Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.', 'Illuminate', 'Keen Eye', 'Analytic', '.', 'Male/Female');
+(505, 'Watchog', 'Normal', '', 'Fighting', 'Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.', 'Illuminate', 'Keen Eye', 'Analytic', '.', 'Male/Female'),
+(506, 'Lillipup', 'Normal', '', 'Fighting', 'Es valiente pero cauto. Usa el suave pelaje que le recubre el rostro para obtener información sobre su entorno.', 'Vital Spirit', 'Pickup', 'Run Away', '.', 'Male/Female'),
+(507, 'Herdier', 'Normal', '', 'Fighting', 'Es muy inteligente y cariñoso. Existen ciertas teorías que lo consideran el primer Pokémon que se convirtió en compañero de los humanos.', 'Intimidate', 'Sand Rush', 'Scrappy', '.', 'Male/Female'),
+(508, 'Stoutland', 'Normal', '', 'Fighting', 'Parece ser que le gusta vivir con personas. En tan solo tres días ya le coge cariño a cualquiera que lo haya atrapado en estado salvaje.', 'Intimidate', 'Sand Rush', 'Scrappy', '.', 'Male/Female'),
+(509, 'Purrloin', 'Dark', '', 'Fighting, Bug, Fairy', 'Sustrae las pertenencias de las personas solo para verlas pasar apuros. Es un rival encarnizado de Nickit.', 'Limber', 'Unburden', 'Prankster', '.', 'Male/Female'),
+(510, 'Liepard', 'Dark', '', 'Fighting, Bug, Fairy', 'Bajo su hermoso pelaje y cautivador estilo, que puede llevar fácilmente a engaño, se oculta un carácter imprevisible y agresivo.', 'Limber', 'Unburden', 'Prankster', '.', 'Male/Female'),
+(511, 'Pansage', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Comparte las hojas de su cabeza con Pokémon agotados. Posee la facultad de aliviar el cansancio.', 'Gluttony', '', 'Overgrow', '.', 'Male/Female'),
+(512, 'Simisage', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Ataca estampando las espinas de su cola en el enemigo. Es un Pokémon con mucho temperamento.', 'Gluttony', '', 'Overgrow', '.', 'Male/Female'),
+(513, 'Pansear', 'Fire', '', 'Water, Ground, Rock', 'Pokémon muy inteligente que tiene la costumbre de tostar las bayas antes de comérselas. Ayuda mucho a los humanos.', 'Gluttony', '', 'Blaze', '.', 'Male/Female'),
+(514, 'Simisear', 'Fire', '', 'Water, Ground, Rock', 'Achicharra a sus enemigos desprendiendo llamas por la cola y la cabeza, fruto de su desmesurado calor interno.', 'Gluttony', '', 'Blaze', '.', 'Male/Female'),
+(515, 'Panpour', 'Water', '', 'Grass, Electric', 'El agua acumulada en su mata de pelo es rica en nutrientes. Usa su cola para regar plantas con esa misma agua.', 'Gluttony', '', 'Torrent', '.', 'Male/Female'),
+(516, 'Simipour', 'Water', '', 'Grass, Electric', 'Cuando lanza agua a alta presión con su cola, puede incluso resquebrajar una pared de cemento.', 'Gluttony', '', 'Torrent', '.', 'Male/Female'),
+(517, 'Munna', 'Psychic', '', 'Bug, Ghost, Dark', 'Aparece en plena noche junto a la almohada de la gente. Cuando devora los sueños, los motivos de su cuerpo emiten una luz tenue.', 'Forewarn', 'Synchronize', 'Telepathy', '.', 'Male/Female'),
+(518, 'Musharna', 'Psychic', '', 'Bug, Ghost, Dark', 'Cuando el humo que desprende es de un color negruzco, conviene no acercarse, ya que puede hacer realidad las pesadillas.', 'Forewarn', 'Synchronize', 'Telepathy', '.', 'Male/Female'),
+(519, 'Pidove', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Aparece en lugares habitados por humanos. Conviene tener cuidado al darles de comer, ya que esto podría atraer a cientos de ejemplares.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(520, 'Tranquill', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Posee una velocidad de vuelo nada desdeñable. Por más que se aleje, siempre recuerda el camino de regreso a su nido o hasta su Entrenador.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(521, 'Unfezant', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Hacen gala de una soberbia destreza al volar. La hembra posee una mayor resistencia, mientras que el macho la supera en velocidad.', 'Big Pecks', 'Super Luck', 'Rivalry', '.', 'Male/Female'),
+(522, 'Blitzle', 'Electric', '', 'Ground', 'El latido de su corazón genera electricidad, cuyo voltaje aumenta cuando se sobresalta y se acelera su ritmo cardíaco.', 'Lightning Rod', 'Motor Drive', 'Sap Sipper', '.', 'Male/Female'),
+(523, 'Zebstrika', 'Electric', '', 'Ground', 'Posee un temperamento salvaje y agresivo. Cuando se solivianta, su crin desprende un fulgor dorado y lanza rayos.', 'Lightning Rod', 'Motor Drive', 'Sap Sipper', '.', 'Male/Female'),
+(524, 'Roggenrola', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Su cuerpo es casi tan duro como el acero, pero al parecer puede reblandecerse levemente si permanece sumergido en agua mucho tiempo.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female'),
+(525, 'Boldore', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Cuando sus cristales anaranjados comienzan a brillar, conviene tener cuidado, pues es señal de que está a punto de liberar energía.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female'),
+(526, 'Gigalith', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Su robustez le permite colaborar con humanos y Copperajah en labores de construcción y minería.', 'Sturdy', 'Weak Armor', 'Sand Force', '.', 'Male/Female'),
+(527, 'Woobat', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Si al alzar la vista en una cueva se ven marcas con forma de corazón en las paredes, es señal de que Woobat la ha convertido en su guarida.', 'Unaware', 'Klutz', 'Simple', '.', 'Male/Female'),
+(528, 'Swoobat', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Tras emitir sus potentísimas ondas, queda tan exhausto que es incapaz de volar durante un tiempo.', 'Unaware', 'Klutz', 'Simple', '.', 'Male/Female'),
+(529, 'Drilbur', 'Ground', '', 'Water, Grass, Ice', 'Es capaz de cavar bajo tierra a más de 50 km/h. Casi podría seguirle el ritmo a un coche que circule por la superficie.', 'Sand Rush', 'Sand Force', 'Mold Breaker', '.', 'Male/Female'),
+(530, 'Excadrill', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Sus garras y su cabeza se han vuelto de acero. Puede combinarlas para formar un taladro capaz de perforar incluso una gruesa plancha metálica.', 'Sand Rush', 'Sand Force', 'Mold Breaker', '.', 'Male/Female'),
+(531, 'Audino', 'Normal', '', 'Fighting', 'Su sentido del oído es extraordinario. Puede percibir el sonido de una piedrecita rodando a 2 km de distancia.', 'Healer', 'Regenerator', 'Klutz', '.', 'Male/Female'),
+(532, 'Timburr', 'Fighting', '', 'Flying, Psychic, Fairy', 'Siempre lleva una viga de madera y ayuda en las construcciones. Se busca vigas más grandes conforme crece.', 'Guts', 'Sheer Force', 'Iron Fist', '.', 'Male/Female'),
+(533, 'Gurdurr', 'Fighting', '', 'Flying, Psychic, Fairy', 'Ejercita el cuerpo cargando vigas de acero. Presume de lo grandes que son sus músculos comparándolos con los de sus congéneres.', 'Guts', 'Sheer Force', 'Iron Fist', '.', 'Male/Female'),
+(534, 'Conkeldurr', 'Fighting', '', 'Flying, Psychic, Fairy', 'Se cree que Conkeldurr enseñó a los humanos la técnica para elaborar hormigón hace más de 2000 años.', 'Guts', 'Sheer Force', 'Iron Fist', '.', 'Male/Female'),
+(535, 'Tympole', 'Water', '', 'Grass, Electric', 'El agudo canto de los Tympole bajo el agua crea hermosas ondas que se extienden por la superficie.', 'Swift Swim', 'Hydration', 'Water Absorb', '.', 'Male/Female'),
+(536, 'Palpitoad', 'Water', 'Ground', 'Grass(X4)', 'Las ondas sonoras que emite pueden provocar dolor de cabeza. Con ellas debilita a sus presas para luego atraparlas con su lengua viscosa.', 'Swift Swim', 'Hydration', 'Water Absorb', '.', 'Male/Female'),
+(537, 'Seismitoad', 'Water', 'Ground', 'Grass(X4)', 'Cuando hace vibrar los bultos de su cuerpo, provoca sacudidas que parecen terremotos. Está emparentado con los Croagunk.', 'Swift Swim', 'Poison Touch', 'Water Absorb', '.', 'Male/Female'),
+(538, 'Throh', 'Fighting', '', 'Flying, Psychic, Fairy', 'Su técnica de lanzamiento es formidable. El sudor que exhala durante el combate impregna su cinturón, cuyo color se vuelve más intenso.', 'Guts', 'Inner Focus', 'Mold Breaker', '.', 'Male'),
+(539, 'Sawk', 'Fighting', '', 'Flying, Psychic, Fairy', 'Viven obsesionados con hacerse más fuertes. Si se los encuentra entrenando en la montaña, lo más recomendable es alejarse en silencio.', 'Sturdy', 'Inner Focus', 'Mold Breaker', '.', 'Male'),
+(540, 'Sewaddle', 'Bug', 'Grass', 'Fire(X4), Ice, Poison, Flying(X4), Bug, Rock', 'Usa como patrón la ropa que le teje Leavanny para aprender a elaborar él mismo atavíos con las hojas de los árboles que recorta.', 'Swarm', 'Chlorophyll', 'Overcoat', '.', 'Male/Female'),
+(541, 'Swadloon', 'Bug', 'Grass', 'Fire(X4), Ice, Poison, Flying(X4), Bug, Rock', 'Vive tranquilo junto a las raíces de los árboles. Prefiere alimentarse de las hojas caídas y ya reblandecidas antes que de hojas frescas.', 'Leaf Guard', 'Chlorophyll', 'Overcoat', '.', 'Male/Female'),
+(542, 'Leavanny', 'Bug', 'Grass', 'Fire(X4), Ice, Poison, Flying(X4), Bug, Rock', 'De carácter afable y marcado instinto protector. Las hojas de sus brazos son tan afiladas que pueden rebanar un gran árbol con un solo corte.', 'Swarm', 'Chlorophyll', 'Overcoat', '.', 'Male/Female'),
+(543, 'Venipede', 'Bug', 'Poison', 'Fire, Flying, Psychic, Rock', 'Aunque se trata de una especie emparentada con los Sizzlipede, si se encuentran ejemplares de ambas, entablarán una lucha encarnizada.', 'Poison Point', 'Swarm', 'Speed Boost', '.', 'Male/Female'),
+(544, 'Whirlipede', 'Bug', 'Poison', 'Fire, Flying, Psychic, Rock', 'Gira a gran velocidad y carga contra sus rivales. Puede alcanzar los 100 km/h.', 'Poison Point', 'Swarm', 'Speed Boost', '.', 'Male/Female'),
+(545, 'Scolipede', 'Bug', 'Poison', 'Fire, Flying, Psychic, Rock', 'Usa las garras que le sobresalen del cuello para atrapar a su presa, golpearla contra el suelo y rematarla inoculando un potente veneno.', 'Poison Point', 'Swarm', 'Speed Boost', '.', 'Male/Female'),
+(546, 'Cottonee', 'Grass', 'Fairy', 'Fire, Ice, Poison(X4), Flying, Steel', 'Los edredones y almohadas rellenos del algodón que suelta Cottonee son un producto de alta calidad por su ligereza y transpirabilidad.', 'Prankster', 'Infiltrator', 'Chlorophyll', '.', 'Male/Female'),
+(547, 'Whimsicott', 'Grass', 'Fairy', 'Fire, Ice, Poison(X4), Flying, Steel', 'Es capaz de atravesar las más mínimas fisuras cual soplo de viento. A su paso, deja pelusillas blancas.', 'Prankster', 'Infiltrator', 'Chlorophyll', '.', 'Male/Female'),
+(548, 'Petilil', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Las hojas de su cabeza vuelven a crecer rápidamente aunque se caigan. A pesar de ser amargas, restablecen la vitalidad.', 'Chlorophyll', 'Own Tempo', 'Leaf Guard', '.', 'Female'),
+(549, 'Lilligant', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'El aroma que despide la flor de su tocado tiene efectos tranquilizantes, pero este Pokémon requiere muchos cuidados.', 'Chlorophyll', 'Own Tempo', 'Leaf Guard', '.', 'Female'),
+(550, 'Basculin', 'Water', '', 'Grass, Electric', 'Un Pokémon agresivo y feroz cuya fortaleza y capacidad de adaptación le permiten multiplicar su número rápidamente.', 'Reckless', 'Adaptability', 'Mold Breaker', '.', 'Male/Female'),
+(551, 'Sandile', 'Ground', 'Dark', 'Water, Grass, Ice, Fighting, Bug, Fairy', 'Se desplaza sumergido bajo la arena, como si nadase. Así se esconde de sus enemigos y evita que descienda su temperatura corporal.', 'Intimidate', 'Moxie', 'Anger Point', '.', 'Male/Female'),
+(552, 'Krokorok', 'Ground', 'Dark', 'Water, Grass, Ice, Fighting, Bug, Fairy', 'Gracias a la membrana que recubre sus ojos, pueden ver incluso de noche. Viven en pequeñas manadas.', 'Intimidate', 'Moxie', 'Anger Point', '.', 'Male/Female'),
+(553, 'Krookodile', 'Ground', 'Dark', 'Water, Grass, Ice, Fighting, Bug, Fairy', 'En cuanto le hinca el diente a su presa con sus potentes mandíbulas, retuerce el cuerpo con violencia hasta despedazarla.', 'Intimidate', 'Moxie', 'Anger Point', '.', 'Male/Female'),
+(554, 'Darumaka', 'Fire', '', 'Water, Ground, Rock', 'Como sus excrementos están muy calientes, la gente de antaño se los metía en los bolsillos para calentarse.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
+(555, 'Darmanitan', 'Fire', '', 'Water, Ground, Rock', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
+(556, 'Maractus', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Emite un sonido parecido a unas maracas. Se mueve con un ritmo marchoso para sorprender a los Pokémon pájaro, que huyen espantados.', 'Water Absorb', 'Chlorophyll', 'Storm Drain', '.', 'Male/Female'),
+(557, 'Dwebble', 'Bug', 'Rock', 'Water, Rock, Steel', 'Cuando halla una piedra de su agrado, la horada y establece su morada. Es enemigo natural de los Roggenrola y los Rolycoly.', 'Sturdy', 'Shell Armor', 'Weak Armor', '.', 'Male/Female'),
+(558, 'Crustle', 'Bug', 'Rock', 'Water, Rock, Steel', 'Este Pokémon posee un fuerte instinto territorial y prefiere los entornos áridos. Los días de lluvia permanece en el interior de su roca.', 'Sturdy', 'Shell Armor', 'Weak Armor', '.', 'Male/Female'),
+(559, 'Scraggy', 'Dark', 'Fighting', 'Fighting, Flying, Fairy(X4)', 'Se sube la piel arrugada hasta el cuello para protegerse. Parece que los ejemplares con la piel más larga son los más respetados.', 'Shed Skin', 'Moxie', 'Intimidate', '.', 'Male/Female'),
+(560, 'Scrafty', 'Dark', 'Fighting', 'Fighting, Flying, Fairy(X4)', 'Ataca en grupo con virulencia a todo aquel que se interne en su territorio. Lanza ácido por la boca.', 'Shed Skin', 'Moxie', 'Intimidate', '.', 'Male/Female'),
+(561, 'Sigilyph', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Vuela gracias a sus poderes psíquicos. Dicen que había sido la deidad protectora de una antigua ciudad, si bien otros creen que era su mensajero.', 'Wonder Skin', 'Magic Guard', 'Tinted Lens', '.', 'Male/Female'),
+(562, 'Yamask', 'Ghost', '', 'Ghost, Dark', 'Merodea todas las noches entre ruinas. Se dice que la máscara que lleva replica su antiguo rostro humano.', 'Mummy', '', '', '.', 'Male/Female'),
+(563, 'Cofagrigus', 'Ghost', '', 'Ghost, Dark', 'Su cuerpo es de rutilante oro. Se dice que ya no recuerda nada de su pasado como humano.', 'Mummy', '', '', '.', 'Male/Female'),
+(564, 'Tirtouga', 'Water', 'Rock', 'Grass(X4), Electric, Fighting, Ground', 'Vivía en los mares de hace millones de años. Sale a tierra para buscar presas, aunque solo se pueda desplazar reptando.', 'Solid Rock', 'Sturdy', 'Swift Swim', '.', 'Male/Female'),
+(565, 'Carracosta', 'Water', 'Rock', 'Grass(X4), Electric, Fighting, Ground', 'Devora incluso los huesos y caparazones de sus presas, por lo que el suyo propio se vuelve duro y grueso.', 'Solid Rock', 'Sturdy', 'Swift Swim', '.', 'Male/Female'),
+(566, 'Archen', 'Rock', 'Flying', 'Water, Electric, Ice, Rock, Steel', 'Fue regenerado a partir de un fósil. Tal y como apuntaban las investigaciones, no puede volar, pero los saltos son su punto fuerte.', 'Defeatist', '', '', '.', 'Male/Female'),
+(567, 'Archeops', 'Rock', 'Flying', 'Water, Electric, Ice, Rock, Steel', 'Coge carrerilla durante aproximadamente 4 km a una velocidad de 40 km/h para poder levantar el vuelo.', 'Defeatist', '', '', '.', 'Male/Female'),
+(568, 'Trubbish', 'Poison', '', 'Ground, Psychic', 'Le gustan los lugares insalubres. Puede llegar a establecerse en las casas de aquellas personas que no hagan la limpieza con regularidad.', 'Stench', 'Sticky Hold', 'Aftermath', '.', 'Male/Female'),
+(569, 'Garbodor', 'Poison', '', 'Ground, Psychic', 'Su cuerpo transforma la inmundicia que engulle en un veneno cuya composición cambia según la basura ingerida.', 'Stench', 'Weak Armor', 'Aftermath', '.', 'Male/Female'),
+(570, 'Zorua', 'Dark', '', 'Fighting, Bug, Fairy', 'Se transforma en otros para crear desconcierto. A menudo, adopta la forma de un niño parco en palabras.', 'Illusion', '', '', '.', 'Male/Female'),
+(571, 'Zoroark', 'Dark', '', 'Fighting, Bug, Fairy', 'Se dice que Zoroark atrapa en un mundo de ilusiones a quien lo intenta capturar y que, de esta manera, lo castiga.', 'Illusion', '', '', '.', 'Male/Female'),
+(572, 'Minccino', 'Normal', '', 'Fighting', 'Tras usar la cola para limpiar su madriguera o su propio cuerpo, se pasa un día entero lavándosela con agua de manantial.', 'Cute Charm', 'Technician', 'Skill Link', '.', 'Male/Female'),
+(573, 'Cinccino', 'Normal', '', 'Fighting', 'Su pelaje blanco está recubierto por un aceite especial que hace resbalar los ataques enemigos.', 'Cute Charm', 'Technician', 'Skill Link', '.', 'Male/Female'),
+(574, 'Gothita', 'Psychic', '', 'Bug, Ghost, Dark', 'Un Pokémon que encarna la inocencia absoluta. Al fijar la mirada en algo invisible, permanece en silencio sin siquiera pestañear.', 'Frisk', 'Competitive', 'Shadow Tag', '.', 'Male/Female'),
+(575, 'Gothorita', 'Psychic', '', 'Bug, Ghost, Dark', 'Adormece a los niños mediante hipnosis y se los lleva consigo. Conviene tener cuidado en las noches estrelladas.', 'Frisk', 'Competitive', 'Shadow Tag', '.', 'Male/Female'),
+(576, 'Gothitelle', 'Psychic', '', 'Bug, Ghost, Dark', 'Libera su poder psíquico e induce al rival a soñar con el fin del universo, un espectáculo al parecer tan bello como efímero.', 'Frisk', 'Competitive', 'Shadow Tag', '.', 'Male/Female'),
+(577, 'Solosis', 'Psychic', '', 'Bug, Ghost, Dark', 'Puede vivir en cualquier ambiente gracias al líquido especial que recubre su cuerpo.', 'Overcoat', 'Magic Guard', 'Regenerator', '.', 'Male/Female'),
+(578, 'Duosion', 'Psychic', '', 'Bug, Ghost, Dark', 'Dado que su cerebro está dividido en dos, a veces tiene conflictos a la hora de decidir qué hacer.', 'Overcoat', 'Magic Guard', 'Regenerator', '.', 'Male/Female'),
+(579, 'Reuniclus', 'Psychic', '', 'Bug, Ghost, Dark', 'Hacen gala de su poder psíquico para controlar sus brazos compuestos de un líquido especial y hacer añicos las rocas.', 'Overcoat', 'Magic Guard', 'Regenerator', '.', 'Male/Female'),
+(580, 'Ducklett', 'Water', 'Flying', 'Electric(X4), Rock', 'Aún no se le da muy bien volar. Observa con atención la danza de sus progenitores Swanna para aprender a mover las alas.', 'Keen Eye', 'Big Pecks', 'Hydration', '.', 'Male/Female'),
+(581, 'Swanna', 'Water', 'Flying', 'Electric(X4), Rock', 'Danzan en perfecta sincronía con el líder de la bandada, situado en el centro, para reforzar su vínculo grupal.', 'Keen Eye', 'Big Pecks', 'Hydration', '.', 'Male/Female'),
+(582, 'Vanillite', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'No puede vivir en lugares muy cálidos. Provoca nevadas exhalando un vaho gélido y luego se acurruca en la nieve acumulada para dormir.', 'Ice Body', 'Snow Cloak', 'Weak Armor', '.', 'Male/Female'),
+(583, 'Vanillish', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Bebe agua pura para agrandar su cuerpo de hielo. Apenas se ven ejemplares durante los días soleados.', 'Ice Body', 'Snow Cloak', 'Weak Armor', '.', 'Male/Female'),
+(584, 'Vanilluxe', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Cuando su rabia alcanza el punto máximo, genera una ventisca que congela tanto a amigos como a enemigos.', 'Ice Body', 'Snow Warning', 'Weak Armor', '.', 'Male/Female'),
+(585, 'Deerling', 'Normal', 'Grass', 'Fire, Ice, Fighting, Poison, Flying, Bug', 'Su fragancia, que cambia con las estaciones, adquiere un agradable matiz dulce al comienzo de la primavera.', 'Chlorophyll', 'Sap Sipper', 'Serene Grace', '.', 'Male/Female'),
+(586, 'Sawsbuck', 'Normal', 'Grass', 'Fire, Ice, Fighting, Poison, Flying, Bug', 'Los ejemplares con la cornamenta más florida presentan un desarrollo ligeramente más lento debido a los nutrientes que consumen las flores.', 'Chlorophyll', 'Sap Sipper', 'Serene Grace', '.', 'Male/Female'),
+(587, 'Emolga', 'Electric', 'Flying', 'Ice, Rock', 'Planea por el aire, casi como si danzara, mientras desprende electricidad. Resulta adorable, pero puede causar bastantes problemas.', 'Static', '', 'Motor Drive', '.', 'Male/Female'),
+(588, 'Karrablast', 'Bug', '', 'Fire, Flying, Rock', 'Su misterioso cuerpo reacciona a la energía eléctrica. Si se encuentra en presencia de un Shelmet, evoluciona.', 'Swarm', 'Shed Skin', 'No Guard', '.', 'Male/Female'),
+(589, 'Escavalier', 'Bug', 'Steel', 'Fire(X4)', 'Le roba el caparazón a un Shelmet y lo usa como armadura. Este Pokémon es extremadamente popular en la región de Galar.', 'Swarm', 'Shed Armor', 'Overcoat', '.', 'Male/Female');
+INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+(590, 'Foongus', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Ciertas teorías, cuya veracidad no ha podido constatarse, afirman que quien desarrolló las Poké Balls admiraba con fervor a este Pokémon.', 'Effect Spore', '', 'Regenerator', '.', 'Male/Female'),
+(591, 'Amoonguss', 'Grass', 'Poison', 'Fire, Ice, Flying, Psychic', 'Las esporas tóxicas que libera son peligrosas, ya que allí donde caen acaban creciendo unas setas parecidas a los sombreros de los Amoonguss.', 'Effect Spore', '', 'Regenerator', '.', 'Male/Female'),
+(592, 'Frillish', 'Water', 'Ghost', 'Grass, Electric, Ghost, Dark', 'Atenaza a las presas con sus tentáculos en forma de velo y las sumerge a 8000 m de profundidad.', 'Water Absorb', 'Cursed Body', 'Damp', '.', 'Male'),
+(593, 'Jellicent', 'Water', 'Ghost', 'Grass, Electric, Ghost, Dark', 'Su cuerpo está compuesto en su mayor parte de agua salada. Crea su guarida con navíos hundidos.', 'Water Absorb', 'Cursed Body', 'Damp', '.', 'Male'),
+(594, 'Alomomola', 'Water', '', 'Grass, Electric', 'Abraza gentilmente con sus aletas a Pokémon que están lastimados y cura sus heridas con su membrana especial.', 'Healer', 'Hydration', 'Regenerator', '.', 'Male/Female'),
+(595, 'Joltik', 'Bug', 'Electric', 'Fire, Rock', 'Los que viven en las ciudades han aprendido a absorber electricidad de los enchufes de las casas particulares.', 'Compound Eyes', 'Unnerve', 'Swarm', '.', 'Male/Female'),
+(596, 'Galvantula', 'Bug', 'Electric', 'Fire, Rock', 'Pone trampas con hilos electrificados. De este modo, electrocuta a sus presas y las inmoviliza para poder devorarlas lentamente.', 'Compound Eyes', 'Unnerve', 'Swarm', '.', 'Male/Female'),
+(597, 'Ferroseed', 'Grass', 'Steel', 'Fire(X4), Steel', 'Se defiende lanzando púas, pero para poder apuntar con precisión a su objetivo necesita ingentes sesiones de práctica.', 'Iron Barbs', '', '', '.', 'Male/Female'),
+(598, 'Ferrothorn', 'Grass', 'Steel', 'Fire(X4), Steel', 'Raya el lecho rocoso con las púas para luego absorber nutrientes con el extremo de los tentáculos.', 'Iron Barbs', '', 'Anticipation', '.', 'Male/Female'),
+(599, 'Klink', 'Steel', '', 'Fire, Fighting, Ground', 'Los dos cuerpos que lo componen están más unidos que unos gemelos. Si intentaran acoplarse a otros, no lograrían encajar.', 'Plus', 'Minus', 'Clear Body', '.', 'N/A'),
+(600, 'Klang', 'Steel', '', 'Fire, Fighting, Ground', 'Cuando se pone en serio, la parte externa de la rueda dentada grande se acopla a la pequeña y aumenta su velocidad de rotación.', 'Plus', 'Minus', 'Clear Body', '.', 'N/A'),
+(601, 'Klinklang', 'Steel', '', 'Fire, Fighting, Ground', 'Emite fuertes descargas eléctricas por la punta de las púas. Acumula una gran cantidad de energía en su núcleo rojo.', 'Plus', 'Minus', 'Clear Body', '.', 'N/A'),
+(602, 'Tynamo', 'Electric', '', 'Ground', 'La electricidad de uno solo es insignificante, pero, si multitud de Tynamo se conectan, consiguen la potencia de un rayo.', 'Levitate', '', '', '.', 'Male/Female'),
+(603, 'Eelektrik', 'Electric', '', 'Ground', 'Las motas redondas componen su aparato electrificador. Enrolla a su rival y deja que la corriente fluya por ellas.', 'Levitate', '', '', '.', 'Male/Female'),
+(604, 'Eelektross', 'Electric', '', 'Ground', 'Sale del mar con la fuerza de sus brazos y ataca a sus presas en la costa. Luego se las lleva de vuelta al mar.', 'Levitate', '', '', '.', 'Male/Female'),
+(605, 'Elgyem', 'Psychic', '', 'Bug, Ghost, Dark', 'Cuando se halla junto a un televisor, la pantalla muestra imágenes de extraños paisajes. Se cree que corresponden a su lugar de origen.', 'Telepathy', 'Synchronize', 'Analytic', '.', 'Male/Female'),
+(606, 'Beheeyem', 'Psychic', '', 'Bug, Ghost, Dark', 'Por algún extraño motivo, siempre que se avista un Beheeyem en una granja desaparece un Dubwool.', 'Telepathy', 'Synchronize', 'Analytic', '.', 'Male/Female'),
+(607, 'Litwick', 'Ghost', 'Fire', 'Water, Ground, Rock, Ghost, Dark', 'Su llama suele estar apagada, pero puede prenderla absorbiendo la energía vital tanto de humanos como de Pokémon.', 'Flash Fire', 'Flame Body', 'Infiltrator', '.', 'Male/Female'),
+(608, 'Lampent', 'Ghost', 'Fire', 'Water, Ground, Rock, Ghost, Dark', 'Aparece en los instantes previos al fallecimiento de alguien y absorbe el alma en cuanto esta se separa del cuerpo.', 'Flash Fire', 'Flame Body', 'Infiltrator', '.', 'Male/Female'),
+(609, 'Chandelure', 'Ghost', 'Fire', 'Water, Ground, Rock, Ghost, Dark', 'Las almas que han ardido bajo sus inquietantes llamas no tienen adónde ir y vagan sin rumbo por este mundo eternamente.', 'Flash Fire', 'Flame Body', 'Infiltrator', '.', 'Male/Female'),
+(610, 'Axew', 'Dragon', '', 'Ice, Dragon, Fairy', 'Viven en madrigueras que horadan en la tierra. En tiempos remotos, la gente usaba sus colmillos a modo de cuchillos de cocina.', 'Rivalry', 'Mold Breaker', 'Unnerve', '.', 'Male/Female'),
+(611, 'Fraxure', 'Dragon', '', 'Ice, Dragon, Fairy', 'Al parecer, procura usar los colmillos únicamente en caso de extrema necesidad, ya que no le vuelven a crecer si se rompen.', 'Rivalry', 'Mold Breaker', 'Unnerve', '.', 'Male/Female'),
+(612, 'Haxorus', 'Dragon', '', 'Ice, Dragon, Fairy', 'Anida en cuevas y en minas abandonadas. Es dócil, pero conviene tener cuidado, ya que monta en cólera si le tocan los colmillos.', 'Rivalry', 'Mold Breaker', 'Unnerve', '.', 'Male/Female'),
+(613, 'Cubchoo', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Abundan en las costas de las regiones más frías. Si no le cuelga un moco, es probable que esté enfermo.', 'Snow Cloak', 'Slush Rush', 'Rattled', '.', 'Male/Female'),
+(614, 'Beartic', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Un fiero Pokémon carnívoro. Cuando atrapa a una presa, exhala un vaho gélido con el fin de congelarla y conservarla.', 'Snow Cloak', 'Slush Rush', 'Swift Swim', '.', 'Male/Female'),
+(615, 'Cryogonal', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Aparece en las estaciones frías. Se dice que es la reencarnación de las personas y los Pokémon que han desaparecido en las montañas nevadas.', 'Levitate', '', '', '.', 'N/A.'),
+(616, 'Shelmet', 'Bug', '', 'Fire, Flying, Rock', 'Cierra a cal y canto la visera de su caparazón al ser atacado. Solo los Karrablast pueden abrirla.', 'Hydration', 'Shell Armor', 'Overcoat', '.', 'Male/Female'),
+(617, 'Accelgor', 'Bug', '', 'Fire, Flying, Rock', 'Lucha escupiendo veneno y moviéndose a una velocidad de vértigo. Ha protagonizado películas y cómics de gran éxito.', 'Hydration', 'Sticky Hold', 'Unburden', '.', 'Male/Female'),
+(618, 'Stunfisk', 'Ground', 'Electric', 'Water, Grass, Ice, Ground', 'Ni un pisotón de un luchador de sumo lo aplastaría gracias a su piel sólida. Sonríe al soltar descargas eléctricas.', 'Static', 'Limber', 'Sand Veil', '.', 'Male/Female'),
+(619, 'Mienfoo', 'Fighting', '', 'Flying, Psychic, Fairy', 'Abruma a sus enemigos encadenando ataques veloces y los hace trizas con sus afiladas garras.', 'Inner Focus', 'Regenerator', 'Reckless', '.', 'Male/Female'),
+(620, 'Mienshao', 'Fighting', '', 'Flying, Psychic, Fairy', 'Si emite extraños aullidos, hay que extremar la precaución: empezará a repartir un sinfín de patadas y puñetazos a una velocidad pasmosa.', 'Inner Focus', 'Regenerator', 'Reckless', '.', 'Male/Female'),
+(621, 'Druddigon', 'Dragon', '', 'Ice, Dragon, Fairy', 'Habita en túneles. Pierde la movilidad si baja su temperatura corporal, por lo que aprovecha la menor oportunidad para tomar el sol.', 'Rough Skin', 'Sheer Force', 'Mold Breaker', '.', 'Male/Female'),
+(622, 'Golett', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Los rumores apuntan a que este Pokémon fue creado gracias a la tecnología de una antigua y misteriosa civilización.', 'Iron Fist', 'Klutz', 'No Guard', '.', 'N/A'),
+(623, 'Golurk', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Si se le desprende el sello del pecho, pierde el control y arrasa con todo sin miramientos: puede convertir un pueblo en un montón de escombros.', 'Iron Fist', 'Klutz', 'No Guard', '.', 'N/A'),
+(624, 'Pawniard', 'Dark', 'Steel', 'Fire, Fighting(X4), Ground', 'Desafía sin temor a enemigos poderosos. Si es necesario, se aferra al rival y le clava las cuchillas que le recubren el cuerpo.', 'Defiant', 'Inner Focus', 'Pressure', '.', 'Male/Female'),
+(625, 'Bisharp', 'Dark', 'Steel', 'Fire, Fighting(X4), Ground', 'Dirige a varios Pawniard para conformar grupos. Tras una disputa territorial, el grupo victorioso incorpora a los vencidos.', 'Defiant', 'Inner Focus', 'Pressure', '.', 'Male/Female'),
+(626, 'Bouffalant', 'Normal', '', 'Fighting', 'Puede destrozar un coche de un solo testarazo. Cuanto más abundante sea su melena, mayor rango tendrá en la jerarquía de la manada.', 'Reckless', 'Sap Sipper', 'Soundproof', '.', 'Male/Female'),
+(627, 'Rufflet', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Desafía indiscriminadamente a cualquier rival. Cada vez que le hieren en combate o se debilita, no hace sino aumentar su fortaleza.', 'Keen Eye', 'Sheer Force', 'Hustle', '.', 'Male'),
+(628, 'Braviary', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Guerrero avezado de los cielos. Su número de cicatrices es directamente proporcional al respeto que recibe de los suyos.', 'Keen Eye', 'Sheer Force', 'Defiant', '.', 'Male'),
+(629, 'Vullaby', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Usa una calavera del tamaño apropiado para proteger sus posaderas. Es proclive a perseguir Pokémon débiles.', 'Big Pecks', 'Overcoat', 'Weak Armor', '.', 'Female'),
+(630, 'Mandibuzz', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Busca sin cesar comida para alimentar a Vullaby. Atrapa al instante a cualquier Pokémon cansado que aviste y se lo lleva al nido.', 'Big Pecks', 'Overcoat', 'Weak Armor', '.', 'Female'),
+(631, 'Heatmor', 'Fire', '', 'Water, Ground, Rock', 'Absorbe aire por el orificio de la cola para prender las llamas que expulsa. Si la abertura se obstruye, enferma.', 'Gluttony', 'Flash Fire', 'White Smoke', '.', 'Male/Female'),
+(632, 'Durant', 'Bug', 'Steel', 'Fire(X4)', 'Deposita sus huevos en la parte más profunda del nido. Si un Heatmor lo ataca, se defiende mordiéndolo con sus enormes mandíbulas.', 'Swarm', 'Hustle', 'Truant', '.', 'Male/Female'),
+(633, 'Deino', 'Dark', 'Dragon', 'Ice, Fighting, Bug, Dragon, Fairy(X4)', 'Al no poder ver, su forma de percibir el entorno es mordisquear todo lo que encuentra, incluido su Entrenador hasta que se familiariza con él.', 'Hustle', '', '', '.', 'Male/Female'),
+(634, 'Zweilous', 'Dark', 'Dragon', 'Ice, Fighting, Bug, Dragon, Fairy(X4)', 'Sus dos cabezas se llevan fatal. Si no reciben el mismo afecto por igual, se enzarzan en una gran pelea a causa de los celos.', 'Hustle', '', '', '.', 'Male/Female'),
+(635, 'Hydreigon', 'Dark', 'Dragon', 'Ice, Fighting, Bug, Dragon, Fairy(X4)', 'La cabeza central es la única dotada de cerebro. Si bien posee un gran intelecto, la destrucción es el único pensamiento que le ocupa.', 'Levitate', '', '', '.', 'Male/Female'),
+(636, 'Larvesta', 'Bug', 'Fire', 'Water, Flying, Rock(X4)', 'Antaño lo llamaron la Larva que Hurtó el Sol. Las llamas que brotan de sus cuernos pueden fundir sin problema una plancha de acero.', 'Flame Body', '', 'Swarm', '.', 'Male/Female'),
+(637, 'Volcarona', 'Bug', 'Fire', 'Water, Flying, Rock(X4)', 'El calor que irradia le granjea pocas simpatías en tierras cálidas. Por el contrario, en las regiones más frías lo veneran como encarnación del sol.', 'Flame Body', '', 'Swarm', '.', 'Male/Female'),
+(638, 'Cobalion', 'Steel', 'Fighting', 'Fire, Fighting, Ground', 'Cuenta una leyenda que combatió contra los humanos junto a Terrakion y Virizion para proteger a los Pokémon de Teselia.', 'Justified', '', '', '.', 'N/A'),
+(639, 'Terrakion', 'Rock', 'Fighting', 'Water, Grass, Fighting, Ground, Psychic, Steel, Fairy', 'Posee una fuerza extraordinaria, y combatirá sin miramientos contra cualquier adversario que se meta con Pokémon más pequeños y débiles.', 'Justified', '', '', '.', 'N/A'),
+(640, 'Virizion', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Según una leyenda, luchó con valentía junto a Cobalion y Terrakion para proteger a los Pokémon de Teselia.', 'Justified', '', '', '.', 'N/A'),
+(641, 'Tornadus', 'Flying', '', 'Electric, Ice, Rock', 'La parte inferior de su cuerpo, similar a una nube, está recubierta de un campo de energía. Vuela a 300 km/h.', 'Prankster', '', 'Defiant', '.', 'Male'),
+(642, 'Thundurus', 'Electric', 'Flying', 'Ice, Rock', 'Lanza descargas eléctricas por las púas de su cola. Sobrevuela Teselia dejando caer rayos.', 'Prankster', '', 'Defiant', '.', 'Male'),
+(643, 'Reshiram', 'Dragon', 'Fire', 'Ground, Rock, Dragon', 'Pokémon legendario capaz de abrasar el mundo con sus llamas. Ayuda a quienes persiguen un mundo veraz.', 'Turboblaze', '', '', '.', 'N/A'),
+(644, 'Zekrom', 'Dragon', 'Electric', 'Ice, Ground, Dragon, Fairy', 'Pokémon legendario capaz de chamuscar el mundo con sus rayos. Ayuda a quienes persiguen un mundo de ideales.', 'Teravolt', '', '', '.', 'N/A'),
+(645, 'Landorus', 'Fire', 'Flying', 'Water, Ice(X4)', 'Lo consideran una deidad de las cosechas porque los cultivos crecen en abundancia en las tierras por las que pasa.', 'Sand Force', '', 'Sheer Force', '.', 'Male'),
+(646, 'Kyurem', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Pokémon legendario que aguarda al héroe que compense el vacío de su cuerpo de hielo con verdad e ideales.', 'Pressure', '', '', '.', 'N/A'),
+(647, 'Keldeo', 'Water', 'Fighting', 'Grass, Electric, Flying, Psychic, Fairy', 'Corre por mares, ríos o cualquier superficie acuática de todo el mundo. Aparece en aguas límpidas.', 'Justified', '', '', '.', 'N/A'),
+(648, 'Meloetta', 'Normal', 'Psychic', 'Bug, Dark', 'Las melodías que canta Meloetta tienen el poder de hacer sentir felicidad a los Pokémon que hay a su alrededor.', 'Serene Grace', '', '', '.', 'N/A'),
+(649, 'Genesect', 'Bug', 'Steel', 'Fire(X4)', 'Pokémon de tipo Bicho de la antigüedad, modificado por el Equipo Plasma. El cañón de su lomo ha sido mejorado.', 'Download', '', '', '.', 'N/A'),
+(650, 'Chespin', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Cuando acumula energía antes de propinar un cabezazo, las púas de su cabeza se vuelven tan afiladas que atraviesan el cuerpo del enemigo.', 'Overgrow', '', 'Bulletproof', '.', 'Male/Female'),
+(651, 'Quilladin', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Lo protege una robusta coraza que, al ser tan pesada, le proporciona al mismo tiempo una forma natural de fortalecer las piernas.', 'Overgrow', '', 'Bulletproof', '.', 'Male/Female'),
+(652, 'Chesnaught', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Cuando sus aliados se encuentran en apuros, despliega un escudo con los brazos y bloquea los ataques utilizando su propio cuerpo.', 'Overgrow', '', 'Bulletproof', '.', 'Male/Female'),
+(653, 'Fennekin', 'Fire', '', 'Water, Ground, Rock', 'Tiende a exaltarse con facilidad. Su temperatura corporal también aumenta en exceso, por lo que expulsa el calor por las orejas para calmarse.', 'Blaze', '', 'Magician', '.', 'Male/Female'),
+(654, 'Braixen', 'Fire', '', 'Water, Ground, Rock', 'Agita la rama candente de la cola para enviar señales a sus compañeros. En caso de peligro, la mueve describiendo una trayectoria circular.', 'Blaze', '', 'Magician', '.', 'Male/Female'),
+(655, 'Delphox', 'Fire', 'Psychic', 'Water, Ground, Rock, Ghost, Dark', 'Deja marcas en el suelo con la punta candente de su varita. Las gentes de antaño practicaban la adivinación interpretando dichas marcas.', 'Blaze', '', 'Magician', '.', 'Male/Female'),
+(656, 'Froakie', 'Water', '', 'Grass, Electric', 'Su aire despreocupado no es más que una fachada con la que engaña a sus enemigos para después arrollarlos a una velocidad abrumadora.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
+(657, 'Frogadier', 'Water', '', 'Grass, Electric', 'Es muy hábil ideando tácticas que usan el terreno a su favor. Dispara piedras envueltas en burbujas con tal puntería que no falla nunca.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
+(658, 'Greninja', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'Puede detectar enemigos fuera de su campo visual al captar los movimientos del aire con su larga lengua enroscada alrededor del cuello.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
+(659, 'Bunnelby', 'Normal', '', 'Fighting', 'Usa hábilmente las orejas para hacer hoyos. Es capaz de excavar una madriguera a 10 m bajo tierra en una sola noche.', 'Pickup', 'Cheek Pouch', 'Huge Power', '.', 'Male/Female'),
+(660, 'Diggersby', 'Normal', 'Ground', 'Water, Grass, Ice, Fighting', 'Puede horadar incluso el duro sustrato rocoso con la fuerza de una excavadora, por lo que su ayuda resulta inestimable para construir túneles.', 'Pickup', 'Cheek Pouch', 'Huge Power', '.', 'Male/Female'),
+(661, 'Fletchling', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Por lo general se muestra calmado, pero, al entrar en combate, su equilibrio hormonal se altera y se vuelve agresivo.', 'Big Pecks', '', 'Gale Wings', '.', 'Male/Female'),
+(662, 'Fletchinder', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Lanza chispas en zonas de hierba alta donde podrían habitar Pokémon de tipo Bicho y, en cuanto intentan escapar, los atrapa.', 'Flame Body', '', 'Gale Wings', '.', 'Male/Female'),
+(663, 'Talonflame', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Su pericia en vuelo es excepcional. Revolotea sin inmutarse aun llevando en sus garras presas de más de 100 kg.', 'Flame Body', '', 'Gale Wings', '.', 'Male/Female'),
+(664, 'Scatterbug', 'Bug', '', 'Fire, Flying, Rock', 'Puede alimentarse de hojas y raíces venenosas, ya que todo el veneno que ingiere lo expulsa tras haberlo transformado en un polvo negro.', 'Shield Dust', 'Compound Eyes', 'Friend Guard', '.', 'Male/Female'),
+(665, 'Spewpa', 'Bug', '', 'Fire, Flying, Rock', 'Cuando los Rufflet lo atacan picoteándolo, se defiende erizando su afilado pelaje y expulsando un polvo negro y venenoso.', 'Shed Skin', '', 'Friend Guard', '.', 'Male/Female'),
+(666, 'Vivillon', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Sus motivos cambian en función del clima y el terreno de su lugar de origen. Adopta esta forma en tierras floridas.', 'Shield Dust', 'Compound Eyes', 'Friend Guard', '.', 'Male/Female'),
+(667, 'Litleo', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Mientras es un cachorro, los Pyroar hembra lo instruyen en la caza, pero, en cuanto madura, se separa de la manada y se independiza.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
+(668, 'Pyroar', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Las hembras colaboran para dar caza y abatir a las presas. De este modo, aseguran el sustento y la supervivencia de la manada.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
+(669, 'Flabébé', 'Fairy', '', 'Poison, Steel', 'Posee el don de extraer el poder oculto de las flores silvestres. Siente una predilección especial por las flores rojas.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(670, 'Floette', 'Fairy', '', 'Poison, Steel', 'Puede extraer la fuerza que les resta a las flores marchitas para reanimarlas. Lleva consigo una flor de color rojo.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(671, 'Florges', 'Fairy', '', 'Poison, Steel', 'Hace de su territorio un jardín esplendoroso. Extrae su poder de las flores rojas que lleva en torno al cuello.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(672, 'Skiddo', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Hasta hace bien poco, los habitantes de las montañas se desplazaban por sus senderos a lomos de este Pokémon.', 'Sap Sipper', '', 'Grass Pelt', '.', 'Male/Female'),
+(673, 'Gogoat', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Puede percibir cómo se siente alguien tocándolo con los cuernos. Lleva ayudando a los humanos en sus labores desde hace 5000 años.', 'Sap Sipper', '', 'Grass Pelt', '.', 'Male/Female'),
+(674, 'Pancham', 'Fighting', '', 'Flying, Psychic, Fairy', 'Sigue los pasos de Pangoro, a quien considera su mentor. A base de imitarlo, aprende a combatir y a cazar presas.', 'Iron Fist', 'Mold Breaker', 'Scrappy', '.', 'Male/Female'),
+(675, 'Pangoro', 'Fighting', 'Dark', 'Fighting, Flying, Fairy(X4)', 'Este Pokémon de carácter agresivo lo soluciona todo a golpes. Desata su espíritu combativo al enfrentarse a los Obstagoon.', 'Iron Fist', 'Mold Breaker', 'Scrappy', '.', 'Male/Female'),
+(676, 'Furfrou', 'Normal', '', 'Fighting', 'Hubo una época en la que los aristócratas competían entre ellos procurando que el corte de pelo de su Furfrou fuera el mejor de todos.', 'Fur Coat', '', '', '.', 'Male/Female'),
+(677, 'Espurr', 'Psychic', '', 'Bug, Ghost, Dark', 'Pliega las orejas en un esfuerzo por contener el inmenso poder psíquico en su interior, pero, si acumula demasiado, pierde la consciencia.', 'Keen Eye', 'Infiltrator', 'Own Tempo', '.', 'Male/Female'),
+(678, 'Meowstic', 'Psychic', '', 'Bug, Ghost, Dark', 'Su poder psíquico podría mandar volando a cualquier rival, pero prefiere emplearlo para proteger a los suyos antes que para atacar.', 'Keen Eye', 'Infiltrator', 'Prankster', '.', 'Male/Female'),
+(679, 'Honedge', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su alma es la de un ser humano que poseyó la misma espada que lo abatió en tiempos remotos.', 'No Guard', '', '', '.', 'Male/Female'),
+(680, 'Doublade', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su espada se duplicó durante su proceso de evolución. Intimida a los rivales con el chirrido metálico que produce al frotar ambas hojas.', 'No Guard', '', '', '.', 'Male/Female'),
+(681, 'Aegislash', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Gracias a su cuerpo de acero y a una barrera de poder espectral, crea una defensa que le permite mitigar prácticamente cualquier ataque.', 'Stance Change', '', '', '.', 'Male/Female'),
+(682, 'Spritzee', 'Fairy', '', 'Poison, Steel', 'Posee un órgano interno con el cual produce una fragancia que varía en función de los alimentos que ingiere.', 'Healer', '', 'Aroma Veil', '.', 'Male/Female'),
+(683, 'Aromatisse', 'Fairy', '', 'Poison, Steel', 'La fragancia que despide su pelaje es tan potente que puede dejar sin olfato a su Entrenador.', 'Healer', '', 'Aroma Veil', '.', 'Male/Female'),
+(684, 'Swirlix', 'Fairy', '', 'Poison, Steel', 'Ingiere diariamente una cantidad de azúcar equivalente a su peso corporal. De lo contrario, se pone de muy mal humor.', 'Sweet Veil', '', 'Unburden', '.', 'Male/Female'),
+(685, 'Slurpuff', 'Fairy', '', 'Poison, Steel', 'Puede percibir el estado físico y mental de alguien solo con olerlo, lo que podría tener aplicaciones útiles en el campo de la medicina.', 'Sweet Veil', '', 'Unburden', '.', 'Male/Female'),
+(686, 'Inkay', 'Dark', 'Psychic', 'Bug(X4), Fairy', 'Los destellos de luz intermitente que emiten sus órganos luminosos aplacan el ánimo del rival, lo que le permite protegerse de enemigos fuertes.', 'Contrary', 'Suction Cups', 'Infiltrator', '.', 'Male/Female'),
+(687, 'Malamar', 'Dark', 'Psychic', 'Bug(X4), Fairy', 'Sus potentes poderes hipnóticos no tienen rival. Aquellos a los que controla no recuerdan en absoluto haber estado sometidos a su voluntad.', 'Contrary', 'Suction Cups', 'Infiltrator', '.', 'Male/Female'),
+(688, 'Binacle', 'Rock', 'Water', 'Grass(X4), Electric, Fighting, Ground', 'Dos Binacle conviven adheridos a una misma roca a orillas del mar y colaboran para atrapar a sus presas cuando sube la marea.', 'Tough Claws', 'Sniper', 'Pickpocket', '.', 'Male/Female'),
+(689, 'Barbaracle', 'Rock', 'Water', 'Grass(X4), Electric, Fighting, Ground', 'Su cuerpo está formado por siete Binacle. El situado en la posición central a modo de cabeza suele impartir las órdenes a las extremidades.', 'Tough Claws', 'Sniper', 'Pickpocket', '.', 'Male/Female'),
+(690, 'Skrelp', 'Poison', 'Water', 'Electric, Ground, Psychic', 'Se oculta de sus enemigos mezclándose con las algas que flotan a la deriva. Elabora su veneno a partir de las algas podridas que ingiere.', 'Poison Point', 'Poison Touch', 'Adaptability', '.', 'Male/Female'),
+(691, 'Dragalge', 'Poison', 'Dragon', 'Ice, Ground, Psychic, Dragon', 'Ataca indiscriminadamente a quien ose invadir su territorio escupiéndole un veneno tan cáustico que es capaz de corroer el casco de un barco.', 'Poison Point', 'Poison Touch', 'Adaptability', '.', 'Male/Female'),
+(692, 'Clauncher', 'Water', '', 'Grass, Electric', 'Dispara balas de agua a Pokémon voladores haciendo estallar el gas de su pinza derecha.', 'Mega Launcher', '', '', '.', 'Male/Female'),
+(693, 'Clawitzer', 'Water', '', 'Grass, Electric', 'Emplea el gas de su cuerpo para lanzar chorros de agua por la parte trasera de su pinza que le permiten nadar a una velocidad de 60 nudos.', 'Mega Launcher', '', '', '.', 'Male/Female'),
+(694, 'Helioptile', 'Electric', 'Normal', 'Fighting, Ground', 'Extiende los pliegues de la cabeza para absorber la luz del sol y convertirla en electricidad, con la que realiza potentes ataques de tipo Eléctrico.', 'Dry Skin', 'Sand Veil', 'Solar Power', '.', 'Male/Female'),
+(695, 'Heliolisk', 'Electric', 'Normal', 'Fighting, Ground', 'Venerado por una antigua civilización del desierto, ahora desaparecida, llegó a Galar junto a sus tesoros y reliquias.', 'Dry Skin', 'Sand Veil', 'Solar Power', '.', 'Male/Female'),
+(696, 'Tyrunt', 'Rock', 'Dragon', 'Ice, Fighting, Ground, Dragon, Steel, Fairy', 'Pokémon prehistórico recreado a partir de un fósil. De carácter violento y egoísta, sus enormes mandíbulas pueden triturar cualquier cosa.', 'Strong Jaw', '', 'Sturdy', '.', 'Male/Female'),
+(697, 'Tyrantrum', 'Rock', 'Dragon', 'Ice, Fighting, Ground, Dragon, Steel, Fairy', 'Este Pokémon vivió hace cien millones de años. A pesar de su ferocidad, posee una firmeza y una presencia dignas de un rey.', 'Strong Jaw', '', 'Sturdy', '.', 'Male/Female'),
+(698, 'Amaura', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Este Pokémon ha sido regenerado a partir de un fósil. Habitaba en manadas en lugares fríos donde los depredadores escaseaban.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
+(699, 'Aurorus', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Fue regenerado a partir de un fósil. Dicen que el rugido de Aurorus hace aparecer la aurora boreal en el cielo nocturno.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
+(700, 'Sylveon', 'Fairy', '', 'Poison, Steel', 'Con sus apéndices sensoriales con forma de cinta, emite unas ondas tranquilizadoras capaces de neutralizar la hostilidad de sus rivales.', 'Cute Charm', '', 'Pixilate', '.', 'Male/Female'),
+(701, 'Hawlucha', 'Fighting', 'Flying', 'Electric, Ice, Flying, Psychic, Fairy', 'Remata a sus rivales con elegancia dando ágiles saltos con la ayuda de las alas. Se trata de una técnica que perfecciona en su bosque natal.', 'Limber', 'Unburden', 'Mold Breaker', '.', 'Male/Female'),
+(702, 'Dedenne', 'Electric', 'Fairy', 'Poison, Ground', 'Como es menudo y su órgano electrógeno está poco desarrollado, absorbe electricidad de las casas con la cola para recargar sus reservas.', 'Cheek Pouch', 'Pickup', 'Plus', '.', 'Male/Female'),
+(703, 'Carbink', 'Rock', 'Fairy', 'Water, Grass, Ground, Steel(X4)', 'Aparece a veces al excavar en cuevas. Desde su nacimiento, lleva cientos de millones de años durmiendo en las profundidades subterráneas.', 'Clear Body', '', 'Sturdy', '.', 'N/A'),
+(704, 'Goomy', 'Dragon', '', 'Ice, Dragon, Fairy', 'Una membrana mucosa recubre por completo su cuerpo, compuesto casi exclusivamente de agua, para evitar que se seque y se deshidrate.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(705, 'Sliggoo', 'Dragon', '', 'Ice, Dragon, Fairy', 'La protuberancia en forma de espiral que tiene en el lomo contiene su cerebro y su corazón, así como el resto de sus órganos vitales.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(706, 'Goodra', 'Dragon', '', 'Ice, Dragon, Fairy', 'Es común verlo pasear por campos y montañas bajo su adorada lluvia. Posee un carácter sereno.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(707, 'Klefki', 'Steel', 'Fairy', 'Fire, Ground', 'No duda en deshacerse de las llaves una vez absorbidos sus iones metálicos, aunque, si una le gusta de verdad, la atesorará durante décadas.', 'Prankster', '', 'Magician', '.', 'N/A'),
+(708, 'Phantump', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se cree que las hojillas verdes que le crecen pueden curar toda afección, pero se marchitan al instante si alguien las arranca.', 'Natural Cure', 'Frisk', 'Harvest', '.', 'Male/Female'),
+(709, 'Trevenant', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se comunica con los árboles a través de sus raíces para vigilar cada rincón del bosque y expulsar a los indeseables con una maldición.', 'Natural Cure', 'Frisk', 'Harvest', '.', 'Male/Female'),
+(710, 'Pumpkaboo', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Las almas errantes de este mundo se introducen en su cuerpo e inician así su viaje al más allá.', 'Pickup', 'Frisk', 'Insomnia', '.', 'Male/Female'),
+(711, 'Gourgeist', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se dice que los espeluznantes alaridos que emite bien entrada la noche son los lamentos de almas en pena desde el más allá.', 'Pickup', 'Frisk', 'Insomnia', '.', 'Male/Female'),
+(712, 'Bergmite', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Vive en zonas montañosas extremadamente frías, pero en raras ocasiones migra cruzando el mar a lomos de un Avalugg.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(713, 'Avalugg', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Suele toparse con manadas de Cetitan mientras camina con algún Bergmite en el lomo, pero prefiere pasar de largo para evitar disputas.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(714, 'Noibat', 'Flying', 'Dragon', 'Ice(X4), Rock, Dragon, Fairy', 'Emite ondas ultrasónicas a través de sus grandes orejas para buscar fruta con la que alimentarse. Siempre confunde a los Applin con comida.', 'Frisk', 'Infiltrator', 'Telepathy', '.', 'Male/Female'),
+(715, 'Noivern', 'Flying', 'Dragon', 'Ice(X4), Rock, Dragon, Fairy', 'Emite ondas ultrasónicas capaces de pulverizar rocas enormes. Posee un carácter cruel.', 'Frisk', 'Infiltrator', 'Telepathy', '.', 'Male/Female'),
+(716, 'Xerneas', 'Fairy', '', 'Poison, Steel', 'Según las leyendas, puede compartir el secreto de la vida eterna. Ha despertado tras dormir durante mil años bajo la apariencia de un árbol.', 'Fairy Aura', '', '', '.', 'N/A'),
+(717, 'Yveltal', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Pokémon legendario que, al extender sus alas y las plumas de la cola, emite un brillo carmesí que absorbe la energía vital de su enemigo.', 'Dark Aura', '', '', '.', 'N/A'),
+(718, 'Zygarde', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Esta es la forma que adopta Zygarde al reunir el 50% de sus células. Su cometido consiste en vigilar el ecosistema.', 'Aura Break', 'Power Construct', '', '.', 'N/A'),
+(719, 'Diancie', 'Rock', 'Fairy', 'Water, Grass, Ground, Steel(X4)', 'Es una transformación súbita de Carbink. Se dice que su cuerpo, que irradia destellos rosados, es lo más bonito de este mundo.', 'Clear Body', '', '', '.', 'N/A'),
+(720, 'Hoopa', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'En su forma original, este Pokémon posee una fuerza descomunal. Una leyenda cuenta que una vez robó un tesoro del interior de una fortaleza.', 'Magician', '', '', '.', 'N/A'),
+(721, 'Volcanion', 'Fire', 'Water', 'Electric, Ground, Rock', 'Expulsa vapor y desaparece entre la densa niebla. Dicen que habita en montañas solitarias.', 'Water Absorb', '', '', '.', 'N/A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
+-- Estructura de tabla para la tabla `messages`
 --
 
 CREATE TABLE `messages` (
@@ -571,7 +788,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pokemoncatched`
+-- Estructura de tabla para la tabla `pokemoncatched`
 --
 
 CREATE TABLE `pokemoncatched` (
@@ -582,48 +799,10 @@ CREATE TABLE `pokemoncatched` (
   `Is_Shiny` tinyint(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `pokemoncatched`
---
-
-INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
-(56, 6, 333, 0, 0),
-(57, 6, 343, 0, 0),
-(58, 6, 354, 0, 0),
-(59, 6, 223, 0, 0),
-(60, 6, 446, 0, 0),
-(61, 6, 271, 0, 0),
-(62, 6, 189, 0, 0),
-(63, 6, 464, 0, 0),
-(64, 6, 435, 0, 0),
-(65, 6, 159, 0, 0),
-(66, 6, 61, 0, 0),
-(67, 6, 102, 0, 0),
-(68, 6, 139, 0, 0),
-(69, 6, 303, 0, 0),
-(70, 6, 114, 0, 0),
-(71, 6, 345, 0, 0),
-(72, 6, 172, 0, 0),
-(73, 6, 154, 0, 0),
-(74, 6, 119, 0, 0),
-(75, 6, 131, 0, 0),
-(76, 6, 139, 0, 0),
-(77, 6, 128, 0, 0),
-(78, 6, 132, 0, 0),
-(79, 6, 56, 0, 0),
-(80, 6, 143, 0, 0),
-(81, 6, 46, 0, 0),
-(82, 6, 100, 0, 0),
-(83, 6, 61, 0, 0),
-(84, 6, 141, 0, 0),
-(85, 6, 455, 0, 1),
-(86, 6, 70, 0, 0),
-(87, 6, 137, 0, 0);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -637,30 +816,23 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
-(6, '123', '123', '123', NULL, 2, 0);
-
---
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `datapokemonall`
+-- Indices de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indexes for table `messages`
+-- Indices de la tabla `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pokemoncatched`
+-- Indices de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_PokemonCatched`),
@@ -668,45 +840,45 @@ ALTER TABLE `pokemoncatched`
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `datapokemonall`
+-- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=506;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=722;
 
 --
--- AUTO_INCREMENT for table `messages`
+-- AUTO_INCREMENT de la tabla `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pokemoncatched`
+-- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `pokemoncatched`
+-- Filtros para la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),

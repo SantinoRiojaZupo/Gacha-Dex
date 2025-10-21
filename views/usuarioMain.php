@@ -2,6 +2,8 @@
 require_once "../config/conexion.php";
 $idPerfil = isset($_GET['id']) && (int)$_GET['id'] > 0 ? (int)$_GET['id'] : $_SESSION['user_id'];
 
+$idPerfilNombre = isset($_GET['nombre']) ? (string)$_GET['nombre'] : '';
+
 $filaNombre = null; // 🔹 valor por defecto
 $bios = '';
 $id = $_SESSION["user_id"];
@@ -78,9 +80,10 @@ if (!empty($_SESSION['user_id'])) {
 <link rel="stylesheet" href="../CSS/estilosUsuarios.css">
 <div class="login-container"></div>
 <div id=inventario>
-  <a href="index.php?page=inventario">
+<a href="index.php?page=inventario&id=<?php echo $idPerfil; ?>">
+  
     <img src="../imagenes/inventario.png" alt="mateo chompi">
-  </a>
+</a>
 </div>
 <div class="perfil-container">
   <div class="perfil-info">
@@ -143,9 +146,16 @@ if (!empty($_SESSION['user_id'])) {
 
     <body>
       <div id=imagenPerfil><img src="<?php echo $foto; ?>"></div>
+                 <?php  if($idPerfil !== $_SESSION['user_id']):?> 
+
+      <button id="iniciarChat">Mandar Mensaje</button>
+
+<?php endif; ?>
+            <?php  if($idPerfil == $_SESSION['user_id']):?> 
 
       <button onclick="abrirPanel()">Seleccionar imagen</button>
 
+<?php endif; ?>
       <div id="fondo">
         <div id="panel">
           <div id="imagenes">
@@ -184,11 +194,12 @@ if (!empty($_SESSION['user_id'])) {
   </div>
   <div class="pokemons">
     <div id="espacioShiny">
-      <h3>Tus Shiny</h3>
-      <p>[Espacio vacío para futuros shiny]</p>
+      <h3>Pokémon Shiny:</h3>
+      <p></p>
     </div>
     <div id="espacioFavorito">
-      <h3>Pokémon Favoritos</h3>
+      <h3>Pokémon Favoritos:</h3>
+      <p></p>
     </div>
   </div>
 
@@ -198,10 +209,25 @@ if (!empty($_SESSION['user_id'])) {
     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
     <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
   </div>
+  <script>
+    const nombreUsuario = <?php echo json_encode((string)$idPerfilNombre); ?>;
+    const idUsuario = <?php echo json_encode((int)$idPerfil); ?>;
+    const idUsuarioLogueado = <?php echo json_encode((int)$_SESSION['user_id']); ?>;
+  </script>
+  <script src="../JS/perfil.js"></script>
+<script>
+  console.log("ID de usuario:", idUsuario);
+mostrarImagenPerfil(idUsuario);
+</script>  
   <?php if ($_SESSION['user_id'] == $idPerfil): ?>
-
-
-    <script src="../JS/perfil.js"></script>
+<script>
+  
+    console.log("ID de usuario:", idUsuario);
+mostrarImagenPerfil(idUsuario);
+  
+</script>
+ 
+    
     <script src="../JS/ponerFotoPerfil.js"></script>
 
   <?php endif; ?>

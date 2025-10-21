@@ -1,4 +1,3 @@
-* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +5,42 @@
   font-family: 'PokemonGB', monospace, sans-serif;
 }
 
-/* Header */
-header {
-    background: linear-gradient(270deg,#f78c6b, #ffd966, #b4f8c8, #a0e7e5);
-    background-size: 1600% 1600%;
-    animation: rainbow 15s ease infinite;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+/* Contenedor principal para la vista de detalles */
+.detalles-page {
+  min-height: 100vh;
+  background-image: url(../imagenes/pokemonfondodetallado.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
 
-.menu-btn {
+/* Header dentro de la vista detalles */
+.detalles-page header {
+  background: linear-gradient(270deg,#f78c6b, #ffd966, #b4f8c8, #a0e7e5);
+  background-size: 1600% 1600%;
+  animation: rainbow 15s ease infinite;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  border-radius: 4px;
+  z-index: 2;
+}
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.detalles-page .menu-btn {
   background-color: white;
   border: 2px solid black;
   padding: 5px 10px;
@@ -30,74 +48,78 @@ header {
   font-size: 16px;
 }
 
-.search-section {
+.detalles-page .search-section {
   display: flex;
   gap: 10px;
 }
 
-.search-input {
+.detalles-page .search-input {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid black;
+  min-width: 200px;
 }
 
-.search-btn {
+.detalles-page .search-btn {
   background-color: white;
   border: 2px solid black;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
-/* Main content */
-.main-content {
-  background-image: url(../imagenes/pokemonfondodetallado.jpg);
-  height: 100vh;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-.pokemon-card {
-  display: flex;
-  background-image: url(../imagenes/pokegif.gif);
+/* Card centrada y con arte a la derecha (no repetida) */
+.detalles-page .pokemon-card {
+  width: 80%;
+  max-width: 900px;
+  background-color: #fff;
   border: 5px solid #000;
-  padding: 100px;
-  gap: 100px;
+  padding: 60px 60px 60px 60px;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  background-image: url(../imagenes/pokemon-mewtwo-white-.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 350px;
 }
 
-.pokemon-image img {
+/* Ajustes internos */
+.detalles-page .pokemon-image img {
   width: 200px;
   height: auto;
 }
 
-.pokemon-info {
+.detalles-page .pokemon-info {
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: #000;
   font-family: 'PokemonGB', monospace, sans-serif;
 }
 
-.pokemon-name {
+.detalles-page .pokemon-name {
   font-size: 32px;
   color: #000;
   margin-bottom: 20px;
   font-family: 'PokemonGB', monospace, sans-serif;
 }
 
-.pokemon-description {
+.detalles-page .pokemon-description {
   background-color: #c4c4c4;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
   font-family: 'PokemonGB', monospace, sans-serif;
+  display: inline-block;
 }
 
-.pokemon-details p {
+.detalles-page .pokemon-details p {
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-.tag {
+.detalles-page .tag {
   background-color: #c4c4c4;
   padding: 5px 10px;
   border-radius: 10px;
