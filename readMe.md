@@ -25,8 +25,8 @@ Hello, we are ***Los Amiguitos*** and we present "Gacha-Dex" which is a project 
 -  **Name**: Samuel Serrezuela <br>
 **Rol**: Stylesheet <br>
 **Description**: He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project. <br>
--  **Name**: Santino Rioja <br>
-**Rol**: Programmer and helper database <br>
+-  **Name**: Ignacio Gonzalez <br>
+**Rol**: Database Designer <br>
 **Description**: He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project. <br>
 
 
