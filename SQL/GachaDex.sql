@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2025 a las 05:35:31
+-- Tiempo de generación: 21-10-2025 a las 14:19:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -748,7 +748,28 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (697, 'Tyrantrum', 'Rock', 'Dragon', 'Ice, Fighting, Ground, Dragon, Steel, Fairy', 'Este Pokémon vivió hace cien millones de años. A pesar de su ferocidad, posee una firmeza y una presencia dignas de un rey.', 'Strong Jaw', '', 'Sturdy', '.', 'Male/Female'),
 (698, 'Amaura', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Este Pokémon ha sido regenerado a partir de un fósil. Habitaba en manadas en lugares fríos donde los depredadores escaseaban.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
 (699, 'Aurorus', 'Rock', 'Ice', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'Fue regenerado a partir de un fósil. Dicen que el rugido de Aurorus hace aparecer la aurora boreal en el cielo nocturno.', 'Refrigerate', '', 'Snow Warning', '.', 'Male/Female'),
-(700, 'Sylveon', 'Fairy', '', 'Poison, Steel', 'Con sus apéndices sensoriales con forma de cinta, emite unas ondas tranquilizadoras capaces de neutralizar la hostilidad de sus rivales.', 'Cute Charm', '', 'Pixilate', '.', 'Male/Female');
+(700, 'Sylveon', 'Fairy', '', 'Poison, Steel', 'Con sus apéndices sensoriales con forma de cinta, emite unas ondas tranquilizadoras capaces de neutralizar la hostilidad de sus rivales.', 'Cute Charm', '', 'Pixilate', '.', 'Male/Female'),
+(701, 'Hawlucha', 'Fighting', 'Flying', 'Electric, Ice, Flying, Psychic, Fairy', 'Remata a sus rivales con elegancia dando ágiles saltos con la ayuda de las alas. Se trata de una técnica que perfecciona en su bosque natal.', 'Limber', 'Unburden', 'Mold Breaker', '.', 'Male/Female'),
+(702, 'Dedenne', 'Electric', 'Fairy', 'Poison, Ground', 'Como es menudo y su órgano electrógeno está poco desarrollado, absorbe electricidad de las casas con la cola para recargar sus reservas.', 'Cheek Pouch', 'Pickup', 'Plus', '.', 'Male/Female'),
+(703, 'Carbink', 'Rock', 'Fairy', 'Water, Grass, Ground, Steel(X4)', 'Aparece a veces al excavar en cuevas. Desde su nacimiento, lleva cientos de millones de años durmiendo en las profundidades subterráneas.', 'Clear Body', '', 'Sturdy', '.', 'N/A'),
+(704, 'Goomy', 'Dragon', '', 'Ice, Dragon, Fairy', 'Una membrana mucosa recubre por completo su cuerpo, compuesto casi exclusivamente de agua, para evitar que se seque y se deshidrate.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(705, 'Sliggoo', 'Dragon', '', 'Ice, Dragon, Fairy', 'La protuberancia en forma de espiral que tiene en el lomo contiene su cerebro y su corazón, así como el resto de sus órganos vitales.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(706, 'Goodra', 'Dragon', '', 'Ice, Dragon, Fairy', 'Es común verlo pasear por campos y montañas bajo su adorada lluvia. Posee un carácter sereno.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(707, 'Klefki', 'Steel', 'Fairy', 'Fire, Ground', 'No duda en deshacerse de las llaves una vez absorbidos sus iones metálicos, aunque, si una le gusta de verdad, la atesorará durante décadas.', 'Prankster', '', 'Magician', '.', 'N/A'),
+(708, 'Phantump', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se cree que las hojillas verdes que le crecen pueden curar toda afección, pero se marchitan al instante si alguien las arranca.', 'Natural Cure', 'Frisk', 'Harvest', '.', 'Male/Female'),
+(709, 'Trevenant', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se comunica con los árboles a través de sus raíces para vigilar cada rincón del bosque y expulsar a los indeseables con una maldición.', 'Natural Cure', 'Frisk', 'Harvest', '.', 'Male/Female'),
+(710, 'Pumpkaboo', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Las almas errantes de este mundo se introducen en su cuerpo e inician así su viaje al más allá.', 'Pickup', 'Frisk', 'Insomnia', '.', 'Male/Female'),
+(711, 'Gourgeist', 'Ghost', 'Grass', 'Fire, Ice, Flying, Ghost, Dark', 'Se dice que los espeluznantes alaridos que emite bien entrada la noche son los lamentos de almas en pena desde el más allá.', 'Pickup', 'Frisk', 'Insomnia', '.', 'Male/Female'),
+(712, 'Bergmite', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Vive en zonas montañosas extremadamente frías, pero en raras ocasiones migra cruzando el mar a lomos de un Avalugg.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(713, 'Avalugg', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Suele toparse con manadas de Cetitan mientras camina con algún Bergmite en el lomo, pero prefiere pasar de largo para evitar disputas.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(714, 'Noibat', 'Flying', 'Dragon', 'Ice(X4), Rock, Dragon, Fairy', 'Emite ondas ultrasónicas a través de sus grandes orejas para buscar fruta con la que alimentarse. Siempre confunde a los Applin con comida.', 'Frisk', 'Infiltrator', 'Telepathy', '.', 'Male/Female'),
+(715, 'Noivern', 'Flying', 'Dragon', 'Ice(X4), Rock, Dragon, Fairy', 'Emite ondas ultrasónicas capaces de pulverizar rocas enormes. Posee un carácter cruel.', 'Frisk', 'Infiltrator', 'Telepathy', '.', 'Male/Female'),
+(716, 'Xerneas', 'Fairy', '', 'Poison, Steel', 'Según las leyendas, puede compartir el secreto de la vida eterna. Ha despertado tras dormir durante mil años bajo la apariencia de un árbol.', 'Fairy Aura', '', '', '.', 'N/A'),
+(717, 'Yveltal', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Pokémon legendario que, al extender sus alas y las plumas de la cola, emite un brillo carmesí que absorbe la energía vital de su enemigo.', 'Dark Aura', '', '', '.', 'N/A'),
+(718, 'Zygarde', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Esta es la forma que adopta Zygarde al reunir el 50% de sus células. Su cometido consiste en vigilar el ecosistema.', 'Aura Break', 'Power Construct', '', '.', 'N/A'),
+(719, 'Diancie', 'Rock', 'Fairy', 'Water, Grass, Ground, Steel(X4)', 'Es una transformación súbita de Carbink. Se dice que su cuerpo, que irradia destellos rosados, es lo más bonito de este mundo.', 'Clear Body', '', '', '.', 'N/A'),
+(720, 'Hoopa', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'En su forma original, este Pokémon posee una fuerza descomunal. Una leyenda cuenta que una vez robó un tesoro del interior de una fortaleza.', 'Magician', '', '', '.', 'N/A'),
+(721, 'Volcanion', 'Fire', 'Water', 'Electric, Ground, Rock', 'Expulsa vapor y desaparece entre la densa niebla. Dicen que habita en montañas solitarias.', 'Water Absorb', '', '', '.', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -832,7 +853,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=701;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=722;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
