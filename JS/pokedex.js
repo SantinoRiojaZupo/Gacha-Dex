@@ -16,9 +16,14 @@ fetch('/Gacha-Dex/pokedex.php')
             pokemonDiv.classList.add('pokemon-card');
             if (pokemon.tiene == 1) {
                 pokemonDiv.innerHTML = `
-                <img src="${pokemon.image}" alt="${pokemon.PokemonName}">
+                <img id="${pokemon.Id_Pokedex}" src="${pokemon.image}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>`
-            
+            pokemonDiv.id=pokemon.Id_Pokedex
+            pokemonDiv.addEventListener('click', ()=>{
+              let idPokemon=pokemon.Id_Pokedex
+             window.location.href = `index.php?page=DetallesPokemon&idpokemon=${idPokemon}`
+
+            })
             }
             else{
                 pokemonDiv.innerHTML=`???`
