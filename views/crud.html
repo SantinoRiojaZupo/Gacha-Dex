@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Demo</title>
+    <style>
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 8px; }
+      .modal { display: none; position: fixed; left:0; top:0; width:100%; height:100%; background: rgba(0,0,0,0.5); align-items:center; justify-content:center; }
+      .modal .box { background: #fff; padding: 20px; border-radius: 6px; max-width: 700px; width: 90%; }
+    </style>
+</head>
+<body>
+    <h1>CRUD</h1>
+  <button id="botonCargarUsuarios">Cargar usuarios</button>
+  <div id="TablaPkmn" style="margin-top:20px"></div>
+
+    <!-- Modal de edición -->
+    <div id="editModal" class="modal">
+      <div class="box">
+        <button id="closeModal" style="float:right">X</button>
+        <h2>Editar registro</h2>
+        <form id="editForm">
+          <input type="hidden" name="id" id="edit_id">
+          Nombre: <input name="Nombre" id="edit_Nombre"><br>
+          Tipo: <input name="Tipo" id="edit_Tipo"><br>
+          SegundoTipo: <input name="SegundoTipo" id="edit_SegundoTipo"><br>
+          Debilidades: <input name="Debilidades" id="edit_Debilidades"><br>
+          Descripcion: <input name="Descripcion" id="edit_Descripcion"><br>
+          Habilidad: <input name="Habilidad" id="edit_Habilidad"><br>
+          Habilidad2: <input name="Habilidad2" id="edit_Habilidad2"><br>
+          HabilidadOculta: <input name="HabilidadOculta" id="edit_HabilidadOculta"><br>
+          Genero: <input name="Genero" id="edit_Genero"><br><br>
+          <button type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="edit.js"></script>
+    <script>
+  document.getElementById('botonCargarUsuarios').addEventListener('click', async function(event) {
+        event.preventDefault();
+
+        // Pedir la página index.php y parsear la tabla HTML que devuelve
+        try {
+            const res = await fetch('index.php');
+            const text = await res.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const table = doc.querySelector('table');
+            if (!table) {
+                alert('No se encontró tabla de usuarios en index.php');
+                return;
+            }
+
+            // Clonar la tabla al contenedor local
+            document.getElementById('TablaPkmn').innerHTML = table.outerHTML;
+            // Añadir botones Edit/Del a cada fila (si no existen)
+            const localTable = document.getElementById('TablaPkmn').querySelector('table');
+            const rows = localTable.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const td = document.createElement('td');
+                td.innerHTML = '<button class="action-btn edit">Edit</button> <button class="action-btn del">Del</button>';
+                row.appendChild(td);
+            });
+        } catch (err) {
+            alert('Error al cargar usuarios: ' + err.message);
+        }
+    });
+
+    // Delegación de eventos: abrir modal cuando se pulsa Edit
+    document.addEventListener('click', function(e) {
+      if (e.target && e.target.classList.contains('edit')) {
+        const tr = e.target.closest('tr');
+        if (!tr) return;
+        const tds = tr.querySelectorAll('td');
+        // Asumimos el mismo orden que la tabla demo
+        // Campos según index.php: Id_User, Name_User, User_Password, Bio, Pity
+        const data = {
+          id: tds[0].textContent.trim(),
+          Name_User: tds[1].textContent.trim(),
+          User_Password: tds[2].textContent.trim(),
+          Bio: tds[3].textContent.trim(),
+          Pity: tds[4].textContent.trim()
+        };
+
+        // Rellenar modal
+        document.getElementById('edit_id').value = data.id;
+  // Rellenar modal con campos de users
+  document.getElementById('edit_Nombre').value = data.Name_User;
+  document.getElementById('edit_Tipo').value = data.User_Password;
+  document.getElementById('edit_SegundoTipo').value = data.Bio;
+  document.getElementById('edit_Debilidades').value = data.Pity;
+
+        // Mostrar modal
+        const modal = document.getElementById('editModal');
+        modal.style.display = 'flex';
+      }
+    });
+
+    // Cerrar modal
+    document.getElementById('closeModal').addEventListener('click', function(){
+      document.getElementById('editModal').style.display = 'none';
+    });
+
+    // Enviar formulario del modal
+    document.getElementById('editForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const payload = {
+        Id_User: document.getElementById('edit_id').value,
+        Name_User: document.getElementById('edit_Nombre').value,
+        User_Password: document.getElementById('edit_Tipo').value,
+        Bio: document.getElementById('edit_SegundoTipo').value,
+        Pity: document.getElementById('edit_Debilidades').value
+      };
+
+      // Llamada al backend (usa edit.js helper si existe)
+      try {
+        if (typeof enviarEdicion === 'function') {
+          const res = await enviarEdicion(payload);
+          alert(res.message || JSON.stringify(res));
+        } else {
+          // fallback: POST directo a edit.php
+          const r = await fetch('edit.php', {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify(payload)
+          });
+          const data = await r.json().catch(()=>({ok:false}));
+          alert(data.message || JSON.stringify(data));
+        }
+        // ocultar modal
+        document.getElementById('editModal').style.display = 'none';
+      } catch(err) {
+        alert('Error al enviar la edición: ' + err.message);
+      }
+    });
+    </script>
+</body>
+</html>

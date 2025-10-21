@@ -9,80 +9,51 @@
     <h1>CRUD</h1>
     <div id="Tabla">
     <b>Pokemon:</b>
-   <form action="" method="POST">
+    <br>
     <input type="text" name="BuscarPkmn" placeholder="Buscar un Pokemon">
-    <button id="botonBuscarPkmn" type="submit" onclick="MostrarInfo()">Buscar</button>
+    <button id="botonBuscarPkmn" type="button" onclick="MostrarInfo()">Buscar</button>
     <div id="TablaPkmn"></div>
     <br>
     <br>
-    <!-- <input type="text" name="AgregarNombrePkmn" placeholder="Agregar Nombre Pokemon">
-    <input type="text" name="AgregarIdPkmn" placeholder="Agregar Id Pokemon">
-    <input type="text" name="AgregarTipoePkmn" placeholder="Agregar Tipo Pokemon">
-    <input type="text" name="AgregarTipo2Pkmn" placeholder="Agregar Tipo2 Pokemon">
-    <input type="text" name="AgregarDebilidadesPkmn" placeholder="Agregar Debilidades Pokemon">
-    <input type="text" name="AgregarDescripcionPkmn" placeholder="Agregar Descripcion Pokemon">
-    <input type="text" name="AgregarHabilidaPkmn" placeholder="Agregar Habilidad Pokemon">
-    <input type="text" name="AgregarHabilidad2Pkmn" placeholder="Agregar Habilidad2 Pokemon">
-    <input type="text" name="AgregarHabilidadSecretaPkmn" placeholder="Agregar Habilidad Secreta Pokemon">
-    <input type="text" name="AgregarGeneroPkmn" placeholder="Agregar Genero Pokemon">
-    <button type="submit">Agreagar un Pkmn</button>
-    <br>
-    <br>
-    <input type="text" name="BorrarPkmn" placeholder="Borrar Pokemon">
-    <button type="submit">Borrar</button>
-    <br>
-    <br>
-    <input type="text" name="MostrarPkmn" placeholder="Nombre Usuario">
-    <button type="submit">Mostrar Pokemon Usuario</button>
-    <br>
-    <br>
-     <input type="text" name="ActualizarIdPkmn" placeholder="Id Pokemon">
-    <input type="text" name="ActualizarNombrePkmn" placeholder="Nombre Pokemon">
-    <button type="submit">Actualizar Pokmn</button>
-    </form> 
-    </div>
-    <br>
-    <br> -->
      <div>
     <b>Usuarios:</b>
-   <form action="" method="POST">
     <table>
   <thead>
     <tr>
-      <th>ID</th><th>Nombre Usuario</th><th>Contraseña</th><th>Bio</th>
+      <th>ID</th><th>Nombre Usuario</th><th>Contraseña</th><th>Bio</th><th>pity</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>1</td><td>gae</td><td>12345</td><td>TETO SUPREMACY 🔻🍐🔻</td>
+      <td>1</td><td>gae</td><td>12345</td><td>TETO SUPREMACY 🔻🍐🔻</td><td>3</td>
       <td>
         <button class="edit">Edit</button>
         <button class="del">Del</button>
       </td>
     </tr>
     <tr>
-      <td>2</td><td>Laranamagica333</td><td>43245</td><td>ranas al poder</td>
+      <td>2</td><td>Laranamagica333</td><td>43245</td><td>ranas al poder</td><td>19</td>
       <td>
         <button class="edit">Edit</button>
         <button class="del">Del</button>
       </td>
     </tr>
     <tr>
-      <td>3</td><td>Mierdown</td><td>67456</td><td>no c</td>
+      <td>3</td><td>Mierdown</td><td>67456</td><td>no c</td><td>0</td>
       <td>
         <button class="edit">Edit</button>
         <button class="del">Del</button>
       </td>
     </tr>
     <tr class="selected">
-      <td>4</td><td>elpibedelasrumbas</td><td>65456</td><td>rumbas>>>></td>
+      <td>4</td><td>elpibedelasrumbas</td><td>65456</td><td>rumbas>>>></td><td>12345</td>13
       <td>
         <button class="edit">Edit</button>
         <button class="del">Del</button>
       </td>
     </tr>
     <tr>
-      <td>5</td><td>zunz</td><td>45354</td><td>paragay</td>
+      <td>5</td><td>zunz</td><td>45354</td><td>paragay</td><td>22</td>
       <td>
         <button class="edit">Edit</button>
         <button class="del">Del</button>
@@ -90,46 +61,38 @@
     </tr>
   </tbody>
 </table>
-
-    <!-- <input type="text" name="NombreUsuario" placeholder="Nombre Usuario">
-    <input type="text" name="AgregarPkmnFav" placeholder="Nombre Pokemon">
-    <button type="submit">Agregar un Pkmn Fav</button>
+    </div>
     <br>
     <br>
-    <input type="text" name="NombreUsuario" placeholder="Nombre Usuario">
-    <input type="text" name="AgregarPkmnFav" placeholder="Nombre Pokemon">
-    <button type="submit">Agregar un Pkmn Shiny</button>
-    <br>
-    <br>
-    <input type="text" name="BorrarUsuario" placeholder="Borrar Usuario">
-    <button type="submit">Borrar</button>
-    <br>
-    <br>
-    <input type="text" name="MostrarUsuarios" placeholder="Nombre Usuario">
-    <button type="submit">Mostrar Usuarios</button>
-    <br>
-    <br>
-     <input type="text" name="ActualizarNombreUsuario" placeholder="Nombre Usuario">
-    <button type="submit">Actualizar Nombre</button>
-    <br>
-    <br>
-     <input type="text" name="NombreUsuario" placeholder="Nombre Usuario">
-     <input type="text" name="ActualizarBioUsuario" placeholder="Nueva Bio de Usuario">
-    <button type="submit">Actualizar Bio</button>
-    </form>  -->
+    <div>
+      <b>Mensajes:</b>
+      <table>
+  <thead>
+    <tr>
+      <th>ID</th><th>sender_id</th><th>reciver_id</th><th>message</th><th>timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td><td>gae</td><td>zunz</td><td>paraguaya mala</td><td>13:45</td>
+      <td>
+        <button class="edit">Edit</button>
+        <button class="del">Del</button>
+      </td>
+    </tr>
     </div>
 </body>
 </html>
 
 <script>
-document.getElementById('botonBuscarPkmn').addEventListener('click', function() {
+document.getElementById('botonBuscarPkmn').addEventListener('click', function(event) {
+    event.preventDefault();
+
     const datos = [
       {id:1, Nombre:'Bulbasaur', Tipo:'Grass', SegundoTipo:'Poison', Debilidades:'Fire, Ice, Flying, Psychic', Descripcion:'fsdfsf', Habilidad:'Overgrow', Habilidad2:"", HabilidadOculta:"Chlorophyll", Genero:"male/female"}
     ];
 
-
-
- let tabla = '<table>';
+    let tabla = '<table>';
     tabla += `<thead>
                 <tr>
                   <th>ID</th><th>Nombre</th><th>Tipo</th><th>SegundoTipo</th><th>Debilidades</th><th>Descripcion</th><th>Habilidad</th><th>Habilidad2</th><th>HabilidadOculta</th><th>Genero</th>
@@ -158,5 +121,5 @@ document.getElementById('botonBuscarPkmn').addEventListener('click', function() 
     tabla += '</tbody></table>';
 
     document.getElementById('TablaPkmn').innerHTML = tabla;
-  });
+});
 </script>
