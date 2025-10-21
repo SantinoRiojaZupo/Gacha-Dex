@@ -60,7 +60,7 @@ header {
 
 .pokemon-card {
   display: flex;
-  background-image: url(../imagenes/pokegif.gif);
+  background-image: url(../imagenes/viejo-fondo-negro-textura-grunge-papel-tapiz-oscuro-pizarra-pizarra-hormigon);
   border: 5px solid #000;
   padding: 100px;
   gap: 100px;

@@ -55,7 +55,6 @@
     </div>
   </div>
   <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script>
- 
   </script>
 </body>
 </html>
