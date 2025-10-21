@@ -1,5 +1,6 @@
 <?php
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +24,11 @@
         </div>
 
         <div class="header-right">
-            <a href="index.php?page=perfil" class="perfil-link">Volver al perfil</a>
+        
+            <a href="index.php?page=perfil&id=<?php echo $idUsuarioPerfil; ?>" class="perfil-link">Volver al perfil</a>
+
         </div>
     </header>
+<script>
+    
+</script>

@@ -3,6 +3,7 @@ session_start();
 require_once __DIR__ . '/config/conexion.php';
 
 $idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : $_SESSION['user_id'];
+$idLogueado = $_SESSION['user_id'];
 header('Content-Type: application/json; charset=utf-8');
 
 // 🔒 Verificar sesión
@@ -96,5 +97,6 @@ while ($fila = mysqli_fetch_assoc($res)) {
 // ✅ Salida JSON final
 echo json_encode([
     'ok' => true,
-    'pokemones' => $pokemones
+    'pokemones' => $pokemones,
+    'idLogueado' => $idLogueado
 ], JSON_UNESCAPED_UNICODE);
