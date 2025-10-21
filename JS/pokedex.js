@@ -1,3 +1,10 @@
+pokemonesUsuario=[];
+
+const contenedor = document.querySelector("search-box");
+const busquedaInput = document.getElementById("busqueda");
+const filtroTipo = document.getElementById("filtro-tipo");
+const filtroGen = document.getElementById("filtro-generacion");
+
 function acutalizarPokedex() {
 fetch('/Gacha-Dex/pokedex.php')
     .then(response => response.json())
@@ -15,6 +22,7 @@ fetch('/Gacha-Dex/pokedex.php')
             const pokemonDiv = document.createElement('div');
             pokemonDiv.classList.add('pokemon-card');
             if (pokemon.tiene == 1) {
+                            pokemonesUsuario.push(pokemon) ;
                 pokemonDiv.innerHTML = `
                 <img id="${pokemon.Id_Pokedex}" src="${pokemon.image}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>`
@@ -32,5 +40,21 @@ fetch('/Gacha-Dex/pokedex.php')
         })
 }
     )
+}
+function aplicarFiltros() {
+    const texto = busquedaInput.value.toLowerCase();
+    const tipo = filtroTipo.value.toLowerCase();
+    const generacion = filtroGen.value;
+
+    const filtrados = pokemonesUsuario.filter(p => {
+        const coincideNombre = p.nombre.toLowerCase().includes(texto);
+        const coincideTipo =
+            tipo === "" ||
+            p.tipo.toLowerCase() === tipo ||
+            (p.tipo_secundario && p.tipo_secundario.toLowerCase() === tipo);
+        const coincideGen = generacion === "" || p.generacion.toString() === generacion;
+        return coincideNombre && coincideTipo && coincideGen;
+    });
+        mostrarPokemones(filtrados);
 }
 acutalizarPokedex();

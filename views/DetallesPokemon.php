@@ -1,10 +1,30 @@
-  <header class="header">
+<head>
+  <link rel="stylesheet" href="../CSS/estilosDetallespokemon.css" />
+  <style>
+    /* Sobrescribe el fondo global */
+    body {
+      background-image: url('../imagenes/pokemonfondodetallado.jpg') !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+    }
 
+    /* Asegura que el contenido principal quede por encima si hay overlays */
+    .main-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<div class="detalles-page">
+  <header class="header">
     <button class="menu-btn">☰ Menu</button>
     <div class="search-section">
       <input type="text" placeholder="Buscar Pokemon..." class="search-input">
       <button class="search-btn">Busca ya!</button>
     </div>
+    
     <link rel="stylesheet" href="../CSS/estilosDetallespokemon.css" />
   </header>
 
@@ -22,31 +42,33 @@
       </div>
     </div>
   </div>
-  <?php
-  require_once '../config/conexion.php';
-  if (!$conexion) {
-    echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
-    exit;
-  }
+  
+</div>
+<?php
+require_once '../config/conexion.php';
+if (!$conexion) {
+  echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
+  exit;
+}
 
-  $sql1 = "SELECT PokemonName, Type, Second_type, Weaknesses, Description, Abilities, Second_Abilities, image FROM datapokemonall where Id_Pokedex=?";
-  $stmt = mysqli_prepare($conexion, $sql1);
-  mysqli_stmt_bind_param($stmt, "i", $idpokemon);
-  mysqli_execute($stmt);
-  $result = mysqli_stmt_get_result($stmt);
-  $arr = [];
-  $idpokedex = 0;
-  if (mysqli_num_rows($result) > 0) {
-    while ($fila = mysqli_fetch_assoc($result)) {
-      $idpokedex = $fila['Id_Pokedex'];
-      $fila['image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $idpokedex . ".png";
+$sql1 = "SELECT PokemonName, Type, Second_type, Weaknesses, Description, Abilities, Second_Abilities, image FROM datapokemonall where Id_Pokedex=?";
+$stmt = mysqli_prepare($conexion, $sql1);
+mysqli_stmt_bind_param($stmt, "i", $idpokemon);
+mysqli_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+$arr = [];
+$idpokedex = 0;
+if (mysqli_num_rows($result) > 0) {
+  while ($fila = mysqli_fetch_assoc($result)) {
+    $idpokedex = $fila['Id_Pokedex'];
+    $fila['image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $idpokedex . ".png";
 
-      $arr[] = $fila;
-    }
+    $arr[] = $fila;
   }
-  if ($arr) {
-    echo json_encode($arr);
-  } else {
-    echo json_encode(["msj" => "mal ahi amigo"]);
-  }
-  ?>
+}
+if ($arr) {
+  echo json_encode($arr);
+} else {
+  echo json_encode(["msj" => "mal ahi amigo"]);
+}
+?>

@@ -14,6 +14,7 @@ $vistaBotonPerfil = $vistaBotonPerfil ?? "";
 $vistaBotonMain = $vistaBotonMain ?? "";
 $vistaJsInventario = $vistaJsInventario ?? "";
 $vistafooter = $vistafooter ?? "";
+
 ?>
 
 <!DOCTYPE html>

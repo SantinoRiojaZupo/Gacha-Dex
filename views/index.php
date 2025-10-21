@@ -47,7 +47,6 @@ switch ($page) {
     break;
 
   default:
-    $vista = VIEWS_PATH . 'main.php';
     $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones = "../JS/registro-js.js";

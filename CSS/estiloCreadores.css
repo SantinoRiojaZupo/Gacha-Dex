@@ -4,9 +4,9 @@ body {
   padding: 0;
   background: linear-gradient(
     to bottom,
-    #000000 0 35%,   /* parte superior negra */
-    #f3c95e 35% 45%, /* franja amarilla */
-    #ffffff 45% 100% /* parte inferior blanca */
+    #f78c6b 0 35%,   
+    #ffd966, 35% 45%,
+    #b4f8c8 45% 100% 
   );
 }
 
