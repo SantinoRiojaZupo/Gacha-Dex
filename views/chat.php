@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <link rel="stylesheet" href="../CSS/chat.css" />
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,17 +9,17 @@
 
 
 
+
+
+
 </head>
 <body>
-  <script>
-    idUsuariologueado= <?php echo $_GET['idLogueado']; ?>;
-    idUsuario= <?php echo $_GET['id']; ?>;
-    nombreUsuario= "<?php echo $_GET['usuario']; ?>";
-  </script>
+
+
 
 
   <div class="container">
-    <div class="users-list" id="usersList">
+    <div class="users-list">
       <div id="5" class="user-item">Usuario 1</div>
       <div id="4" class="user-item">Usuario 2</div>
       <div  class="user-item">Usuario 3</div>
@@ -32,6 +31,7 @@
       <div  class="user-item">Usuario 9</div>
       <div  class="user-item">Usuario 10</div>
     </div>
+
 
     <div class="chat-area">
       <div class="messages">
@@ -54,8 +54,8 @@
       </div>
     </div>
   </div>
-  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script> 
-<script src="../JS/AgregarChat.js"></script>
-
+  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script>
+ 
+  </script>
 </body>
 </html>
