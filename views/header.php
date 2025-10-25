@@ -11,11 +11,13 @@ require_once "../config/conexion.php";
     <div class="header-left">
         <button id="botonMenu">Menú</button>
     <ul id="menu">
-        <li>Pagina Principal</li>
-        <li>Registro</li>
-        <li>INICIO DE SESION</li>
-        <li><a href="index.php?page=pokedex">pokedex</a></li>
-        <li><a href="index.php?page=chat">Chat</a></li>
+        <li id="li1" >Pagina Principal</li>
+        <?php if(!isset($_SESSION['user_id'])): ?>
+        <li id="li4">Registro</li>
+        <li id="li5">INICIO DE SESION</li>
+        <?php endif; ?>
+        <li id="li2">Pokedex</a></li>
+        <li id="li3">Chat</a></li>
     </ul>
    
 </div>

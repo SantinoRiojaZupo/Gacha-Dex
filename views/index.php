@@ -16,6 +16,7 @@ switch ($page) {
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaChatMandar = "../JS/mandarMensaje.js";
     $vistaChatCargar = "../JS/cargarMensajes.js";
+    $vistaMenuOpciones="../JS/menuOpciones.js";
     break;
   case 'pokedex':
     $vista = VIEWS_PATH . 'pokedex.php';
@@ -26,6 +27,7 @@ switch ($page) {
     $vistaBotonLogin = "../JS/botonLogin.js";
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaPokedexFunciones = "../JS/pokedex.js";
+    $vistaMenuOpciones="../JS/menuOpciones.js";
     break;
   case 'main':
     $vistaHeader = VIEWS_PATH . 'header.php';
@@ -36,6 +38,7 @@ switch ($page) {
     $vistaBotonLogin = "../JS/botonLogin.js";
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaBuscarUsuario = "../JS/buscarUsuario.js";
+    $vistaMenuOpciones="../JS/menuOpciones.js";
     break;
 
   case 'registro':
@@ -52,6 +55,7 @@ switch ($page) {
     $registroFunciones = "../JS/registro-js.js";
     $vistaBotonLogin = "../JS/botonLogin.js";
     $vistafooter = "footer.php";
+    $vistaMenuOpciones="../JS/menuOpciones.js";
     break;
 
   case 'Login':
@@ -72,6 +76,7 @@ switch ($page) {
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaBuscarUsuario = "../JS/buscarUsuario.js";
     $vistaIniciarChat = "../JS/botonIniciarChat.js";
+    $vistaMenuOpciones="../JS/menuOpciones.js";
     break;
 
   case 'DetallesPokemon':

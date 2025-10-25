@@ -49,6 +49,7 @@ $vistafooter = $vistafooter ?? "";
     <?php if (!empty($vistaBotonPerfil)) echo "<script src='{$vistaBotonPerfil}'></script>"; ?>
     <?php if (!empty($vistaBotonMain)) echo "<script src='{$vistaBotonMain}'></script>"; ?>
     <?php if (!empty($vistaJsInventario)) echo "<script src='{$vistaJsInventario}'></script>"; ?>
+    <?php if (!empty($vistaMenuOpciones)) echo "<script src='{$vistaMenuOpciones}'></script>"; ?>
 </body>
 <footer>
     <?php if (!empty($vistafooter)) include $vistafooter; ?>

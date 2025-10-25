@@ -19,7 +19,7 @@
 
 
   <div class="container">
-    <div class="users-list">
+    <div id= "users-list" class="users-list">
       <div id="5" class="user-item">Usuario 1</div>
       <div id="4" class="user-item">Usuario 2</div>
       <div  class="user-item">Usuario 3</div>
@@ -54,7 +54,17 @@
       </div>
     </div>
   </div>
-  <script>  const usuarioActual= <?php echo $_SESSION['user_id']; ?>;</script>
+
+  <script>  
+const idUsuario = <?php echo json_encode($_GET['id']);?>;
+const nombreUsuario = <?php echo json_encode($_GET['usuario']);?>;
+const idUsuarioLogueado = <?php echo json_encode($_GET['idLogueado']);?>;
+  
+  const usuarioActual= <?php echo json_encode($_SESSION['user_id']); ?>;
+  </script>
+  
+  <script src="../JS/AgregarChat.js"> 
+ 
   </script>
 </body>
 </html>
