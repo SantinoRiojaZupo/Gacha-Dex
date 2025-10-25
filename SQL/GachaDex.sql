@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2025 a las 17:48:52
+-- Tiempo de generación: 25-10-2025 a las 06:19:04
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -836,7 +836,50 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (785, 'Tapu Koko', 'Electric', 'Fairy', 'Poison, Ground', 'Aunque se le considera un espíritu guardián, obra también como espíritu vengativo contra las personas y Pokémon que desatan su ira.', 'Electric Surge', '', 'Telepathy', '.', 'N/A'),
 (786, 'Tapu Lele', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Esparce escamas brillantes que curan a las personas y los Pokémon. En la isla de Akala es venerado como su espíritu guardián.', 'Grassy Surge', '', 'Telepathy', '.', 'N/A'),
 (787, 'Tapu Bulu', 'Grass', 'Fairy', 'Fire, Ice, Poison(X4), Flying, Steel', 'Se lo conoce como espíritu guardián, pero abate sin piedad a aquellos que considera sus enemigos.', 'Psychic Surge', '', 'Telepathy', '.', 'N/A'),
-(788, 'Tapu Fini', 'Water', 'Fairy', 'Grass, Electric, Poison', 'El espíritu guardián de Poni, temido y venerado a la vez. Mora en una espesa niebla y manipula el agua a su antojo.', 'Misty Surge', '', 'Telepathy', '.', 'N/A');
+(788, 'Tapu Fini', 'Water', 'Fairy', 'Grass, Electric, Poison', 'El espíritu guardián de Poni, temido y venerado a la vez. Mora en una espesa niebla y manipula el agua a su antojo.', 'Misty Surge', '', 'Telepathy', '.', 'N/A'),
+(789, 'Cosmog', 'Psychic', '', 'Bug, Ghost, Dark', 'Hasta la brisa más leve es capaz de arrastrar su cuerpo, compuesto de una materia gaseosa inestable, pero no parece que eso le moleste.', 'Unaware', '', '', '.', 'N/A'),
+(790, 'Cosmoem', 'Psychic', '', 'Bug, Ghost, Dark', 'En la antigüedad, un rey de Alola lo apodó Crisálida de las Estrellas y erigió un altar en su honor.', 'Sturdy', '', '', '.', 'N/A'),
+(791, 'Solgaleo', 'Psychic', 'Steel', 'Fire, Ground, Ghost, Dark', 'Es capaz de crear Ultraumbrales a través de los cuales formas de vida y energía procedentes de otros mundos acuden al nuestro.', 'Full Metal Body', '', '', '.', 'N/A'),
+(792, 'Lunala', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'Aparece en obras de la literatura antigua en las que se refieren a él como la “criatura que invoca a la luna”.', 'Shadow Shield', '', '', '.', 'N/A'),
+(793, 'Nihilego', 'Rock', 'Poison', 'Water, Ground(X4), Psychic, Steel', 'Una forma de vida de otro mundo conocida como Ultraente. Se cree que posee una neurotoxina muy potente.', 'Beast Boost', '', '', '.', 'N/A'),
+(794, 'Buzzwole', 'Bug', 'Fighting', 'Fire, Flying(X4), Psychic, Fairy', 'Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.', 'Beast Boost', '', '', '.', 'N/A'),
+(795, 'Pheromosa', 'Bug', 'Fighting', 'Fire, Flying(X4), Psychic, Fairy', 'Una forma de vida procedente de otro mundo. Aunque su cuerpo es esbelto y flexible, alberga un gran poder.', 'Beast Boost', '', '', '.', 'N/A'),
+(796, 'Xurkitree', 'Electric', '', 'Ground', 'Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.', 'Beast Boost', '', '', '.', 'N/A'),
+(797, 'Celesteela', 'Steel', 'Flying', 'Fire, Electric', 'Uno de los temibles Ultraentes. Las lecturas de las reacciones energéticas procedentes de sus enormes brazos alcanzan picos desorbitados.', 'Beast Boost', '', '', '.', 'N/A'),
+(798, 'Kartana', 'Grass', 'Steel', 'Fire(X4), Fighting', 'El cuerpo de este Ultraente es fino como el papel y tan cortante como una espada recién afilada.', 'Beast Boost', '', '', '.', 'N/A'),
+(799, 'Guzzlord', 'Dark', 'Dragon', 'Ice, Fighting, Bug, Dragon, Fairy(X4)', 'Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.', 'Beast Boost', '', '', '.', 'N/A');
+INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+(800, 'Necrozma', 'Psychic', '', 'Bug, Ghost, Dark', 'La luz es su fuente de energía y la busca con tal desespero que da la impresión de que sufre. Parece ser una criatura de otro mundo.', 'Prism Armor', '', '', '.', 'N/A'),
+(801, 'Magearna', 'Steel', 'Fairy', 'Fire, Ground', 'Sincroniza su consciencia con la de los demás para comprender sus sentimientos. Utiliza esta capacidad para cuidar de las personas.', 'Soul-Heart', '', '', '.', 'N/A'),
+(802, 'Marshadow', 'Fighting', 'Ghost', 'Flying, Psychic, Ghost, Fairy', 'Se oculta en la sombra de su oponente y copia sus movimientos y su fuerza. Su imitación resulta más poderosa que el original.', 'Technician', '', '', '.', 'N/A'),
+(803, 'Poipole', 'Poison', '', 'Ground, Psychic', 'En su mundo, este Ultraente se considera tan entrañable como para ser elegido compañero de viaje.', 'Beast Boost', '', '', '.', 'N/A'),
+(804, 'Naganadel', 'Poison', 'Dragon', 'Ice, Ground, Psychic, Dragon', 'Una de las temibles criaturas conocidas como Ultraentes. En su cuerpo almacena cientos de litros de veneno.', 'Beast Boost', '', '', '.', 'N/A'),
+(805, 'Stakataka', 'Rock', 'Steel', 'Water, Fighting(X4), Ground(X4)', 'Surgió de un Ultraumbral. Parece estar compuesto de varias criaturas que se han combinado para formar un solo ser.', 'Beast Boost', '', '', '.', 'N/A'),
+(806, 'Blacephalon', 'Fire', 'Ghost', 'Water, Ground, Rock, Ghost, Dark', 'Parece ser uno de los temibles Ultraentes. Se acerca a la gente contoneándose y hace explotar su propia cabeza súbitamente.', 'Beast Boost', '', '', '.', 'N/A'),
+(807, 'Zeraora', 'Electric', '', 'Ground', 'Hace jirones al oponente con sus garras electrificadas. Aunque este esquive los golpes, acaba electrocutado por las descargas.', 'Volt Absorb', '', '', '.', 'N/A'),
+(808, 'Meltan', 'Steel', '', 'Fire, Fighting, Ground', 'Su cuerpo está compuesto de acero líquido. Funde las partículas de hierro y otros metales del subsuelo para luego absorberlas.', 'Magnet Pull', '', '', '.', 'N/A'),
+(809, 'Melmetal', 'Steel', '', 'Fire, Fighting, Ground', 'Al final de su vida, su cuerpo se oxida y se hace pedazos. Poco tiempo después, estos fragmentos que quedan dan vida a varios Meltan.', 'Iron Fist', '', '', '.', 'N/A'),
+(810, 'Grookey', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'La baqueta que posee Grookey se vuelve más flexible y resistente cuando absorbe la energía que emana de su cuerpo.', 'Overgrow', '', 'Grassy Surge', '.', 'Male/Female'),
+(811, 'Thwackey', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Usa con habilidad sus dos baquetas, no solo para marcar ritmos contundentes, sino también para aporrear a sus adversarios en combate.', 'Overgrow', '', 'Grassy Surge', '.', 'Male/Female'),
+(812, 'Rillaboom', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Es de carácter tranquilo, pero no tolera a aquellos que quebrantan la armonía y los disciplina hasta que aprenden la lección.', 'Overgrow', '', 'Grassy Surge', '.', 'Male/Female'),
+(813, 'Scorbunny', 'Fire', '', 'Water, Ground, Rock', 'Desata su verdadera fuerza cuando su cuerpo entra en calor. Por eso hace ejercicios de calentamiento.', 'Blaze', '', 'Libero', '.', 'Male/Female'),
+(814, 'Raboot', 'Fire', '', 'Water, Ground, Rock', 'Su suave pelaje le permite calentar energía ígnea con mayor facilidad y así expulsar llamas todavía más potentes.', 'Blaze', '', 'Libero', '.', 'Male/Female'),
+(815, 'Cinderace', 'Fire', '', 'Water, Ground, Rock', 'Es de temperamento irascible, pero da lo mejor de sí mismo en combate cuando cuenta con un Entrenador en el que confía.', 'Blaze', '', 'Libero', '.', 'Male/Female'),
+(816, 'Sobble', 'Water', '', 'Grass, Electric', 'Dispara proyectiles de agua por la boca para hacer caer bayas de los árboles y comérselas. Su puntería es infalible.', 'Torrent', '', 'Sniper', '.', 'Male/Female'),
+(817, 'Drizzile', 'Water', '', 'Grass, Electric', 'Extiende su larga lengua recubierta de una sustancia viscosa a una velocidad imperceptible para abatir a sus presas hábilmente.', 'Torrent', '', 'Sniper', '.', 'Male/Female'),
+(818, 'Inteleon', 'Water', '', 'Grass, Electric', 'Gracias a las lentes especiales de sus ojos, es capaz de percibir la temperatura corporal del adversario y así atacar sus puntos débiles.', 'Torrent', '', 'Sniper', '.', 'Male/Female'),
+(819, 'Skwovet', 'Normal', '', 'Fighting', 'Guarda bayas en los carrillos. Cuando no le quedan, mete en su lugar piedras pequeñas para lidiar con el antojo.', 'Cheek Pouch', '', 'Gluttony', '.', 'Male/Female'),
+(820, 'Greedent', 'Normal', '', 'Fighting', 'Incluso en medio de un combate, si ve un árbol con bayas, no duda ni un segundo en ir a recolectarlas.', 'Cheek Pouch', '', 'Gluttony', '.', 'Male/Female'),
+(821, 'Rookidee', 'Flying', '', 'Electric, Ice, Rock', 'Es de carácter valiente y temerario. Las marcas blancas que tiene alrededor de los ojos le sirven para espantar a los Pokémon más miedosos.', 'Keen Eye', 'Unnerve', 'Big Pecks', '.', 'Male/Female'),
+(822, 'Corvisquire', 'Flying', '', 'Electric, Ice, Rock', 'Dicen que su inteligencia superior se debe a que posee un cerebro más grande que el de otros Pokémon pájaro.', 'Keen Eye', 'Unnerve', 'Big Pecks', '.', 'Male/Female'),
+(823, 'Corviknight', 'Flying', 'Steel', 'Fire, Electric', 'Dicen que su inteligencia superior se debe a que posee un cerebro más grande que el de otros Pokémon pájaro.', 'Pressure', 'Unnerve', 'Mirror Armor', '.', 'Male/Female'),
+(824, 'Blipbug', 'Bug', '', 'Fire, Flying, Rock', 'Siempre está recopilando información, por lo que es muy inteligente, aunque su fuerza deja bastante que desear.', 'Swarm', 'Compound Eyes', 'Telepathy', '.', 'Male/Female'),
+(825, 'Dottler', 'Bug', 'Psychic', 'Fire, Flying, Bug, Rock, Ghost, Dark', 'Apenas se mueve, pero está vivo. Se cree que adquiere poderes psíquicos mientras permanece recluido en su caparazón sin comer ni beber.', 'Swarm', 'Compound Eyes', 'Telepathy', '.', 'Male/Female'),
+(826, 'Orbeetle', 'Bug', 'Psychic', 'Fire, Flying, Bug, Rock, Ghost, Dark', 'Este Pokémon es conocido por su inteligencia. El gran tamaño de su cerebro es un indicio de la magnitud de sus poderes psíquicos.', 'Swarm', 'Frisk', 'Telepathy', '.', 'Male/Female'),
+(827, 'Nickit', 'Dark', '', 'Fighting, Bug, Fairy', 'Se sustenta con el alimento que roba a otros Pokémon. Las almohadillas de sus patas son tan blandas que no hace ningún ruido al caminar.', 'Run Away', 'Unburden', 'Stakeout', '.', 'Male/Female'),
+(828, 'Thievul', 'Dark', '', 'Fighting, Bug, Fairy', 'Marca a su presa sin ser advertido. Sigue el olor y, cuando el otro Pokémon baja la guardia, aprovecha para robarle.', 'Run Away', 'Unburden', 'Stakeout', '.', 'Male/Female'),
+(829, 'Gossifleur', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Si planta su única extremidad inferior en la tierra y se expone a abundante luz solar, sus pétalos cobran un color vivo.', 'Cotton Down', 'Regenerator', 'Effect Spore', '.', 'Male/Female'),
+(830, 'Eldegoss', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Las semillas que tiene entre la pelusa son muy nutritivas. Arrastradas por el viento, devuelven la vitalidad a la flora y a otros Pokémon.', 'Cotton Down', 'Regenerator', 'Effect Spore', '.', 'Male/Female');
 
 -- --------------------------------------------------------
 
@@ -937,7 +980,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=789;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=831;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
