@@ -1,21 +1,18 @@
 <?php
-// Inicia la sesión para poder usar $_SESSION y verificar el usuario
 session_start();
-
-// Incluye la conexión a la base de datos
 require_once __DIR__ . '/config/conexion.php';
 
-// Verifica si el usuario está logueado
+header('Content-Type: application/json; charset=utf-8');
+
+// ⚠️ Verificar login
 if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, devuelve un JSON con mensaje y termina la ejecución
-    echo json_encode(["msj"=>"No logueado"]);
+    echo json_encode(["ok" => false, "error" => "No logueado"]);
     exit;
 }
 
-// Guarda el ID del usuario logueado en una variable
 $idusuario = $_SESSION['user_id'];
 
-// Obtener la gen dependiendo del id
+// ✅ Función generación (igual al inventario)
 function obtenerGeneracion($id) {
     $rangos = [
         1 => [1, 151],
@@ -34,51 +31,47 @@ function obtenerGeneracion($id) {
     return null;
 }
 
-// Consulta SQL para obtener todos los Pokémon de la Pokedex
-// y marcar cuáles el usuario ya atrapó
-$sql1= "
+// ✅ Consulta estandarizada
+$sql = "
 SELECT 
-datapokemonall.Id_Pokedex,
-    datapokemonall.PokemonName,        -- Nombre del Pokémon
-        datapokemonall.Type,
-    datapokemonall.image,              -- URL de la imagen del Pokémon
+    d.Id_Pokedex AS id_pokedex,
+    d.PokemonName AS nombre,
+    d.Type AS tipo,
+    d.Second_Type AS tipo_secundario,
+    d.Image AS imagen_normal,
     CASE 
-        WHEN COUNT(pokemoncatched.Id_PokemonCatched) > 0 THEN 1  -- Si el usuario atrapó al menos uno
-        ELSE 0                                                    -- Si no lo atrapó
-    END AS tiene
-FROM datapokemonall
-LEFT JOIN pokemoncatched 
-    ON datapokemonall.Id_Pokedex = pokemoncatched.Id_Pokedex  -- Relaciona el Pokémon con los atrapados
-    AND pokemoncatched.Id_User = $idusuario                   -- Solo para este usuario
-GROUP BY datapokemonall.Id_Pokedex                            -- Agrupa por Pokémon para evitar duplicados
-ORDER BY datapokemonall.Id_Pokedex;                           -- Ordena por número de la Pokedex
+        WHEN c.Id_Pokedex IS NOT NULL THEN 1
+        ELSE 0
+    END AS atrapado
+FROM datapokemonall d
+LEFT JOIN (
+    SELECT Id_Pokedex, Id_User
+    FROM pokemoncatched
+    WHERE Id_User = ?
+    GROUP BY Id_Pokedex
+) c ON d.Id_Pokedex = c.Id_Pokedex
+ORDER BY d.Id_Pokedex ASC;
 ";
 
-// Ejecuta la consulta en la base de datos
-$result=mysqli_query($conexion, $sql1);
+$stmt = mysqli_prepare($conexion, $sql);
+mysqli_stmt_bind_param($stmt, "i", $idusuario);
+mysqli_stmt_execute($stmt);
+$res = mysqli_stmt_get_result($stmt);
 
-// Array para almacenar los resultados de la consulta
-$arr=[];
-$idpokedex=0;
+// ✅ Formar respuesta
+$pokedex = [];
 
-// Si la consulta devuelve al menos una fila
-if(mysqli_num_rows($result) > 0){
-    // Recorre todas las filas y las agrega al array
-    while($fila=mysqli_fetch_assoc($result)){
-        $idpokedex=$fila['Id_Pokedex'];
-        $fila['image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
-
-        $arr[]=$fila;
-    }
+while ($fila = mysqli_fetch_assoc($res)) {
+    $id = (int)$fila['id_pokedex'];
+    $fila['generacion'] = obtenerGeneracion($id);
+    $fila['imagen'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png";
+    unset($fila['imagen_normal']);
+    $pokedex[] = $fila;
 }
 
-// Si el array tiene datos, los devuelve en formato JSON
-if($arr){
-    echo json_encode($arr);
-}
-// Si no hay datos, devuelve un mensaje de error
-else{
-    echo json_encode(["msj"=>"mal ahi amigo"]);
-}
+// ✅ JSON final uniforme
+echo json_encode([
+    "ok" => true,
+    "pokedex" => $pokedex
+], JSON_UNESCAPED_UNICODE);
 
-?>

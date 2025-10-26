@@ -43,6 +43,15 @@
       <option value="9">Gen 9</option>
     </select>
   </div>
+  <label style="display:flex; gap:5px; align-items:center;">
+    <input type="checkbox" id="filtro-atrapados">
+    Solo atrapados
+</label>
+
+<p id="progresoPokedex" style="font-weight:bold;"></p>
+<div id="barraProgreso" style="width:1025px; height:12px; background:#ddd; border-radius:6px; margin: 10px auto; display:block;">
+    <div id="barraProgresoFill" style="height:100%; width:0%; background:green; border-radius:6px;"></div>
+</div>
 
     <div id="inventoryPoke" class="inventory">
       <div class="pokemon-card">

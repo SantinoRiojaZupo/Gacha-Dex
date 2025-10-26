@@ -125,3 +125,12 @@ main {
     .main-title {
     font-size: 1.8em;
   }
+
+  #barraProgreso {
+  max-width: 90%;
+  margin: 10px auto;
+  height: 12px;
+  background: #ddd;
+  border-radius: 6px;
+  display: flex;
+}
