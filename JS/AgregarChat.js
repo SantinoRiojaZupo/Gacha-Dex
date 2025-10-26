@@ -22,9 +22,23 @@ if (!idUsuario || !nombreUsuario) {
         }
     });
 } else {
-    let division = document.createElement('div');
-    division.classList.add('user-item');
-    division.id = idUsuario;
-    division.innerText = nombreUsuario;
-    Usuarios.appendChild(division);
+     fetch(`../obtenerChats.php?user_id=${idUsuarioLogueado}`)
+    .then(res => res.json())
+    .then(data => {
+        if(Array.isArray(data) && data.length > 0){
+            data.forEach(element => {
+                let division = document.createElement('div');
+                division.classList.add('user-item');
+                division.id = element.receptorId;
+                division.innerText = element.nombreReceptor;
+                Usuarios.appendChild(division);
+                division.addEventListener('click', () => {
+    receptor = division.id;
+    cargarMensajes();
+});
+            });
+        } else {
+            Usuarios.innerText = "¿Con quién vas a conectar? ¡Con amigos es más divertido!";
+        }
+    });
 }
