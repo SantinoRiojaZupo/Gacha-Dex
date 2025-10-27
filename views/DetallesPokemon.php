@@ -30,45 +30,22 @@
 
   <div class="pokemon-card">
     <div class="pokemon-image">
-      <img src="" alt="pokemon">
+      <img id="0" src="" alt="pokemon">
     </div>
     <div class="pokemon-info">
-      <h1 class="pokemon-name">Pokemon</h1>
-      <div class="pokemon-description">*Descripcion del pokemon*</div>
+      <h1 class="pokemon-name" id="1" >Pokemon</h1>
+      <div class="pokemon-description" id="2">*Descripcion del pokemon*</div>
       <div class="pokemon-details">
-        <p><strong>Tipo:</strong> <span class="tag">*Tipo*</span></p>
-        <p><strong>Debilidades:</strong> <span class="tag">*Debilidades*</span></p>
-        <p><strong>Habilidad/es:</strong> <span class="tag">*Habilidad/es*</span></p>
+        <p><strong>Tipo:</strong> <span class="tag"id="3">*Tipo*</span></p>
+        <p><strong>Debilidades:</strong> <span class="tag"id="4">*Debilidades*</span></p>
+        <p><strong>Habilidad/es:</strong> <span class="tag"id="5">*Habilidad/es*</span></p>
+        <p><strong>Habilidad oculta:</strong> <span class="tag"id="6">*Habilidad oculta*</span></p>
       </div>
     </div>
   </div>
   
 </div>
-<?php
-require_once '../config/conexion.php';
-if (!$conexion) {
-  echo json_encode(["error" => "No se pudo conectar a la base de datos"]);
-  exit;
-}
-
-$sql1 = "SELECT PokemonName, Type, Second_type, Weaknesses, Description, Abilities, Second_Abilities, image FROM datapokemonall where Id_Pokedex=?";
-$stmt = mysqli_prepare($conexion, $sql1);
-mysqli_stmt_bind_param($stmt, "i", $idpokemon);
-mysqli_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-$arr = [];
-$idpokedex = 0;
-if (mysqli_num_rows($result) > 0) {
-  while ($fila = mysqli_fetch_assoc($result)) {
-    $idpokedex = $fila['Id_Pokedex'];
-    $fila['image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $idpokedex . ".png";
-
-    $arr[] = $fila;
-  }
-}
-if ($arr) {
-  echo json_encode($arr);
-} else {
-  echo json_encode(["msj" => "mal ahi amigo"]);
-}
-?>
+<script>
+  const idpokemon = <?php echo json_encode($_GET['idpokemon']);?>;
+</script>
+<script src="../JS/MostrarDatosPokemon.js"> 
