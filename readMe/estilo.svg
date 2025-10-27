@@ -1,2 +1,127 @@
-429: Too Many Requests
-For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+<svg viewBox="0 0 1200 2300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: 'Poppins', sans-serif;
+      fill: #2c3e50;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+      text-anchor: middle; /* Centrado */
+    }
+
+    .subtitle {
+      font-size: 22px;
+      text-anchor: middle;
+    }
+
+    .member-name {
+      font-size: 18px;
+      font-weight: bold;
+      fill: #1a237e;
+      text-anchor: middle;
+    }
+
+    .role {
+      font-size: 16px;
+      fill: #0d47a1;
+      text-anchor: middle;
+    }
+
+    .desc {
+      font-size: 14px;
+      fill: #333;
+      text-anchor: middle;
+    }
+
+    .footer {
+      font-size: 20px;
+      fill: #2c3e50;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+  </style>
+  <!-- Título centrado -->
+  <text x="600" y="65" class="title">GACHA DEX 💫</text>
+
+  <!-- Logo centrado -->
+  <image href="https://thiago-anzaldo.github.io/readMe/imagenes/gachadex.png"
+         x="475" y="90" width="250" height="150" />
+
+  <!-- Descripción centrada -->
+  <text x="600" y="280" class="subtitle">
+    Hello, we are Los Amiguitos and we present "Gacha-Dex" — a Pokémon project
+  </text>
+  <text x="600" y="310" class="subtitle">
+    where you can roll and collect Pokémon! They can appear in normal or shiny form,
+  </text>
+  <text x="600" y="340" class="subtitle">
+    and there's a pity system that increases your chances for LEGENDARY or SHINY Pokémon.
+  </text>
+  <text x="600" y="370" class="subtitle">
+    You can fill your Pokédex and show off your favorites!
+  </text>
+
+  <!-- Integrantes del equipo centrados -->
+  <g transform="translate(600, 420)"> <!-- x=600 centro -->
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Benja.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Dario Montero</text>
+    <text y="175" class="role">Scrum Master and Programmer</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 620)">
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Santi.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Santino Rioja</text>
+    <text y="175" class="role">Programmer and DB Assistant</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 720)">
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Emiliano.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Emiliano Estrada</text>
+    <text y="175" class="role">Programmer</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 820)">
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Agus.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Agustin Castro</text>
+    <text y="175" class="role">Programmer</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 1020)">
+    <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/Benja.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Thiago Anzaldo</text>
+    <text y="175" class="role">Programmer</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 1220)">
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Gael.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Gael Baez</text>
+    <text y="175" class="role">Stylesheet</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+  <g transform="translate(600, 1420)">
+    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Samuel.png" x="-60" y="0" width="120" height="120" />
+    <text y="150" class="member-name">Samuel Serrezuela</text>
+    <text y="175" class="role">Stylesheet</text>
+    <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+  </g>
+
+<g transform="translate(600, 1620)">
+  <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/imagenes/Ignacio.png" x="-60" y="0" width="120" height="120" />
+  <text y="150" class="member-name">Ignacio Gonzalez</text>
+  <text y="175" class="role">Database Designer</text>
+  <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
+</g>
+
+<!-- Créditos finales -->
+<text x="600" y="1900" class="footer">Made with ❤️ by Los Amiguitos</text>
+<image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/imagenes/amiguitos.jpeg"
+       x="540" y="2120" width="120" height="120" />
+</svg>
