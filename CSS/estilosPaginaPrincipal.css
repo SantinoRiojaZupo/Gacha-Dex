@@ -13,7 +13,7 @@
              padding: -10px 10px;
         }
         main {
-            margin-top: 100px;
+            
             text-align: center;}
         #barraInicio {
     width: 100%;
@@ -258,4 +258,9 @@
 .logo-img{
     width: 82px;
     height: auto;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }

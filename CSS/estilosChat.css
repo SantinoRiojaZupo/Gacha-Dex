@@ -3,12 +3,19 @@
     box-sizing: border-box;
   }
   body {
-    margin: 0;
-    font-family: 'PokemonGB', monospace, sans-serif;
-    background-color: #806786;
-    color: #d4e2d7;
-  }
+  margin: 0;
+  font-family: 'PokemonGB', monospace, sans-serif;
+  background-color: #806786;
+  color: #d4e2d7;
+  overflow: hidden; /* ❌ QUITALA o CAMBIALA */
+}
+ #users-list{
+ height: 1000px;
 
+ }
+ #container{
+  height: ;
+ }
 
 
 
