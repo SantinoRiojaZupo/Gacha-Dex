@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2025 a las 04:12:16
+-- Tiempo de generación: 27-10-2025 a las 13:31:42
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -949,7 +949,9 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (897, 'Spectrier', 'Ghost', '', 'Ghost, Dark', 'Examina su entorno con todos los sentidos, salvo la vista. Se dice que sus coces son capaces de robarle el alma a quien las recibe.', 'Grim Neigh', '', '', '.', 'N/A'),
 (898, 'Calyrex', 'Psychic', 'Grass', 'Fire, Ice, Poison, Flying, Bug(X4), Ghost, Dark', 'Un Pokémon muy compasivo agraciado con el poder de la curación. Reinó en Galar en tiempos remotos.', 'Unnerve', '', '', '.', 'N/A'),
 (899, 'Wyrdeer', 'Normal', 'Psychic', 'Bug, Dark', 'Sus orbes negros brillan con un fulgor misterioso cuando erige muros invisibles. El pelaje que se desprende de sus barbas es muy codiciado para crear cálidos ropajes para el invierno.', 'Intimidate', 'Frisk', 'Sap Sipper', '.', 'Male/Female'),
-(900, 'Kleavor', 'Bug', 'Rock', 'Water, Rock, Steel', 'Gracias a un mineral extremadamente escaso que se encuentra en zonas volcánicas, parte de su cuerpo se volvió pétreo al evolucionar.', 'Swarm', 'Sheer Force', 'Sharpness', '.', 'Male/Female');
+(900, 'Kleavor', 'Bug', 'Rock', 'Water, Rock, Steel', 'Gracias a un mineral extremadamente escaso que se encuentra en zonas volcánicas, parte de su cuerpo se volvió pétreo al evolucionar.', 'Swarm', 'Sheer Force', 'Sharpness', '.', 'Male/Female'),
+(901, 'Ursaluna', 'Ground', 'Normal', 'Water, Grass, Ice, Fighting', 'Tengo la teoría de que el terreno pantanoso de Hisui favoreció el desarrollo de su constitución robusta, así como su capacidad de manipular la turba a voluntad.', 'Guts', 'Bulletproof', 'Unnerve', '.', 'Male/Female'),
+(902, 'Basculegion', 'Water', 'Ghost', 'Grass, Electric, Ghost, Dark', 'Su cuerpo está envuelto en las almas de los compañeros que perecieron durante el arduo viaje para regresar al río que los vio nacer.', 'Swift Swim', 'Adaptability', 'Mold Breaker', '.', 'Male');
 
 -- --------------------------------------------------------
 
@@ -1012,6 +1014,27 @@ INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Ph
 (11, '2', '2', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
 (12, '3', '3', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', 0, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `variant_pokemon`
+--
+
+CREATE TABLE `variant_pokemon` (
+  `Id_Variant` int(11) NOT NULL,
+  `Id_Pokedex` int(11) NOT NULL,
+  `PokemonName` varchar(255) NOT NULL,
+  `Type` varchar(255) DEFAULT NULL,
+  `Second_Type` varchar(255) DEFAULT NULL,
+  `Weaknesses` varchar(255) DEFAULT NULL,
+  `Description` varchar(255) DEFAULT NULL,
+  `Abilities` varchar(255) DEFAULT NULL,
+  `Second_Abilities` varchar(255) DEFAULT NULL,
+  `Abilities_Hidden` varchar(255) DEFAULT NULL,
+  `Image` varchar(255) DEFAULT NULL,
+  `Gender` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tablas volcadas
 --
@@ -1043,6 +1066,13 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
+-- Indices de la tabla `variant_pokemon`
+--
+ALTER TABLE `variant_pokemon`
+  ADD PRIMARY KEY (`Id_Variant`,`Id_Pokedex`),
+  ADD KEY `Id_Pokedex` (`Id_Pokedex`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -1050,7 +1080,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=901;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=903;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
@@ -1071,6 +1101,12 @@ ALTER TABLE `users`
   MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT de la tabla `variant_pokemon`
+--
+ALTER TABLE `variant_pokemon`
+  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -1081,6 +1117,12 @@ ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `fk_pokemonCatched_constraint` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pokemoncatched_ibfk_1` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`),
   ADD CONSTRAINT `pokemoncatched_ibfk_2` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
+
+--
+-- Filtros para la tabla `variant_pokemon`
+--
+ALTER TABLE `variant_pokemon`
+  ADD CONSTRAINT `variant_pokemon_ibfk_1` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
