@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1200 2300" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 2500" xmlns="http://www.w3.org/2000/svg">
   <style>
     text {
       font-family: 'Poppins', sans-serif;
@@ -17,20 +17,20 @@
     }
 
     .member-name {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: bold;
       fill: #1a237e;
       text-anchor: middle;
     }
 
     .role {
-      font-size: 16px;
+      font-size: 17px;
       fill: #0d47a1;
       text-anchor: middle;
     }
 
     .desc {
-      font-size: 14px;
+      font-size: 18px;
       fill: #333;
       text-anchor: middle;
     }
@@ -78,42 +78,42 @@
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-  <g transform="translate(600, 720)">
+  <g transform="translate(600, 820)">
     <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Emiliano.png" x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Emiliano Estrada</text>
     <text y="175" class="role">Programmer</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-  <g transform="translate(600, 820)">
+  <g transform="translate(600, 1020)">
     <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Agus.png" x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Agustin Castro</text>
     <text y="175" class="role">Programmer</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-  <g transform="translate(600, 1020)">
-    <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/Benja.png" x="-60" y="0" width="120" height="120" />
+  <g transform="translate(600, 1220)">
+    <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/Thiago.png" x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Thiago Anzaldo</text>
     <text y="175" class="role">Programmer</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-  <g transform="translate(600, 1220)">
+  <g transform="translate(600, 1420)">
     <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Gael.png" x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Gael Baez</text>
     <text y="175" class="role">Stylesheet</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-  <g transform="translate(600, 1420)">
+  <g transform="translate(600, 1620)">
     <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Samuel.png" x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Samuel Serrezuela</text>
     <text y="175" class="role">Stylesheet</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
   </g>
 
-<g transform="translate(600, 1620)">
+<g transform="translate(600, 1820)">
   <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/imagenes/Ignacio.png" x="-60" y="0" width="120" height="120" />
   <text y="150" class="member-name">Ignacio Gonzalez</text>
   <text y="175" class="role">Database Designer</text>
@@ -121,7 +121,7 @@
 </g>
 
 <!-- Créditos finales -->
-<text x="600" y="1900" class="footer">Made with ❤️ by Los Amiguitos</text>
+<text x="600" y="2100" class="footer">Made with ❤️ by Los Amiguitos</text>
 <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/imagenes/amiguitos.jpeg"
        x="540" y="2120" width="120" height="120" />
 </svg>
