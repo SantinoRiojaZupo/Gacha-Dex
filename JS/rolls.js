@@ -47,6 +47,7 @@ function mostrarSobre(pokemonActual) {
 
 // Función para mostrar el Pokémon al abrir el sobre
 function mostrarPokemon(pokemonActual) {
+      const imagen = pokemonActual.Image.toLowerCase();
     pokemonDisplay.innerHTML = `
     <div style="text-align:center;">
         <img id="pokemonImg" crossorigin="anonymous"
@@ -56,13 +57,13 @@ function mostrarPokemon(pokemonActual) {
         <strong>${pokemonActual.PokemonName}</strong>
     </div>
 `;
-    
+
     rollsBtn.disabled = true;
     generacionSelect.disabled = true;
     if (!pokemonActual.PokemonName) alert("use a roll first"), pokemonActual = null, generacionSelect.disabled = false, rollsBtn.disabled = false;
     pokemonDisplay.innerHTML = `
         <div style="text-align:center;">
-            <img src="${pokemonActual.Image}" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
+            <img src="${imagen}" alt="${pokemonActual.PokemonName}" style="width:120px;"><br>
             <strong>${pokemonActual.PokemonName}</strong>
         </div>
     `;
@@ -151,14 +152,15 @@ data.pokemones.forEach(p => {
     div.style.display = "inline-block";
     div.style.margin = "5px";
     div.style.textAlign = "center";
+    const nombre= p.PokemonName.toLowerCase();
 
     const id = p.Id_Pokedex; 
     const imgaeUrl=null
     if(p.Is_Shiny==1){
-         imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${id}.png`;
+         imageUrl = `https://img.pokemondb.net/sprites/home/shiny/2x/${nombre}.jpg`;
     }
     else{
-         imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+         imageUrl = `https://img.pokemondb.net/sprites/home/normal/2x/${nombre}.jpg`;
     }
     div.innerHTML = `
         <img src="${imageUrl}" alt="${p.PokemonName}" style="width:50px;"><br>

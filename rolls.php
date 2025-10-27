@@ -113,11 +113,12 @@ if (!$pokemon) {
     echo json_encode(['error' => 'No se encontró Pokémon válido']);
     exit;
 }
+$nombrePokemon= $pokemon['PokemonName'];
 
 // --- Asignar imagen e indicador shiny ---
 $pokemon['Image'] = $isShiny
-    ? "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${idPokemon}.png"
-    : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$idPokemon}.png";
+    ? "https://img.pokemondb.net/sprites/home/shiny/2x/{$nombrePokemon}.jpg"
+    : "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
 
 $pokemon['Is_Shiny'] = $isShiny ? 1 : 0;
 

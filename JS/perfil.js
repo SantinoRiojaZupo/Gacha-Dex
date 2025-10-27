@@ -49,9 +49,10 @@ fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
             let sidebar = document.getElementById("sidebar");
             const pokemonDiv = document.createElement('div');
             pokemonDiv.classList.add("sprite-box");
+            imagen = pokemon.Image.toLowerCase();
             if (pokemon.tiene == 1) {
                 pokemonDiv.innerHTML = `
-                <img src="${pokemon.Image}" alt="${pokemon.PokemonName}">
+                <img src="${imagen}" alt="${pokemon.PokemonName}">
                 <h3>${pokemon.PokemonName}</h3>
                 `
             
@@ -101,6 +102,7 @@ function mostrarPokemones(lista) {
     }
 
     lista.forEach(pokemon => {
+        const nombre = pokemon.nombre.toLowerCase();
         const card = document.createElement("div");
         const esShiny = pokemon.shiny === 1;
         const esFavorito = pokemon.favorito === 1;
@@ -111,8 +113,8 @@ function mostrarPokemones(lista) {
 
         // URL de imagen
         const imagen = esShiny
-            ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id_pokedex}.png`
-            : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id_pokedex}.png`;
+            ? `https://img.pokemondb.net/sprites/home/shiny/2x/${nombre}.jpg`
+            : `https://img.pokemondb.net/sprites/home/normal/2x/${nombre}.jpg`;
 
         // Botón con estado actual
         const corazon = esFavorito ? "❤️" : "♡";

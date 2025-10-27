@@ -69,7 +69,8 @@ if (mysqli_num_rows($result) > 0) {
     // Recorre todas las filas y las agrega al array
     while ($fila = mysqli_fetch_assoc($result)) {
         $idpokedex = $fila['Id_Pokedex'];
-        $fila['image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" . $idpokedex . ".png";
+        $nombre = strtolower($fila['PokemonName'])
+        $fila['image'] = "https://img.pokemondb.net/sprites/home/normal/2x/" . $nombre . ".jpg";
 
         $arr[] = $fila;
     }

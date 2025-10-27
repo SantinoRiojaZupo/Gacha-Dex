@@ -10,15 +10,18 @@ const filtroGen = document.getElementById("filtro-generacion");
 function mostrarPokemones(lista) {
     contenedor.innerHTML = "";
 
+
     if (lista.length === 0) {
         contenedor.innerHTML = "<p>No se encontraron Pokémon.</p>";
         return;
     }
 
     lista.forEach(pokemon => {
+     const nombres = pokemon.nombre.toLowerCase();
         const card = document.createElement("div");
         const esShiny = pokemon.shiny === 1;
         const esFavorito = pokemon.favorito === 1;
+        console.log(nombres)
 
         // Asignar clase base
         card.classList.add(esShiny ? "card-pokemon-shiny" : "card-pokemon");
@@ -26,8 +29,8 @@ function mostrarPokemones(lista) {
 
         // URL de imagen
         const imagen = esShiny
-            ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id_pokedex}.png`
-            : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id_pokedex}.png`;
+            ? `https://img.pokemondb.net/sprites/home/shiny/2x/${nombres}.jpg`
+            : `https://img.pokemondb.net/sprites/home/normal/2x/${nombres}.jpg`;
 
         // Botón con estado actual
         const corazon = esFavorito ? "❤️" : "♡";
@@ -50,6 +53,7 @@ function mostrarPokemones(lista) {
         `;
 
         contenedor.appendChild(card);
+        
     });
 }
 

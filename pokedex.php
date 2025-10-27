@@ -63,8 +63,9 @@ $pokedex = [];
 
 while ($fila = mysqli_fetch_assoc($res)) {
     $id = (int)$fila['id_pokedex'];
+    $nombre = strtolower($fila['nombre']);
     $fila['generacion'] = obtenerGeneracion($id);
-    $fila['imagen'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{$id}.png";
+    $fila['imagen'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombre}.jpg";
     unset($fila['imagen_normal']);
     $pokedex[] = $fila;
 }

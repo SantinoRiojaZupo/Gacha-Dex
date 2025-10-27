@@ -38,7 +38,8 @@ $resultado= mysqli_stmt_get_result($stmt);
 if(mysqli_num_rows($resultado) > 0){
 while($fila=mysqli_fetch_assoc($resultado)){
     $idpokedex= $fila['Id_Pokedex'];
-    $fila['Image'] = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+    $nombrePokemon = strtolower($fila['PokemonName']);
+    $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/{$nombrePokemon}.jpg";
      $arr[]=$fila;
 
 }
@@ -75,7 +76,7 @@ $idpokedex=0;
 if(mysqli_num_rows($result) > 0){
     while($fila=mysqli_fetch_assoc($result)){
         $idpokedex=$fila['Id_Pokedex'];
-        $fila['Image']="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/".$idpokedex.".png";
+        $fila['Image']="https://img.pokemondb.net/sprites/home/normal/2x/{$fila['PokemonName']}.jpg";
 
         $arr[]=$fila;
     }

@@ -268,8 +268,8 @@ main h1 {
 }
 
 .card-pokemon img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -298,6 +298,12 @@ main h1 {
   font-weight: bold;
   font-family: "Press Start 2P", monospace;
   text-shadow: 0 0 3px yellow;
+}
+.card-pokemon-shiny  img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 .card-pokemon-shiny h3 {
   font-size: 12px;
