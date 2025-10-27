@@ -17,7 +17,7 @@
     }
 
     .member-name {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       fill: #1a237e;
       text-anchor: middle;
