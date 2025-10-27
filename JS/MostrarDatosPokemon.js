@@ -1,4 +1,3 @@
-        alert(idpokemon);
         fetch("/Gacha-Dex/DetallesPokemon.php", {
         method: "POST",
             headers: {

@@ -26,7 +26,7 @@
       <li id="li3">Chat</a></li>
     </ul>
     <div class="search-section">
-      <input type="text" placeholder="Buscar Pokemon..." class="search-input">
+      <input type="text" placeholder="Buscar Pokemon..." class="busqueda">
       <button class="search-btn">Busca ya!</button>
     </div>
 
