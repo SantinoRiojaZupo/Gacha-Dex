@@ -37,21 +37,20 @@
     }
 
     .header {
-    background: linear-gradient(270deg,#f78c6b, #ffd966, #b4f8c8, #a0e7e5);
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ce7e9b, 0 0 10px #130007, 0 0 20px #7bff00, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
 
-    background-size: 1600% 1600%;
-    animation: rainbow 15s ease infinite;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+  @keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #4e4e4e, 0 0 10px #ff2172, 0 0 20px #ffe600, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #c8ff00, 0 0 20px #00d4ff, 0 0 40px #b4b100, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
 
 
     .menu-btn {
