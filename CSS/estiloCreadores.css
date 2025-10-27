@@ -1,19 +1,25 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  font-family: 'PokemonGB', monospace, sans-serif;
   padding: 0;
-  background: linear-gradient(
-    to bottom,
-    #f78c6b 0 35%,   
-    #ffd966, 35% 45%,
-    #b4f8c8 45% 100% 
-  );
+  background-image: url('../imagenes/amiguitos.jpeg');
 }
 
 header {
-  text-align: center;
-  padding: 20px;
-  color: #f3c95e;
+
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ce7e9b, 0 0 10px #130007, 0 0 2px #7bff00, 0 0 4px #ff005e, 0 0 8px #ff005e;
+    animation: glow 1.5s infinite alternate;
+    padding: 20px;
+    font-size: 16px;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #4e4e4e, 0 0 10px #ff2172, 0 0 20px #ffe600, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #c8ff00, 0 0 20px #00d4ff, 0 0 40px #b4b100, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
 }
 
 #barraInicioCreadores {

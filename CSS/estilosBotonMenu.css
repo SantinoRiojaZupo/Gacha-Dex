@@ -1,7 +1,10 @@
 #barraInicio {
   position: relative; /* contenedor relativo para posicionar el menú */
 }
-
+.header-left {
+  position: relative;
+  display: inline-block; /* para que el menú quede alineado con el botón */
+}
 #menu {
   position: absolute;
   top: calc(100% + 10px); /* justo debajo del botón con un pequeño espacio */

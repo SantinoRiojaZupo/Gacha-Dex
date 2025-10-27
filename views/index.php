@@ -5,6 +5,7 @@ define('VIEWS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 
 $page = $_GET['page'] ?? "main";
 
+
 switch ($page) {
   case 'chat':
     $vista = VIEWS_PATH . 'chat.php';
@@ -17,6 +18,7 @@ switch ($page) {
     $vistaChatMandar = "../JS/mandarMensaje.js";
     $vistaChatCargar = "../JS/cargarMensajes.js";
     $vistaMenuOpciones="../JS/menuOpciones.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
   case 'pokedex':
     $vista = VIEWS_PATH . 'pokedex.php';
@@ -28,6 +30,7 @@ switch ($page) {
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaPokedexFunciones = "../JS/pokedex.js";
     $vistaMenuOpciones="../JS/menuOpciones.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
   case 'main':
     $vistaHeader = VIEWS_PATH . 'header.php';
@@ -39,6 +42,7 @@ switch ($page) {
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaBuscarUsuario = "../JS/buscarUsuario.js";
     $vistaMenuOpciones="../JS/menuOpciones.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   case 'registro':
@@ -47,6 +51,7 @@ switch ($page) {
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones = "../JS/registro-js.js";
     $vistaBotonLogin = "../JS/botonLogin.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   default:
@@ -56,6 +61,7 @@ switch ($page) {
     $vistaBotonLogin = "../JS/botonLogin.js";
     $vistafooter = "footer.php";
     $vistaMenuOpciones="../JS/menuOpciones.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   case 'Login':
@@ -64,6 +70,7 @@ switch ($page) {
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones = "../JS/registro-js.js";
     $vistaBotonLogin = "../JS/botonLogin.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   case 'perfil':
@@ -77,6 +84,7 @@ switch ($page) {
     $vistaBuscarUsuario = "../JS/buscarUsuario.js";
     $vistaIniciarChat = "../JS/botonIniciarChat.js";
     $vistaMenuOpciones="../JS/menuOpciones.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   case 'DetallesPokemon':
@@ -85,6 +93,7 @@ switch ($page) {
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $vistaBotonPerfil = "../JS/botonPerfil.js";
     $vistaBuscarUsuario = "../JS/buscarUsuario.js";
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
 
@@ -92,6 +101,7 @@ switch ($page) {
     $idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : ($_SESSION['user_id'] ?? 0);
     $vista = VIEWS_PATH . 'inventario.php';
     $vistaHeader = VIEWS_PATH . 'inventarioHeader.php';
+    $vistafooter = VIEWS_PATH . 'footer.php';
 
 
     break;
@@ -151,14 +161,14 @@ switch ($pageHead) {
 
 $pagefooter = $_GET['footer'] ?? "footer";
 
-switch ($pagefooter) {
-  case 'footer':
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-  default:
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-}
+//switch ($pagefooter) {
+ // case 'footer':
+   // $vistafooter = VIEWS_PATH . 'footer.php';
+   // break;
+  //default:
+  //  $vistafooter = VIEWS_PATH . 'footer.php';
+ //   break;
+//}
 
 
 include(VIEWS_PATH . 'layout.php');
