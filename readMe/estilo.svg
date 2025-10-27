@@ -65,7 +65,7 @@
 
   <!-- Integrantes del equipo centrados -->
   <g transform="translate(600, 420)"> <!-- x=600 centro -->
-    <image href="https://thiago-anzaldo.github.io/readMe/imagenes/Benja.png" x="-60" y="0" width="120" height="120" />
+    <image href="https://raw.githubusercontent.com/Thiago-Anzaldo/readMe/main/imagenes/Benja.png" " x="-60" y="0" width="120" height="120" />
     <text y="150" class="member-name">Dario Montero</text>
     <text y="175" class="role">Scrum Master and Programmer</text>
     <text y="200" class="desc">He has a passion for programming and teamwork. He is in charge of the organization and development of the Gacha-Dex project.</text>
