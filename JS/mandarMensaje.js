@@ -5,6 +5,7 @@ const inputMensaje = document.querySelector('.input-area input');
 
 users.forEach(user => {
     user.addEventListener('click', () => {
+        console.log("click")
         receptor = user.id; // actualizar receptor
         cargarMensajes();   // cargar mensajes al seleccionar usuario
     });

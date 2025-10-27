@@ -11,7 +11,6 @@
 
 
 
-
 </head>
 <body>
 
@@ -56,10 +55,11 @@
   </div>
 
   <script>  
-const idUsuario = <?php echo json_encode($_GET['id']);?>;
-const nombreUsuario = <?php echo json_encode($_GET['usuario']);?>;
-const idUsuarioLogueado = <?php echo json_encode($_GET['idLogueado']);?>;
-  
+  <?php ?>
+const idUsuario = <?php echo isset($_GET['id']) ? json_encode($_GET['id']) : 'null'; ?>;
+const nombreUsuario = <?php echo isset($_GET['usuario']) ? json_encode($_GET['usuario']) : 'null';?>;
+const idUsuarioLogueado = <?php echo json_encode($_SESSION['user_id']);?>;
+
   const usuarioActual= <?php echo json_encode($_SESSION['user_id']); ?>;
   </script>
   
