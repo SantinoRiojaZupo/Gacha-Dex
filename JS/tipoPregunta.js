@@ -21,11 +21,16 @@ botonPreguntaImagenes.addEventListener('click', () => {
         .then(data => {
 console.log(data)
 let imagenDelPokemon = data.correcto[0].Image
-let nombreDelPokemon = data.correcto[0].pokemonName
-let nombreIncorrecto1 =data.incorrectos[0].pokemonName
-let nombreIncorrecto2 =data.incorrectos[1].pokemonName
-let nombreIncorrecto3=data.incorrectos[2].pokemonName
-window.location.href = `index.php?page=preguntas2&imagen=${imagenDelPokemon}&nombre=${nombreDelPokemon}&incorrecto1=${nombreIncorrecto1}&incorrecto2=${nombreIncorrecto2}&incorrecto3=${nombreIncorrecto3}`;
+let nombreDelPokemon = data.correcto[0].PokemonName
+let nombreIncorrecto1 =data.incorrectos[0].PokemonName
+let nombreIncorrecto2 =data.incorrectos[1].PokemonName
+let nombreIncorrecto3=data.incorrectos[2].PokemonName
+window.location.href = `index.php?page=preguntas2` +
+`&imagen=${encodeURIComponent(imagenDelPokemon)}` +
+`&nombre=${encodeURIComponent(nombreDelPokemon)}` +
+`&incorrecto1=${encodeURIComponent(nombreIncorrecto1)}` +
+`&incorrecto2=${encodeURIComponent(nombreIncorrecto2)}` +
+`&incorrecto3=${encodeURIComponent(nombreIncorrecto3)}`;
         })
 })
 

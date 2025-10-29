@@ -11,7 +11,7 @@ if($tipoPregunta){
 
 if($tipoPregunta == 1){
 
- $sql ="SELECT Image,Id_Pokedex,pokemonName FROM datapokemonall
+ $sql ="SELECT Image,Id_Pokedex,PokemonName FROM datapokemonall
  ORDER BY 
  RAND()
   LIMIT 1;";

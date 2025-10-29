@@ -18,6 +18,7 @@
     ?>
 let imagen = <?php echo isset($_GET['imagen']) ? json_encode($_GET['imagen']) : 'null';  ?>;
 let nombre = <?php echo isset($_GET['nombre']) ? json_encode($_GET['nombre']) : 'null';  ?>;
+console.log(nombre)
 let arrIncorrectos = <?php echo json_encode($arrIncorrectos);?>;
 console.log(arrIncorrectos)
 let incorrecto1 = <?php echo isset($_GET['incorrecto1']) ? json_encode($_GET['incorrecto1']) : 'null';  ?>;
