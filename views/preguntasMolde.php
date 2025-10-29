@@ -14,7 +14,7 @@ let incorrecto1 = <?php echo isset($_GET['incorrecto1']) ? json_encode($_GET['in
 let incorrecto2 =<?php echo isset($_GET['incorrecto2']) ? json_encode($_GET['incorrecto2']) : 'null';  ?>;
 let incorrecto3 =<?php echo isset($_GET['incorrecto3']) ? json_encode($_GET['incorrecto3']) : 'null';  ?>;
 let opciones = document.getElementById("opciones")
-
+if(imagen,nombre,incorrecto1,incorrecto2,incorrecto3,opciones){
 let foto = document.getElementById("imagen")
 let foto2 = document.createElement('img')
 foto2.src = imagen
@@ -53,7 +53,7 @@ div.classList.add("opcion")
 
 
 })
-
+}
 
 
 

@@ -40,10 +40,45 @@ echo json_encode(["correcto"=>$arr1,
 "incorrectos"=> $arr2]);
 
 }
+else{
+  echo json_encode(["msj"=> "no se pudo pa"]);
 }
-else if ($tipoPregunta == 2)
+}
+else if ($tipoPregunta == 2);
 {
+$sql = "SELECT Id_Pokedex, Image, PokemonName, Description 
+FROM datapokemonall
+ORDER BY 
+RAND() LIMIT 1;";
+$resultado = mysqli_query($conexion, $sql);
+$fila = mysqli_fetch_assoc($resultado);
+$nombrePokemo = $fila['pokemonName'];
+$nombrePokemon= strtolower($nombrePokemo);
+$fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
+$arr1[] = $fila;
+$sql = "SELECT PokemonName, Image FROM
+ datapokemonall 
+ ORDER BY 
+ RAND() LIMIT 3;";
+ $resultado = mysqli_query($conexion, $sql);
+ while($fila = mysqli_fetch_assoc($resultado)){
+  $nombrePokemo = $fila['pokemonName'];
+  $nombrePokemon = strtolower($nombrePokemo);
+  $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
+$arr2[]=$fila;
+ }
 
+ if($arr1 && $arr2){
+  echo json_encode([
+ "correcto" => $arr1,
+ "incorrectos" => $arr2
+
+  ]);
+ }
+ else {
+  echo json_encode(["msj" => "no se pudo pa"]);
+ }
+ 
 }
 
 
