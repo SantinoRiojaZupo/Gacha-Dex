@@ -18,7 +18,8 @@ if($tipoPregunta == 1){
 
   $resultado = mysqli_query($conexion, $sql);
   $fila=mysqli_fetch_assoc($resultado);
-  $nombrePokemon = $fila['pokemonName'];
+  $nombrePokemo = $fila['pokemonName'];
+  $nombrePokemon=strtolower($nombrePokemo);
     $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
   $arr1[]=$fila;
 $idAExcluir = $fila['Id_Pokedex'];
