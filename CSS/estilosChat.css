@@ -213,6 +213,7 @@
   border-left: 8px solid #a0e7e5;
   animation: borderColorAnim 7s linear infinite;
   overflow: hidden; /* evita scroll doble */
+  
 }
 
 

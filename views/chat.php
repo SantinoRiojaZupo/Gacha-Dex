@@ -34,18 +34,7 @@
 
     <div class="chat-area">
       <div class="messages">
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
-        <div class="message-left">Bleh Bleh Bleh Bleh Bleh Bleh...</div>
-        <div class="message-right">Blah blah blah blah blah blah blah...</div>
+        
       </div>
       <div class="input-area">
         <input type="text" placeholder="Escribí un mensaje acá..." />

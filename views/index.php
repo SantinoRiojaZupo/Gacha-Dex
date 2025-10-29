@@ -7,6 +7,9 @@ $page = $_GET['page'] ?? "main";
 
 
 switch ($page) {
+  case 'preguntas':
+    $vista = VIEWS_PATH . 'preguntas.php';
+    break;
   case 'chat':
     $vista = VIEWS_PATH . 'chat.php';
     $vistaHeader = VIEWS_PATH . 'header.php';

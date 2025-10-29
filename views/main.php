@@ -5,6 +5,7 @@
     <div class="side-box left-box">
         <h2>Breve explicación</h2>
         <p>Aprete el boton de rolls para buscar un pokemon</p>
+        <button id="preguntas">Cuestionario</button>
     </div>
     <div class="center-boxes">
         <div class="center-box">
@@ -35,4 +36,5 @@
         <div id="pokemonesConseguidos"><!--Aca van a apareces los nombres o x cosa de los pokemons conseguidos--></div>
     </div>
 </main>
+<script src="../JS/botonPreguntas.js"></script>
 <script src="../JS/rolls.js"></script>
