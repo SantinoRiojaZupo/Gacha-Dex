@@ -10,6 +10,7 @@ botonPreguntaAleatoria.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
       console.log(data)
+
         })
 })
 
@@ -19,6 +20,13 @@ botonPreguntaImagenes.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
 console.log(data)
+let imagenDelPokemon = data.correcto[0].Image
+let nombreDelPokemon = data.correcto[0].pokemonName
+let nombreIncorrecto1 =data.incorrecto[0].pokemonName
+let nombreIncorrecto2 =data.incorrecto[1].pokemonName
+let nombreIncorrecto3=data.incorrecto[2].pokemonName
+window.location.href = `index.php?page=preguntas2&imagen=${imagenDelPokemon}&nombre=${nombreDelPokemon}&incorrecto1=${nombreIncorrecto1}&incorrecto2=
+${nombreIncorrecto2}&incorrecto3=${nombreIncorrecto3}`;
         })
 })
 
