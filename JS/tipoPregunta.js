@@ -35,6 +35,20 @@ botonPreguntaDescripcion.addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
 console.log(data)
+let arrIncorrectos = []
+ let imagenDelPokemon = data.correcto[0].Image
+ let nombreDelPokemon = data.correcto[0].PokemonName
+ data.incorrectos.forEach(r => {
+        arrIncorrectos.push({
+                nombre: r.PokemonName,
+                imagen: r.Image
+                }
+        )
+
+ })
+ let arrJSON = encodeURIComponent(JSON.stringify(arrIncorrectos));
+ console.log(arrJSON)
+window.location.href = `index.php?page=preguntas2&imagen=${imagenDelPokemon}&nombre=${nombreDelPokemon}&arrincorrectos=${arrJSON}`;
         })
 })
 

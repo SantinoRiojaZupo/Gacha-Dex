@@ -18,13 +18,13 @@ if($tipoPregunta == 1){
 
   $resultado = mysqli_query($conexion, $sql);
   $fila=mysqli_fetch_assoc($resultado);
-  $nombrePokemo = $fila['pokemonName'];
+  $nombrePokemo = $fila['PokemonName'];
   $nombrePokemon=strtolower($nombrePokemo);
     $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
   $arr1[]=$fila;
 $idAExcluir = $fila['Id_Pokedex'];
 
-  $sql="SELECT pokemonName FROM datapokemonall
+  $sql="SELECT PokemonName FROM datapokemonall
   WHERE Id_Pokedex != $idAExcluir
   ORDER BY 
   RAND()
@@ -44,7 +44,7 @@ else{
   echo json_encode(["msj"=> "no se pudo pa"]);
 }
 }
-else if ($tipoPregunta == 2);
+else if ($tipoPregunta == 2)
 {
 $sql = "SELECT Id_Pokedex, Image, PokemonName, Description 
 FROM datapokemonall
@@ -52,7 +52,7 @@ ORDER BY
 RAND() LIMIT 1;";
 $resultado = mysqli_query($conexion, $sql);
 $fila = mysqli_fetch_assoc($resultado);
-$nombrePokemo = $fila['pokemonName'];
+$nombrePokemo = $fila['PokemonName'];
 $nombrePokemon= strtolower($nombrePokemo);
 $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
 $arr1[] = $fila;
@@ -62,7 +62,7 @@ $sql = "SELECT PokemonName, Image FROM
  RAND() LIMIT 3;";
  $resultado = mysqli_query($conexion, $sql);
  while($fila = mysqli_fetch_assoc($resultado)){
-  $nombrePokemo = $fila['pokemonName'];
+  $nombrePokemo = $fila['PokemonName'];
   $nombrePokemon = strtolower($nombrePokemo);
   $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
 $arr2[]=$fila;
