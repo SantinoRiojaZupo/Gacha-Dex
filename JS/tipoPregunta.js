@@ -43,6 +43,7 @@ console.log(data)
 let arrIncorrectos = []
  let imagenDelPokemon = data.correcto[0].Image
  let nombreDelPokemon = data.correcto[0].PokemonName
+ let descripcionDelPokemon = data.correcto[0].Description
  data.incorrectos.forEach(r => {
         arrIncorrectos.push({
                 nombre: r.PokemonName,
@@ -53,7 +54,8 @@ let arrIncorrectos = []
  })
  let arrJSON = encodeURIComponent(JSON.stringify(arrIncorrectos));
  console.log(arrJSON)
-window.location.href = `index.php?page=preguntas2&imagen=${imagenDelPokemon}&nombre=${nombreDelPokemon}&arrincorrectos=${arrJSON}`;
+ console.log(descripcionDelPokemon)
+window.location.href = `index.php?page=preguntas2&imagen=${imagenDelPokemon}&nombre=${nombreDelPokemon}&arrincorrectos=${arrJSON}&descripcion=${encodeURIComponent(descripcionDelPokemon)}`;
         })
 })
 
