@@ -1,82 +1,6 @@
-<style>
-#pregunta {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    color: #ffde00; /* Amarillo Pokémon */
-    text-shadow: 0 0 5px #ffde00, 0 0 10px #ffde00, 0 0 20px #ffde00;
-}
+<link rel="stylesheet" href="../CSS/estilosCuestionario.css">
 
-#imagen img {
-    display: block;
-    margin: 0 auto;
-    max-width: 200px;
-    border: 3px solid #ffde00;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #ffde00, 0 0 30px #000;
-}
-
-#Descripcion {
-    font-size: 1.2rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 0 5px #000;
-    margin-bottom: 20px;
-}
-
-#opciones {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.opcion {
-    background-color: #000;
-    color: #ffde00;
-    font-weight: bold;
-    padding: 15px 25px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #ffde00;
-    text-align: center;
-    min-width: 140px;
-}
-
-.opcion:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #ffde00, 0 0 40px #fff200;
-}
-
-#acertasteONo {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.correcto {
-    color: #39ff14; /* verde neón */
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-.incorrecto {
-    color: #ff073a; /* rojo neón */
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 5px, 0 0 10px, 0 0 15px; }
-    to { text-shadow: 0 0 20px, 0 0 40px, 0 0 60px; }
-}
-</style>
-</style>
-<div id= "pregunta">¿Quien es este Pkemon?</div>
+<div id= "pregunta">¿Quien es este Pokemon?</div>
 <div id= "imagen"></div>
 <div id= "Descripcion"></div>
 <div id="opciones">
@@ -130,15 +54,16 @@ div.classList.add("opcion")
     div.textContent = r.texto;
     div.dataset.correcta = r.esCorrecta
     div.addEventListener('click', ()=>{
-    let mensaje = document.getElementById("acertasteONo");
-    if(div.dataset.correcta === "true"){
-        mensaje.textContent = "¡ACERTASTE!";
-        mensaje.className = "correcto";
-    } else {
-        mensaje.textContent = "FRACA :(";
-        mensaje.className = "incorrecto";
-    }
-})
+        if(div.dataset.correcta === "true"){
+            document.getElementById("acertasteONo").innerHTML = "acertaste"
+
+        }
+        else{
+            document.getElementById("acertasteONo").innerHTML = "fraca"
+        }
+        
+    
+    })
     opciones.appendChild(div)
 
 
@@ -174,15 +99,16 @@ divRespuesta.appendChild(divRespuestaNombre)
 divRespuesta.classList.add("opcion")
 divRespuesta.dataset.correcta = r.esCorrecta
 divRespuesta.addEventListener('click', ()=>{
-    let mensaje = document.getElementById("acertasteONo");
-    if(divRespuesta.dataset.correcta === "true"){
-        mensaje.textContent = "¡ACERTASTE!";
-        mensaje.className = "correcto";
-    } else {
-        mensaje.textContent = "FRACA :(";
-        mensaje.className = "incorrecto";
-    }
-})
+        if(divRespuesta.dataset.correcta === "true"){
+            document.getElementById("acertasteONo").innerHTML = "acertaste"
+
+        }
+        else{
+            document.getElementById("acertasteONo").innerHTML = "fraca"
+        }
+        
+    
+    })
     opciones.appendChild(divRespuesta)
 
 

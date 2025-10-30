@@ -1,0 +1,136 @@
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+  body {
+      font-family: 'Press Start 2P', 'Pokemon', 'Arial', sans-serif;
+      background: radial-gradient(circle at top left, #000 0%, #0a0a0a 40%, #1a1a1a 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      min-height: 100vh;
+      text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  }
+
+  #pregunta {
+      font-size: 30px;
+      color: #ffeb3b;
+      text-shadow: 0 0 10px #ffee58, 0 0 25px #ffeb3b, 0 0 45px #ffeb3b;
+      margin-bottom: 25px;
+      text-align: center;
+      letter-spacing: 1px;
+  }
+
+  #imagen img {
+      max-width: 240px;
+      display: block;
+      margin: 0 auto 25px auto;
+      border: 4px solid #ffeb3b;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b inset, 0 0 80px rgba(255,255,0,0.3);
+      background-color: #111;
+      transition: all 0.3s ease;
+  }
+
+  #imagen img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px #ffee58, 0 0 55px #ffeb3b inset;
+  }
+
+  #Descripcion {
+      font-size: 18px;
+      text-align: center;
+      max-width: 620px;
+      padding: 15px 20px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255, 236, 0, 0.08), rgba(255, 255, 0, 0.02));
+      border: 2px solid #ffeb3b;
+      box-shadow: 0 0 10px #ffee58, inset 0 0 15px rgba(255, 255, 0, 0.2);
+      color: #fff176;
+      margin-bottom: 25px;
+      line-height: 1.6;
+  }
+
+  #opciones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 25px;
+  }
+
+  .opcion {
+      background: rgba(10, 10, 10, 0.9);
+      border: 3px solid #ffeb3b;
+      border-radius: 16px;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 160px;
+      box-shadow: 0 0 10px #ffee58, 0 0 20px rgba(255, 235, 59, 0.3);
+  }
+
+  .opcion:hover {
+      background: #ffeb3b;
+      color: #000;
+      transform: translateY(-5px) scale(1.06);
+      box-shadow: 0 0 35px #ffeb3b, inset 0 0 30px #fff176;
+      text-shadow: none;
+  }
+
+  .opcion img {
+      max-width: 100px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 2px solid #ffeb3b;
+      padding: 4px;
+      background-color: #000;
+      transition: all 0.2s ease;
+  }
+
+  .opcion img:hover {
+      transform: scale(1.12);
+      box-shadow: 0 0 15px #ffee58;
+  }
+
+  #acertasteONo {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      min-height: 40px;
+      padding: 15px 25px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      border: 3px solid #ffeb3b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px #ffeb3b;
+  }
+
+  #acertasteONo.correcto {
+      color: #00ff66;
+      background: rgba(0,255,102,0.1);
+      box-shadow: 0 0 25px #00ff66, inset 0 0 25px rgba(0,255,100,0.3);
+  }
+
+  #acertasteONo.incorrecto {
+      color: #ff0033;
+      background: rgba(255,0,51,0.1);
+      box-shadow: 0 0 25px #ff0033, inset 0 0 25px rgba(255,0,51,0.3);
+  }
+
+  /* Efecto parpadeante sutil en el título */
+  @keyframes neonPulse {
+      0%, 100% { text-shadow: 0 0 10px #ffee58, 0 0 25px #ffeb3b; }
+      50% { text-shadow: 0 0 20px #fff176, 0 0 40px #ffeb3b; }
+  }
+
+  #pregunta {
+      animation: neonPulse 2.5s infinite ease-in-out;
+  }
