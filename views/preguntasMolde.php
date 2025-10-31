@@ -35,7 +35,7 @@
 
 
 
-
+//funcion nueva pregunta sobre imagen
 function funcionNuevaPregunta(){
     document.getElementById("imagen").innerHTML = ""
 document.getElementById("acertasteONo").innerHTML = ""
@@ -96,9 +96,75 @@ opciones.appendChild(div)
 
         })
         }
+//funcion nuevas preguntas sobre imagen
+//funcion nuevas preguntas sobre descripcion
+function funcionNuevaPreguntaDescripcion() {
+    fetch("../obtenerTipoPregunta.php?pregunta=" + 2)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        imagen = data.correcto[0].Image;
+        nombre = data.correcto[0].PokemonName;
+        descripcion = data.correcto[0].Description;
+
+        // Limpiamos y rellenamos el array
+        arrIncorrectos = data.incorrectos.map(r => ({
+            nombre: r.PokemonName,
+            imagen: r.Image
+        }));
+
+        let divDescripcion = document.getElementById("Descripcion");
+        divDescripcion.innerHTML = descripcion;
+
+        let respuestas = [
+            {texto: nombre, imagenPokemon: imagen, esCorrecta: true},
+            {texto: arrIncorrectos[0].nombre, imagenPokemon: arrIncorrectos[0].imagen, esCorrecta: false},
+            {texto: arrIncorrectos[1].nombre, imagenPokemon: arrIncorrectos[1].imagen, esCorrecta: false},
+            {texto: arrIncorrectos[2].nombre, imagenPokemon: arrIncorrectos[2].imagen, esCorrecta: false}
+        ];
+
+        // Mezclar
+        for (let i = respuestas.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
+        }
+        console.log("Respuestas generadas:", respuestas);
+
+        opciones.innerHTML = "";
+        respuestas.forEach(r => {
+            let divRespuesta = document.createElement('div');
+            let divRespuestaImagen = document.createElement('div');
+            let foto = document.createElement('img');
+            foto.src = r.imagenPokemon;
+            divRespuestaImagen.appendChild(foto);
+            divRespuesta.appendChild(divRespuestaImagen);
+
+            let divRespuestaNombre = document.createElement('div');
+            divRespuestaNombre.textContent = r.texto;
+            divRespuesta.appendChild(divRespuestaNombre);
+
+            divRespuesta.classList.add("opcion");
+            divRespuesta.dataset.correcta = r.esCorrecta;
+
+            divRespuesta.addEventListener('click', () => {
+                if (divRespuesta.dataset.correcta === "true") {
+                    document.getElementById("acertasteONo").innerHTML = "acertaste";
+                    setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
+                } else {
+                    document.getElementById("acertasteONo").innerHTML = "fraca";
+                    setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
+                }
+            });
+
+            opciones.appendChild(divRespuesta);
+            
+        });
+    });
+}
 
 
 
+//funcion nuevas preguntas sobre descripcion   
 
 
 
@@ -184,10 +250,15 @@ respuestas.forEach(r => {
 divRespuesta.addEventListener('click', ()=>{
         if(divRespuesta.dataset.correcta === "true"){
         document.getElementById("acertasteONo").innerHTML = "acertaste"
-
+         setTimeout(() => {
+  funcionNuevaPreguntaDescripcion()
+}, 1500);
     }
     else{
         document.getElementById("acertasteONo").innerHTML = "fraca"
+        setTimeout(() => {
+  funcionNuevaPreguntaDescripcion()
+}, 1500);
     }
         
     
