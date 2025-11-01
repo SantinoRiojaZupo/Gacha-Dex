@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2025 a las 15:54:43
+-- Tiempo de generación: 01-11-2025 a las 04:18:37
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1072,6 +1072,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
+(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 0, 1),
+(2, 'BenjaMuiXd', 'chufo', ' He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Benja.png', 0, 1),
+(3, 'Significado', 'Significado', 'He has a passion for programming, doing conecctions and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/emiliano.png', 0, 1),
 (10, '1', '1', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
 (11, '2', '2', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
 (12, '3', '3', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', 0, 0);
