@@ -72,7 +72,10 @@ div.classList.add("opcion")
 div.textContent = r.texto
 div.dataset.correcta = r.esCorrecta
 div.addEventListener('click', () => {
+      document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
     if(div.dataset.correcta === "true"){
+        div.classList.add('correcta'); // ✅ pone verde
+        
         document.getElementById("acertasteONo").innerHTML = "acertaste"
 setTimeout(() => {
     funcionNuevaPregunta()
@@ -80,7 +83,10 @@ setTimeout(() => {
         
     }
     else {
+        div.classList.add('incorrecta'); // ❌ pone roja
+   
          document.getElementById("acertasteONo").innerHTML = "fraca"
+           
         setTimeout(() => {
   funcionNuevaPregunta()
 }, 1500);
@@ -147,10 +153,15 @@ function funcionNuevaPreguntaDescripcion() {
             divRespuesta.dataset.correcta = r.esCorrecta;
 
             divRespuesta.addEventListener('click', () => {
+                  document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
                 if (divRespuesta.dataset.correcta === "true") {
+                    divRespuesta.classList.add('correcta');
+ 
                     document.getElementById("acertasteONo").innerHTML = "acertaste";
                     setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
                 } else {
+                    divRespuesta.classList.add('incorrecta'); 
+
                     document.getElementById("acertasteONo").innerHTML = "fraca";
                     setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
                 }
@@ -196,7 +207,10 @@ const div = document.createElement('div')
     div.textContent = r.texto;
     div.dataset.correcta = r.esCorrecta
     div.addEventListener('click', ()=>{
+          document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
         if(div.dataset.correcta === "true"){
+            div.classList.add('correcta'); 
+ 
         document.getElementById("acertasteONo").innerHTML = "acertaste"
         
         setTimeout(() => {
@@ -204,6 +218,7 @@ const div = document.createElement('div')
         }, 1500);
     }
     else{
+        div.classList.add('incorrecta'); 
         document.getElementById("acertasteONo").innerHTML = "fraca"
         setTimeout(() => {
   funcionNuevaPregunta()
@@ -248,13 +263,16 @@ respuestas.forEach(r => {
     divRespuesta.classList.add("opcion")
     divRespuesta.dataset.correcta = r.esCorrecta
 divRespuesta.addEventListener('click', ()=>{
+      document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
         if(divRespuesta.dataset.correcta === "true"){
+            divRespuesta.classList.add('correcta');
         document.getElementById("acertasteONo").innerHTML = "acertaste"
          setTimeout(() => {
   funcionNuevaPreguntaDescripcion()
 }, 1500);
     }
     else{
+        divRespuesta.classList.add('incorrecta'); 
         document.getElementById("acertasteONo").innerHTML = "fraca"
         setTimeout(() => {
   funcionNuevaPreguntaDescripcion()
