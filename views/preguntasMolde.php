@@ -74,7 +74,7 @@ div.dataset.correcta = r.esCorrecta
 div.addEventListener('click', () => {
       document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
     if(div.dataset.correcta === "true"){
-        div.classList.add('correcta'); // ✅ pone verde
+        div.classList.add('correcta'); 
         
         document.getElementById("acertasteONo").innerHTML = "acertaste"
 setTimeout(() => {
@@ -83,10 +83,13 @@ setTimeout(() => {
         
     }
     else {
-        div.classList.add('incorrecta'); // ❌ pone roja
+        div.classList.add('incorrecta'); 
    
          document.getElementById("acertasteONo").innerHTML = "fraca"
-           
+             document.querySelectorAll('.opcion').forEach(btn => {
+            if(btn.dataset.correcta === "true") {
+                btn.classList.add('correcta');
+             }})
         setTimeout(() => {
   funcionNuevaPregunta()
 }, 1500);
@@ -161,6 +164,11 @@ function funcionNuevaPreguntaDescripcion() {
                     setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
                 } else {
                     divRespuesta.classList.add('incorrecta'); 
+                    document.getElementById("acertasteONo").innerHTML = "fraca"
+             document.querySelectorAll('.opcion').forEach(btn => {
+            if(btn.dataset.correcta === "true") {
+                btn.classList.add('correcta');
+             }})
 
                     document.getElementById("acertasteONo").innerHTML = "fraca";
                     setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
@@ -220,6 +228,11 @@ const div = document.createElement('div')
     else{
         div.classList.add('incorrecta'); 
         document.getElementById("acertasteONo").innerHTML = "fraca"
+             document.querySelectorAll('.opcion').forEach(btn => {
+            if(btn.dataset.correcta === "true") {
+                btn.classList.add('correcta');
+             }})
+        document.getElementById("acertasteONo").innerHTML = "fraca"
         setTimeout(() => {
   funcionNuevaPregunta()
 }, 1500);
@@ -273,6 +286,11 @@ divRespuesta.addEventListener('click', ()=>{
     }
     else{
         divRespuesta.classList.add('incorrecta'); 
+        document.getElementById("acertasteONo").innerHTML = "fraca"
+             document.querySelectorAll('.opcion').forEach(btn => {
+            if(btn.dataset.correcta === "true") {
+                btn.classList.add('correcta');
+             }})
         document.getElementById("acertasteONo").innerHTML = "fraca"
         setTimeout(() => {
   funcionNuevaPreguntaDescripcion()
