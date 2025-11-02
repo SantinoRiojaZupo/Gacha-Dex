@@ -14,7 +14,7 @@ mysqli_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $arr = [];
 $idpokedex = 0;
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($result) >= 0) {
   while ($fila = mysqli_fetch_assoc($result)) {
     $idpokedex = $fila['Id_Pokedex'];
     $nombre = strtolower($fila['PokemonName']);
@@ -26,6 +26,6 @@ if (mysqli_num_rows($result) > 0) {
 if ($arr) {
   echo json_encode($arr);
 } else {
-  echo json_encode($arr);
+  echo json_encode($result);
 }
 ?>
