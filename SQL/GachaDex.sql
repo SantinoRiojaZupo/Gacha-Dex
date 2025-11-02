@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2025 a las 04:18:37
+-- Tiempo de generación: 02-11-2025 a las 17:29:15
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -167,7 +167,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (119, 'Seaking', 'Water', '', 'Grass, Electric', 'En otoño gana algo de peso para atraer a posibles parejas y se cubre de llamativos colores.', 'Swift Swim', 'Water Veil', 'Lightning Rod', 'https://archives.bulbagarden.net/media/upload/7/76/0119Seaking.png', 'Male/Female'),
 (120, 'Staryu', 'Water', '', 'Grass, Electric', 'A finales de verano, se pueden ver grupos de Staryu en la orilla de la playa sincronizando el brillo de sus núcleos a ritmo regular.', 'Illuminate', 'Natural Cure', 'Analytic', 'https://archives.bulbagarden.net/media/upload/3/38/0120Staryu.png', 'N/A'),
 (121, 'Starmie', 'Water', 'Psychic', 'Grass, Electric', 'Su órgano central, conocido como núcleo, brilla con los colores del arcoíris cuando se dispone a liberar sus potentes poderes psíquicos.', 'Illuminate', 'Natural Cure', 'Analytic', 'https://archives.bulbagarden.net/media/upload/a/aa/0121Starmie.png', 'N/A'),
-(122, 'Mr. Mime', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Un experto de la pantomima capaz de crear paredes invisibles pero sólidas solo con sus gestos.', 'Soundproof', 'Filter', 'Technician', 'https://archives.bulbagarden.net/media/upload/f/fb/0122Mr._Mime.png', 'Male/Female'),
+(122, 'Mr-Mime', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Un experto de la pantomima capaz de crear paredes invisibles pero sólidas solo con sus gestos.', 'Soundproof', 'Filter', 'Technician', 'https://archives.bulbagarden.net/media/upload/f/fb/0122Mr._Mime.png', 'Male/Female'),
 (123, 'Scyther', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Avanza por la hierba con sus afiladas guadañas, más rápido de lo que el ojo humano puede percibir.', 'Swarm', 'Technician', 'Steadfast', 'https://archives.bulbagarden.net/media/upload/8/81/0123Scyther.png', 'Male/Female'),
 (124, 'Jynx', 'Ice', 'Psychic', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'En cierta parte de Galar se conocía a Jynx como la Reina del Hielo y se reverenciaba con cierto temor.', 'Oblivious', 'Forewarn', 'Dry Skin', 'https://archives.bulbagarden.net/media/upload/0/07/0124Jynx.png', 'Female'),
 (125, 'Electabuzz', 'Electric', '', 'Ground', 'Su cuerpo descarga electricidad constantemente, por lo que eriza el cabello a cualquiera que se le acerque.', 'Static', '', 'Vital Spirit', 'https://archives.bulbagarden.net/media/upload/5/5c/0125Electabuzz.png', 'Male/Female'),
@@ -833,10 +833,10 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (782, 'Jangmo-o', 'Dragon', '', 'Ice, Dragon, Fairy', 'No da la espalda ni al enemigo más poderoso, sino que lo afronta con osadía. Usa la escama de la cabeza con fines ofensivos y defensivos.', 'Bulletproof', 'Soundproof', 'Overcoat', '.', 'Male/Female'),
 (783, 'Hakamo-o', 'Dragon', 'Fighting', 'Ice, Flying, Psychic, Dragon, Fairy(X4)', 'Se enzarza en peleas tan violentas que incluso se le desprenden las escamas de los brazos. Esta desnudez constituye una prueba de su valor.', 'Bulletproof', 'Soundproof', 'Overcoat', '.', 'Male/Female'),
 (784, 'Kommo-o', 'Dragon', 'Fighting', 'Ice, Flying, Psychic, Dragon, Fairy(X4)', 'Alza súbitamente sus brazos penduleantes para propinar al rival un puñetazo especial capaz de enviarlo por los aires.', 'Bulletproof', 'Soundproof', 'Overcoat', '.', 'Male/Female'),
-(785, 'Tapu Koko', 'Electric', 'Fairy', 'Poison, Ground', 'Aunque se le considera un espíritu guardián, obra también como espíritu vengativo contra las personas y Pokémon que desatan su ira.', 'Electric Surge', '', 'Telepathy', '.', 'N/A'),
-(786, 'Tapu Lele', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Esparce escamas brillantes que curan a las personas y los Pokémon. En la isla de Akala es venerado como su espíritu guardián.', 'Grassy Surge', '', 'Telepathy', '.', 'N/A'),
-(787, 'Tapu Bulu', 'Grass', 'Fairy', 'Fire, Ice, Poison(X4), Flying, Steel', 'Se lo conoce como espíritu guardián, pero abate sin piedad a aquellos que considera sus enemigos.', 'Psychic Surge', '', 'Telepathy', '.', 'N/A'),
-(788, 'Tapu Fini', 'Water', 'Fairy', 'Grass, Electric, Poison', 'El espíritu guardián de Poni, temido y venerado a la vez. Mora en una espesa niebla y manipula el agua a su antojo.', 'Misty Surge', '', 'Telepathy', '.', 'N/A'),
+(785, 'Tapu-Koko', 'Electric', 'Fairy', 'Poison, Ground', 'Aunque se le considera un espíritu guardián, obra también como espíritu vengativo contra las personas y Pokémon que desatan su ira.', 'Electric Surge', '', 'Telepathy', '.', 'N/A'),
+(786, 'Tapu-Lele', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Esparce escamas brillantes que curan a las personas y los Pokémon. En la isla de Akala es venerado como su espíritu guardián.', 'Grassy Surge', '', 'Telepathy', '.', 'N/A'),
+(787, 'Tapu-Bulu', 'Grass', 'Fairy', 'Fire, Ice, Poison(X4), Flying, Steel', 'Se lo conoce como espíritu guardián, pero abate sin piedad a aquellos que considera sus enemigos.', 'Psychic Surge', '', 'Telepathy', '.', 'N/A'),
+(788, 'Tapu-Fini', 'Water', 'Fairy', 'Grass, Electric, Poison', 'El espíritu guardián de Poni, temido y venerado a la vez. Mora en una espesa niebla y manipula el agua a su antojo.', 'Misty Surge', '', 'Telepathy', '.', 'N/A'),
 (789, 'Cosmog', 'Psychic', '', 'Bug, Ghost, Dark', 'Hasta la brisa más leve es capaz de arrastrar su cuerpo, compuesto de una materia gaseosa inestable, pero no parece que eso le moleste.', 'Unaware', '', '', '.', 'N/A'),
 (790, 'Cosmoem', 'Psychic', '', 'Bug, Ghost, Dark', 'En la antigüedad, un rey de Alola lo apodó Crisálida de las Estrellas y erigió un altar en su honor.', 'Sturdy', '', '', '.', 'N/A'),
 (791, 'Solgaleo', 'Psychic', 'Steel', 'Fire, Ground, Ghost, Dark', 'Es capaz de crear Ultraumbrales a través de los cuales formas de vida y energía procedentes de otros mundos acuden al nuestro.', 'Full Metal Body', '', '', '.', 'N/A'),
@@ -1049,7 +1049,8 @@ CREATE TABLE `pokemoncatched` (
 
 INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
 (141, 12, 154, 0, 0),
-(142, 12, 383, 0, 0);
+(142, 12, 383, 0, 0),
+(143, 1, 679, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1072,10 +1073,15 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
-(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 0, 1),
+(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 1, 1),
 (2, 'BenjaMuiXd', 'chufo', ' He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Benja.png', 0, 1),
 (3, 'Significado', 'Significado', 'He has a passion for programming, doing conecctions and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/emiliano.png', 0, 1),
-(10, '1', '1', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
+(4, 'AgustinCS', 'agus123', 'He has a passion for programming and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-Dex/imagenes/Agus.png', NULL, 0),
+(5, 'Mierdown1', 'thiago123', 'Description: He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex and admin of the mudae server\n黑色的,\nAlias: Mierdown1.', 'http://localhost/Gacha-Dex/imagenes/Thiago.png', 0, 1),
+(6, 'Sasu', 'samuel123', 'He has a passion for teamwork.He is in charge of the HTML and CSS of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/Samuel.png', 0, 1),
+(7, 'Gael Baez Sakin', 'gael123', ' A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH BIG FATASS TETO FAN', 'http://localhost/Gacha-Dex/imagenes/gael.png', 0, 1),
+(8, 'GoldenFredy', 'ignacio123', '  He has a passion for the Database and teamwork.He is in charge of the Data Base Managment of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/ignacio.png', 0, 1),
+(10, '1', '1', 'a', 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
 (11, '2', '2', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
 (12, '3', '3', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', 0, 0);
 
@@ -1157,13 +1163,13 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `variant_pokemon`
