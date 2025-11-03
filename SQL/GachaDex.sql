@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2025 a las 17:29:15
+-- Tiempo de generación: 03-11-2025 a las 04:16:16
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1013,7 +1013,69 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (961, 'Wugtrio', 'Water', '', 'Grass, Electric', 'Es de temperamento agresivo, aunque no lo parezca. Envuelve a sus presas con sus largos cuerpos y las arrastra a su nido.', 'Gooey', 'Rattled', 'Sand Veil', '.', 'Male/Female'),
 (962, 'Bombirdier', 'Flying', 'Dark', 'Electric, Ice, Rock, Fairy', 'Mete cosas en su bolsa, fabricada con el plumón de su pecho y con plumas mudadas, para luego dejarlas caer desde las alturas por diversión.', 'Big Pecks', 'Keen Eye', 'Rocky Payload', '.', 'Male/Female'),
 (963, 'Finizen', 'Water', '', 'Grass, Electric', 'Le gusta jugar con sus congéneres con el anillo de agua de su aleta caudal. Utiliza ultrasonidos para percibir las emociones de otros seres.', 'Water Veil', '', '', '.', 'Male/Female'),
-(964, 'Palafin', 'Water', '', 'Grass, Electric', 'Cambia de forma en cuanto recibe una señal de socorro de sus compañeros. Nunca se transforma delante de nadie.', 'Zero to Hero', '', '', '.', 'Male/Female');
+(964, 'Palafin', 'Water', '', 'Grass, Electric', 'Cambia de forma en cuanto recibe una señal de socorro de sus compañeros. Nunca se transforma delante de nadie.', 'Zero to Hero', '', '', '.', 'Male/Female'),
+(965, 'Varoom', 'Steel', 'Poison', 'Fire, Ground(X4)', 'Se dice que surgió cuando un misterioso Pokémon venenoso tomó posesión de un motor abandonado en un desguace.', 'Overcoat', '', 'Slow Start', '.', 'Male/Female'),
+(966, 'Revavroom', 'Steel', 'Poison', 'Fire, Ground(X4)', 'Posee ocho cilindros, con los que genera energía haciendo estallar el gas que produce al mezclar los minerales de las rocas con su veneno.', 'Overcoat', '', 'Filter', '.', 'Male/Female'),
+(967, 'Cyclizar', 'Dragon', 'Normal', 'Ice, Fighting, Dragon, Fairy', 'Según parece, ha permitido que los humanos monten en él desde tiempos remotos. Aparece en pinturas rupestres de hace diez mil años.', 'Shed Skin', '', 'Regenerator', '.', 'Male/Female'),
+(968, 'Orthworm', 'Steel', '', 'Fire, Fighting, Ground', 'Cuando lo atacan, usa los pelos de su cuerpo a modo de puños y hace llover un aluvión de puñetazos sobre sus enemigos.', 'Earth Eater', '', 'Sand Veil', '.', 'Male/Female'),
+(969, 'Glimmet', 'Rock', 'Poison', 'Water, Ground(X4), Psychic, Steel', 'Absorbe nutrientes de las paredes de las cuevas. Cubre su cuerpo con pétalos hechos de energía venenosa cristalizada.', 'Toxic Debris', '', 'Corrosion', '.', 'Male/Female'),
+(970, 'Glimmora', 'Rock', 'Poison', 'Water, Ground(X4), Psychic, Steel', 'En cuanto percibe peligro, abre sus pétalos de cristal y despide rayos por su cuerpo en forma de cono.', 'Toxic Debris', '', 'Corrosion', '.', 'Male/Female'),
+(971, 'Greavard', 'Ghost', '', 'Ghost, Dark', 'Se cree que es la reencarnación de un Pokémon perro vagabundo que murió sin haber tenido contacto con humanos.', 'Pickup', '', 'Fluffy', '.', 'Male/Female'),
+(972, 'Houndstone', 'Ghost', '', 'Ghost, Dark', 'Pasa la mayor parte del tiempo durmiendo en cementerios. De todos los Pokémon perro, es el que profesa una mayor lealtad por su Entrenador.', 'Sand Rush', '', 'Fluffy', '.', 'Male/Female'),
+(973, 'Flamigo', 'Flying', 'Fighting', 'Electric, Ice, Flying, Psychic, Fairy', 'Al parecer, se anudan la base del cuello para impedir que la energía que tienen almacenada en el estómago escape por el pico.', 'Scrappy', 'Tangled Feet', 'Costar', '.', 'Male/Female'),
+(974, 'Cetoddle', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Los miembros de esta especie, emparentada al parecer con los Wailmer, abandonaron hace ya mucho tiempo el mar para vivir en tierra firme.', 'Thick Fat', 'Snow Cloak', 'Sheer Force', '.', 'Male/Female'),
+(975, 'Cetitan', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Este Pokémon vive en áreas cubiertas de nieve y hielo. Se protege con su fuerte musculatura y una gruesa capa de grasa subcutánea.', 'Thick Fat', 'Slush Rush', 'Sheer Force', '.', 'Male/Female'),
+(976, 'Veluza', 'Water', 'Psychic', 'Grass, Electric, Bug, Ghost, Dark', 'Al desechar la carne que no necesita, agudiza la mente y sus poderes psíquicos se incrementan. Dicha carne tiene un sabor suave pero exquisito.', 'Mold Breaker', '', 'Sharpness', '.', 'Male/Female'),
+(977, 'Dondozo', 'Water', '', 'Grass, Electric', 'Le gusta mucho comer, pero no se le da bien cazar, por lo que aúna fuerzas con Tatsugiri con el fin de capturar presas.', 'Unaware', 'Oblivious', 'Water Veil', '.', 'Male/Female'),
+(978, 'Tatsugiri', 'Dragon', 'Water', 'Dragon, Fairy', 'Pokémon dragón de pequeño tamaño. Vive en la boca de un Dondozo para protegerse de los ataques de los depredadores.', 'Commander', '', 'Storm Drain', '.', 'Male/Female'),
+(979, 'Annihilape', 'Fighting', 'Ghost', 'Flying, Psychic, Ghost, Fairy', 'Cuando su ira explosiva rebasó el punto crítico, adquirió un poder que lo libró para siempre de las limitaciones de su cuerpo material.', 'Vital Spirit', 'Inner Focus', 'Defiant', '.', 'Male/Female'),
+(980, 'Clodsire', 'Poison', 'Ground', 'Water, Ice, Ground, Psychic', 'Cuando se siente amenazado, repele al enemigo con sus gruesas púas retráctiles. Esta técnica tan peligrosa es un arma de doble filo.', 'Poison Point', 'Water Absorb', 'Unaware', '.', 'Male/Female'),
+(981, 'Farigiraf', 'Normal', 'Psychic', 'Bug, Dark', 'Las ondas cerebrales de la cola y la cabeza van al compás, lo que le confiere poderes psíquicos diez veces más potentes que los de los Girafarig.', 'Cud Chew', 'Armor Tail', 'Sap Sipper', '.', 'Male/Female'),
+(982, 'Dudunsparce', 'Normal', '', 'Fighting', 'Usa su dura cola para horadar el lecho rocoso en las profundidades de la tierra y establecer su madriguera, cuyos túneles se extienden 10 km.', 'Serene Grace', 'Run Away', 'Rattled', '.', 'Male/Female'),
+(983, 'Kingambit', 'Dark', 'Steel', 'Fire, Fighting(X4), Ground', 'Solo el Bisharp más destacado entre las filas de cada gran ejército tiene el honor de evolucionar a Kingambit.', 'Defiant', 'Supreme Overlord', 'Pressure', '.', 'Male/Female'),
+(984, 'Great-Tusk', 'Ground', 'Fighting', 'Water, Grass, Ice, Flying, Psychic, Fairy', 'Testigos afirman haberlo visto recientemente. El nombre Colmilargo está tomado de una criatura mencionada en cierto libro.', 'Protosynthesis', '', '', '.', 'N/A'),
+(985, 'Scream-Tail', 'Fairy', 'Psychic', 'Poison, Ghost, Steel', 'Solo se había avistado una vez en el pasado. Su aspecto se asemeja al de una misteriosa criatura descrita en cierto diario antiguo.', 'Protosynthesis', '', '', '.', 'N/A'),
+(986, 'Brute-Bonnet', 'Grass', 'Dark', 'Fire, Ice, Fighting, Poison, Flying, Bug(X4), Fairy', 'Es posible que se trate de la criatura que se menciona en cierto libro bajo el nombre de Furioseta.', 'Protosynthesis', '', '', '.', 'N/A'),
+(987, 'Flutter-Mane', 'Ghost', 'Fairy', 'Ghost, Steel', 'Sus rasgos distintivos encajan con la descripción de una criatura mencionada en cierto libro bajo el nombre de Melenaleteo.', 'Protosynthesis', '', '', '.', 'N/A'),
+(988, 'Slither-Wing', 'Bug', 'Fighting', 'Fire, Flying(X4), Psychic, Fairy', 'Un misterioso Pokémon que presenta ciertas similitudes con Reptalada, una criatura descrita en un tomo antiguo.', 'Protosynthesis', '', '', '.', 'N/A'),
+(989, 'Sandy-Shocks', 'Electric', 'Ground', 'Water, Grass, Ice, Ground', 'Nunca se había capturado uno, ergo los datos al respecto escasean. Su descripción coincide con la de una criatura mencionada en cierto diario.', 'Protosynthesis', '', '', '.', 'N/A'),
+(990, 'Iron-Treads', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Su aspecto recuerda al de un arma científica de origen extraterrestre que apareció en un artículo de una revista esotérica.', 'Quark Drive', '', '', '.', 'N/A'),
+(991, 'Iron-Bundle', 'Ice', 'Water', 'Grass, Electric, Fighting, Rock', 'Tiene una forma similar a la del robot construido por una civilización antigua mencionado en cierto artículo de una revista esotérica.', 'Quark Drive', '', '', '.', 'N/A'),
+(992, 'Iron-Hands', 'Fighting', 'Electric', 'Ground, Psychic, Fairy', 'Guarda parecido con un atleta, supuestamente transformado en cíborg, que apareció entre las exclusivas de una revista esotérica.', 'Quark Drive', '', '', '.', 'N/A'),
+(993, 'Iron-Jugulis', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Se asemeja a un Pokémon que apareció en una revista esotérica descrito como “el fruto de un romance entre un Hydreigon y un robot”.', 'Quark Drive', '', '', '.', 'N/A'),
+(994, 'Iron-Moth', 'Fire', 'Poison', 'Water, Ground(X4), Psychic, Rock', 'Se asemeja a un extraño objeto descrito en una revista esotérica como “un ovni enviado con el objetivo de espiar a la raza humana”.', 'Quark Drive', '', '', '.', 'N/A'),
+(995, 'Iron-Thorns', 'Rock', 'Electric', 'Water, Grass, Fighting, Ground(X4)', 'Guarda similitudes con el supuesto aspecto que, según cierta revista de dudosa veracidad, tendrá Tyranitar dentro de mil millones de años.', 'Quark Drive', '', '', '.', 'N/A'),
+(996, 'Frigibax', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Absorbe el calor a través de la placa dorsal y lo convierte en energía gélida. Cuanto más alta es la temperatura, más energía acumula.', 'Thermal Exchange', '', 'Ice Body', '.', 'Male/Female'),
+(997, 'Arctibax', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Congela el aire a su alrededor para cubrirse el rostro con una máscara de hielo protectora y dotar su placa dorsal de cuchillas glaciales.', 'Thermal Exchange', '', 'Ice Body', '.', 'Male/Female'),
+(998, 'Baxcalibur', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Exhala un aliento extremadamente frío por la boca que es capaz de congelar al instante incluso magma al rojo vivo.', 'Thermal Exchange', '', 'Ice Body', '.', 'Male/Female'),
+(999, 'Gimmighoul', 'Ghost', '', 'Ghost, Dark', 'El cofre en el que nació data de hace 1500 años aproximadamente. Absorbe la energía vital de los granujas que intentan hacerse con su tesoro.', 'Rattled', '', '', '.', 'N/A'),
+(1000, 'Gholdengo', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Se dice que su cuerpo está formado por 1000 monedas. Es capaz de hacer buenas migas con cualquiera rápidamente por su sociabilidad.', 'Good as Gold', '', '', '.', 'N/A'),
+(1001, 'Wo-Chien', 'Dark', 'Grass', 'Fire, Ice, Fighting, Poison, Flying, Bug(X4), Fairy', 'Este Pokémon nació al imbuirse en hojas marchitas el rencor de una persona castigada por enumerar las fechorías de su rey en unas tablillas.', 'Tablets of Ruin', '', '', '.', 'N/A'),
+(1002, 'Chien-Pao', 'Dark', 'Ice', 'Fire, Fighting(X4), Bug, Rock, Steel, Fairy', 'Controla a su voluntad masas de nieve de hasta cien toneladas. Se divierte zambulléndose y saltando felizmente en los aludes que provoca.', 'Sword of Ruin', '', '', '.', 'N/A'),
+(1003, 'Ting-Lu', 'Dark', 'Ground', 'Water, Grass, Ice, Fighting, Bug, Fairy', 'Este Pokémon nació al imbuirse en tierra y rocas el miedo vertido en un caldero que se utilizaba en rituales antiguos.', 'Vessel of Ruin', '', '', '.', 'N/A'),
+(1004, 'Chi-Yu', 'Dark', 'Fire', 'Water, Fighting, Ground, Rock', 'Controla a su voluntad llamas de hasta 3000 ºC. Nada tranquilamente por los mares de magma que crea al derretir las rocas y la grava a su paso.', 'Beads of Ruin', '', '', '.', 'N/A'),
+(1005, 'Roaring-Moon', 'Dragon', 'Dark', 'Ice, Fighting, Bug, Dragon, Fairy(X4)', 'Podría tratarse de la criatura que aparece bajo el nombre de Bramaluna en cierto diario repleto de incógnitas.', 'Protosynthesis', '', '', '.', 'N/A'),
+(1006, 'Iron-Valiant', 'Fairy', 'Fighting', 'Poison, Flying, Psychic, Steel, Fairy', 'Comparte varios rasgos con el invento de un científico loco que apareció en un artículo de una revista esotérica.', 'Quark Drive', '', '', '.', 'N/A');
+INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+(1007, 'Koraidon', 'Fighting', 'Dragon', 'Ice, Flying, Psychic, Dragon, Fairy(X4)', 'Parece tratarse de Reyalado, la criatura que, según lo narrado en un antiguo diario, fue capaz de dividir la tierra con sus puños.', 'Orichalcum Pulse', '', '', '.', 'N/A'),
+(1008, 'Miraidon', 'Electric', 'Dragon', 'Ice, Ground, Dragon, Fairy', 'Pese a las similitudes con los Cyclizar, es mucho más fuerte y despiadado que ellos. Está rodeado de incógnitas.', 'Hadron Engine', '', '', '.', 'N/A'),
+(1009, 'Walking-Wake', 'Water', 'Dragon', 'Dragon, Fairy', 'Una criatura violenta rodeada de misterio, cuyo nombre se inspira en cierto monstruo acuático mencionado en un viejo diario de exploración.', 'Protosynthesis', '', '', '.', 'N/A'),
+(1010, 'Iron-Leaves', 'Grass', 'Psychic', 'Fire, Ice, Poison, Flying, Bug(X4), Ghost, Dark', 'Presenta numerosas características en común con el Virizion del futuro que apareció publicado en cierta revista esotérica.', 'Quark Drive', '', '', '.', 'N/A'),
+(1011, 'Dipplin', 'Grass', 'Dragon', 'Ice(X4), Poison, Flying, Bug, Dragon, Fairy', 'Ha evolucionado gracias a una manzana especial que solo se cultiva en cierta zona. Este Pokémon está formado por dos individuos.', 'Supersweet Syrup', 'Gluttony', 'Sticky Hold', '.', 'Male/Female'),
+(1012, 'Poltchageist', 'Grass', 'Ghost', 'Fire, Ice, Flying, Ghost, Dark', 'Según se dice, el resquemor de un practicante de la ceremonia del té que murió sin perfeccionar el arte poseyó el matcha y dio lugar a un Pokémon.', 'Hospitality', '', 'Heatproof', '.', 'N/A'),
+(1013, 'Sinistcha', 'Grass', 'Ghost', 'Fire, Ice, Flying, Ghost, Dark', 'Se hace pasar por té matcha para que algún incauto lo beba y así absorber su energía vital, pero su plan suele fracasar.', 'Hospitality', '', 'Heatproof', '.', 'N/A'),
+(1014, 'Okidogi', 'Poison', 'Fighting', 'Ground, Flying, Psychic(X4)', 'Las toxinas de la cadena que lleva al cuello producen una estimulación muscular que le ha conferido un cuerpo de lo más robusto.', 'Toxic Chain', '', 'Guard Dog', '.', 'Male'),
+(1015, 'Munkidori', 'Poison', 'Psychic', 'Ground, Ghost, Dark', 'Las toxinas de la cadena, capaces de sacar a relucir su potencial, le han estimulado el cerebro y le han hecho desarrollar poderes psíquicos.', 'Toxic Chain', '', 'Frisk', '.', 'Male'),
+(1016, 'Fezandipiti', 'Poison', 'Fairy', 'Ground, Psychic, Steel', 'Ha desarrollado una forma y una voz muy bellas gracias a la estimulación causada por las toxinas de la cadena que lleva en torno al cuerpo.', 'Toxic Chain', '', 'Technician', '.', 'Male'),
+(1017, 'Ogerpon', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Cambia de tipo según la máscara que lleve. Se vale de sus rápidos movimientos y patadas para jugar a su antojo con sus enemigos.', 'Defiant', '', '', '.', 'Female'),
+(1018, 'Archaludon', 'Steel', 'Dragon', 'Fighting, Ground', 'Acumula la electricidad estática de su entorno. El rayo que dispara cuando está a cuatro patas posee una potencia colosal.', 'Stamina', 'Sturdy', 'Stalwart', '.', 'Male/Female'),
+(1019, 'Hydrapple', 'Grass', 'Dragon', 'Ice(X4), Poison, Flying, Bug, Dragon, Fairy', 'Se trata de siete seres llamados Viborappli que viven juntos en una manzana de caramelo. El del centro es el líder del grupo.', 'Supersweet Syrup', 'Regenerator', 'Sticky Hold', '.', 'Male/Female'),
+(1020, 'Gouging-Fire', 'Fire', 'Dragon', 'Ground, Rock, Dragon', 'Apenas constan avistamientos de este Pokémon, pero existe una breve grabación donde aparece desbocado y escupiendo ráfagas de fuego.', 'Protosynthesis', '', '', '.', 'N/A'),
+(1021, 'Raging-Bolt', 'Electric', 'Dragon', 'Ice, Ground, Dragon, Fairy', 'Se dice que calcina todo cuanto lo rodea con los rayos que libera su pelaje. Aparte de eso, se sabe muy poco sobre esta criatura.', 'Protosynthesis', '', '', '.', 'N/A'),
+(1022, 'Iron-Boulder', 'Rock', 'Psychic', 'Water, Grass, Ground, Bug, Ghost, Dark, Steel', 'Recuerda a un Pokémon descrito en cierta revista de dudosa veracidad como “un Terrakion modificado por una malvada organización”.', 'Quark Drive', '', '', '.', 'N/A'),
+(1023, 'Iron-Crown', 'Steel', 'Psychic', 'Fire, Ground, Ghost, Dark', 'Se asemeja a un extraño objeto descrito en una revista esotérica como “un arma de tecnología punta con forma de Cobalion”.', 'Quark Drive', '', '', '.', 'N/A'),
+(1024, 'Terapagos', 'Normal', '', 'Fighting', 'Se vale de su capacidad para transformar energía en duros cristales para protegerse. Este Pokémon dio origen a la teracristalización.', 'Tera Shift', '', '', '.', 'Male/Female'),
+(1025, 'Pecharunt', 'Poison', 'Ghost', 'Ground, Psychic, Ghost, Dark', 'Hace comer a su objetivo un mochi tóxico que saca a relucir todo su potencial y su ambición, para después controlarlo con sus cadenas.', 'Poison Puppeteer', '', '', '.', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -1151,7 +1213,7 @@ ALTER TABLE `variant_pokemon`
 -- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=965;
+  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1026;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
