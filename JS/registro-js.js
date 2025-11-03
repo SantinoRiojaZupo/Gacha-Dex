@@ -3,11 +3,33 @@ function registrarse(){
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
     const Contra2 = document.querySelector('[name="contraseña-2"]').value;
+    restrincion=/[^A-Za-z0-9_-]/
     if (Usua && Contra) {
-        if (Contra !== Contra2) {
-            console.log("Las contraseñas no coinciden");
+        if((Usua.length>=6)&&(Contra.length>=6)&&(Contra2.length>=6)){
+            for (let i = 0; i < Usua.length; i++) {
+             let caracter = Usua.charAt(i);
+             if(restrincion.test(caracter)){
+                document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
+                return
+             }
+              }  for (let i = 0; i < Contra.length; i++) {
+             let caracter = Contra.charAt(i);
+             if(restrincion.test(caracter)){
+                document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
+                return
+             }
+              }  for (let i = 0; i < Contra2.length; i++) {
+             let caracter = Contra2.charAt(i);
+             if(restrincion.test(caracter)){
+                document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
+                return
+             }
+              } 
+                if (Contra !== Contra2) {
+            document.getElementById("error").innerHTML="Las contraseñas no coinciden";
             return;
         }
+
         fetch("/Gacha-Dex/registro.php", {
             method: "POST",
             headers: {
@@ -25,8 +47,14 @@ function registrarse(){
                     window.location.href = "login.php";
                 }
             });
-    } else {
-        console.log("Escribi algo");
+            }
+            else{
+            document.getElementById("error").innerHTML="el nombre de usurio y contraseña debe de ser de 6 caracteres de minimo"
+            }
+       
+    } 
+    else {
+        document.getElementById("error").innerHTML="Escribi algo";
     }
 }
 function mostrarMensaje(mensaje, exito) {

@@ -13,6 +13,8 @@
       </div>
       <button type="button" id="boton-Login">Entrar</button>
     </form>
+    <br>
+    <label id="errores"></label>
     <div class="register-link">
       ¿No tienes cuenta? <a href="http://localhost/Gacha-Dex/views/index.php?page=registro">Regístrate</a>
     </div>

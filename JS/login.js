@@ -14,6 +14,7 @@ document.getElementById("boton-Login").addEventListener("click", () => {
         .then(res=>{
             if(res.error){
                 console.log(res.error + ": " + res.msj);
+                document.getElementById("errores").innerHTML="esta mal escrito en nombre del usuario o la contraseña"
             }
             else{
                 console.log(res.msj);
