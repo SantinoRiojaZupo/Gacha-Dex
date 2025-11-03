@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2025 a las 04:44:35
+-- Tiempo de generación: 03-11-2025 a las 12:38:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -486,7 +486,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (436, 'Bronzor', 'Steel', 'Psychic', 'Fire, Ground, Ghost, Dark', 'Antaño se creía que en el dibujo de su parte posterior residía una fuerza misteriosa.', 'Levitate', 'Heatproof', 'Heavy Metal', '.', 'N/A'),
 (437, 'Bronzong', 'Steel', 'Psychic', 'Fire, Ground, Ghost, Dark', 'Antaño se adoraba a este Pokémon para que propiciara lluvias abundantes. A veces, puede encontrarse enterrado bajo tierra.', 'Levitate', 'Heatproof', 'Heavy Metal', '.', 'N/A'),
 (438, 'Bonsly', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Aunque parece que llora, realmente lo que hace es expulsar el exceso de fluidos corporales por los ojos.', 'Sturdy', 'Rock Head', 'Rattled', '.', 'Male/Female'),
-(439, 'Mime Jr.', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Imita todo lo que ve, especialmente los gráciles pasos de baile de Mr. Rime, que practica con gran tesón.', 'Soundproof', 'Filter', 'Technician', '.', 'Male/Female'),
+(439, 'Mime-Jr', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Imita todo lo que ve, especialmente los gráciles pasos de baile de Mr. Rime, que practica con gran tesón.', 'Soundproof', 'Filter', 'Technician', '.', 'Male/Female'),
 (440, 'Happiny', 'Normal', '', 'Fighting', 'En la bolsa de su panza transporta una roca redonda y blanca. Cuando hace amigos puede llegar a regalársela.', 'Natural Cure', 'Serene Grace', 'Friend Guard', '.', 'Female'),
 (441, 'Chatot', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Imita los sonidos de sus rivales, haciéndoles creer que son amigos e impidiendo que le ataquen.', 'Keen Eye', 'Tangled Feet', 'Big Pecks', '.', 'Male/Female'),
 (442, 'Spiritomb', 'Ghost', 'Dark', 'Fairy', 'Por sus constantes fechorías se le acabó uniendo a una Piedra Espíritu con un misterioso hechizo.', 'Pressure', '', 'Infiltrator', '.', 'Male/Female'),
@@ -717,7 +717,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (666, 'Vivillon', 'Bug', 'Flying', 'Fire, Electric, Ice, Flying, Rock(X4)', 'Sus motivos cambian en función del clima y el terreno de su lugar de origen. Adopta esta forma en tierras floridas.', 'Shield Dust', 'Compound Eyes', 'Friend Guard', '.', 'Male/Female'),
 (667, 'Litleo', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Mientras es un cachorro, los Pyroar hembra lo instruyen en la caza, pero, en cuanto madura, se separa de la manada y se independiza.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
 (668, 'Pyroar', 'Fire', 'Normal', 'Water, Fighting, Ground, Rock', 'Las hembras colaboran para dar caza y abatir a las presas. De este modo, aseguran el sustento y la supervivencia de la manada.', 'Rivalry', 'Unnerve', 'Moxie', '.', 'Male/Female'),
-(669, 'Flabébé', 'Fairy', '', 'Poison, Steel', 'Posee el don de extraer el poder oculto de las flores silvestres. Siente una predilección especial por las flores rojas.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
+(669, 'Flabebe', 'Fairy', '', 'Poison, Steel', 'Posee el don de extraer el poder oculto de las flores silvestres. Siente una predilección especial por las flores rojas.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
 (670, 'Floette', 'Fairy', '', 'Poison, Steel', 'Puede extraer la fuerza que les resta a las flores marchitas para reanimarlas. Lleva consigo una flor de color rojo.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
 (671, 'Florges', 'Fairy', '', 'Poison, Steel', 'Hace de su territorio un jardín esplendoroso. Extrae su poder de las flores rojas que lleva en torno al cuello.', 'Flower Veil', '', 'Symbiosis', '.', 'Female'),
 (672, 'Skiddo', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'Hasta hace bien poco, los habitantes de las montañas se desplazaban por sus senderos a lomos de este Pokémon.', 'Sap Sipper', '', 'Grass Pelt', '.', 'Male/Female'),
@@ -914,8 +914,8 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (862, 'Obstagoon', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'La potencia de su voz es realmente pasmosa. La técnica que usa para intimidar al rival mientras grita recibe el nombre de Obstrucción.', 'Reckless', 'Guts', 'Defiant', '.', 'Male/Female'),
 (863, 'Perrserker', 'Steel', '', 'Fire, Fighting, Ground', 'El pelo de la cabeza se le ha endurecido hasta el punto de parecer un yelmo de hierro. Posee un temperamento muy combativo.', 'Battle Armor', 'Tough Claws', 'Steely Spirit', '.', 'Male/Female'),
 (864, 'Cursola', 'Ghost', '', 'Ghost, Dark', 'Su energía espiritual ha aumentado hasta hacerlo desprenderse de su base caliza. Protege el alma del núcleo con su cuerpo espectral.', 'Weak Armor', '', 'Perish Body', '.', 'Male/Female'),
-(865, 'Sirfetch\'d', 'Fighting', '', 'Flying, Psychic, Fairy', 'Los ejemplares que superan numerosos combates evolucionan y adoptan esta forma. Abandonan el terreno de combate en cuanto el puerro se seca.', 'Steadfast', '', 'Scrappy', '.', 'Male/Female'),
-(866, 'Mr. Rime', 'Ice', 'Psychic', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'Es un bailarín consumado de claqué. Agita su bastón de hielo mientras exhibe su destreza con gráciles pasos.', 'Tangled Feet', 'Screen Cleaner', 'Ice Body', '.', 'Male/Female'),
+(865, 'Sirfetchd', 'Fighting', '', 'Flying, Psychic, Fairy', 'Los ejemplares que superan numerosos combates evolucionan y adoptan esta forma. Abandonan el terreno de combate en cuanto el puerro se seca.', 'Steadfast', '', 'Scrappy', '.', 'Male/Female'),
+(866, 'Mr-Rime', 'Ice', 'Psychic', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'Es un bailarín consumado de claqué. Agita su bastón de hielo mientras exhibe su destreza con gráciles pasos.', 'Tangled Feet', 'Screen Cleaner', 'Ice Body', '.', 'Male/Female'),
 (867, 'Runerigus', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Una poderosa maldición pesa sobre esta antigua imagen grabada, que ha cobrado vida tras adueñarse del alma de Yamask.', 'Wandering Spirit', '', '', '.', 'Male/Female'),
 (868, 'Milcery', 'Fairy', '', 'Poison, Steel', 'Su cuerpo va aumentando de tamaño conforme absorbe aromas dulces, pero se desinfla al perder energía.', 'Sweet Veil', '', 'Aroma Veil', '.', 'Female'),
 (869, 'Alcremie', 'Fairy', '', 'Poison, Steel', 'Los dulces decorados por Alcremie hacen feliz a todo aquel que los ingiere gracias a la suma dulzura que los caracteriza.', 'Sweet Veil', '', 'Aroma Veil', '.', 'Female'),
