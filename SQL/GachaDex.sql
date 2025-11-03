@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2025 a las 04:32:12
+-- Tiempo de generación: 03-11-2025 a las 04:44:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -74,10 +74,10 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (26, 'Raichu', 'Electric', '', 'Ground', 'Su cola actúa como toma de tierra y descarga electricidad al suelo, lo que le protege de los calambrazos.', 'Static', '', 'Lightning Rod', 'https://archives.bulbagarden.net/media/upload/b/b0/0026Raichu.png', 'Male/Female'),
 (27, 'Sandshrew', 'Ground', '', 'Water, Grass, Ice', 'Excava madrigueras profundas en las que vive. Cuando lo ataca algún enemigo, se hace una bola y aguanta pacientemente sus embates.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/e/e9/0027Sandshrew.png', 'Male/Female'),
 (28, 'Sandslash', 'Ground', '', 'Water, Grass, Ice', 'Corre de un lado a otro a toda velocidad al tiempo que ataca hábilmente con las púas que tiene en la espalda y con sus afiladas garras.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/a/a4/0028Sandslash.png', 'Male/Female'),
-(29, 'Nidoran(Female)', 'Poison', '', 'Ground, Psychic', 'Posee un olfato más fino que los Nidoran?. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/b/b2/0029Nidoran.png', 'Female'),
+(29, 'Nidoran-F', 'Poison', '', 'Ground, Psychic', 'Posee un olfato más fino que los Nidoran?. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/b/b2/0029Nidoran.png', 'Female'),
 (30, 'Nidorina', 'Poison', '', 'Ground, Psychic', 'Se cree que el cuerno de la frente se le ha atrofiado para evitar herir a sus crías al alimentarlas.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/e/ea/0030Nidorina.png', 'Female'),
 (31, 'Nidoqueen', 'Poison', 'Ground', 'Water, Ice, Ground, Psychic', 'Su defensa destaca sobre la capacidad ofensiva. Usa las escamas del cuerpo como una coraza para proteger a su prole de cualquier ataque.', 'Poison Point', 'Rivalry', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/9/9d/0031Nidoqueen.png', 'Female'),
-(32, 'Nidoran(Male)', 'Poison', '', 'Ground, Psychic', 'Mantiene sus grandes orejas levantadas, siempre alerta. Si advierte peligro, ataca inoculando una potente toxina con su cuerno frontal.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/8/8c/0032Nidoran.png', 'Male'),
+(32, 'Nidoran-M', 'Poison', '', 'Ground, Psychic', 'Mantiene sus grandes orejas levantadas, siempre alerta. Si advierte peligro, ataca inoculando una potente toxina con su cuerno frontal.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/8/8c/0032Nidoran.png', 'Male'),
 (33, 'Nidorino', 'Poison', '', 'Ground, Psychic', 'Dondequiera que va, parte rocas con su cuerno, más duro que un diamante, en busca de una Piedra Lunar.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/1/1e/0033Nidorino.png', 'Male'),
 (34, 'Nidoking', 'Poison', 'Ground', 'Water, Ice, Ground, Psychic', 'Una vez que se desboca, no hay quien lo pare. Solo se calma ante Nidoqueen, su compañera de toda la vida.', 'Poison Point', 'Rivalry', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/2/21/0034Nidoking.png', 'Male'),
 (35, 'Clefairy', 'Fairy', '', 'Poison, Steel', 'En las noches de luna llena, Clefairy de diversos lugares se reúnen para bailar bajo su luz, la cual los hace flotar.', 'Cute Charm', 'Magic Guard', 'Friend Guard', 'https://archives.bulbagarden.net/media/upload/b/b7/0035Clefairy.png', 'Male/Female'),
