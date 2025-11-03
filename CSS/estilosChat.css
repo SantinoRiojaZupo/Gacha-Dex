@@ -3,19 +3,23 @@
     box-sizing: border-box;
   }
   body {
+  height: 100%;
   margin: 0;
-  font-family: 'PokemonGB', monospace, sans-serif;
-  background-color: #806786;
-  color: #d4e2d7;
-  overflow: hidden; /* ❌ QUITALA o CAMBIALA */
+  padding: 0;
+  background: #ddd; /* o el color que quieras */
+  overflow: hidden;
 }
  #users-list{
  height: 1000px;
 
  }
- #container{
-  height: ;
- }
+ #container,
+.container {
+  height: 100vh; /* ocupar toda la pantalla */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 
 
 
@@ -77,18 +81,15 @@
   /* Chat principal */
 .chat-area {
   flex-grow: 1;
-  background: #ddd;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
+  background: #ddd; /* color del chat */
   border-left: 8px solid #a0e7e5;
-  animation: borderColorAnim 7s linear infinite;
-
-
-  /* 🔽 Importante: controlamos la altura */
-  height: calc(100vh - 60px); /* ajustá según el alto del header */
-  overflow: hidden; /* evita scroll doble */
 }
+
+
 
 
 @keyframes borderColorAnim {
