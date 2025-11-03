@@ -312,4 +312,66 @@ divRespuesta.addEventListener('click', ()=>{
 
 
 
+// Colores posibles para el neón
+const neonColors = ['#dbc608ff', '#009414ff', '#0fcacaff', '#00ff66e0', '#4c00ffff', '#cc00ffff'];
+let currentNeon = '#ffeb3b'; // valor inicial
+
+// Asigna un color aleatorio cada vez que se carga una nueva pregunta
+function setRandomNeon() {
+  const randomColor = neonColors[Math.floor(Math.random() * neonColors.length)];
+  currentNeon = randomColor;
+  document.documentElement.style.setProperty('--neon-color', currentNeon);
+}
+
+// Llamamos una vez al cargar
+setRandomNeon();
+
+// ======= EFECTO SPLASH =======
+function createSplash(x, y, color) {
+  const splash = document.createElement('div');
+  splash.classList.add('splash');
+  splash.style.left = `${x}px`;
+  splash.style.top = `${y}px`;
+  splash.style.background = color;
+  document.body.appendChild(splash);
+  setTimeout(() => splash.remove(), 600);
+}
+
+// ======= HOVER DINÁMICO =======
+document.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('opcion')) {
+    e.target.style.boxShadow = `0 0 40px ${currentNeon}, inset 0 0 30px ${currentNeon}`;
+    e.target.style.borderColor = currentNeon;
+  }
+});
+document.addEventListener('mouseout', (e) => {
+  if (e.target.classList.contains('opcion')) {
+    e.target.style.boxShadow = '';
+    e.target.style.borderColor = '';
+  }
+});
+
+// ======= SPLASH AL CLIC =======
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('opcion')) {
+    const x = e.clientX;
+    const y = e.clientY;
+    createSplash(x, y, currentNeon);
+  }
+});
+
+// ======= NUEVA PREGUNTA: CAMBIA EL COLOR =======
+// Cada vez que se genera una pregunta nueva, llamá a setRandomNeon()
+const oldFunc1 = funcionNuevaPregunta;
+funcionNuevaPregunta = function() {
+  setRandomNeon();
+  oldFunc1();
+};
+
+const oldFunc2 = funcionNuevaPreguntaDescripcion;
+funcionNuevaPreguntaDescripcion = function() {
+  setRandomNeon();
+  oldFunc2();
+};
+
 </script>

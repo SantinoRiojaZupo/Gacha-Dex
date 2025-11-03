@@ -1,149 +1,213 @@
- @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-  body {
-      font-family: 'Press Start 2P', 'Pokemon', 'Arial', sans-serif;
-      background: radial-gradient(circle at top left, #000 0%, #0a0a0a 40%, #1a1a1a 100%);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px;
-      min-height: 100vh;
-      text-shadow: 0 0 4px rgba(0,0,0,0.7);
-  }
-
-  #pregunta {
-      font-size: 30px;
-      color: #ffeb3b;
-      text-shadow: 0 0 10px #ffee58, 0 0 25px #ffeb3b, 0 0 45px #ffeb3b;
-      margin-bottom: 25px;
-      text-align: center;
-      letter-spacing: 1px;
-  }
-
-  #imagen img {
-      max-width: 240px;
-      display: block;
-      margin: 0 auto 25px auto;
-      border: 4px solid #ffeb3b;
-      border-radius: 25px;
-      box-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b inset, 0 0 80px rgba(255,255,0,0.3);
-      background-color: #111;
-      transition: all 0.3s ease;
-  }
-
-  #imagen img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 35px #ffee58, 0 0 55px #ffeb3b inset;
-  }
-
-  #Descripcion {
-      font-size: 18px;
-      text-align: center;
-      max-width: 620px;
-      padding: 15px 20px;
-      border-radius: 20px;
-      background: linear-gradient(145deg, rgba(255, 236, 0, 0.08), rgba(255, 255, 0, 0.02));
-      border: 2px solid #ffeb3b;
-      box-shadow: 0 0 10px #ffee58, inset 0 0 15px rgba(255, 255, 0, 0.2);
-      color: #fff176;
-      margin-bottom: 25px;
-      line-height: 1.6;
-  }
-
-  #opciones {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 25px;
-  }
-
-  .opcion {
-      background: rgba(10, 10, 10, 0.9);
-      border: 3px solid #ffeb3b;
-      border-radius: 16px;
-      padding: 15px 25px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 160px;
-      box-shadow: 0 0 10px #ffee58, 0 0 20px rgba(255, 235, 59, 0.3);
-  }
-
-  .opcion:hover {
-      background: #ffeb3b;
-      color: #000;
-      transform: translateY(-5px) scale(1.06);
-      box-shadow: 0 0 35px #ffeb3b, inset 0 0 30px #fff176;
-      text-shadow: none;
-  }
-
-  .opcion img {
-      max-width: 100px;
-      margin-bottom: 10px;
-      border-radius: 12px;
-      border: 2px solid #ffeb3b;
-      padding: 4px;
-      background-color: #000;
-      transition: all 0.2s ease;
-  }
-
-  .opcion img:hover {
-      transform: scale(1.12);
-      box-shadow: 0 0 15px #ffee58;
-  }
-
-  #acertasteONo {
-      font-size: 26px;
-      font-weight: bold;
-      text-align: center;
-      min-height: 40px;
-      padding: 15px 25px;
-      border-radius: 16px;
-      transition: all 0.3s ease;
-      border: 3px solid #ffeb3b;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      box-shadow: 0 0 15px #ffeb3b;
-  }
-
-  #acertasteONo.correcto {
-      color: #00ff66;
-      background: rgba(0,255,102,0.1);
-      box-shadow: 0 0 25px #00ff66, inset 0 0 25px rgba(0,255,100,0.3);
-  }
-
-  #acertasteONo.incorrecto {
-      color: #ff0033;
-      background: rgba(255,0,51,0.1);
-      box-shadow: 0 0 25px #ff0033, inset 0 0 25px rgba(255,0,51,0.3);
-  }
-
-  /* Efecto parpadeante sutil en el título */
-  @keyframes neonPulse {
-      0%, 100% { text-shadow: 0 0 10px #ffee58, 0 0 25px #ffeb3b; }
-      50% { text-shadow: 0 0 20px #fff176, 0 0 40px #ffeb3b; }
-  }
-
-  #pregunta {
-      animation: neonPulse 2.5s infinite ease-in-out;
-  }
-.opcion.correcta {
-    border-color: #00ff66;
-    background-color: rgba(0,255,102,0.2);
-    color: #00ff66;
-    box-shadow: 0 0 20px #00ff66, inset 0 0 15px rgba(0,255,100,0.3);
+:root {
+  --neon-color: #ffeb3b; /* valor inicial (amarillo) */
 }
 
+/* ======= FONDO Y GENERAL ======= */
+body {
+  font-family: 'Press Start 2P', 'Pokemon', 'Arial', sans-serif;
+  background: radial-gradient(circle at top center, #000000 0%, #101010 60%, #1a1a1a 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('../imagenes/pokefondo2.jpg') center / cover no-repeat;
+  filter: blur(6px) brightness(0.5);
+  z-index: -2;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.9) 80%);
+  z-index: -1;
+}
+
+/* ======= PREGUNTA ======= */
+#pregunta {
+  font-size: 28px;
+  color: var(--neon-color);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px var(--neon-color), 0 0 25px var(--neon-color), 0 0 45px var(--neon-color);
+  animation: preguntaPulse 3s infinite ease-in-out;
+}
+
+@keyframes preguntaPulse {
+  0%, 100% { text-shadow: 0 0 8px var(--neon-color), 0 0 25px var(--neon-color); }
+  50% { text-shadow: 0 0 20px var(--neon-color), 0 0 40px var(--neon-color); }
+}
+
+/* ======= IMAGEN ======= */
+#imagen img {
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 25px;
+  border-radius: 25px;
+  border: 4px solid var(--neon-color);
+  background-color: #0a0a0a;
+  box-shadow: 0 0 30px var(--neon-color), inset 0 0 25px color-mix(in srgb, var(--neon-color) 40%, transparent);
+  transition: all 0.3s ease;
+}
+#imagen img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 0 45px var(--neon-color), inset 0 0 35px var(--neon-color);
+}
+
+/* ======= DESCRIPCIÓN ======= */
+#Descripcion {
+  font-size: 14px;
+  color: var(--neon-color);
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.3));
+  border: 2px solid var(--neon-color);
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--neon-color), inset 0 0 15px color-mix(in srgb, var(--neon-color) 40%, transparent);
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 25px;
+  max-width: 640px;
+  line-height: 1.6;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ======= OPCIONES ======= */
+#opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.opcion {
+  background: rgba(20, 20, 20, 0.95);
+  border: 3px solid var(--neon-color);
+  border-radius: 16px;
+  padding: 15px 25px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  min-width: 160px;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 15px var(--neon-color), 0 0 25px color-mix(in srgb, var(--neon-color) 60%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.opcion img {
+  max-width: 90px;
+  margin-bottom: 8px;
+  border: 2px solid var(--neon-color);
+  border-radius: 12px;
+  padding: 3px;
+  background: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.opcion img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--neon-color);
+}
+
+.opcion:hover {
+  background: var(--neon-color);
+  color: #000;
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 0 40px var(--neon-color), inset 0 0 30px #fff;
+}
+
+/* ======= RESULTADO ======= */
+#acertasteONo {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  min-height: 50px;
+  border-radius: 16px;
+  padding: 15px 25px;
+  border: 3px solid var(--neon-color);
+  color: var(--neon-color);
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px var(--neon-color);
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ======= ESTADOS ======= */
+.opcion.correcta {
+  border-color: #00ff66;
+  color: #00ff66;
+  background: rgba(0,255,102,0.15);
+  box-shadow: 0 0 25px #00ff66, inset 0 0 25px rgba(0,255,100,0.3);
+}
 .opcion.incorrecta {
-    border-color: #ff0033;
-    background-color: rgba(255,0,51,0.2);
-    color: #ff0033;
-    box-shadow: 0 0 20px #ff0033, inset 0 0 15px rgba(255,0,51,0.3);
+  border-color: #ff0033;
+  color: #ff0033;
+  background: rgba(255,0,51,0.15);
+  box-shadow: 0 0 25px #ff0033, inset 0 0 25px rgba(255,0,51,0.3);
+}
+
+/* ======= ANIMACIONES ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= EFECTO SPLASH ======= */
+.splash {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: splashAnim 0.6s ease-out forwards;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  box-shadow: 0 0 25px var(--neon-color), 0 0 50px var(--neon-color);
+  background: var(--neon-color);
+}
+
+@keyframes splashAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 600px) {
+  body { padding: 20px; }
+  #pregunta { font-size: 20px; }
+  .opcion { min-width: 130px; font-size: 12px; }
+  #Descripcion { font-size: 12px; padding: 15px; }
 }

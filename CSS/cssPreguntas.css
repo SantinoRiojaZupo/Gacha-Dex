@@ -1,0 +1,138 @@
+/* ======= ESTILO GENERAL ======= */
+body {
+  font-family: 'PokemonGB', monospace, sans-serif;
+  background: radial-gradient(circle at top center, #000000 0%, #1a1a1a 100%);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-image: url('../imagenes/pokefondo2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Bruma de fondo */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+/* ======= TÍTULO ======= */
+h1 {
+  font-size: 3rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 25px #ff006e, 0 0 50px #ff006e;
+  animation: glowTitle 2s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes glowTitle {
+  from { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ff006e, 0 0 20px #ff006e; }
+  to { text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff, 0 0 50px #ffcc00; }
+}
+
+/* ======= CONTENEDOR DE BOTONES ======= */
+div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======= BOTONES ======= */
+button {
+  font-family: 'PokemonGB', monospace, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+/* Efecto neón animado */
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  color: #000;
+  background: #ffcc00;
+  box-shadow: 0 0 25px #ffcc00, 0 0 50px #ff006e, 0 0 100px #00ffff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Efectos de color según tipo */
+#preguntasAleatorias {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff55;
+}
+#preguntasAleatorias:hover {
+  background: #00ffff;
+}
+
+#preguntasImagenes {
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px #ff00ff55;
+}
+#preguntasImagenes:hover {
+  background: #ff00ff;
+}
+
+#preguntasDescripcion {
+  border-color: #00ff00;
+  box-shadow: 0 0 15px #00ff0055;
+}
+#preguntasDescripcion:hover {
+  background: #00ff00;
+}
+
+#preguntasNombres {
+  border-color: #ff0000;
+  box-shadow: 0 0 15px #ff000055;
+}
+#preguntasNombres:hover {
+  background: #ff0000;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+    gap: 20px;
+  }
+  button {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
