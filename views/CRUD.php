@@ -69,6 +69,83 @@ include 'conexion.php';
             . '</tr>';
     }
     ?>
+
+<!-- Sección de Mensajes -->
+<table border="1" id="messages-table">
+    <tr>
+        <th>ID</th>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Mensaje</th>
+        <th>Timestamp</th>
+        <th>Acciones</th>
+    </tr>
+    <h3>Mensajes:</h3>
+
+    <?php
+    // Intentar detectar la tabla de mensajes disponible
+    $msgTables = ['messages','mensajes','chat','messages_table'];
+    $usedTable = null;
+    $res = null;
+    foreach ($msgTables as $t) {
+        // validar nombre
+        if (!preg_match('/^[a-zA-Z0-9_]+$/', $t)) continue;
+        $q = @mysqli_query($conexion, "SELECT * FROM `$t` LIMIT 1000");
+        if ($q !== false) {
+            $usedTable = $t;
+            $res = $q;
+            break;
+        }
+    }
+
+    if ($res) {
+        while($row = $res->fetch_assoc()) {
+            $id = htmlspecialchars($row['id'] ?? $row['Id'] ?? '', ENT_QUOTES);
+            $sender = htmlspecialchars($row['sender_id'] ?? $row['sender'] ?? '', ENT_QUOTES);
+            $receiver = htmlspecialchars($row['receiver_id'] ?? $row['receiver'] ?? '', ENT_QUOTES);
+            $message = htmlspecialchars($row['message'] ?? $row['msg'] ?? '', ENT_QUOTES);
+            $ts = htmlspecialchars($row['timestamp'] ?? $row['time'] ?? '', ENT_QUOTES);
+
+            echo '<tr data-msg-id="' . $id . '" data-msg-table="' . $usedTable . '">'
+                . '<td>' . $id . '</td>'
+                . '<td>' . $sender . '</td>'
+                . '<td>' . $receiver . '</td>'
+                . '<td>' . $message . '</td>'
+                . '<td>' . $ts . '</td>'
+                . '<td><button class="delete-msg-btn" data-id="' . $id . '" data-table="' . $usedTable . '">Borrar</button></td>'
+                . '</tr>';
+        }
+    } else {
+        echo '<tr><td colspan="6">No se encontró una tabla de mensajes (buscadas: ' . implode(',', $msgTables) . ')</td></tr>';
+    }
+    ?>
+</table>
+
+<!-- Script para borrar mensajes sin recargar -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.delete-msg-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            if (!confirm('¿Confirmas eliminar este mensaje?')) return;
+            const id = btn.dataset.id;
+            const table = btn.dataset.table;
+            try {
+                const resp = await fetch('borrarMensaje.php?id=' + encodeURIComponent(id) + '&table=' + encodeURIComponent(table));
+                const json = await resp.json();
+                if (!json.error) {
+                    const row = btn.closest('tr');
+                    if (row) row.parentNode.removeChild(row);
+                    alert('Mensaje eliminado');
+                } else {
+                    alert('Error: ' + json.mensaje);
+                }
+            } catch (err) {
+                alert('Error al eliminar el mensaje');
+            }
+        });
+    });
+});
+</script>
 </table>
 
 <script src="edit.js"></script>
