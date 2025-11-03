@@ -108,6 +108,7 @@ opciones.appendChild(div)
 //funcion nuevas preguntas sobre imagen
 //funcion nuevas preguntas sobre descripcion
 function funcionNuevaPreguntaDescripcion() {
+    document.getElementById("acertasteONo").innerHTML = ""
     fetch("../obtenerTipoPregunta.php?pregunta=" + 2)
     .then(response => response.json())
     .then(data => {
