@@ -28,13 +28,17 @@
   padding-right: 25px;
  }
 
-    body {
-      font-family: 'PokemonGB', monospace, sans-serif;
-      color: white;
-      margin: 0;
-      padding: 0;
-      background-image: url(../imagenes/pokefondo2.jpg);
-    }
+   body {
+  font-family: 'PokemonGB', monospace, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-image: url(../imagenes/pokefondo2.jpg);
+  background-repeat: no-repeat;        /* No repite la imagen */
+  background-size: cover;              /* Cubre toda la pantalla */
+  background-attachment: fixed;        /* Hace que el fondo se mantenga fijo al hacer scroll */
+  background-position: center;         /* Centra la imagen */
+}
 
     .header {
     font-size: 4rem;
