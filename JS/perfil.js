@@ -1,7 +1,6 @@
    const espacioFavorito = document.getElementById('espacioFavorito');
    const espacioShiny= document.getElementById('espacioShiny');
 function cambiarDescripcion() {
-    console.log("click en perfil");
     nuevoNombre = document.querySelector('[name="nuevoNombre"]').value;
     bios = document.getElementById('bios');
     restrincion=/[^A-Za-z0-9_-]/;
@@ -31,7 +30,7 @@ function cambiarDescripcion() {
                 }
             });
     } else {
-        console.log("Escribi algo");
+            document.getElementById("errores").innerHTML="Escribi algo";
     }
 }
 else{

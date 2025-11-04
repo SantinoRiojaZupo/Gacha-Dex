@@ -44,11 +44,10 @@ if ($gen === 0) {
     [$from, $to] = $rangosGen[$gen];
 }
 
-<<<<<<< HEAD
-//  Obtener pity del usuario
-=======
 
->>>>>>> d2297cea2ff19eabe3c0e9b64fa9e7685dc74766
+
+
+
 $sql = "SELECT Pity FROM users WHERE Id_User = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bind_param("i", $_SESSION['user_id']);
