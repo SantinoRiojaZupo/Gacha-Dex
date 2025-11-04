@@ -11,11 +11,13 @@ window.location.href = "index.php?page=pokedex"
 });
 li3.addEventListener('click', ()=>{
 window.location.href = "index.php?page=chat"  
-});
-    li4.addEventListener('click', ()=>{
+})
+if(li4 && li5){
+li4.addEventListener('click', ()=>{
 window.location.href = "index.php?page=registro"  
 });
 
 li5.addEventListener('click', ()=>{
 window.location.href = "index.php?page=Login"  
-});
+})
+}
