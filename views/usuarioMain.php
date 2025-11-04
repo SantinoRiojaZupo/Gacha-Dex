@@ -221,8 +221,6 @@ mostrarImagenPerfil(idUsuario);
 </script>  
   <?php if ($_SESSION['user_id'] == $idPerfil): ?>
 <script>
-  
-    console.log("ID de usuario:", idUsuario);
 mostrarImagenPerfil(idUsuario);
   
 </script>
