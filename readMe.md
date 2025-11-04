@@ -1,5 +1,7 @@
-# GACHA-DEX
+<div align="center">
 
+# GACHA-DEX <br> <img src="imagenes/gachadex.png" alt="gachadex" width="200">
+</div>
 Hello! We are **Los Amiguitos** and we present **Gacha-Dex**, a project that lets you explore the world of Pokémon in a fun and interactive way.  
 
 With **Gacha-Dex**, you can:  
@@ -70,7 +72,11 @@ With **Gacha-Dex**, you can:
 
 ---
 
-We hope you enjoy **Gacha-Dex**, a project made with a lot of love. Thank you very much!  
+We hope you enjoy **Gacha-Dex**, a project made with a lot of love. Thank you very much!<br>
+<div align="center">
+      <h3>-Los amiguitos</h3> <br>
+    <img src="imagenes/amiguitos.jpeg" alt="amiguitos" width="300">
+</div>
 
 ## How to Use
 1. Clone the repository:  
