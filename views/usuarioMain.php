@@ -4,7 +4,7 @@ $idPerfil = isset($_GET['id']) && (int)$_GET['id'] > 0 ? (int)$_GET['id'] : $_SE
 
 $idPerfilNombre = isset($_GET['nombre']) ? (string)$_GET['nombre'] : '';
 
-$filaNombre = null; // 🔹 valor por defecto
+$filaNombre = null; //  valor por defecto
 $bios = '';
 $id = $_SESSION["user_id"];
 
@@ -205,10 +205,10 @@ if (!empty($_SESSION['user_id'])) {
   </div>
 
   <div id="sidebar" class="sidebar">
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
   </div>
   <script>
     const nombreUsuario = <?php echo json_encode((string)$idPerfilNombre); ?>;

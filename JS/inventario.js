@@ -93,7 +93,7 @@ function cargarPokemones() {
                 idLogueado = data.idLogueado
                 mostrarPokemones(pokemonesUsuario);
             } catch (e) {
-                console.error("❌ Error al parsear JSON:", e);
+                console.error(" Error al parsear JSON:", e);
                 contenedor.innerHTML = `<pre>${texto}</pre>`;
             }
         })

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("JS cargado"); // ✅ probar si el archivo se ejecuta
+  console.log("JS cargado"); //  probar si el archivo se ejecuta
   const botonMenu = document.getElementById("botonMenu");
   const menu = document.getElementById("menu");
 

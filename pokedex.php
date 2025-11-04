@@ -4,7 +4,7 @@ require_once __DIR__ . '/config/conexion.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-// ⚠️ Verificar login
+//  Verificar login
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(["ok" => false, "error" => "No logueado"]);
     exit;
@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $idusuario = $_SESSION['user_id'];
 
-// ✅ Función generación (igual al inventario)
+//  Función generación (igual al inventario)
 function obtenerGeneracion($id) {
     $rangos = [
         1 => [1, 151],
@@ -31,7 +31,7 @@ function obtenerGeneracion($id) {
     return null;
 }
 
-// ✅ Consulta estandarizada
+//  Consulta estandarizada
 $sql = "
 SELECT 
     d.Id_Pokedex AS id_pokedex,
@@ -58,7 +58,7 @@ mysqli_stmt_bind_param($stmt, "i", $idusuario);
 mysqli_stmt_execute($stmt);
 $res = mysqli_stmt_get_result($stmt);
 
-// ✅ Formar respuesta
+//  Formar respuesta
 $pokedex = [];
 
 while ($fila = mysqli_fetch_assoc($res)) {
