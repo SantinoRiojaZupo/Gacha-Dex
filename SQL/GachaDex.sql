@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2025 a las 12:38:53
+-- Tiempo de generación: 03-11-2025 a las 15:59:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1169,6 +1169,59 @@ CREATE TABLE `variant_pokemon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `variant_pokemon`
+--
+
+INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
+(1, 19, 'Rattata', 'Normal', '', 'Fighting', 'Es propenso a hincar los incisivos en cualquier cosa que se le ponga por delante. Si se ve alguno, seguramente haya cuarenta cerca.', 'Run Away', 'Guts', 'Hustle', '.', 'Male/Female'),
+(1, 20, 'Raticate', 'Normal', '', 'Fighting', 'Gracias a las pequeñas membranas de las patas traseras, puede nadar por los ríos para capturar presas.', 'Run Away', 'Guts', 'Hustle', 'https://archives.bulbagarden.net/media/upload/2/2c/0020Raticate.png', 'Male/Female'),
+(1, 26, 'Raichu', 'Electric', '', 'Ground', 'Su cola actúa como toma de tierra y descarga electricidad al suelo, lo que le protege de los calambrazos.', 'Static', '', 'Lightning Rod', 'https://archives.bulbagarden.net/media/upload/b/b0/0026Raichu.png', 'Male/Female'),
+(1, 27, 'Sandshrew', 'Ground', '', 'Water, Grass, Ice', 'Excava madrigueras profundas en las que vive. Cuando lo ataca algún enemigo, se hace una bola y aguanta pacientemente sus embates.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/e/e9/0027Sandshrew.png', 'Male/Female'),
+(1, 28, 'Sandslash', 'Ground', '', 'Water, Grass, Ice', 'Corre de un lado a otro a toda velocidad al tiempo que ataca hábilmente con las púas que tiene en la espalda y con sus afiladas garras.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/a/a4/0028Sandslash.png', 'Male/Female'),
+(1, 37, 'Vulpix', 'Fire', '', 'Water, Ground, Rock', 'Si lo ataca un enemigo más fuerte que él, finge estar herido para confundirlo y huir en cuanto baja la guardia.', 'Flash Fire', '', 'Drought', 'https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png', 'Male/Female'),
+(1, 38, 'Ninetales', 'Fire', '', 'Water, Ground, Rock', 'Cuentan algunas leyendas que cada una de sus nueve colas posee su propio y único poder sobrenatural.', 'Flash Fire', '', 'Drought', 'https://archives.bulbagarden.net/media/upload/3/3e/0038Ninetales.png', 'Male/Female'),
+(1, 50, 'Diglett', 'Ground', '', 'Water, Grass, Ice', 'Vive 1 m por debajo del suelo, donde se alimenta de raíces. A veces también aparece en la superficie.', 'Sand Veil', 'Arena Trap', 'Sand Force', 'https://archives.bulbagarden.net/media/upload/a/a6/0050Diglett.png', 'Male/Female'),
+(1, 51, 'Dugtrio', 'Ground', '', 'Water, Grass, Ice', 'Sus tres cabezas suben y bajan para remover la tierra cercana y facilitar así la excavación.', 'Sand Veil', 'Arena Trap', 'Sand Force', 'https://archives.bulbagarden.net/media/upload/8/88/0051Dugtrio.png', 'Male/Female'),
+(1, 52, 'Meowth', 'Normal', '', 'Fighting', 'Durante el día, se dedica a dormir. De noche, vigila su territorio con un brillo en los ojos.', 'Pickup', 'Technician', 'Unnerve', 'https://archives.bulbagarden.net/media/upload/d/d6/0052Meowth.png', 'Male/Female'),
+(1, 53, 'Persian', 'Normal', '', 'Fighting', 'Aunque es muy admirado por el pelaje, es difícil de entrenar como mascota porque enseguida suelta arañazos.', 'Limber', 'Technician', 'Unnerve', 'https://archives.bulbagarden.net/media/upload/b/b0/0053Persian.png', 'Male/Female'),
+(1, 74, 'Geodude', 'Rock', 'Ground', 'Water(X4), Grass(X4), Ice, Fighting, Ground, Steel', 'En reposo parece una roca normal, pero responde agitando los puños con agresividad si se pisa por error.', 'Rock Head', 'Sturdy', 'Sand Veil', 'https://archives.bulbagarden.net/media/upload/9/97/0074Geodude.png', 'Male/Female'),
+(1, 75, 'Graveler', 'Rock', 'Ground', 'Water(X4), Grass(X4), Ice, Fighting, Ground, Steel', 'Camina muy lentamente, por lo que se desplaza rodando, sin importarle lo que pueda haber en su camino.', 'Rock Head', 'Sturdy', 'Sand Veil', 'https://archives.bulbagarden.net/media/upload/d/d4/0075Graveler.png', 'Male/Female'),
+(1, 76, 'Golem', 'Rock', 'Ground', 'Water(X4), Grass(X4), Ice, Fighting, Ground, Steel', 'Está cubierto por un duro caparazón formado por losas de piedra. Lo muda una vez al año para aumentar de tamaño.', 'Rock Head', 'Sturdy', 'Sand Veil', 'https://archives.bulbagarden.net/media/upload/3/38/0076Golem.png', 'Male/Female'),
+(1, 77, 'Ponyta', 'Fire', '', 'Water, Ground, Rock', 'Apenas una hora después de nacer, ya le crecen la cola y la crin de fuego, que le confieren un aspecto magnífico.', 'Run Away', 'Flash Fire', 'Flame Body', 'https://archives.bulbagarden.net/media/upload/c/c0/0077Ponyta.png', 'Male/Female'),
+(1, 78, 'Rapidash', 'Fire', '', 'Water, Ground, Rock', 'Su crin de fuego centellea cuando galopa como una flecha a velocidades que llegan a alcanzar los 240 km/h.', 'Run Away', 'Flash Fire', 'Flame Body', 'https://archives.bulbagarden.net/media/upload/a/a9/0078Rapidash.png', 'Male/Female'),
+(1, 79, 'Slowpoke', 'Water', 'Psychic', 'Grass, Electric, Bug, Ghost, Dark', 'Increíblemente lento y torpe. Tarda cinco segundos en sentir dolor si lo atacan.', 'Oblivious', 'Own Tempo', 'Regenerator', 'https://archives.bulbagarden.net/media/upload/1/19/0079Slowpoke.png', 'Male/Female'),
+(1, 80, 'Slowbro', 'Water', 'Psychic', 'Grass, Electric, Bug, Ghost, Dark', 'Según parece, cuando Slowpoke fue a pescar al mar, un Shellder le mordió la cola y así evolucionó a Slowbro.', 'Oblivious', 'Own Tempo', 'Regenerator', 'https://archives.bulbagarden.net/media/upload/a/a3/0080Slowbro.png', 'Male/Female'),
+(1, 83, 'Farfetchd', 'Normal', 'Flying', 'Electric, Ice, Rock', 'No puede vivir sin el puerro que lleva, así que lo protege de sus atacantes con todas sus fuerzas.', 'Keen Eye', 'Inner Focus', 'Defiant', 'https://archives.bulbagarden.net/media/upload/9/99/0083Farfetch%27d.png', 'Male/Female'),
+(1, 88, 'Grimer', 'Poison', '', 'Ground, Psychic', 'Formados a partir de lodo, los Grimer se juntan en lugares sucios para aumentar el número de gérmenes de su cuerpo.', 'Stench', 'Sticky Hold', 'Poison Touch', 'https://archives.bulbagarden.net/media/upload/e/eb/0088Grimer.png', 'Male/Female'),
+(1, 89, 'Muk', 'Poison', '', 'Ground, Psychic', 'Está cubierto por un repugnante lodo. Es tan tóxico que hasta su rastro es venenoso.', 'Stench', 'Sticky Hold', 'Poison Touch', 'https://archives.bulbagarden.net/media/upload/4/41/0089Muk.png', 'Male/Female'),
+(1, 103, 'Exeggutor', 'Grass', 'Psychic', 'Fire, Ice, Poison, Flying, Bug(X4), Ghost, Dark', 'Se lo llama la Selva Andante. Cada fruto tiene una cara distinta y voluntad propia.', 'Chlorophyll', '', 'Harvest', 'https://archives.bulbagarden.net/media/upload/a/ae/0103Exeggutor.png', 'Male/Female'),
+(1, 105, 'Marowak', 'Ground', '', 'Water, Grass, Ice', 'Ha evolucionado tras fortalecerse y superar su pena. Ahora lucha con arrojo blandiendo su hueso a modo de arma.', 'Rock Head', 'Lightning Rod', 'Battle Armor', 'https://archives.bulbagarden.net/media/upload/a/a1/0105Marowak.png', 'Male/Female'),
+(2, 19, 'Rattata-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Sus bigotes son órganos olfativos muy agudos que le permiten localizar el alimento ipso facto, aunque esté oculto.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
+(2, 20, 'Raticate-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Obliga a los Rattata a llevar comida a su madriguera. Solo acepta los manjares más deliciosos y nutritivos.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
+(2, 26, 'Raichu-Alolan', 'Electric', 'Psychic', 'Ground, Bug, Ghost, Dark', 'Se cree que Raichu adoptó esta forma en Alola debido a las distintas condiciones topográficas, meteorológicas y alimentarias de la región.', 'Surge Surfer', '', 'Lightning Rod', '.', 'Male/Female'),
+(2, 27, 'Sandshrew-Alolan', 'Ice', 'Steel', 'Fire, Fighting, Ground', 'Vive en montañas nevadas. Su caparazón de acero es muy resistente, pero tiene tal dureza que no le permite enrollarse del todo.', 'Snow Cloak', '', 'Slush Rush', '.', 'Male/Female'),
+(2, 28, 'Sandslash-Alolan', 'Ice', 'Steel', 'Fire, Fighting, Ground', 'Sus púas de acero están cubiertas de hielo. Cuando pincha con ellas, además de profundas heridas, también causa daño por congelación.', 'Snow Cloak', '', 'Slush Rush', '.', 'Male/Female'),
+(2, 37, 'Vulpix-Alolan', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Los miembros de la manada se ayudan entre sí. Congela a sus presas con su aliento gélido a -50 ºC antes de devorarlas.', 'Snow Cloak', '', 'Snow Warning', '.', 'Male/Female'),
+(2, 38, 'Ninetales-Alolan', 'Ice', 'Fairy', 'Fire, Poison, Rock, Steel(X4)', 'De temperamento tranquilo. Hasta que se supo que era la forma regional de Ninetales, se lo veneraba como la encarnación de una deidad.', 'Snow Cloak', '', 'Snow Warning', '.', 'Male/Female'),
+(2, 50, 'Diglett-Alolan', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Los pelillos metálicos de su cabeza son fruto de una mutación. Se comunica con sus compañeros meneándolos.', 'Sand Veil', 'Tangling Hair', 'Sand Force', '.', 'Male/Female'),
+(2, 51, 'Dugtrio-Alolan', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Sus brillantes filamentos dorados son potentes sensores. Puede detectar las vibraciones de un sonido a varios kilómetros de distancia.', 'Sand Veil', 'Tangling Hair', 'Sand Force', '.', 'Male/Female'),
+(2, 52, 'Meowth-Alolan', 'Dark', '', 'Fighting, Bug, Fairy', 'Antaño disfrutó de los lujos de la familia real de Alola, por lo que tiene un paladar muy refinado y no come cualquier cosa.', 'Pickup', 'Technician', 'Rattled', '.', 'Male/Female'),
+(2, 53, 'Persian-Alolan', 'Dark', '', 'Fighting, Bug, Fairy', 'En Alola todos consideran la cara redonda de los Persian un símbolo de buena fortuna, por lo que los tratan con mucho respeto.', 'Fur Coat', 'Technician', 'Rattled', '.', 'Male/Female'),
+(2, 74, 'Geodude-Alolan', 'Rock', 'Electric', 'Water, Grass, Fighting, Ground(X4)', 'Su cuerpo de piedra está magnetizado. En los puntos donde su campo magnético se intensifica, tiene masas compactas de arena ferruginosa.', 'Magnet Pull', 'Sturdy', 'Galvanize', '.', 'Male/Female'),
+(2, 75, 'Graveler-Alolan', 'Rock', 'Electric', 'Water, Grass, Fighting, Ground(X4)', 'Se pelean por las rocas de las que se alimentan. Cuando chocan entre sí, se oyen estallidos y se ven destellos de luz.', 'Magnet Pull', 'Sturdy', 'Galvanize', '.', 'Male/Female'),
+(2, 76, 'Golem-Alolan', 'Rock', 'Electric', 'Water, Grass, Fighting, Ground(X4)', 'Es de carácter cascarrabias y obstinado. Cuando se harta, descarga electricidad por todo el cuerpo y ruge con voz atronadora.', 'Magnet Pull', 'Sturdy', 'Galvanize', '.', 'Male/Female'),
+(2, 77, 'Ponyta-Galarian', 'Psychic', '', 'Bug, Ghost, Dark', 'Su pequeño cuerno posee poderes curativos capaces de sanar heridas no muy graves con tan solo un leve roce.', 'Run Away', 'Pastel Veil', 'Anticipation', '.', 'Male/Female'),
+(2, 78, 'Rapidash-Galarian', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'El movimiento Psicocorte que realiza con su cuerno posee tal poder destructivo que hasta puede atravesar gruesas placas de metal.', 'Run Away', 'Pastel Veil', 'Anticipation', '.', 'Male/Female'),
+(2, 79, 'Slowpoke-Galarian', 'Psychic', '', 'Bug, Ghost, Dark', 'El olor estimulante que desprende se debe a que su cuerpo está impregnado de la esencia de la especia que consume habitualmente.', 'Gluttony', 'Own Tempo', 'Regenerator', '.', 'Male/Female'),
+(2, 80, 'Slowbro-Galarian', 'Poison', 'Psychic', 'Ground, Ghost, Dark', 'A pesar de haber perdido el conocimiento por el veneno, el Shellder que le muerde el brazo parece estar extasiado con su delicioso sabor.', 'Quick Draw', 'Own Tempo', 'Regenerator', '.', 'Male/Female'),
+(2, 83, 'Farfetchd-Galarian', 'Fighting', '', 'Flying, Psychic, Fairy', 'Este es el aspecto de los Farfetch’d que habitan en Galar. Son guerreros fieros y osados que luchan blandiendo un puerro grueso y firme.', 'Steadfast', '', 'Scrappy', '.', 'Male/Female'),
+(2, 88, 'Grimer-Alolan', 'Poison', 'Dark', 'Ground', 'Almacena las toxinas en el interior de su cuerpo, por lo que, a diferencia de los Grimer de otras regiones, no apesta por más que uno se acerque.', 'Poison Touch', 'Gluttony', 'Power of Alchemy', '.', 'Male/Female'),
+(2, 89, 'Muk-Alolan', 'Poison', 'Dark', 'Ground', 'En su cuerpo alberga más de un centenar de tipos de veneno. Las reacciones químicas entre ellos son su fuente de energía vital.', 'Poison Touch', 'Gluttony', 'Power of Alchemy', '.', 'Male/Female'),
+(2, 103, 'Exeggutor-Alolan', 'Grass', 'Dragon', 'Ice(X4), Poison, Flying, Bug, Dragon, Fairy', 'Asesta cabezazos al oponente chasqueando el cuello como un látigo. Se marea un poco al hacerlo.', 'Frisk', '', 'Harvest', '.', 'Male/Female'),
+(2, 105, 'Marowak-Alolan', 'Fire', 'Ghost', 'Water, Ground, Rock, Ghost, Dark', 'Al caer la noche, prende los extremos del hueso que porta y baila sin descanso para honrar y llorar a sus compañeros caídos.', 'Cursed Body', 'Lightning', 'Rock Head', '.', 'Male/Female'),
+(3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -1237,7 +1290,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
-  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

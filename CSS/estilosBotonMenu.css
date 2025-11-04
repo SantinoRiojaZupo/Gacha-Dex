@@ -1,13 +1,13 @@
 #barraInicio {
-  position: relative; /* contenedor relativo para posicionar el menú */
+  position: relative; 
 }
 .header-left {
   position: relative;
-  display: inline-block; /* para que el menú quede alineado con el botón */
+  display: inline-block; 
 }
 #menu {
   position: absolute;
-  top: calc(100% + 10px); /* justo debajo del botón con un pequeño espacio */
+  top: calc(100% + 10px); 
   left: 0;
   width: 250px;       /* ancho del menú */
   height: 0;          /* menú cerrado */

@@ -1,6 +1,8 @@
-# GACHA-DEX
+<div align="center">
 
-Hello! We are **Los Amiguitos** and we present **Gacha-Dex**, a project that lets you explore the world of Pokémon in a fun and interactive way.  
+# GACHA-DEX <br> <img src="imagenes/gachadex.png" alt="gachadex" width="200">
+</div>
+Hello! We are <b>Los Amiguitos</b> and we present <b>Gacha-Dex</b>, a project that lets you explore the world of Pokémon in a fun and interactive way.  
 
 With **Gacha-Dex**, you can:  
 - Roll for Pokémon and collect them.  
@@ -51,7 +53,7 @@ With **Gacha-Dex**, you can:
     <img src="imagenes/Thiago.png" alt="Thiago" width="100"/><br>
     <b>Thiago Anzaldo</b><br>
     <b>Programmer</b><br>
-    He has a passion for programming and teamwork. He is in charge of the organization and development of the project Gacha-Dex.
+    I'm interested in programming and everything related to it, and I'm part of the Gacha-Dex development team.
   </p>
 
   <p>
@@ -62,15 +64,18 @@ With **Gacha-Dex**, you can:
   </p>
   <p>
     <img src="imagenes/Gael.png" alt="Gael" width="100"/><br>
-    <b>Gael Baez</b><br>
+    <b>Gael Baez Sakin</b><br>
     <b>Stylesheet</b><br>
-    He has a passion for programming and teamwork. He is in charge of the organization and development of the project Gacha-Dex.
-  </p>
+   A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH A BIG FATASS TETO FAN
 </div>
 
 ---
 
-We hope you enjoy **Gacha-Dex**, a project made with a lot of love. Thank you very much!  
+We hope you enjoy **Gacha-Dex**, a project made with a lot of love. Thank you very much!<br>
+<div align="center">
+      <h3>-Los amiguitos</h3> <br>
+    <img src="imagenes/amiguitos.jpeg" alt="amiguitos" width="300">
+</div>
 
 ## How to Use
 1. Clone the repository:  

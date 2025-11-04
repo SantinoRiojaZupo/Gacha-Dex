@@ -8,6 +8,7 @@
   padding: 0;
   background: #ddd; /* o el color que quieras */
   overflow: hidden;
+  font-family: 'PokemonGB', monospace, sans-serif;
 }
  #users-list{
  height: 1000px;
@@ -112,27 +113,28 @@
 .messages {
   padding: 10px;
   flex-grow: 1;
-  overflow-y: auto;   /* 🔥 Scroll vertical solo acá */
+  overflow-y: auto;   
   display: flex;
   flex-direction: column;
   gap: 12px;
   position: relative;
-
-
-  /* 🔽 Esto hace que funcione incluso si hay muchos mensajes */
   max-height: 100%;
-  scroll-behavior: smooth; /* animación suave al scrollear */
+  scroll-behavior: smooth; 
 }
-  /* Burbuja izquierda */
+  
   .message-left {
-    align-self: flex-start;
-    background: #888;
-    color: #ccc;
-    padding: 12px 18px;
-    border-radius: 18px 18px 18px 4px;
-    max-width: 220px;
-    position: relative;
-  }
+  align-self: flex-start;
+  background: #555; 
+  color: #fff; 
+  padding: 12px 18px;
+  border-radius: 18px 18px 18px 4px;
+  max-width: 220px;
+  position: relative;
+  word-wrap: break-word;      
+  white-space: pre-wrap;      
+  line-height: 1.4;           
+  font-family: 'PokemonGB', monospace, sans-serif;
+}
   .message-left::before {
     content: "";
     position: absolute;
@@ -146,14 +148,19 @@
   }
   /* Burbuja derecha */
   .message-right {
-    align-self: flex-end;
-    background: #a085ff;
-    color: #c0b6ff;
-    padding: 12px 18px;
-    border-radius: 18px 18px 4px 18px;
-    max-width: 220px;
-    position: relative;
-  }
+  align-self: flex-end;
+  background: #7a5cff; /* violeta */
+  color: #fff; /* texto blanco */
+  padding: 12px 18px;
+  border-radius: 18px 18px 4px 18px;
+  max-width: 220px;
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-family: 'PokemonGB', monospace, sans-serif;
+  font-size: 14px;
+}
   .message-right::after {
     content: "";
     position: absolute;
