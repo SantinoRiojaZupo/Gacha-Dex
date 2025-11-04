@@ -7,7 +7,6 @@ $tipoPregunta = $_GET['pregunta'];
 $arr1=[];
 $arr2=[];
 
-if($tipoPregunta){
 
 if($tipoPregunta == 1){
 
@@ -81,6 +80,45 @@ $arr2[]=$fila;
  
 }
 
+else if($tipoPregunta == 3){
+
+ $sql ="SELECT Image,Id_Pokedex,PokemonName FROM datapokemonall
+ ORDER BY 
+ RAND()
+  LIMIT 1;";
+
+  $resultado = mysqli_query($conexion, $sql);
+  $fila=mysqli_fetch_assoc($resultado);
+  $nombrePokemo = $fila['PokemonName'];
+  $nombrePokemon=strtolower($nombrePokemo);
+    $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombrePokemon}.jpg";
+  $arr1[]=$fila;
+$idAExcluir = $fila['Id_Pokedex'];
+
+  $sql="SELECT PokemonName,image FROM datapokemonall
+  WHERE Id_Pokedex != $idAExcluir
+  ORDER BY 
+  RAND()
+  LIMIT 3;";
+
+
+$resultado2= mysqli_query($conexion, $sql);
+
+ while($fila = mysqli_fetch_assoc($resultado2)){
+  $nombreMal = $fila['PokemonName'];
+  $nombreMalo = strtolower($nombreMal);
+  $fila['Image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombreMalo}.jpg";
+  $arr2[] = $fila;
+}
+
+if($arr1 && $arr2){
+echo json_encode(["correcto"=>$arr1,
+"incorrectos"=> $arr2]);
+
+}
+else{
+  echo json_encode(["msj"=> "no se pudo pa"]);
+}
 
 }
 else{
