@@ -2,7 +2,7 @@
 
 # GACHA-DEX <br> <img src="imagenes/gachadex.png" alt="gachadex" width="200">
 </div>
-Hello! We are <b>Los Amiguitos</b> and we present <b></b>Gacha-Dex</b>, a project that lets you explore the world of Pokémon in a fun and interactive way.  
+Hello! We are <b>Los Amiguitos</b> and we present <b>Gacha-Dex</b>, a project that lets you explore the world of Pokémon in a fun and interactive way.  
 
 With **Gacha-Dex**, you can:  
 - Roll for Pokémon and collect them.  
