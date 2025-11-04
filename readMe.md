@@ -64,10 +64,9 @@ With **Gacha-Dex**, you can:
   </p>
   <p>
     <img src="imagenes/Gael.png" alt="Gael" width="100"/><br>
-    <b>Gael Baez</b><br>
+    <b>Gael Baez Sakin</b><br>
     <b>Stylesheet</b><br>
-    He has a passion for programming and teamwork. He is in charge of the organization and development of the project Gacha-Dex.
-  </p>
+   A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH A BIG FATASS TETO FAN
 </div>
 
 ---
