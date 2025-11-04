@@ -53,7 +53,7 @@ With **Gacha-Dex**, you can:
     <img src="imagenes/Thiago.png" alt="Thiago" width="100"/><br>
     <b>Thiago Anzaldo</b><br>
     <b>Programmer</b><br>
-    He has a passion for programming and teamwork. He is in charge of the organization and development of the project Gacha-Dex.
+    I'm interested in programming and everything related to it, and I'm part of the Gacha-Dex development team.
   </p>
 
   <p>
