@@ -204,10 +204,10 @@ if (!empty($_SESSION['user_id'])) {
   </div>
 
   <div id="sidebar" class="sidebar">
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
-    <div class="sprite-box"><img src="https://via.placeholder.com/100" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
+    <div class="sprite-box"><img src="" alt="img pkmn"></div>
   </div>
   <script>
     const nombreUsuario = <?php echo json_encode((string)$idPerfilNombre); ?>;
