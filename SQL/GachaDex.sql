@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 04, 2025 at 02:19 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 04-11-2025 a las 15:14:10
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gachadex`
+-- Base de datos: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datapokemonall`
+-- Estructura de tabla para la tabla `datapokemonall`
 --
 
 CREATE TABLE `datapokemonall` (
@@ -42,7 +42,7 @@ CREATE TABLE `datapokemonall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `datapokemonall`
+-- Volcado de datos para la tabla `datapokemonall`
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -74,7 +74,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (26, 'Raichu', 'Electric', '', 'Ground', 'Su cola actúa como toma de tierra y descarga electricidad al suelo, lo que le protege de los calambrazos.', 'Static', '', 'Lightning Rod', 'https://archives.bulbagarden.net/media/upload/b/b0/0026Raichu.png', 'Male/Female'),
 (27, 'Sandshrew', 'Ground', '', 'Water, Grass, Ice', 'Excava madrigueras profundas en las que vive. Cuando lo ataca algún enemigo, se hace una bola y aguanta pacientemente sus embates.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/e/e9/0027Sandshrew.png', 'Male/Female'),
 (28, 'Sandslash', 'Ground', '', 'Water, Grass, Ice', 'Corre de un lado a otro a toda velocidad al tiempo que ataca hábilmente con las púas que tiene en la espalda y con sus afiladas garras.', 'Sand Veil', '', 'Sand Rush', 'https://archives.bulbagarden.net/media/upload/a/a4/0028Sandslash.png', 'Male/Female'),
-(29, 'Nidoran-F', 'Poison', '', 'Ground, Psychic', 'Posee un olfato más fino que los Nidoran?. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/b/b2/0029Nidoran.png', 'Female'),
+(29, 'Nidoran-F', 'Poison', '', 'Ground, Psychic', 'Posee un olfato más fino que los Nidoran-M. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/b/b2/0029Nidoran.png', 'Female'),
 (30, 'Nidorina', 'Poison', '', 'Ground, Psychic', 'Se cree que el cuerno de la frente se le ha atrofiado para evitar herir a sus crías al alimentarlas.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/e/ea/0030Nidorina.png', 'Female'),
 (31, 'Nidoqueen', 'Poison', 'Ground', 'Water, Ice, Ground, Psychic', 'Su defensa destaca sobre la capacidad ofensiva. Usa las escamas del cuerpo como una coraza para proteger a su prole de cualquier ataque.', 'Poison Point', 'Rivalry', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/9/9d/0031Nidoqueen.png', 'Female'),
 (32, 'Nidoran-M', 'Poison', '', 'Ground, Psychic', 'Mantiene sus grandes orejas levantadas, siempre alerta. Si advierte peligro, ataca inoculando una potente toxina con su cuerno frontal.', 'Poison Point', 'Rivalry', 'Hustle', 'https://archives.bulbagarden.net/media/upload/8/8c/0032Nidoran.png', 'Male'),
@@ -1080,7 +1080,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
+-- Estructura de tabla para la tabla `messages`
 --
 
 CREATE TABLE `messages` (
@@ -1094,7 +1094,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pokemoncatched`
+-- Estructura de tabla para la tabla `pokemoncatched`
 --
 
 CREATE TABLE `pokemoncatched` (
@@ -1106,7 +1106,7 @@ CREATE TABLE `pokemoncatched` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pokemoncatched`
+-- Volcado de datos para la tabla `pokemoncatched`
 --
 
 INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
@@ -1117,7 +1117,7 @@ INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Fav
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Estructura de tabla para la tabla `users`
 --
 
 CREATE TABLE `users` (
@@ -1132,7 +1132,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`, `Rolls`) VALUES
@@ -1151,7 +1151,7 @@ INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Ph
 -- --------------------------------------------------------
 
 --
--- Table structure for table `variant_pokemon`
+-- Estructura de tabla para la tabla `variant_pokemon`
 --
 
 CREATE TABLE `variant_pokemon` (
@@ -1170,7 +1170,7 @@ CREATE TABLE `variant_pokemon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `variant_pokemon`
+-- Volcado de datos para la tabla `variant_pokemon`
 --
 
 INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -1197,6 +1197,19 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (1, 89, 'Muk', 'Poison', '', 'Ground, Psychic', 'Está cubierto por un repugnante lodo. Es tan tóxico que hasta su rastro es venenoso.', 'Stench', 'Sticky Hold', 'Poison Touch', 'https://archives.bulbagarden.net/media/upload/4/41/0089Muk.png', 'Male/Female'),
 (1, 103, 'Exeggutor', 'Grass', 'Psychic', 'Fire, Ice, Poison, Flying, Bug(X4), Ghost, Dark', 'Se lo llama la Selva Andante. Cada fruto tiene una cara distinta y voluntad propia.', 'Chlorophyll', '', 'Harvest', 'https://archives.bulbagarden.net/media/upload/a/ae/0103Exeggutor.png', 'Male/Female'),
 (1, 105, 'Marowak', 'Ground', '', 'Water, Grass, Ice', 'Ha evolucionado tras fortalecerse y superar su pena. Ahora lucha con arrojo blandiendo su hueso a modo de arma.', 'Rock Head', 'Lightning Rod', 'Battle Armor', 'https://archives.bulbagarden.net/media/upload/a/a1/0105Marowak.png', 'Male/Female'),
+(1, 110, 'Weezing', 'Poison', '', 'Ground, Psychic', 'Diluir sus venenosos gases internos lo máximo posible permite fabricar perfumes de alta gama.', 'Levitate', 'Neutralizing Gas', 'Stench', 'https://archives.bulbagarden.net/media/upload/7/72/0110Weezing.png', 'Male/Female'),
+(1, 122, 'Mr-Mime', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Un experto de la pantomima capaz de crear paredes invisibles pero sólidas solo con sus gestos.', 'Soundproof', 'Filter', 'Technician', 'https://archives.bulbagarden.net/media/upload/f/fb/0122Mr._Mime.png', 'Male/Female'),
+(1, 144, 'Articuno', 'Ice', 'Flying', 'Fire, Electric, Rock(X4), Steel', 'Una de las aves legendarias. Es capaz de generar ventiscas congelando la humedad del aire.', 'Pressure', '', 'Snow Cloak', 'https://archives.bulbagarden.net/media/upload/d/d0/0144Articuno.png', 'N/A'),
+(1, 145, 'Zapdos', 'Electric', 'Flying', 'Ice, Rock', 'Una de las aves legendarias. Según dicen, vive en los nubarrones y controla los rayos a su antojo.', 'Pressure', '', 'Static', 'https://archives.bulbagarden.net/media/upload/c/c6/0145Zapdos.png', 'N/A'),
+(1, 146, 'Moltres', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Una de las aves legendarias. Dicen que su presencia anuncia la llegada de la primavera.', 'Pressure', '', 'Flame Body', 'https://archives.bulbagarden.net/media/upload/2/21/0146Moltres.png', 'N/A'),
+(1, 199, 'Slowking', 'Water', 'Psychic', 'Grass, Electric, Bug, Ghost, Dark', 'Al ser mordido en la cabeza, Slowpoke absorbió unas toxinas que liberaron su poder oculto.', 'Oblivious', 'Own Tempo', 'Regenerator', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png', 'Male/Female'),
+(1, 222, 'Corsola', 'Water', 'Rock', 'Grass(X4), Electric, Fighting, Ground', 'Es incapaz de vivir en aguas contaminadas. Muchos ejemplares habitan en los cristalinos mares del sur.', 'Hustle', 'Natural Cure', 'Regenerator', '.', 'Male/Female'),
+(1, 263, 'Zigzagoon', 'Normal', '', 'Fighting', 'Se mueve en zigzag. Se le da bien encontrar objetos ocultos en la hierba e incluso enterrados.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(1, 264, 'Linoone', 'Normal', '', 'Fighting', 'Carga contra sus presas a más de 100 km/h, pero, como solo puede correr en línea recta, falla a menudo.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(1, 554, 'Darumaka', 'Fire', '', 'Water, Ground, Rock', 'Como sus excrementos están muy calientes, la gente de antaño se los metía en los bolsillos para calentarse.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
+(1, 555, 'Darmanitan', 'Fire', '', 'Water, Ground, Rock', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
+(1, 562, 'Yamask', 'Ghost', '', 'Ghost, Dark', 'Merodea todas las noches entre ruinas. Se dice que la máscara que lleva replica su antiguo rostro humano.', 'Mummy', '', '', '.', 'Male/Female'),
+(1, 618, 'Stunfisk', 'Ground', 'Electric', 'Water, Grass, Ice, Ground', 'Ni un pisotón de un luchador de sumo lo aplastaría gracias a su piel sólida. Sonríe al soltar descargas eléctricas.', 'Static', 'Limber', 'Sand Veil', '.', 'Male/Female'),
 (2, 19, 'Rattata-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Sus bigotes son órganos olfativos muy agudos que le permiten localizar el alimento ipso facto, aunque esté oculto.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 20, 'Raticate-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Obliga a los Rattata a llevar comida a su madriguera. Solo acepta los manjares más deliciosos y nutritivos.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 26, 'Raichu-Alolan', 'Electric', 'Psychic', 'Ground, Bug, Ghost, Dark', 'Se cree que Raichu adoptó esta forma en Alola debido a las distintas condiciones topográficas, meteorológicas y alimentarias de la región.', 'Surge Surfer', '', 'Lightning Rod', '.', 'Male/Female'),
@@ -1220,26 +1233,39 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 89, 'Muk-Alolan', 'Poison', 'Dark', 'Ground', 'En su cuerpo alberga más de un centenar de tipos de veneno. Las reacciones químicas entre ellos son su fuente de energía vital.', 'Poison Touch', 'Gluttony', 'Power of Alchemy', '.', 'Male/Female'),
 (2, 103, 'Exeggutor-Alolan', 'Grass', 'Dragon', 'Ice(X4), Poison, Flying, Bug, Dragon, Fairy', 'Asesta cabezazos al oponente chasqueando el cuello como un látigo. Se marea un poco al hacerlo.', 'Frisk', '', 'Harvest', '.', 'Male/Female'),
 (2, 105, 'Marowak-Alolan', 'Fire', 'Ghost', 'Water, Ground, Rock, Ghost, Dark', 'Al caer la noche, prende los extremos del hueso que porta y baila sin descanso para honrar y llorar a sus compañeros caídos.', 'Cursed Body', 'Lightning', 'Rock Head', '.', 'Male/Female'),
+(2, 110, 'Weezing-Galarian', 'Poison', 'Fairy', 'Ground, Psychic, Steel', 'Absorbe las partículas contaminantes de la atmósfera y expulsa aire limpio.', 'Levitate', 'Neutralizing Gas', 'Misty Surge', '.', 'Male/Female'),
+(2, 122, 'Mr-Mime-Galarian', 'Ice', 'Psychic', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'El claqué es su especialidad. Genera una capa de hielo bajo sus pies, sobre la que taconea para crear barreras con las que protegerse.', 'Vital Spirit', 'Screen Cleaner', 'Ice Body', '.', 'Male/Female'),
+(2, 144, 'Articuno-Galarian', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Las gruesas cuchillas en forma de pluma creadas a partir de energía psíquica son capaces de cortar una lámina de acero como si fuera papel.', 'Competitive', '', '', '.', 'N/A'),
+(2, 145, 'Zapdos-Galarian', 'Fighting', 'Flying', 'Electric, Ice, Flying, Psychic, Fairy', 'El origen de su nombre parece provenir del sonido que produce el roce de su plumaje, que recuerda al estallido de un chispazo eléctrico.', 'Defiant', '', '', '.', 'N/A'),
+(2, 146, 'Moltres-Galarian', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Su aura maligna con aspecto de llama ardiente puede calcinar el alma de quien la toca.', 'Berserk', '', '', '.', 'N/A'),
+(2, 199, 'Slowking-Galarian', 'Poison', 'Psychic', 'Ground, Ghost, Dark', 'Cuando se topa con un Pokémon sin fuerzas, segrega un brebaje medicinal hecho con veneno por los orificios de los cuernos y se lo ofrece.', 'Curious Medicine', 'Own Tempo', 'Regenerator', '.', 'Male/Female'),
+(2, 222, 'Corsola-Galarian', 'Ghost', '', 'Ghost, Dark', 'Es habitual hallarlos en lo que antaño fueron lechos oceánicos. Maldice a aquellos que le dan un puntapié confundiéndolo con un pedrusco.', 'Weak Armor', '', 'Cursed Body', '.', 'Male/Female'),
+(2, 263, 'Zigzagoon-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Corretea por doquier sin descanso. En cuanto ve a otro Pokémon, se lanza contra él para provocarlo y buscar pelea.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(2, 264, 'Linoone-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Provoca a sus presas con su larga lengua y arremete con fuerza contra ellas cuando montan en cólera.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(2, 554, 'Darumaka-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'La adaptación a entornos nevados ha atrofiado y congelado su saca de fuego, pero ha propiciado el desarrollo de un órgano generador de frío.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
+(2, 555, 'Darmanitan-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Transporta su alimento en la bola de nieve de la cabeza. Los días de ventisca desciende hasta las zonas habitadas por los humanos.', 'Gorilla Tactics', '', 'Zen Mode', '.', 'Male/Female'),
+(2, 562, 'Yamask-Galarian', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Yamask ha sido poseído por una tabla de arcilla sobre la que pesa una maldición. Se dice que absorbe y se nutre de rencor e inquina.', 'Wandering Spirit', '', '', '.', 'Male/Female'),
+(2, 618, 'Stunfisk-Galarian', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Al vivir en lodo rico en hierro, su cuerpo ha alcanzado la dureza del acero.', 'Mimicry', '', '', '.', 'Male/Female'),
 (3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `datapokemonall`
+-- Indices de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indexes for table `messages`
+-- Indices de la tabla `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pokemoncatched`
+-- Indices de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_PokemonCatched`),
@@ -1247,58 +1273,58 @@ ALTER TABLE `pokemoncatched`
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- Indexes for table `users`
+-- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
--- Indexes for table `variant_pokemon`
+-- Indices de la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   ADD PRIMARY KEY (`Id_Variant`,`Id_Pokedex`),
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `datapokemonall`
+-- AUTO_INCREMENT de la tabla `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1026;
 
 --
--- AUTO_INCREMENT for table `messages`
+-- AUTO_INCREMENT de la tabla `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pokemoncatched`
+-- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
   MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `variant_pokemon`
+-- AUTO_INCREMENT de la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `pokemoncatched`
+-- Filtros para la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `fk_pokemonCatched_constraint` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1306,7 +1332,7 @@ ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `pokemoncatched_ibfk_2` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
 
 --
--- Constraints for table `variant_pokemon`
+-- Filtros para la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   ADD CONSTRAINT `variant_pokemon_ibfk_1` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
