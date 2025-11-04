@@ -12,10 +12,6 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
         console.log(res.error);
     } else if (res.length > 0){
         res.forEach(pokemon => {
-            console.log(res);
-            console.log(typeof obj)
-            console.log("Tipo de res:", typeof res);
-            console.log(pokemon.PokemonName);
             imagen.src = pokemon.image;
             document.getElementById("1").innerHTML = pokemon.PokemonName;
             document.getElementById("2").innerHTML = pokemon.Description;
@@ -39,7 +35,7 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
     document.getElementById("4").innerHTML = "???";
     document.getElementById("5").innerHTML = "???";
     document.getElementById("6").innerHTML = "???";
- imagen.src =imagenes/locked.pgn;
+ imagen.src ="../imagenes/locked.png";
 
    
 }

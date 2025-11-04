@@ -3,13 +3,13 @@ require_once __DIR__ . '/config/conexion.php';
 session_start();
 header('Content-Type: application/json');
 
-// 🧩 Verificar sesión
+//  Verificar sesión
 if (!isset($_SESSION['user_id'])) {
     echo json_encode(['error' => 'Inicia Sesión']);
     exit;
 }
 
-// 🧩 Rangos por generación
+//  Rangos por generación
 $rangosGen = [
     1 => [1, 151],
     2 => [152, 251],
@@ -22,7 +22,7 @@ $rangosGen = [
     9 => [906, 1025]
 ];
 
-// 🟨 Legendarios por generación
+//  Legendarios por generación
 $legendariosPorGen = [
     1 => [144, 145, 146, 150, 151],
     2 => [243, 244, 245, 249, 250, 251],
@@ -35,7 +35,7 @@ $legendariosPorGen = [
     9 => [984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
 ];
 
-// 🧩 Obtener generación seleccionada
+//  Obtener generación seleccionada
 $gen = isset($_POST['gen']) ? intval($_POST['gen']) : 0;
 if ($gen === 0) {
     $from = 1;
@@ -44,7 +44,11 @@ if ($gen === 0) {
     [$from, $to] = $rangosGen[$gen];
 }
 
+<<<<<<< HEAD
+//  Obtener pity del usuario
+=======
 
+>>>>>>> d2297cea2ff19eabe3c0e9b64fa9e7685dc74766
 $sql = "SELECT Pity FROM users WHERE Id_User = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bind_param("i", $_SESSION['user_id']);

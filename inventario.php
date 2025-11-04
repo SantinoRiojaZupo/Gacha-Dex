@@ -6,7 +6,7 @@ $idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : $_SESSION['user_id
 $idLogueado = $_SESSION['user_id'];
 header('Content-Type: application/json; charset=utf-8');
 
-// 🔒 Verificar sesión
+//  Verificar sesión
 if (!isset($_SESSION['user_id'])) {
     echo json_encode([
         'ok' => false,
@@ -15,12 +15,12 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// 🧠 Si se pasa ?id= por GET, usar ese. Si no, usar el de la sesión.
+//  Si se pasa ?id= por GET, usar ese. Si no, usar el de la sesión.
 $userid = isset($_GET['id']) && is_numeric($_GET['id'])
     ? (int)$_GET['id']
     : (int)$_SESSION['user_id'];
 
-// 🧩 Función para calcular la generación según el ID del pokémon
+//  Función para calcular la generación según el ID del pokémon
 function obtenerGeneracion($id) {
     $rangos = [
         1 => [1, 151],
@@ -39,7 +39,7 @@ function obtenerGeneracion($id) {
     return null;
 }
 
-// 🔍 Consulta
+//  Consulta
 $sql = "
     SELECT 
         d.Id_Pokedex AS id_pokedex,
@@ -76,13 +76,13 @@ if (!$res) {
     exit;
 }
 
-// 🧾 Construir resultado
+//  Construir resultado
 $pokemones = [];
 while ($fila = mysqli_fetch_assoc($res)) {
     $id = (int)$fila['id_pokedex'];
     $fila['generacion'] = obtenerGeneracion($id);
 
-    // 🟡 Imagen shiny o normal
+    //  Imagen shiny o normal
     if ((int)$fila['shiny'] === 1) {
         $fila['imagen'] = "https://img.pokemondb.net/sprites/black-white/shiny/{$id}.png";
     } else {
@@ -94,7 +94,7 @@ while ($fila = mysqli_fetch_assoc($res)) {
     $pokemones[] = $fila;
 }
 
-// ✅ Salida JSON final
+//  Salida JSON final
 echo json_encode([
     'ok' => true,
     'pokemones' => $pokemones,

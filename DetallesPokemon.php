@@ -18,8 +18,17 @@ if (mysqli_num_rows($result) >= 0) {
   while ($fila = mysqli_fetch_assoc($result)) {
     $idpokedex = $fila['Id_Pokedex'];
     $nombre = strtolower($fila['PokemonName']);
-    $fila['image'] = "https://img.pokemondb.net/artwork/large/" . $nombre . ".jpg";
-
+   // $fila['image'] = "https://img.pokemondb.net/artwork/large/" . $nombre . ".jpg";
+   if($idpokedex<10){
+    $fila['image'] = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/". "00" .$idpokedex .".png";
+   }
+    else if($idpokedex<100){
+    $fila['image'] = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/". "0" .$idpokedex .".png";
+   }
+   else{
+    $fila['image'] = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/" .$idpokedex .".png";
+   }
+     
     $arr[] = $fila;
   }
 }

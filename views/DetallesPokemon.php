@@ -43,6 +43,7 @@
     </div>
     <div class="pokemon-info">
       <h1 class="pokemon-name" id="1">Pokemon</h1>
+      <div id="btnVariantes"><select name="variantes" id="variantes"></select></div>
       <div class="pokemon-description" id="2">*Descripcion del pokemon*</div>
       <div class="pokemon-details">
         <p><strong>Tipo<br></strong> <span class="tag" id="3">*Tipo*</span></p>

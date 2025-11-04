@@ -38,4 +38,3 @@
     <?php endif; ?>
     <script src="../JS/registro-js.js"></script>
   </div>
-  <script src="../JS/f.js"></script>
