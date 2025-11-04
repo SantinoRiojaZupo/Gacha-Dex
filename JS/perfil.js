@@ -19,7 +19,7 @@ function cambiarDescripcion() {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "nuevoNombre=" + encodeURIComponent(nuevoNombre.value) + "&bios=" + encodeURIComponent(bios.value)
+            body: "nuevoNombre=" + encodeURIComponent(nuevoNombre) + "&bios=" + encodeURIComponent(bios.value)
         }) //POST
             .then(res => res.json())
             .then(res => {

@@ -44,7 +44,7 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
     echo json_encode(["error" => "Faltan datos", "msj" => "No se recibió el nombre o el usuario no está logueado"]);
 }
 $user_id = $_SESSION["user_id"];
-$sql1 = "
+$sql2 = "
 SELECT 
 datapokemonall.Id_Pokedex,
     datapokemonall.PokemonName,        
@@ -58,7 +58,7 @@ inner JOIN pokemoncatched
     AND pokemoncatched.Id_User = $user_id                  
 GROUP BY datapokemonall.Id_Pokedex                            
 ORDER BY datapokemonall.Id_Pokedex;";
-$result = mysqli_query($conexion, $sql1);
+$result = mysqli_query($conexion, $sql2);
 
 // Array para almacenar los resultados de la consulta
 $arr = [];

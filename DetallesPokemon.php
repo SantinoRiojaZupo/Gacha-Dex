@@ -18,8 +18,9 @@ if (mysqli_num_rows($result) >= 0) {
   while ($fila = mysqli_fetch_assoc($result)) {
     $idpokedex = $fila['Id_Pokedex'];
     $nombre = strtolower($fila['PokemonName']);
-    $fila['image'] = "https://img.pokemondb.net/artwork/large/" . $nombre . ".jpg";
-
+   // $fila['image'] = "https://img.pokemondb.net/artwork/large/" . $nombre . ".jpg";
+    $fila['image'] = "https://img.pokemondb.net/sprites/home/normal/2x/${nombre}.jpg";
+     
     $arr[] = $fila;
   }
 }

@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2025 a las 15:59:26
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Nov 04, 2025 at 02:19 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gachadex`
+-- Database: `gachadex`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datapokemonall`
+-- Table structure for table `datapokemonall`
 --
 
 CREATE TABLE `datapokemonall` (
@@ -42,7 +42,7 @@ CREATE TABLE `datapokemonall` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `datapokemonall`
+-- Dumping data for table `datapokemonall`
 --
 
 INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -1080,7 +1080,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `messages`
+-- Table structure for table `messages`
 --
 
 CREATE TABLE `messages` (
@@ -1094,7 +1094,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pokemoncatched`
+-- Table structure for table `pokemoncatched`
 --
 
 CREATE TABLE `pokemoncatched` (
@@ -1106,7 +1106,7 @@ CREATE TABLE `pokemoncatched` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `pokemoncatched`
+-- Dumping data for table `pokemoncatched`
 --
 
 INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
@@ -1117,7 +1117,7 @@ INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Fav
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -1127,30 +1127,31 @@ CREATE TABLE `users` (
   `Bio` varchar(255) DEFAULT NULL,
   `Profile_Photo` varchar(255) DEFAULT 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg',
   `Pity` int(11) DEFAULT NULL,
-  `Rol` int(11) DEFAULT 0
+  `Rol` int(11) DEFAULT 0,
+  `Rolls` int(11) DEFAULT 10
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`) VALUES
-(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 1, 1),
-(2, 'BenjaMuiXd', 'chufo', ' He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Benja.png', 0, 1),
-(3, 'Significado', 'Significado', 'He has a passion for programming, doing conecctions and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/emiliano.png', 0, 1),
-(4, 'AgustinCS', 'agus123', 'He has a passion for programming and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-Dex/imagenes/Agus.png', NULL, 0),
-(5, 'Mierdown1', 'thiago123', 'Description: He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex and admin of the mudae server\n黑色的,\nAlias: Mierdown1.', 'http://localhost/Gacha-Dex/imagenes/Thiago.png', 0, 1),
-(6, 'Sasu', 'samuel123', 'He has a passion for teamwork.He is in charge of the HTML and CSS of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/Samuel.png', 0, 1),
-(7, 'Gael Baez Sakin', 'gael123', ' A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH BIG FATASS TETO FAN', 'http://localhost/Gacha-Dex/imagenes/gael.png', 0, 1),
-(8, 'GoldenFredy', 'ignacio123', '  He has a passion for the Database and teamwork.He is in charge of the Data Base Managment of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/ignacio.png', 0, 1),
-(10, '1', '1', 'a', 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
-(11, '2', '2', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0),
-(12, '3', '3', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', 0, 0);
+INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`, `Rolls`) VALUES
+(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 1, 1, 10),
+(2, 'BenjaMuiXd', 'chufo', ' He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Benja.png', 0, 1, 10),
+(3, 'Significado', 'Significado', 'He has a passion for programming, doing conecctions and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/emiliano.png', 0, 1, 10),
+(4, 'AgustinCS', 'agus123', 'He has a passion for programming and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-Dex/imagenes/Agus.png', NULL, 0, 10),
+(5, 'Mierdown1', 'thiago123', 'Description: He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex and admin of the mudae server\n黑色的,\nAlias: Mierdown1.', 'http://localhost/Gacha-Dex/imagenes/Thiago.png', 0, 1, 10),
+(6, 'Sasu', 'samuel123', 'He has a passion for teamwork.He is in charge of the HTML and CSS of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/Samuel.png', 0, 1, 10),
+(7, 'Gael Baez Sakin', 'gael123', ' A bit lazy, but full of energy to work as a team.He takes care of the CSS of project Gacha-Dex. SUCH BIG FATASS TETO FAN', 'http://localhost/Gacha-Dex/imagenes/gael.png', 0, 1, 10),
+(8, 'GoldenFredy', 'ignacio123', '  He has a passion for the Database and teamwork.He is in charge of the Data Base Managment of the project Gacha-Dex.', 'http://localhost/Gacha-Dex/imagenes/ignacio.png', 0, 1, 10),
+(10, '1', '1', 'a', 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0, 10),
+(11, '2', '2', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', NULL, 0, 10),
+(12, '3', '3', NULL, 'http://localhost/gacha-dex/imagenes/sinFotoPerfil.jpg', 0, 0, 10);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `variant_pokemon`
+-- Table structure for table `variant_pokemon`
 --
 
 CREATE TABLE `variant_pokemon` (
@@ -1169,7 +1170,7 @@ CREATE TABLE `variant_pokemon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `variant_pokemon`
+-- Dumping data for table `variant_pokemon`
 --
 
 INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`, `Weaknesses`, `Description`, `Abilities`, `Second_Abilities`, `Abilities_Hidden`, `Image`, `Gender`) VALUES
@@ -1222,23 +1223,23 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `datapokemonall`
+-- Indexes for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   ADD PRIMARY KEY (`Id_Pokedex`);
 
 --
--- Indices de la tabla `messages`
+-- Indexes for table `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `pokemoncatched`
+-- Indexes for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD PRIMARY KEY (`Id_PokemonCatched`),
@@ -1246,58 +1247,58 @@ ALTER TABLE `pokemoncatched`
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_User`);
 
 --
--- Indices de la tabla `variant_pokemon`
+-- Indexes for table `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   ADD PRIMARY KEY (`Id_Variant`,`Id_Pokedex`),
   ADD KEY `Id_Pokedex` (`Id_Pokedex`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `datapokemonall`
+-- AUTO_INCREMENT for table `datapokemonall`
 --
 ALTER TABLE `datapokemonall`
   MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1026;
 
 --
--- AUTO_INCREMENT de la tabla `messages`
+-- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `pokemoncatched`
+-- AUTO_INCREMENT for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `Id_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT de la tabla `variant_pokemon`
+-- AUTO_INCREMENT for table `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `pokemoncatched`
+-- Constraints for table `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `fk_pokemonCatched_constraint` FOREIGN KEY (`Id_User`) REFERENCES `users` (`Id_User`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -1305,7 +1306,7 @@ ALTER TABLE `pokemoncatched`
   ADD CONSTRAINT `pokemoncatched_ibfk_2` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
 
 --
--- Filtros para la tabla `variant_pokemon`
+-- Constraints for table `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
   ADD CONSTRAINT `variant_pokemon_ibfk_1` FOREIGN KEY (`Id_Pokedex`) REFERENCES `datapokemonall` (`Id_Pokedex`);
