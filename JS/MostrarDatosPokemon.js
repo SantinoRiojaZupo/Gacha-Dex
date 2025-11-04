@@ -39,7 +39,7 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
     document.getElementById("4").innerHTML = "???";
     document.getElementById("5").innerHTML = "???";
     document.getElementById("6").innerHTML = "???";
- imagen.src =imagenes/locked.pgn;
+ imagen.src ="../imagenes/locked.png";
 
    
 }

@@ -32,7 +32,7 @@ function mostrarPokedex(lista) {
         } else {
             card.classList.add("pokemon-card-locked");
             card.innerHTML = `
-                <img class="locked" src="img/locked.png" alt="Bloqueado">
+                <img class="locked" src="../imagenes/locked.png" alt="Bloqueado">
                 <h3>???</h3>
             `;
         }

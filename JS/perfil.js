@@ -2,9 +2,17 @@
    const espacioShiny= document.getElementById('espacioShiny');
 function cambiarDescripcion() {
     console.log("click en perfil");
-    nuevoNombre = document.querySelector('[name="nuevoNombre"]');
+    nuevoNombre = document.querySelector('[name="nuevoNombre"]').value;
     bios = document.getElementById('bios');
-    
+    restrincion=/[^A-Za-z0-9_-]/;
+     if((nuevoNombre.length>=6)){
+    for (let i = 0; i < nuevoNombre.length; i++) {
+             let caracter = nuevoNombre.charAt(i);
+             if(restrincion.test(caracter)){
+                document.getElementById("errores").innerHTML="unicos carcteres especiales permitido son - _"
+                return
+             }
+            }
     if(nuevoNombre!=="" & bios!==""){
     fetch("/Gacha-Dex/usuario.php", {
         method: "POST",
@@ -25,7 +33,12 @@ function cambiarDescripcion() {
     } else {
         console.log("Escribi algo");
     }
-};
+}
+else{
+    document.getElementById("errores").innerHTML="el nombre de usurio debe de ser de 6 caracteres de minimo"
+}
+}
+
 function mostrarMensaje(mensaje, exito) {
     const container = document.querySelector(".login-container"); //esperen un momento
     if (!container) return;

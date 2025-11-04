@@ -1,30 +1,31 @@
 function registrarse(){
-    console.log("hola")
     const Usua = document.querySelector('[name="Usuario"]').value;
     const Contra = document.querySelector('[name="contraseña"]').value;
     const Contra2 = document.querySelector('[name="contraseña-2"]').value;
     restrincion=/[^A-Za-z0-9_-]/
     if (Usua && Contra) {
         if((Usua.length>=6)&&(Contra.length>=6)&&(Contra2.length>=6)){
-            for (let i = 0; i < Usua.length; i++) {
+            for (let i = 0; i <  Usua.length; i++) {
              let caracter = Usua.charAt(i);
              if(restrincion.test(caracter)){
                 document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
                 return
              }
-              }  for (let i = 0; i < Contra.length; i++) {
+              }
+              for (let i = 0; i <  Contra.length; i++) {
              let caracter = Contra.charAt(i);
              if(restrincion.test(caracter)){
                 document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
                 return
              }
-              }  for (let i = 0; i < Contra2.length; i++) {
+              }
+              for (let i = 0; i <  Contra2.length; i++) {
              let caracter = Contra2.charAt(i);
              if(restrincion.test(caracter)){
                 document.getElementById("error").innerHTML="unicos carcteres especiales permitido son - _"
                 return
              }
-              } 
+              }
                 if (Contra !== Contra2) {
             document.getElementById("error").innerHTML="Las contraseñas no coinciden";
             return;

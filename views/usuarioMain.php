@@ -180,12 +180,13 @@ if (!empty($_SESSION['user_id'])) {
       <h2>Username </h2>
       <p>visible para todos (obligatorio)</p>
       <input type="text" placeholder="<?php
-                                      if ($_SESSION['user_id'] !== $idPerfil && $filaNombre) {
-                                        echo htmlspecialchars($filaNombre['Name_User']);
-                                      } else
-                                        echo htmlspecialchars($_SESSION['username']); ?>"
+             if ($_SESSION['user_id'] !== $idPerfil && $filaNombre) {
+                echo htmlspecialchars($filaNombre['Name_User']);
+              } else
+              echo htmlspecialchars($_SESSION['username']); ?>"
 
         required name="nuevoNombre">
+        <label id="errores"></label>
       <h2>Bio </h2>
       <textarea rows="4" id="bios"><?php echo htmlspecialchars($bios); ?></textarea>
       <?php if ($_SESSION['user_id'] == $idPerfil): ?>
