@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2025 a las 04:39:05
+-- Tiempo de generación: 05-11-2025 a las 05:07:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1203,10 +1203,12 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (1, 105, 'Marowak', 'Ground', '', 'Water, Grass, Ice', 'Ha evolucionado tras fortalecerse y superar su pena. Ahora lucha con arrojo blandiendo su hueso a modo de arma.', 'Rock Head', 'Lightning Rod', 'Battle Armor', 'https://archives.bulbagarden.net/media/upload/a/a1/0105Marowak.png', 'Male/Female'),
 (1, 110, 'Weezing', 'Poison', '', 'Ground, Psychic', 'Diluir sus venenosos gases internos lo máximo posible permite fabricar perfumes de alta gama.', 'Levitate', 'Neutralizing Gas', 'Stench', 'https://archives.bulbagarden.net/media/upload/7/72/0110Weezing.png', 'Male/Female'),
 (1, 122, 'Mr-Mime', 'Psychic', 'Fairy', 'Poison, Ghost, Steel', 'Un experto de la pantomima capaz de crear paredes invisibles pero sólidas solo con sus gestos.', 'Soundproof', 'Filter', 'Technician', 'https://archives.bulbagarden.net/media/upload/f/fb/0122Mr._Mime.png', 'Male/Female'),
+(1, 128, 'Tauros', 'Normal', '', 'Fighting', 'Cuando ve a un enemigo, se fustiga con las colas y carga ferozmente contra él.', 'Intimidate', 'Anger Point', 'Sheer Force', 'https://archives.bulbagarden.net/media/upload/a/ad/0128Tauros.png', 'Male'),
 (1, 144, 'Articuno', 'Ice', 'Flying', 'Fire, Electric, Rock(X4), Steel', 'Una de las aves legendarias. Es capaz de generar ventiscas congelando la humedad del aire.', 'Pressure', '', 'Snow Cloak', 'https://archives.bulbagarden.net/media/upload/d/d0/0144Articuno.png', 'N/A'),
 (1, 145, 'Zapdos', 'Electric', 'Flying', 'Ice, Rock', 'Una de las aves legendarias. Según dicen, vive en los nubarrones y controla los rayos a su antojo.', 'Pressure', '', 'Static', 'https://archives.bulbagarden.net/media/upload/c/c6/0145Zapdos.png', 'N/A'),
 (1, 146, 'Moltres', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Una de las aves legendarias. Dicen que su presencia anuncia la llegada de la primavera.', 'Pressure', '', 'Flame Body', 'https://archives.bulbagarden.net/media/upload/2/21/0146Moltres.png', 'N/A'),
 (1, 157, 'Typhlosion', 'Fire', '', 'Water, Ground, Rock', 'Posee una técnica secreta y devastadora que consiste en atacar frotando su pelaje ardiente para provocar explosiones.', 'Blaze', '', 'Flash Fire', 'https://archives.bulbagarden.net/media/upload/1/13/0157Typhlosion.png', 'Male/Female'),
+(1, 194, 'Wooper', 'Water', 'Ground', 'Grass(X4)', 'Está cubierto por una membrana mucosa transparente. El contacto directo provoca escozor y entumecimiento.', 'Damp', 'Water Absorb', 'Unaware', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/194.png', 'Male/Female'),
 (1, 199, 'Slowking', 'Water', 'Psychic', 'Grass, Electric, Bug, Ghost, Dark', 'Al ser mordido en la cabeza, Slowpoke absorbió unas toxinas que liberaron su poder oculto.', 'Oblivious', 'Own Tempo', 'Regenerator', 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png', 'Male/Female'),
 (1, 211, 'Qwilfish', 'Water', 'Poison', 'Electric, Ground, Psychic', 'Si comienza a beber agua para hincharse, es señal de amenaza. Ataca al rival arrojando las púas tóxicas que le recubren el cuerpo.', 'Poison Point', 'Swift Swim', 'Intimidate', '.', 'Male/Female'),
 (1, 215, 'Sneasel', 'Dark', 'Ice', 'Fire, Fighting(X4), Bug, Rock, Steel, Fairy', 'Este Pokémon es muy astuto. Se vale de la oscuridad de la noche para atacar a su presa.', 'Inner Focus', 'Keen Eye', 'Pickpocket', '.', 'Male/Female'),
@@ -1255,10 +1257,12 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 105, 'Marowak-Alolan', 'Fire', 'Ghost', 'Water, Ground, Rock, Ghost, Dark', 'Al caer la noche, prende los extremos del hueso que porta y baila sin descanso para honrar y llorar a sus compañeros caídos.', 'Cursed Body', 'Lightning', 'Rock Head', '.', 'Male/Female'),
 (2, 110, 'Weezing-Galarian', 'Poison', 'Fairy', 'Ground, Psychic, Steel', 'Absorbe las partículas contaminantes de la atmósfera y expulsa aire limpio.', 'Levitate', 'Neutralizing Gas', 'Misty Surge', '.', 'Male/Female'),
 (2, 122, 'Mr-Mime-Galarian', 'Ice', 'Psychic', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'El claqué es su especialidad. Genera una capa de hielo bajo sus pies, sobre la que taconea para crear barreras con las que protegerse.', 'Vital Spirit', 'Screen Cleaner', 'Ice Body', '.', 'Male/Female'),
+(2, 128, 'Tauros-Paldean-Combat', 'Fighting', '', 'Flying, Psychic, Fairy', 'Destaca en el combate cuerpo a cuerpo gracias a su constitución musculosa. Ataca los puntos vitales del enemigo con sus cortos cuernos.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
 (2, 144, 'Articuno-Galarian', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Las gruesas cuchillas en forma de pluma creadas a partir de energía psíquica son capaces de cortar una lámina de acero como si fuera papel.', 'Competitive', '', '', '.', 'N/A'),
 (2, 145, 'Zapdos-Galarian', 'Fighting', 'Flying', 'Electric, Ice, Flying, Psychic, Fairy', 'El origen de su nombre parece provenir del sonido que produce el roce de su plumaje, que recuerda al estallido de un chispazo eléctrico.', 'Defiant', '', '', '.', 'N/A'),
 (2, 146, 'Moltres-Galarian', 'Dark', 'Flying', 'Electric, Ice, Rock, Fairy', 'Su aura maligna con aspecto de llama ardiente puede calcinar el alma de quien la toca.', 'Berserk', '', '', '.', 'N/A'),
 (2, 157, 'Typhlosion-Hisuian', 'Fire', 'Ghost', 'Water, Ground, Rock, Ghost, Dark', 'Mi teoría es que la montaña sagrada que se yergue en el centro de Hisui ha influido en su apariencia. Se dice que purifica con sus llamas a las almas errantes y las conduce al otro mundo.', 'Blaze', '', 'Frisk', '.', 'Male/Female'),
+(2, 194, 'Wooper-Paldean', 'Poison', 'Ground', 'Water, Ice, Ground, Psychic', 'Tras perder una disputa territorial, se vio forzado a vivir en tierra firme y desarrolló una membrana mucosa tóxica con la que proteger su cuerpo.', 'Poison Point', 'Water Absorb', 'Unaware', '.', 'Male/Female'),
 (2, 199, 'Slowking-Galarian', 'Poison', 'Psychic', 'Ground, Ghost, Dark', 'Cuando se topa con un Pokémon sin fuerzas, segrega un brebaje medicinal hecho con veneno por los orificios de los cuernos y se lo ofrece.', 'Curious Medicine', 'Own Tempo', 'Regenerator', '.', 'Male/Female'),
 (2, 211, 'Qwilfish-Hisuian', 'Dark', 'Poison', 'Ground', 'Vive en las aguas cercanas a tierras frías. Sus púas tóxicas son más gruesas y cortas que las de los Qwilfish de otras regiones.', 'Poison Point', 'Swift Swim', 'Intimidate', '.', 'Male/Female'),
 (2, 215, 'Sneasel-Hisuian', 'Fighting', 'Poison', 'Ground, Flying, Psychic(X4)', 'Sus robustas garras son ideales para moverse por los riscos más escarpados. De sus puntas rezuma un veneno que daña los nervios de las presas que captura.', 'Inner Focus', 'Keen Eye', 'Pickpocket', '.', 'Male/Female'),
@@ -1278,7 +1282,9 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 706, 'Goodra-Hisuian', 'Steel', 'Dragon', 'Fighting, Ground', 'Puede alterar la dureza de su caparazón metálico a voluntad. De carácter dependiente, detesta la soledad y monta en cólera si lo abandona alguien a quien profese gran afecto.', 'Sap Sipper', 'Shell Armor', 'Gooey', '.', 'Male/Female'),
 (2, 713, 'Avalugg-Hisuian', 'Ice', 'Rock', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'La coraza de hielo que cubre su mandíbula es más dura que el acero y le permite triturar rocas con facilidad. Avanza veloz por escarpados senderos montañosos apartando la nieve a su paso.', 'Strong Jaw', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
 (2, 724, 'Decidueye-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Almacena aire en el raquis de las plumas, lo que le permite aguantar las gélidas temperaturas de Hisui. Un claro ejemplo de cómo el entorno puede influir en la evolución de los Pokémon.', 'Overgrow', '', 'Scrappy', '.', 'Male/Female'),
-(3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female');
+(3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female'),
+(3, 128, 'Tauros-Paldean-Blaze', 'Fighting', 'Fire', 'Water, Ground, Flying, Psychic', 'Sus cuernos alcanzan los 1000 ºC cuando los calienta con energía ígnea. Quienes reciben una de sus cornadas sufren heridas y quemaduras.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
+(4, 128, 'Tauros-Paldean-Aqua', 'Fighting', 'Water', 'Grass, Electric, Flying, Psychic, Fairy', 'Perfora a sus rivales lanzando chorros de agua a alta presión por la cavidad que tiene en la punta de los cuernos.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male');
 
 --
 -- Índices para tablas volcadas
@@ -1349,7 +1355,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
-  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
