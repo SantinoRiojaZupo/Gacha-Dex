@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   background: #ddd; /* o el color que quieras */
-  overflow: hidden;
+  
   font-family: 'PokemonGB', monospace, sans-serif;
 }
  #users-list{
@@ -20,6 +20,14 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  height: auto; /* ✅ deja que se adapte */
+  min-height: 100vh; /* ✅ ocupa toda la altura visible */
+  width: 100%;
+  overflow: hidden; /* ✅ evita scroll doble */
 }
 
 
@@ -58,10 +66,6 @@
     cursor: pointer;
   }
   /* Layout principal */
-  .container {
-    display: flex;
-    height: calc(100vh - 48px); /* header 48px + 6 bottom border */
-  }
   /* Lista de usuarios */
   .users-list {
     width: 180px;
@@ -85,7 +89,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+
   background: #ddd; /* color del chat */
   border-left: 8px solid #a0e7e5;
 }
@@ -206,11 +210,8 @@
 .messages::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
-.container {
-  display: flex;
-  height: calc(100vh - 0px); /* ajustá según el alto del header */
-  overflow: hidden;
-}
+
+
 
 
 .chat-area {
@@ -220,8 +221,8 @@
   flex-direction: column;
   border-left: 8px solid #a0e7e5;
   animation: borderColorAnim 7s linear infinite;
-  overflow: hidden; /* evita scroll doble */
-  
+  overflow: hidden; /* está bien */
+  height: auto; /* ✅ elimina el 100vh */
 }
 
 
@@ -273,4 +274,13 @@
   font-size: 14px;
   color: #222; /* texto oscuro dentro del input */
   background: #f8f8f8; /* input más claro */
+}
+
+
+.input-area button {
+  border: 2px solid #111;
+  background: #fff;
+  padding: 6px 12px;
+  font-family: 'PokemonGB', monospace, sans-serif;
+  cursor: pointer;
 }

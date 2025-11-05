@@ -8,9 +8,11 @@
         body {
     font-family: 'PokemonGB', monospace, sans-serif;
     background-color: transparent; /* o el color de tu fondo principal */
-    background-image: url(../imagenes/fondoPaginaPrincipal.jpg);
-    margin: 0;
-    padding: 0;
+    background-image: url(../imagenes/ytal.gif);
+   background-size: cover;       /* que cubra toda la pantalla */
+  background-repeat: no-repeat; /* que no se repita */
+  background-position: center;  /* centrado */
+  background-attachment: fixed;
 }
        
 
@@ -379,4 +381,81 @@ html, body {
 @keyframes explotar {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }
   100% { transform: translate(var(--x), var(--y)) scale(0.2); opacity: 0; }
+}
+.side-box,
+.center-box {
+  background: transparent; /* sin color de fondo */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* línea suave */
+  border-radius: 14px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto hover */
+.side-box:hover,
+.center-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Títulos más visibles */
+.side-box h2,
+.center-box h2 {
+  color: #ffeb3b;
+  text-shadow: 0 0 10px #ff00ff, 0 0 18px #00ffff;
+}
+
+/* Textos dentro de los cuadros */
+.side-box p,
+.center-box p {
+  color: #f0f0f0;
+  opacity: 0.95;
+  font-size: 14px;
+}
+
+/* --- Botón principal Roll --- */
+#rolls {
+  font-size: 2rem;
+  padding: 20px 60px;
+  background: linear-gradient(90deg, #ff0066 0%, #66ffcc 100%);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 150, 0.5);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#rolls:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(255, 0, 150, 0.8);
+}
+
+/* --- Fondo general --- */
+body {
+  font-family: 'PokemonGB', monospace, sans-serif;
+  background-image: url('../imagenes/ytal.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* --- Sutil brillo animado --- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04), transparent 70%);
+  animation: fondoBrillo 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes fondoBrillo {
+  from { opacity: 0.3; transform: scale(1); }
+  to { opacity: 0.7; transform: scale(1.1); }
 }
