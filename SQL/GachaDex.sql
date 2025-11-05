@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2025 a las 16:47:08
+-- Tiempo de generación: 05-11-2025 a las 04:39:05
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -1214,10 +1214,18 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (1, 263, 'Zigzagoon', 'Normal', '', 'Fighting', 'Se mueve en zigzag. Se le da bien encontrar objetos ocultos en la hierba e incluso enterrados.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (1, 264, 'Linoone', 'Normal', '', 'Fighting', 'Carga contra sus presas a más de 100 km/h, pero, como solo puede correr en línea recta, falla a menudo.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (1, 503, 'Samurott', 'Water', '', 'Grass, Electric', 'Un maestro en el arte del desenvaine. Zanja sus combates con un tajo de los grandes sables que guarda en la coraza de las patas delanteras.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
+(1, 549, 'Lilligant', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'El aroma que despide la flor de su tocado tiene efectos tranquilizantes, pero este Pokémon requiere muchos cuidados.', 'Chlorophyll', 'Own Tempo', 'Leaf Guard', '.', 'Female'),
 (1, 554, 'Darumaka', 'Fire', '', 'Water, Ground, Rock', 'Como sus excrementos están muy calientes, la gente de antaño se los metía en los bolsillos para calentarse.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
 (1, 555, 'Darmanitan', 'Fire', '', 'Water, Ground, Rock', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
 (1, 562, 'Yamask', 'Ghost', '', 'Ghost, Dark', 'Merodea todas las noches entre ruinas. Se dice que la máscara que lleva replica su antiguo rostro humano.', 'Mummy', '', '', '.', 'Male/Female'),
+(1, 570, 'Zorua', 'Dark', '', 'Fighting, Bug, Fairy', 'Se transforma en otros para crear desconcierto. A menudo, adopta la forma de un niño parco en palabras.', 'Illusion', '', '', '.', 'Male/Female'),
+(1, 571, 'Zoroark', 'Dark', '', 'Fighting, Bug, Fairy', 'Se dice que Zoroark atrapa en un mundo de ilusiones a quien lo intenta capturar y que, de esta manera, lo castiga.', 'Illusion', '', '', '.', 'Male/Female'),
 (1, 618, 'Stunfisk', 'Ground', 'Electric', 'Water, Grass, Ice, Ground', 'Ni un pisotón de un luchador de sumo lo aplastaría gracias a su piel sólida. Sonríe al soltar descargas eléctricas.', 'Static', 'Limber', 'Sand Veil', '.', 'Male/Female'),
+(1, 628, 'Braviary', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Guerrero avezado de los cielos. Su número de cicatrices es directamente proporcional al respeto que recibe de los suyos.', 'Keen Eye', 'Sheer Force', 'Defiant', '.', 'Male'),
+(1, 705, 'Sliggoo', 'Dragon', '', 'Ice, Dragon, Fairy', 'La protuberancia en forma de espiral que tiene en el lomo contiene su cerebro y su corazón, así como el resto de sus órganos vitales.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(1, 706, 'Goodra', 'Dragon', '', 'Ice, Dragon, Fairy', 'Es común verlo pasear por campos y montañas bajo su adorada lluvia. Posee un carácter sereno.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
+(1, 713, 'Avalugg', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Suele toparse con manadas de Cetitan mientras camina con algún Bergmite en el lomo, pero prefiere pasar de largo para evitar disputas.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(1, 724, 'Decidueye', 'Grass', 'Ghost', 'Fire, Ice, Flying, Ghost, Dark', 'Las plumas de las alas le sirven de flechas que dispara con la precisión suficiente para perforar un guijarro a 100 m.', 'Overgrow', '', 'Long Reach', '.', 'Male/Female'),
 (2, 19, 'Rattata-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Sus bigotes son órganos olfativos muy agudos que le permiten localizar el alimento ipso facto, aunque esté oculto.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 20, 'Raticate-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Obliga a los Rattata a llevar comida a su madriguera. Solo acepta los manjares más deliciosos y nutritivos.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 26, 'Raichu-Alolan', 'Electric', 'Psychic', 'Ground, Bug, Ghost, Dark', 'Se cree que Raichu adoptó esta forma en Alola debido a las distintas condiciones topográficas, meteorológicas y alimentarias de la región.', 'Surge Surfer', '', 'Lightning Rod', '.', 'Male/Female'),
@@ -1258,10 +1266,18 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 263, 'Zigzagoon-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Corretea por doquier sin descanso. En cuanto ve a otro Pokémon, se lanza contra él para provocarlo y buscar pelea.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (2, 264, 'Linoone-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Provoca a sus presas con su larga lengua y arremete con fuerza contra ellas cuando montan en cólera.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (2, 503, 'Samurott-Hisuian', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'De actitud indiferente y muy hábil con la espada, propina incesantes y violentos ataques cual maremoto. Se trata de una forma poco común que solo se da en Hisui.', 'Torrent', '', 'Sharpness', '.', 'Male/Female'),
+(2, 549, 'Lilligant-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Habitar en montañas cubiertas de nieves le ha permitido desarrollar unas piernas robustas. Expulsa un aroma por la flor de su corona que infunde ánimo a quien esté cerca.', 'Chlorophyll', 'Hustle', 'Leaf Guard', '.', 'Female'),
 (2, 554, 'Darumaka-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'La adaptación a entornos nevados ha atrofiado y congelado su saca de fuego, pero ha propiciado el desarrollo de un órgano generador de frío.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
 (2, 555, 'Darmanitan-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Transporta su alimento en la bola de nieve de la cabeza. Los días de ventisca desciende hasta las zonas habitadas por los humanos.', 'Gorilla Tactics', '', 'Zen Mode', '.', 'Male/Female'),
 (2, 562, 'Yamask-Galarian', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Yamask ha sido poseído por una tabla de arcilla sobre la que pesa una maldición. Se dice que absorbe y se nutre de rencor e inquina.', 'Wandering Spirit', '', '', '.', 'Male/Female'),
+(2, 570, 'Zorua-Hisuian', 'Normal', 'Ghost', 'Dark', 'Es un alma difunta resucitada en Hisui que transforma su rencor en energía. Esta surge de su cabeza y adopta la forma de su oponente, disipando así su inquina.', 'Illusion', '', '', '.', 'Male/Female'),
+(2, 571, 'Zoroark-Hisuian', 'Normal', 'Ghost', 'Dark', 'La revuelta melena blanca le hace parecer la personificación de la muerte. Abate a sus rivales sin consideración por su vida valiéndose de un profundo rencor que también daña su cuerpo.', 'Illusion', '', '', '.', 'Male/Female'),
 (2, 618, 'Stunfisk-Galarian', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Al vivir en lodo rico en hierro, su cuerpo ha alcanzado la dureza del acero.', 'Mimicry', '', '', '.', 'Male/Female'),
+(2, 628, 'Braviary-Hisuian', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Esta enorme ave emite un espeluznante graznido de guerra cuando sale de caza. Lanza ondas contra los lagos y atrapa a las presas que afloran a la superficie.', 'Keen Eye', 'Sheer Force', 'Tinted Lens', '.', 'Male'),
+(2, 705, 'Sliggoo-Hisuian', 'Steel', 'Dragon', 'Fighting, Ground', 'Adolece de una personalidad lúgubre. Sospecho que su concha metálica se formó mediante una reacción entre la mucosidad que recubre su piel y el contenido férreo del agua de Hisui.', 'Sap Sipper', 'Shell Armor', 'Gooey', '.', 'Male/Female'),
+(2, 706, 'Goodra-Hisuian', 'Steel', 'Dragon', 'Fighting, Ground', 'Puede alterar la dureza de su caparazón metálico a voluntad. De carácter dependiente, detesta la soledad y monta en cólera si lo abandona alguien a quien profese gran afecto.', 'Sap Sipper', 'Shell Armor', 'Gooey', '.', 'Male/Female'),
+(2, 713, 'Avalugg-Hisuian', 'Ice', 'Rock', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'La coraza de hielo que cubre su mandíbula es más dura que el acero y le permite triturar rocas con facilidad. Avanza veloz por escarpados senderos montañosos apartando la nieve a su paso.', 'Strong Jaw', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(2, 724, 'Decidueye-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Almacena aire en el raquis de las plumas, lo que le permite aguantar las gélidas temperaturas de Hisui. Un claro ejemplo de cómo el entorno puede influir en la evolución de los Pokémon.', 'Overgrow', '', 'Scrappy', '.', 'Male/Female'),
 (3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female');
 
 --
