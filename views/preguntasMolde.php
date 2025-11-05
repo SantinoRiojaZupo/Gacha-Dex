@@ -1,60 +1,50 @@
 <link rel="stylesheet" href="../CSS/estilosCuestionario.css">
-
 <div id= "pregunta">¿Quien es este Pokemon?</div>
 <div id= "imagen"></div>
 <div id= "Descripcion"></div>
 <div id="opciones">
-
 </div>
 <div id="acertasteONo"><p></p></div>
-
 <script>
     <?php
-    $arrIncorrectos = [];
-    if (isset($_GET['arrincorrectos'])) {
-        $json = urldecode($_GET['arrincorrectos']);
-    $arrIncorrectos = json_decode($json, true);
-
+$tipo = $_SESSION['preguntaActual']['tipo']; //saco de session el tipo de pregunta
+if($tipo == 1){
+$correcto = $_SESSION['preguntaActual']['correcto'][0]; //saco de session la respuesta correcta
+$incorrectos = $_SESSION['preguntaActual']['incorrectos']; //saco de session las respuestas incorrectas
+}
+else if($tipo == 2){
+    $correcto = $_SESSION['preguntaActual']['correcto'][0]; //saco de session la respuesta correcta
+    $incorrectos = $_SESSION['preguntaActual']['incorrectos']; //saco de session las respuestas incorrectas
 }
     ?>
-    //esto son declaraciones
-    let imagen = <?php echo isset($_GET['imagen']) ? json_encode($_GET['imagen']) : 'null';  ?>;
-    let nombre = <?php echo isset($_GET['nombre']) ? json_encode($_GET['nombre']) : 'null';  ?>;
-    let descripcion = <?php echo isset($_GET['descripcion']) ? json_encode($_GET['descripcion']) : 'null';  ?>;
-    console.log(nombre)
-    let arrIncorrectos = <?php echo json_encode($arrIncorrectos);?>;
-    console.log(arrIncorrectos)
-    let incorrecto1 = <?php echo isset($_GET['incorrecto1']) ? json_encode($_GET['incorrecto1']) : 'null';  ?>;
-    let incorrecto2 =<?php echo isset($_GET['incorrecto2']) ? json_encode($_GET['incorrecto2']) : 'null';  ?>;
-    let incorrecto3 =<?php echo isset($_GET['incorrecto3']) ? json_encode($_GET['incorrecto3']) : 'null';  ?>;
+    const tipo = <?= json_encode($tipo) ?>; //aca declario las variables js con los valores de php
+    const correcto = <?= json_encode($correcto) ?>;
+    const incorrectos = <?= json_encode($incorrectos) ?>;
     let opciones = document.getElementById("opciones")
 //llega hasta aca (hago esto para q sea mas comodo trabajar xdxdxd)
-
-    console.log({imagen, nombre, incorrecto1, incorrecto2, incorrecto3, arrIncorrectos, descripcion});
-
-
-
-
 //funcion nueva pregunta sobre imagen
-function funcionNuevaPregunta(){
+document.addEventListener("DOMContentLoaded", () => { //aca espero a que cargue el dom
+    if (tipo == 1) { //pregunta sobre el tipo de pregunta
+        funcionNuevaPregunta(correcto, incorrectos); //llamo a la funcion correspondiente
+    }
+    else if (tipo == 2) {    
+        funcionNuevaPreguntaDescripcion(correcto, incorrectos);
+    }
+})
+function funcionNuevaPregunta(correcto, incorrectos){
+        setRandomNeon();
     document.getElementById("imagen").innerHTML = ""
 document.getElementById("acertasteONo").innerHTML = ""
-opciones.innerHTML = ""
-        fetch('../obtenerTipoPregunta.php?pregunta=' + 1)
-        .then (response => response.json())
-        .then(data => {
-           console.log(data)
-           opciones.innerHTML = ""
-            imagen = data.correcto[0].Image
-            nombre = data.correcto[0].PokemonName
-            incorrecto1 = data.incorrectos[0].PokemonName
-            incorrecto2 = data.incorrectos[1].PokemonName
-            incorrecto3 = data.incorrectos[2].PokemonName
-            let foto = document.getElementById("imagen")
-            foto.innerHTML = ""
-    let foto2 = document.createElement('img')
-    foto2.src = imagen
-    foto.appendChild(foto2)
+opciones.innerHTML = "";
+       nombre = correcto.PokemonName;
+       imagen = correcto.Image;
+       let foto = document.getElementById("imagen");
+let img = document.createElement("img");
+img.src = imagen;
+foto.appendChild(img);
+         incorrecto1 = incorrectos[0].PokemonName;
+            incorrecto2 = incorrectos[1].PokemonName;
+               incorrecto3 = incorrectos[2].PokemonName;
     let respuestas =[
     {texto: nombre, esCorrecta:true},
     {texto: incorrecto1, esCorrecta:false},
@@ -65,7 +55,6 @@ opciones.innerHTML = ""
     const j = Math.floor(Math.random()* (i+1));
     [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
 }
-
 respuestas.forEach(r => {
 const div = document.createElement('div')
 div.classList.add("opcion")
@@ -77,10 +66,10 @@ div.addEventListener('click', () => {
         div.classList.add('correcta'); 
         
         document.getElementById("acertasteONo").innerHTML = "acertaste"
+        fetch("../obtenerTipoPregunta.php?pregunta=1")
 setTimeout(() => {
-    funcionNuevaPregunta()
-}, 1500);
-        
+ location.reload();
+}, 1500);      
     }
     else {
         div.classList.add('incorrecta'); 
@@ -90,57 +79,40 @@ setTimeout(() => {
             if(btn.dataset.correcta === "true") {
                 btn.classList.add('correcta');
              }})
+             fetch("../obtenerTipoPregunta.php?pregunta=1")
         setTimeout(() => {
-  funcionNuevaPregunta()
+     location.reload();
 }, 1500);
     }
-    
-
 })
 opciones.appendChild(div)
 })
-
-
-
-
-        })
-        }
+}
 //funcion nuevas preguntas sobre imagen
 //funcion nuevas preguntas sobre descripcion
-function funcionNuevaPreguntaDescripcion() {
+function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
+    setRandomNeon();
     document.getElementById("acertasteONo").innerHTML = ""
-    fetch("../obtenerTipoPregunta.php?pregunta=" + 2)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        imagen = data.correcto[0].Image;
-        nombre = data.correcto[0].PokemonName;
-        descripcion = data.correcto[0].Description;
-
-        // Limpiamos y rellenamos el array
-        arrIncorrectos = data.incorrectos.map(r => ({
+        imagen = correcto.Image;
+        nombre = correcto.PokemonName;
+        descripcion = correcto.Description;  
+        arrIncorrectos = incorrectos.map(r => ({
             nombre: r.PokemonName,
             imagen: r.Image
         }));
-
         let divDescripcion = document.getElementById("Descripcion");
         divDescripcion.innerHTML = descripcion;
-
         let respuestas = [
             {texto: nombre, imagenPokemon: imagen, esCorrecta: true},
             {texto: arrIncorrectos[0].nombre, imagenPokemon: arrIncorrectos[0].imagen, esCorrecta: false},
             {texto: arrIncorrectos[1].nombre, imagenPokemon: arrIncorrectos[1].imagen, esCorrecta: false},
             {texto: arrIncorrectos[2].nombre, imagenPokemon: arrIncorrectos[2].imagen, esCorrecta: false}
-        ];
-
-        // Mezclar
+        ];    
         for (let i = respuestas.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
         }
-        console.log("Respuestas generadas:", respuestas);
-
-        opciones.innerHTML = "";
+       opciones.innerHTML = "";
         respuestas.forEach(r => {
             let divRespuesta = document.createElement('div');
             let divRespuestaImagen = document.createElement('div');
@@ -148,21 +120,18 @@ function funcionNuevaPreguntaDescripcion() {
             foto.src = r.imagenPokemon;
             divRespuestaImagen.appendChild(foto);
             divRespuesta.appendChild(divRespuestaImagen);
-
             let divRespuestaNombre = document.createElement('div');
             divRespuestaNombre.textContent = r.texto;
             divRespuesta.appendChild(divRespuestaNombre);
-
             divRespuesta.classList.add("opcion");
             divRespuesta.dataset.correcta = r.esCorrecta;
-
             divRespuesta.addEventListener('click', () => {
                   document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
                 if (divRespuesta.dataset.correcta === "true") {
                     divRespuesta.classList.add('correcta');
- 
                     document.getElementById("acertasteONo").innerHTML = "acertaste";
-                    setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
+                    fetch("../obtenerTipoPregunta.php?pregunta=2");
+                    setTimeout(() => location.reload(), 1500);
                 } else {
                     divRespuesta.classList.add('incorrecta'); 
                     document.getElementById("acertasteONo").innerHTML = "fraca"
@@ -170,148 +139,16 @@ function funcionNuevaPreguntaDescripcion() {
             if(btn.dataset.correcta === "true") {
                 btn.classList.add('correcta');
              }})
-
                     document.getElementById("acertasteONo").innerHTML = "fraca";
-                    setTimeout(() => funcionNuevaPreguntaDescripcion(), 1500);
+                    fetch("../obtenerTipoPregunta.php?pregunta=2");
+                    setTimeout(() => location.reload(), 1500);
                 }
             });
 
             opciones.appendChild(divRespuesta);
             
         });
-    });
-}
-
-
-
-//funcion nuevas preguntas sobre descripcion   
-
-
-
-
-    //existen estas variables?
-    
-    if(imagen && nombre && incorrecto1 && incorrecto2 && incorrecto3 && opciones){
-        let foto = document.getElementById("imagen")
-    let foto2 = document.createElement('img')
-    foto2.src = imagen
-    foto.appendChild(foto2)
-
-    let respuestas =[
-    {texto: nombre, esCorrecta:true},
-    {texto: incorrecto1, esCorrecta:false},
-    {texto: incorrecto2, esCorrecta:false},
-    {texto: incorrecto3, esCorrecta:false}
-    ]
-
-for(let i = respuestas.length -1; i >0; i--){
-    const j = Math.floor(Math.random()* (i+1));
-    [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
-}
-
-    opciones.innerHTML=""
-respuestas.forEach(r =>{
-const div = document.createElement('div')
-    div.classList.add("opcion")
-    div.textContent = r.texto;
-    div.dataset.correcta = r.esCorrecta
-    div.addEventListener('click', ()=>{
-          document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
-        if(div.dataset.correcta === "true"){
-            div.classList.add('correcta'); 
- 
-        document.getElementById("acertasteONo").innerHTML = "acertaste"
-        
-        setTimeout(() => {
-            funcionNuevaPregunta()
-        }, 1500);
-    }
-    else{
-        div.classList.add('incorrecta'); 
-        document.getElementById("acertasteONo").innerHTML = "fraca"
-             document.querySelectorAll('.opcion').forEach(btn => {
-            if(btn.dataset.correcta === "true") {
-                btn.classList.add('correcta');
-             }})
-        document.getElementById("acertasteONo").innerHTML = "fraca"
-        setTimeout(() => {
-  funcionNuevaPregunta()
-}, 1500);
-    }
-        
-    
-    })
-    opciones.appendChild(div)
-
-
-})
-} 
-//si existen entonces se ejecuta todo el bloque de arriba (preguntas por imagen), si no, el de abajo (preguntas por descripcion).
-
-    else if(imagen && nombre && arrIncorrectos && descripcion){
-        let divDescripcion = document.getElementById("Descripcion")
-    divDescripcion.innerHTML = descripcion
-
-    let respuestas =[
-    {texto: nombre, imagenPokemon:imagen, esCorrecta:true},
-    {texto: arrIncorrectos[0].nombre,imagenPokemon:arrIncorrectos[0].imagen, esCorrecta:false},
-    {texto: arrIncorrectos[1].nombre,imagenPokemon:arrIncorrectos[1].imagen, esCorrecta:false},
-    {texto: arrIncorrectos[2].nombre,imagenPokemon:arrIncorrectos[2].imagen, esCorrecta:false}
-    ]
-
-for(let i = respuestas.length -1; i >0; i--){
-    const j = Math.floor(Math.random()* (i+1));
-    [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
-}
-    opciones.innerHTML=""
-respuestas.forEach(r => {
-        let divRespuesta = document.createElement('div')
-    let divRespuestaImagen = document.createElement('div')
-    let foto = document.createElement('img')
-    foto.src = r.imagenPokemon
-    divRespuestaImagen.appendChild(foto)
-    divRespuesta.appendChild(divRespuestaImagen)
-    let divRespuestaNombre = document.createElement('div')
-    divRespuestaNombre.textContent = r.texto
-    divRespuesta.appendChild(divRespuestaNombre)
-    divRespuesta.classList.add("opcion")
-    divRespuesta.dataset.correcta = r.esCorrecta
-divRespuesta.addEventListener('click', ()=>{
-      document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
-        if(divRespuesta.dataset.correcta === "true"){
-            divRespuesta.classList.add('correcta');
-        document.getElementById("acertasteONo").innerHTML = "acertaste"
-         setTimeout(() => {
-  funcionNuevaPreguntaDescripcion()
-}, 1500);
-    }
-    else{
-        divRespuesta.classList.add('incorrecta'); 
-        document.getElementById("acertasteONo").innerHTML = "fraca"
-             document.querySelectorAll('.opcion').forEach(btn => {
-            if(btn.dataset.correcta === "true") {
-                btn.classList.add('correcta');
-             }})
-        document.getElementById("acertasteONo").innerHTML = "fraca"
-        setTimeout(() => {
-  funcionNuevaPreguntaDescripcion()
-}, 1500);
-    }
-        
-    
-    })
-    opciones.appendChild(divRespuesta)
-
-
-
-
-})
-
-}
-//hasta aca.
-
-
-
+    };
 // Colores posibles para el neón
 const neonColors = ['#dbc608ff', '#009414ff', '#0fcacaff', '#00ff66e0', '#4c00ffff', '#cc00ffff'];
 let currentNeon = '#ffeb3b'; // valor inicial
@@ -362,16 +199,6 @@ document.addEventListener('click', (e) => {
 
 // ======= NUEVA PREGUNTA: CAMBIA EL COLOR =======
 // Cada vez que se genera una pregunta nueva, llamá a setRandomNeon()
-const oldFunc1 = funcionNuevaPregunta;
-funcionNuevaPregunta = function() {
-  setRandomNeon();
-  oldFunc1();
-};
 
-const oldFunc2 = funcionNuevaPreguntaDescripcion;
-funcionNuevaPreguntaDescripcion = function() {
-  setRandomNeon();
-  oldFunc2();
-};
 
 </script>
