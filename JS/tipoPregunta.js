@@ -2,6 +2,11 @@ let botonPreguntaAleatoria = document.getElementById("preguntasAleatorias")
 let botonPreguntaImagenes = document.getElementById("preguntasImagenes")
 let botonPreguntaDescripcion = document.getElementById("preguntasDescripcion")
 let botonPreguntaNombre = document.getElementById("preguntasNombres")
+let volver = document.getElementById("volver");
+
+volver.addEventListener('click', () => {
+    window.location.href = 'index.php?page=main'
+})
 
 
 botonPreguntaAleatoria.addEventListener('click', () => {

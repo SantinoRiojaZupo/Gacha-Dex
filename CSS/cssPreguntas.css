@@ -121,6 +121,13 @@ button:hover {
 #preguntasNombres:hover {
   background: #ff0000;
 }
+#volver {
+  border-color: #b700ff;
+  box-shadow: 0 0 15px #00ffff55;
+}
+#volver:hover {
+  background: #7700ff;
+}
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 600px) {
