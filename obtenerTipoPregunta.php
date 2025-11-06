@@ -117,9 +117,11 @@ $resultado2= mysqli_query($conexion, $sql);
 }
 
 if($arr1 && $arr2){
-echo json_encode(["correcto"=>$arr1,
-"incorrectos"=> $arr2]);
-
+$pregunta = ["tipo" => $tipoPregunta,
+ "correcto" => $arr1,
+  "incorrectos" => $arr2];
+  $_SESSION['preguntaActual'] = $pregunta;
+  echo json_encode($pregunta);
 }
 else{
   echo json_encode(["msj"=> "no se pudo pa"]);

@@ -16,6 +16,10 @@ else if($tipo == 2){
     $correcto = $_SESSION['preguntaActual']['correcto'][0]; //saco de session la respuesta correcta
     $incorrectos = $_SESSION['preguntaActual']['incorrectos']; //saco de session las respuestas incorrectas
 }
+else if($tipo == 3){
+    $correcto = $_SESSION['preguntaActual']['correcto'][0]; //saco de session la respuesta correcta
+    $incorrectos = $_SESSION['preguntaActual']['incorrectos']; //saco de
+}
     ?>
     const tipo = <?= json_encode($tipo) ?>; //aca declario las variables js con los valores de php
     const correcto = <?= json_encode($correcto) ?>;
@@ -29,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => { //aca espero a que cargue 
     }
     else if (tipo == 2) {    
         funcionNuevaPreguntaDescripcion(correcto, incorrectos);
+    }
+    else if (tipo == 3) {    
+        funcionNuevaPreguntaNombre(correcto, incorrectos);
     }
 })
 function funcionNuevaPregunta(correcto, incorrectos){
@@ -149,6 +156,64 @@ function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
             
         });
     };
+
+
+    function funcionNuevaPreguntaNombre(correcto, incorrectos){
+        setRandomNeon();
+    document.getElementById("imagen").innerHTML = ""
+document.getElementById("acertasteONo").innerHTML = ""
+opciones.innerHTML = "";
+       nombre = correcto.PokemonName;
+       imagenCorrecta = correcto.Image;
+       let nombreAdivinar = document.getElementById("Descripcion");
+nombreAdivinar.textContent = "Adivina que pokemon es..." + nombre;
+
+         incorrecto1 = incorrectos[0].Image;
+            incorrecto2 = incorrectos[1].Image;
+               incorrecto3 = incorrectos[2].Image;
+    let respuestas =[
+    {imagen: imagenCorrecta, esCorrecta:true},
+    {imagen: incorrecto1, esCorrecta:false},
+    {imagen: incorrecto2, esCorrecta:false},
+    {imagen: incorrecto3, esCorrecta:false}
+    ]
+    for(let i = respuestas.length -1; i >0; i--){
+    const j = Math.floor(Math.random()* (i+1));
+    [respuestas[i], respuestas[j]] = [respuestas[j], respuestas[i]];
+}
+respuestas.forEach(r => {
+const div = document.createElement('div')
+div.classList.add("opcion")
+div.innerHTML = `<img src="${r.imagen}" alt="Pokemon">`
+div.dataset.correcta = r.esCorrecta
+div.addEventListener('click', () => {
+      document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
+    if(div.dataset.correcta === "true"){
+        div.classList.add('correcta'); 
+        
+        document.getElementById("acertasteONo").innerHTML = "acertaste"
+        fetch("../obtenerTipoPregunta.php?pregunta=3")
+setTimeout(() => {
+ location.reload();
+}, 1500);      
+    }
+    else {
+        div.classList.add('incorrecta'); 
+   
+         document.getElementById("acertasteONo").innerHTML = "fraca"
+             document.querySelectorAll('.opcion').forEach(btn => {
+            if(btn.dataset.correcta === "true") {
+                btn.classList.add('correcta');
+             }})
+             fetch("../obtenerTipoPregunta.php?pregunta=3")
+        setTimeout(() => {
+     location.reload();
+}, 1500);
+    }
+})
+opciones.appendChild(div)
+})
+}
 // Colores posibles para el neón
 const neonColors = ['#dbc608ff', '#009414ff', '#0fcacaff', '#00ff66e0', '#4c00ffff', '#cc00ffff'];
 let currentNeon = '#ffeb3b'; // valor inicial
