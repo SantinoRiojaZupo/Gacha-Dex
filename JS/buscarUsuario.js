@@ -1,14 +1,26 @@
 
-resultados=document.getElementById('resultadosBusqueda');
+let delay;
+const input = document.getElementById('buscadorUsuario');
+const resultados = document.getElementById('resultadosBusqueda');
 resultados.classList.add('resultadosInvisibles');
-document.getElementById('buscarUsuario').addEventListener('click', () => {
+
+// Escucha cada vez que se escribe algo
+input.addEventListener('input', () => {
+  clearTimeout(delay);
+  delay = setTimeout(() => {
+    buscarUsuarios(); // función que hace el fetch
+  }, 300); // espera 300 ms desde la última tecla
+});
+
+function buscarUsuarios(){
     resultados.innerHTML = ''
     console.log("Botón de búsqueda clickeado");
     const query = document.getElementById('buscadorUsuario').value;
     if (!query) {   
-        resultados.innerHTML = "<li>Escribí algo</li>";
+        resultados.innerHTML = "";
         resultados.classList.remove('resultadosVisibles');
         resultados.classList.add('resultadosInvisibles');
+        
    return; 
     }
     resultados.classList.remove('resultadosInvisibles');
@@ -42,7 +54,9 @@ document.getElementById('buscarUsuario').addEventListener('click', () => {
 
 
 
-})
+}
+
+
     document.addEventListener('click', (e) => {
     if (!e.target.closest('.busqueda')) {
         resultados.classList.remove('resultadosVisibles');

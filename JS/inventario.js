@@ -146,3 +146,9 @@ filtroGen.addEventListener("change", aplicarFiltros);
 
 // Inicializar
 cargarPokemones();
+const musica = new Audio('../sonidos/1-21.%20Pokémon%20Center.mp3');
+musica.volume = 0.5;
+musica.loop = true;
+document.addEventListener('click', () => {
+  musica.play();
+});

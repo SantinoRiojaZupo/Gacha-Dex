@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../CSS/estilosCuestionario.css">
+<button id="volver">Volver a las preguntas</button>
 <div id= "pregunta">¿Quien es este Pokemon?</div>
 <div id= "imagen"></div>
 <div id= "Descripcion"></div>
@@ -25,6 +26,7 @@ else if($tipo == 3){
     const correcto = <?= json_encode($correcto) ?>;
     const incorrectos = <?= json_encode($incorrectos) ?>;
     let opciones = document.getElementById("opciones")
+    volver=document.getElementById("volver");
 //llega hasta aca (hago esto para q sea mas comodo trabajar xdxdxd)
 //funcion nueva pregunta sobre imagen
 document.addEventListener("DOMContentLoaded", () => { //aca espero a que cargue el dom
@@ -39,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => { //aca espero a que cargue 
     }
 })
 function funcionNuevaPregunta(correcto, incorrectos){
+    volver.addEventListener('click', () => {
+    window.location.href = 'index.php?page=preguntas'
+    });
         setRandomNeon();
     document.getElementById("imagen").innerHTML = ""
 document.getElementById("acertasteONo").innerHTML = ""
@@ -99,6 +104,9 @@ opciones.appendChild(div)
 //funcion nuevas preguntas sobre descripcion
 function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
     setRandomNeon();
+    volver.addEventListener('click', () => {
+    window.location.href = 'index.php?page=preguntas'
+    });
     document.getElementById("acertasteONo").innerHTML = ""
         imagen = correcto.Image;
         nombre = correcto.PokemonName;
@@ -160,6 +168,9 @@ function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
 
     function funcionNuevaPreguntaNombre(correcto, incorrectos){
         setRandomNeon();
+        volver.addEventListener('click', () => {
+    window.location.href = 'index.php?page=preguntas'
+    });
     document.getElementById("imagen").innerHTML = ""
 document.getElementById("acertasteONo").innerHTML = ""
 opciones.innerHTML = "";

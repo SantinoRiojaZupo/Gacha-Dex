@@ -48,9 +48,6 @@ require_once "../config/conexion.php";
 
     </ul>
     </div>
-
-
-    <button id="buscarUsuario">Busca ya!</button>
     <?php endif; ?>
 
 
