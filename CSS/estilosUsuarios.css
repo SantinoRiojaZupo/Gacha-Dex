@@ -33,7 +33,7 @@
   color: white;
   margin: 0;
   padding: 0;
-  background-image: url(../imagenes/pokefondo2.jpg);
+  background-image: url(../imagenes/pokefondo3.gif);
   background-repeat: no-repeat;        /* No repite la imagen */
   background-size: cover;              /* Cubre toda la pantalla */
   background-attachment: fixed;        /* Hace que el fondo se mantenga fijo al hacer scroll */
