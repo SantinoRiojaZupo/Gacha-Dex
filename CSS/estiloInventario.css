@@ -18,6 +18,26 @@ body {
   padding: 15px 0;
 }
 
+/* Asegurar que el header quede por encima del contenido principal */
+.header-inventario {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Si el header transparente se superpone al contenido, permitir que los inputs debajo reciban clicks
+   pero mantener los enlaces y botones del header interactivos. */
+.header-inventario {
+  /* no capturar eventos por defecto */
+  pointer-events: none;
+}
+.header-inventario a,
+.header-inventario button,
+.header-inventario .logo,
+.header-inventario .perfil-link {
+  /* habilitar interacción solo en elementos interactivos del header */
+  pointer-events: auto;
+}
+
 @keyframes headerAnim {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

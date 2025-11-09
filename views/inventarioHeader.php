@@ -20,7 +20,7 @@
         </div>
 
         <div class="header-center">
-            <h1>Tu Inventario Pokémon</h1>
+            <h1>Inventario Pokémon</h1>
         </div>
 
         <div class="header-right">
@@ -29,6 +29,3 @@
 
         </div>
     </header>
-<script>
-    
-</script>
