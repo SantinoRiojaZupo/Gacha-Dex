@@ -231,12 +231,13 @@ mostrarImagenPerfil(idUsuario);
 
   <?php endif; ?>
   <script>
-    const musica = new Audio('../sonidos/1-40%20Slateport%20City.mp3');
+window.addEventListener('load', () => {
+const musica = new Audio('../sonidos/1-40%20Slateport%20City.mp3');
 musica.volume = 0.5;
 musica.loop = true;
-document.addEventListener('click', () => {
-  musica.play();
+musica.play();
 });
+
   </script>
 
 

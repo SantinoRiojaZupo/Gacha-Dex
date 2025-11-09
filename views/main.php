@@ -39,12 +39,13 @@
  
 </main>
 <script>
+window.addEventListener('load', () => {
 const musica = new Audio('../sonidos/1-35.%20Vermilion%20City.mp3');
 musica.volume = 0.5;
 musica.loop = true;
-document.addEventListener('click', () => {
-  musica.play();
+musica.play();
 });
+
 
 </script>
 <script src="../JS/botonPreguntas.js"></script>
