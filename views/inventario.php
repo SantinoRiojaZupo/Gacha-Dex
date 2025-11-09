@@ -55,7 +55,14 @@
 
     <!-- más pokémon dinámicos -->
   </div>
+  <div id="menuContextual" class="context-menu">
+    <button data-action="info">Ver info</button>
+    <button data-action="favorito">Marcar favorito</button>
+    <button data-action="borrar">Eliminar</button>
+</div>
+
 </main>
+
 
 <script>
   const idUsuario = <?= json_encode($idUsuarioPerfil); ?>;

@@ -57,8 +57,8 @@ $pity = intval($stmt->get_result()->fetch_assoc()['Pity'] ?? 0);
 // --- Probabilidades ---
 $rangeSize = $to - $from + 1;
 $pityFactor = $rangeSize / 1025;
-$probShinyBase = 0.01;         // 3% base
-$probLegendarioBase = 0.03;    // 3% base
+$probShinyBase = 10.01;         // 3% base
+$probLegendarioBase = 10.03;    // 3% base
 $probShiny = $probShinyBase + ($pity * 0.001 * $pityFactor);
 $probLegendario = $probLegendarioBase + ($pity * 0.002 * $pityFactor);
 

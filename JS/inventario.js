@@ -18,7 +18,9 @@ function mostrarPokemones(lista) {
 
     lista.forEach(pokemon => {
      const nombres = pokemon.nombre.toLowerCase();
-        const card = document.createElement("div");
+    const card = document.createElement("div");
+    // guardar id del pokemon (id del registro atrapado) en dataset para referencia desde el menú
+    if (pokemon.atrapado !== undefined) card.dataset.id = pokemon.atrapado;
         const esShiny = pokemon.shiny === 1;
         const esFavorito = pokemon.favorito === 1;
         console.log(nombres)
@@ -196,4 +198,81 @@ window.addEventListener('load', () => {
         });
     }
 });
+// === MENU CONTEXTUAL PERSONALIZADO ===
+const menuContextual = document.getElementById("menuContextual");
+let pokemonSeleccionado = null;
 
+if (!menuContextual) {
+    console.warn("menuContextual no encontrado en el DOM. El menú contextual no funcionará.");
+} else {
+    // mover el menú al body para evitar problemas de posicionamiento con ancestros posicionados/transformados
+    if (menuContextual.parentElement !== document.body) {
+        document.body.appendChild(menuContextual);
+    }
+
+    // CLICK DERECHO (delegado desde el documento)
+    document.addEventListener("contextmenu", (e) => {
+        const card = e.target.closest(".card-pokemon, .card-pokemon-shiny, .card-pokemon-favorito");
+        if (!card) return; // no es una tarjeta
+        if (!contenedor || !contenedor.contains(card)) return;
+
+        e.preventDefault(); // evitar menú nativo
+        pokemonSeleccionado = card;
+
+        // coordenadas del mouse
+        let x = e.pageX;
+        let y = e.pageY;
+
+        // mostrar y posicionar (fixed -> coordenadas del viewport)
+        menuContextual.style.display = "block";
+        // ajustar para que no se salga de pantalla
+        const menuWidth = menuContextual.offsetWidth;
+        const menuHeight = menuContextual.offsetHeight;
+        const pageWidth = window.innerWidth;
+        const pageHeight = window.innerHeight;
+        if (x + menuWidth > pageWidth) x = pageWidth - menuWidth - 10;
+        if (y + menuHeight > pageHeight) y = pageHeight - menuHeight - 10;
+        menuContextual.style.left = x + "px";
+        menuContextual.style.top = y + "px";
+        requestAnimationFrame(() => menuContextual.classList.add("show"));
+    });
+
+    // CERRAR AL CLICK FUERA
+    document.addEventListener("mousedown", (e) => {
+        if (!menuContextual || menuContextual.contains(e.target)) return;
+        menuContextual.classList.remove("show");
+
+    });
+
+    // Manejo de acciones del menú
+    menuContextual.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const action = btn.dataset.action;
+        // cerrar menú
+        menuContextual.classList.remove('show');
+        setTimeout(() => { menuContextual.style.display = 'none'; }, 150);
+
+        if (action === 'info') {
+            if (pokemonSeleccionado) {
+                // usar el id del pokemon almacenado en el data-id de la tarjeta (atrapado)
+                const pokeId = pokemonSeleccionado.dataset.id || pokemonSeleccionado.querySelector('.boton-favorito')?.dataset.id;
+                if (pokeId) {
+                    window.location.href = `index.php?page=DetallesPokemon&idpokemon=${encodeURIComponent(pokeId)}`;
+                } else {
+                    // fallback a nombre si no existe id
+                    const nombre = pokemonSeleccionado.querySelector('h3')?.textContent?.trim() || '';
+                    window.location.href = `index.php?page=DetallesPokemon&name=${encodeURIComponent(nombre)}`;
+                }
+            }
+        } else if (action === 'favorito') {
+            const botonFav = pokemonSeleccionado?.querySelector('.boton-favorito');
+            if (botonFav) botonFav.click();
+        } else if (action === 'borrar') {
+            if (confirm('¿Eliminar este Pokémon?')) {
+                // eliminamos del DOM; idealmente llamar al backend para eliminar permanentemente
+                pokemonSeleccionado?.remove();
+            }
+        }
+    });
+}
