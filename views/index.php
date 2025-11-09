@@ -57,7 +57,6 @@ switch ($page) {
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones = "../JS/registro-js.js";
     $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   default:
@@ -76,7 +75,6 @@ switch ($page) {
     $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
     $registroFunciones = "../JS/registro-js.js";
     $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
 
   case 'perfil':
