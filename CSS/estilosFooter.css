@@ -39,3 +39,19 @@ body {
 main {
     flex-grow: 1; /* empuja el footer al final */
 }
+#footerControls {
+    padding-right: 26px;
+    height: 33px;;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 10px;
+}
+#musicVolume {
+    width: 120px;
+    margin-left: 8px;
+}

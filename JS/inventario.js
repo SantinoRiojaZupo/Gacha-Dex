@@ -148,9 +148,52 @@ filtroGen.addEventListener("change", aplicarFiltros);
 cargarPokemones();
 
 
+let musica;
+
 window.addEventListener('load', () => {
-const musica = new Audio('../sonidos/1-21.%20Pokémon%20Center.mp3');
-musica.volume = 0.5;
-musica.loop = true;
-musica.play();
+    musica = new Audio('../sonidos/1-21.%20Pokémon%20Center.mp3');
+    musica.volume = 0.5;
+    musica.loop = true;
+
+    // Guardar/Restaurar mute
+    const mutadoGuardado = localStorage.getItem("mutado") === "true";
+    musica.muted = mutadoGuardado;
+
+    // Guardar/Restaurar volumen
+    const volumenGuardado = localStorage.getItem("volumenMusica");
+    if (volumenGuardado !== null) {
+        musica.volume = parseFloat(volumenGuardado);
+    }
+
+    musica.play().catch(() => {});
+
+    // Elementos
+    const btn = document.getElementById("toggleMusic");
+    const slider = document.getElementById("musicVolume");
+
+    if (btn) {
+        btn.textContent = musica.muted ? "🔇" : "🔊";
+    }
+
+    if (slider) {
+        slider.value = musica.volume;
+    }
+
+    // Evento botón
+    if (btn) {
+        btn.addEventListener("click", () => {
+            musica.muted = !musica.muted;
+            localStorage.setItem("mutado", musica.muted);
+            btn.textContent = musica.muted ? "🔇" : "🔊";
+        });
+    }
+
+    // Evento volumen
+    if (slider) {
+        slider.addEventListener("input", () => {
+            musica.volume = slider.value;
+            localStorage.setItem("volumenMusica", slider.value);
+        });
+    }
 });
+
