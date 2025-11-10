@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2025 a las 05:07:40
+-- Tiempo de generación: 10-11-2025 a las 15:59:01
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1215,8 +1215,17 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (1, 222, 'Corsola', 'Water', 'Rock', 'Grass(X4), Electric, Fighting, Ground', 'Es incapaz de vivir en aguas contaminadas. Muchos ejemplares habitan en los cristalinos mares del sur.', 'Hustle', 'Natural Cure', 'Regenerator', '.', 'Male/Female'),
 (1, 263, 'Zigzagoon', 'Normal', '', 'Fighting', 'Se mueve en zigzag. Se le da bien encontrar objetos ocultos en la hierba e incluso enterrados.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (1, 264, 'Linoone', 'Normal', '', 'Fighting', 'Carga contra sus presas a más de 100 km/h, pero, como solo puede correr en línea recta, falla a menudo.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(1, 386, 'Deoxys', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
+(1, 412, 'Burmy', 'Bug', '', 'Fire, Flying, Rock', 'Para protegerse de los vientos fríos invernales, se cubre con un caparazón de ramas y hojas.', 'Shed Skin', '', 'Overcoat', '.', 'Male/Female'),
+(1, 413, 'Wormadam', 'Bug', 'Grass', 'Fire(X4), Ice, Poison, Flying(X4), Bug, Rock', 'Su apariencia varía según dónde evolucione. Los materiales que haya pasan a formar parte de su cuerpo.', 'Anticipation', '', 'Overcoat', '.', 'Female'),
+(1, 479, 'Rotom', 'Electric', 'Ghost', 'Ghost, Dark', 'Con su cuerpo eléctrico puede infiltrarse en algunos aparatos para controlarlos y hacer travesuras.', 'Levitate', '', '', '.', 'N/A'),
+(1, 483, 'Dialga', 'Dragon', 'Steel', 'Fighting, Ground', 'Tiene el poder de controlar el tiempo. Aparece en los mitos de Sinnoh como una vieja deidad.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(1, 484, 'Palkia', 'Water', 'Dragon', 'Dragon, Fairy', 'Tiene la habilidad de distorsionar el espacio. La mitología de Sinnoh lo describe como una deidad.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(1, 487, 'Giratina', 'Ghost', 'Dragon', 'Ghost, Dragon, Fairy, Ice, Dark', 'Vive en el Mundo Distorsión, un mundo opuesto al nuestro y cuyas leyes desafían el sentido común.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(1, 492, 'Shaymin', 'Grass', '', 'Bug, Fire, Ice, Flying, Poison', 'Se dice que, cuando florecen las Gracídeas, Shaymin alza el vuelo para mostrar su gratitud.', 'Natural Cure', '', '', '.', 'N/A'),
 (1, 503, 'Samurott', 'Water', '', 'Grass, Electric', 'Un maestro en el arte del desenvaine. Zanja sus combates con un tajo de los grandes sables que guarda en la coraza de las patas delanteras.', 'Torrent', '', 'Shell Armor', '.', 'Male/Female'),
 (1, 549, 'Lilligant', 'Grass', '', 'Fire, Ice, Poison, Flying, Bug', 'El aroma que despide la flor de su tocado tiene efectos tranquilizantes, pero este Pokémon requiere muchos cuidados.', 'Chlorophyll', 'Own Tempo', 'Leaf Guard', '.', 'Female'),
+(1, 550, 'Basculin', 'Water', '', 'Grass, Electric', 'Un Pokémon agresivo y feroz cuya fortaleza y capacidad de adaptación le permiten multiplicar su número rápidamente.', 'Reckless', 'Adaptability', 'Mold Breaker', '.', 'Male/Female'),
 (1, 554, 'Darumaka', 'Fire', '', 'Water, Ground, Rock', 'Como sus excrementos están muy calientes, la gente de antaño se los metía en los bolsillos para calentarse.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
 (1, 555, 'Darmanitan', 'Fire', '', 'Water, Ground, Rock', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
 (1, 562, 'Yamask', 'Ghost', '', 'Ghost, Dark', 'Merodea todas las noches entre ruinas. Se dice que la máscara que lleva replica su antiguo rostro humano.', 'Mummy', '', '', '.', 'Male/Female'),
@@ -1269,8 +1278,17 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 222, 'Corsola-Galarian', 'Ghost', '', 'Ghost, Dark', 'Es habitual hallarlos en lo que antaño fueron lechos oceánicos. Maldice a aquellos que le dan un puntapié confundiéndolo con un pedrusco.', 'Weak Armor', '', 'Cursed Body', '.', 'Male/Female'),
 (2, 263, 'Zigzagoon-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Corretea por doquier sin descanso. En cuanto ve a otro Pokémon, se lanza contra él para provocarlo y buscar pelea.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
 (2, 264, 'Linoone-Galarian', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Provoca a sus presas con su larga lengua y arremete con fuerza contra ellas cuando montan en cólera.', 'Pickup', 'Gluttony', 'Quick Feet', '.', 'Male/Female'),
+(2, 386, 'Deoxys-Attack', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
+(2, 412, 'Burmy-Sandy', 'Bug', '', 'Fire, Flying, Rock', 'Para protegerse de los vientos fríos invernales, se cubre con un caparazón de ramas y hojas.', 'Shed Skin', '', 'Overcoat', '.', 'Male/Female'),
+(2, 413, 'Wormadam-Sandy', 'Bug', 'Ground', 'Fire, Water, Ice, Flying', 'Su apariencia varía según dónde evolucione. Los materiales que haya pasan a formar parte de su cuerpo.', 'Anticipation', '', 'Overcoat', '.', 'Female'),
+(2, 479, 'Rotom-Heat', 'Electric', 'Fire', 'Water, Ground(X4), Rock', 'Si el horno eléctrico se encuentra en mal estado, la salud del Rotom que reside en su interior se deteriora también.', 'Levitate', '', '', '.', 'N/A'),
+(2, 483, 'Dialga-Origin', 'Dragon', 'Steel', 'Fighting, Ground', 'La luz desencadena el cambio a esta forma, que recuerda al creador de todo lo existente. La colosal fuerza de la que hace gala nos sugiere que se trata de su verdadera forma.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(2, 484, 'Palkia-Origin', 'Water', 'Dragon', 'Dragon, Fairy', 'Esta forma que surca el cielo me hace pensar en el creador de todo lo existente. Quizá adopte dicha forma para hacerse con su poder.', 'Pressure', '', 'Telepathy', '.', 'N/A'),
+(2, 487, 'Giratina-Origin', 'Ghost', 'Dragon', 'Ghost, Dragon, Fairy, Ice, Dark', 'Vive en el Mundo Distorsión, un mundo opuesto al nuestro y cuyas leyes desafían el sentido común.', 'Levitate', '', '', '.', 'N/A'),
+(2, 492, 'Shaymin-Sky', 'Grass', 'Flying', 'Fire, Ice(X4), Poison, Flying, Rock', 'Se dice que, cuando florecen las Gracídeas, Shaymin alza el vuelo para mostrar su gratitud.', 'Serene Grace', '', '', '.', 'N/A'),
 (2, 503, 'Samurott-Hisuian', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'De actitud indiferente y muy hábil con la espada, propina incesantes y violentos ataques cual maremoto. Se trata de una forma poco común que solo se da en Hisui.', 'Torrent', '', 'Sharpness', '.', 'Male/Female'),
 (2, 549, 'Lilligant-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Habitar en montañas cubiertas de nieves le ha permitido desarrollar unas piernas robustas. Expulsa un aroma por la flor de su corona que infunde ánimo a quien esté cerca.', 'Chlorophyll', 'Hustle', 'Leaf Guard', '.', 'Female'),
+(2, 550, 'Basculin-Blue-Striped', 'Water', '', 'Grass, Electric', 'Forman bancos de ejemplares del mismo color. Sus enemigos acérrimos son los Basculin de raya roja.', 'Rock Head', 'Adaptability', 'Mold Breaker', '.', 'Male/Female'),
 (2, 554, 'Darumaka-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'La adaptación a entornos nevados ha atrofiado y congelado su saca de fuego, pero ha propiciado el desarrollo de un órgano generador de frío.', 'Hustle', '', 'Inner Focus', '.', 'Male/Female'),
 (2, 555, 'Darmanitan-Galarian', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Transporta su alimento en la bola de nieve de la cabeza. Los días de ventisca desciende hasta las zonas habitadas por los humanos.', 'Gorilla Tactics', '', 'Zen Mode', '.', 'Male/Female'),
 (2, 562, 'Yamask-Galarian', 'Ground', 'Ghost', 'Water, Grass, Ice, Ghost, Dark', 'Yamask ha sido poseído por una tabla de arcilla sobre la que pesa una maldición. Se dice que absorbe y se nutre de rencor e inquina.', 'Wandering Spirit', '', '', '.', 'Male/Female'),
@@ -1284,7 +1302,18 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 724, 'Decidueye-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Almacena aire en el raquis de las plumas, lo que le permite aguantar las gélidas temperaturas de Hisui. Un claro ejemplo de cómo el entorno puede influir en la evolución de los Pokémon.', 'Overgrow', '', 'Scrappy', '.', 'Male/Female'),
 (3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female'),
 (3, 128, 'Tauros-Paldean-Blaze', 'Fighting', 'Fire', 'Water, Ground, Flying, Psychic', 'Sus cuernos alcanzan los 1000 ºC cuando los calienta con energía ígnea. Quienes reciben una de sus cornadas sufren heridas y quemaduras.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
-(4, 128, 'Tauros-Paldean-Aqua', 'Fighting', 'Water', 'Grass, Electric, Flying, Psychic, Fairy', 'Perfora a sus rivales lanzando chorros de agua a alta presión por la cavidad que tiene en la punta de los cuernos.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male');
+(3, 386, 'Deoxys-Defense', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
+(3, 412, 'Burmy-Trash', 'Bug', '', 'Fire, Flying, Rock', 'Para protegerse de los vientos fríos invernales, se cubre con un caparazón de ramas y hojas.', 'Shed Skin', '', 'Overcoat', '.', 'Male/Female'),
+(3, 413, 'Wormadam-Trash', 'Bug', 'Steel', 'Fire(X4)', 'Su apariencia varía según dónde evolucione. Los materiales que haya pasan a formar parte de su cuerpo.', 'Anticipation', '', 'Overcoat', '.', 'Female'),
+(3, 479, 'Rotom-Wash', 'Electric', 'Water', 'Grass, Ground', 'Con su cuerpo eléctrico puede infiltrarse en algunos aparatos para controlarlos y hacer travesuras.', 'Levitate', '', '', '.', 'N/A'),
+(3, 550, 'Basculin-White-Striped', 'Water', '', 'Grass, Electric', 'Forman bancos en mares de aguas gélidas y comparten la comida entre ellos. Llegado el momento, regresan al río en el que nacieron.', 'Rattled', 'Adaptability', 'Mold Breaker', '.', 'Male/Female'),
+(3, 555, 'Darmanitan-Zen', 'Fire', 'Psychic', 'Water, Ground, Rock, Ghost, Dark', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
+(4, 128, 'Tauros-Paldean-Aqua', 'Fighting', 'Water', 'Grass, Electric, Flying, Psychic, Fairy', 'Perfora a sus rivales lanzando chorros de agua a alta presión por la cavidad que tiene en la punta de los cuernos.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
+(4, 386, 'Deoxys-Speed', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
+(4, 479, 'Rotom-Frost', 'Electric', 'Ice', 'Fire, Fighting, Ground, Rock', 'Asume esta forma cuando toma posesión de un frigorífico. Congela todo a su alrededor con aire gélido para acto seguido brincar de alegría.', 'Levitate', '', '', '.', 'N/A'),
+(4, 555, 'Darmanitan-Galarian-Zen', 'Ice', 'Fire', 'Water, Ground, Rock(X4), Fighting, Steel', 'Transporta su alimento en la bola de nieve de la cabeza. Los días de ventisca desciende hasta las zonas habitadas por los humanos.', 'Gorilla Tactics', '', 'Zen Mode', '.', 'Male/Female'),
+(5, 479, 'Rotom-Fan', 'Electric', 'Flying', 'Ice, Rock', 'Asume esta forma cuando toma posesión de un ventilador. Hace volar por los aires los objetos que tiene alrededor y acto seguido ríe para sí.', 'Levitate', '', '', '.', 'N/A'),
+(6, 479, 'Rotom-Mow', 'Electric', 'Grass', 'Fire, Ice, Poison, Bug', 'El cortacésped es uno de los aparatos que impulsaron el desarrollo de la RotomDex.', 'Levitate', '', '', '.', 'N/A');
 
 --
 -- Índices para tablas volcadas
@@ -1355,7 +1384,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `variant_pokemon`
 --
 ALTER TABLE `variant_pokemon`
-  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id_Variant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
