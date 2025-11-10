@@ -73,7 +73,7 @@ With **Gacha-Dex**, you can:
 
 We hope you enjoy **Gacha-Dex**, a project made with a lot of love. Thank you very much!<br>
 <div align="center">
-      <h3>-Los amiguitos</h3> <br>
+      <h3>-Los Amiguitos</h3> <br>
     <img src="imagenes/amiguitos.jpeg" alt="amiguitos" width="300">
 </div>
 
