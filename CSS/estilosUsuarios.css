@@ -115,7 +115,7 @@
     .pokemons {
       display: flex;
       gap: 20px;
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
 
     .pokemons > div img {
@@ -167,11 +167,16 @@
 
 #espacioShiny,
 #espacioFavorito {
+  grid-auto-flow: column;
+  grid-auto-rows: auto;
   max-height: 600px;        /* ← Ajusta la altura visible */
   overflow-y: auto;         /* ← Activa el scroll vertical */
-  overflow-x: hidden;       /* ← Evita scroll horizontal */
-  scrollbar-width: thin;    /* ← Scroll más fino en Firefox */
+  overflow-x: hidden;       /* ← Evita scroll horizontal */   /* ← Scroll más fino en Firefox */
   scrollbar-color: #00bfff #1a1a1a; /* color del scroll */
+}
+#espacioShiny {
+padding-left: 20px;
+padding-right: 50px;
 }
 
 /* Para navegadores WebKit (Chrome, Edge, Opera, etc.) */
