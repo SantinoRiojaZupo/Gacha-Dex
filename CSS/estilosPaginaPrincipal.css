@@ -466,3 +466,30 @@ body::after {
       background: #333;
       padding: 6px;
     border-radius: 16px;}
+    /* --- Animación de brillo para el texto del select --- */
+@keyframes textoBrillante {
+  0% { color: #000000; text-shadow: 0 0 4px #ff0000, 0 0 8px #00ffff; }
+  50% { color: #0026ff; text-shadow: 0 0 8px #ff0000, 0 0 12px #66ffcc; }
+  100% { color: #000000; text-shadow: 0 0 4px #ff0000, 0 0 8px #00ffff; }
+}
+
+select {
+  font-family: 'PokemonGB', monospace, sans-serif;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: 3px solid #ff0000;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #000000 0%, #ff6699 100%);
+  color: #ff0000;
+  box-shadow: 0 4px 0 #000;
+  text-shadow: 0 0 4px #ff00cc, 0 0 8px #00ffff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../imagenes/fondoblanco.jpg');
+  background-position: right 10px center;
+  background-size: 12px;
+  animation: textoBrillante 2s infinite alternate ease-in-out;
+}
+
