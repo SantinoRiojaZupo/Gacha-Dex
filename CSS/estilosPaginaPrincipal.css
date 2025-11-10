@@ -459,3 +459,10 @@ body::after {
   from { opacity: 0.3; transform: scale(1); }
   to { opacity: 0.7; transform: scale(1.1); }
 }
+.pokemon-revelado img{border-radius: 25px;}
+#pokemonesConseguidos div img {   
+  height: 65px;
+     flex: 1;
+      background: #333;
+      padding: 6px;
+    border-radius: 16px;}

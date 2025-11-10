@@ -8,7 +8,7 @@
  .sprite-box {
   height: 180px;
   width: 200px; 
-  border: 2px solid #555;
+  border: 6px solid #555;
   border-radius: 12px;
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
@@ -118,7 +118,7 @@
       justify-content: space-between;
     }
 
-    .pokemons > div {
+    .pokemons > div img {
       flex: 1;
       background: #333;
       padding: 10px;

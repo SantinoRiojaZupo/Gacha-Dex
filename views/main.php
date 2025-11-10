@@ -10,8 +10,10 @@
     </div>
     <div class="center-boxes">
         <div class="center-box">
-            <h2>Pity:</h2>
+            <h2>Suerte:</h2>
             <p id="probabilidad"><!--de tener Shiny/Legendario --></p>
+            <h2>Rolls:</h2>
+            <p id=rollsCant><!--Cantidad de rolls que tiene el usuario --></p>
         </div>
         <div class="center-box">
             <div id="pokemonDisplay"><!--Aca va a aparecer el pokemon--></div>
