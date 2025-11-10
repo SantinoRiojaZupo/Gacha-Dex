@@ -20,7 +20,8 @@ function mostrarPokemones(lista) {
      const nombres = pokemon.nombre.toLowerCase();
     const card = document.createElement("div");
     // guardar id del pokemon (id del registro atrapado) en dataset para referencia desde el menú
-    if (pokemon.atrapado !== undefined) card.dataset.id = pokemon.atrapado;
+    if (pokemon.atrapado !== undefined) card.dataset.idAtrapado = pokemon.atrapado
+    card.dataset.id= pokemon.id_pokedex;
         const esShiny = pokemon.shiny === 1;
         const esFavorito = pokemon.favorito === 1;
         console.log(nombres)
@@ -41,6 +42,7 @@ function mostrarPokemones(lista) {
             idLogueado === idUsuario
                 ? `<button class="boton-favorito" 
                             data-id="${pokemon.atrapado}" 
+                            data-idPokemon="${pokemon.id_pokedex}"
                             data-fav="${pokemon.favorito}">
                         ${corazon}
                    </button>`
@@ -212,7 +214,7 @@ if (!menuContextual) {
 
     // CLICK DERECHO (delegado desde el documento)
     document.addEventListener("contextmenu", (e) => {
-        const card = e.target.closest(".card-pokemon, .card-pokemon-shiny, .card-pokemon-favorito");
+        const card = e.target.closest(".card-pokemon,card-pokemon, .card-pokemon-shiny, .card-pokemon-favorito");
         if (!card) return; // no es una tarjeta
         if (!contenedor || !contenedor.contains(card)) return;
 

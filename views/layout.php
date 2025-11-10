@@ -34,7 +34,7 @@ $vistafooter = $vistafooter ?? "";
 
     <!-- Contenido principal -->
     <main>
-        <?php "a";  if (!empty($vista)) include $vista; ?>
+        <?php if (!empty($vista)) include $vista; ?>
     </main>
 
     <!-- Archivos JS opcionales -->
