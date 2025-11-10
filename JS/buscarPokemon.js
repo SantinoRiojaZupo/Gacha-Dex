@@ -1,7 +1,7 @@
 
 function buscarPokemon(){
     console.log("click en buscar")
-    resultados = document.getElementById('resultados')
+    let resultados = document.getElementById('resultados')
     resultados.innerHTML = ''
     const query = document.getElementById('buscarPokemonDP').value;
     if (!query) {
@@ -16,6 +16,7 @@ function buscarPokemon(){
         fetch('../buscarPokemon.php?query=' + encodeURIComponent(query))
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if (!Array.isArray(data)) {
                 resultados.innerHTML = "<li>Error en la respuesta del servidor</li>";
                 return;

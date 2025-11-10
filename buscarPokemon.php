@@ -12,9 +12,9 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 } else {
     $paramBusqueda = "%" . $pokemonBuscado . "%";
-    $sql = 'SELECT Id_Pokedex, PokemonName FROM datapokemonall WHERE PokemonName LIKE ? LIMIT 5';
+    $sql = "SELECT Id_Pokedex, PokemonName FROM datapokemonall WHERE PokemonName LIKE ? LIMIT 5;";
     $stmt = mysqli_prepare($conexion, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $pokemonBuscado);
+    mysqli_stmt_bind_param($stmt, "s", $paramBusqueda);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     if (!$result) {
