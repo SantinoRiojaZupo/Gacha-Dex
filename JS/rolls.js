@@ -2,9 +2,11 @@ const pokemonDisplay = document.getElementById('pokemonDisplay');
 const generacionSelect = document.getElementById('generacionSelect');
 const rollsBtn = document.getElementById('rolls');
 const pityBox = document.getElementById('probabilidad');
+const rollsBox = document.getElementById('rollsCant');
 
 let pokemonActual = null;
 let pityActual = 0;
+let Roles=0;
 let sobreAbierto = false;
 
 const rangosGen = {
@@ -142,6 +144,11 @@ sonido.addEventListener("ended", () => {
 
 // Roll
 rollsBtn.addEventListener("click", function () {
+  if (Roles <= 0) {
+    console.log("No te quedan rolls disponibles.");
+    alert("No te quedan rolls disponibles. ¡Consigue más en Cuestionario!");
+    return;
+  }
   rollsBtn.disabled = true;
   generacionSelect.disabled = true;
   sobreAbierto = false;
@@ -188,7 +195,10 @@ function cargarUltimosPokemones() {
       if (!data.ok) return console.error("Error cargando últimos:", data.error);
       const contenedor = document.getElementById("pokemonesConseguidos");
       contenedor.innerHTML = "";
+      console.log(data.Rolls  );
+       Roles= data.Rolls;
       if (data.pity !== undefined) pityBox.innerHTML = `"${data.pity}"`;
+      if (data.Rolls !== undefined) rollsBox.innerHTML = `"${data.Rolls}"`;
       data.pokemones.forEach(p => {
         const div = document.createElement("div");
         div.style.display = "inline-block";
@@ -200,7 +210,7 @@ function cargarUltimosPokemones() {
           : `https://img.pokemondb.net/sprites/home/normal/2x/${nombre}.jpg`;
         div.innerHTML = `<img src="${imageUrl}" style="width:50px;"><br><small>${p.PokemonName}</small>`;
         contenedor.appendChild(div);
-      });
+      return(Roles);});
     })
     .catch(err => console.error("Error fetch ultimosPokemones:", err));
 }

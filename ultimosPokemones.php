@@ -38,17 +38,19 @@ while ($row = mysqli_fetch_assoc($res)) {
     $pokemones[] = $row;
 }
 
-// Obtener pity actual
-$sqlPity = "SELECT Pity FROM users WHERE Id_User = ?";
+// Obtener pity y rolls actuales
+$sqlPity = "SELECT Pity, Rolls FROM users WHERE Id_User = ?";
 $stmtPity = mysqli_prepare($conexion, $sqlPity);
 mysqli_stmt_bind_param($stmtPity, "i", $userId);
 $stmtPity->execute();
 $resPity = mysqli_stmt_get_result($stmtPity);
 $pityData = mysqli_fetch_assoc($resPity);
 $pityActual = intval($pityData['Pity']);
+$Rollsactual = intval($pityData['Rolls']);
 
 echo json_encode([
     'ok'        => true,
     'pokemones' => $pokemones,
-    'pity'      => $pityActual
+    'pity'      => $pityActual,
+    'Rolls'     => $Rollsactual
 ], JSON_UNESCAPED_UNICODE);

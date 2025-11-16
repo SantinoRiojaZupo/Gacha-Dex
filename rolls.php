@@ -48,11 +48,13 @@ if ($gen === 0) {
 
 
 
-$sql = "SELECT Pity FROM users WHERE Id_User = ?";
+$sql = "SELECT Pity, Rolls FROM users WHERE Id_User = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bind_param("i", $_SESSION['user_id']);
 $stmt->execute();
-$pity = intval($stmt->get_result()->fetch_assoc()['Pity'] ?? 0);
+$userData = $stmt->get_result()->fetch_assoc();
+$pity = intval($userData['Pity'] ?? 0);
+$Rolls = intval($userData['Rolls'] ?? 0);
 
 // --- Probabilidades ---
 $rangeSize = $to - $from + 1;
@@ -77,6 +79,7 @@ if ($isLegendario) {
         : array_merge(...array_values($legendariosPorGen));
     $idPokemon = $listaLegend[array_rand($listaLegend)];
     $pity = 0;
+    $Rolls = $Rolls - 1;
 } else {
     // No legendario → cualquier Pokémon normal del rango
     $listaLegend = array_merge(...array_values($legendariosPorGen));
@@ -94,6 +97,7 @@ if ($isLegendario) {
     $res = $stmt->get_result();
     $pokemonData = $res->fetch_assoc();
 
+
     if (!$pokemonData) {
         $stmt = $conexion->prepare("SELECT Id_Pokedex FROM datapokemonall WHERE Id_Pokedex BETWEEN ? AND ? ORDER BY RAND() LIMIT 1");
         $stmt->bind_param("ii", $from, $to);
@@ -102,8 +106,10 @@ if ($isLegendario) {
     }
 
     $idPokemon = $pokemonData['Id_Pokedex'] ?? mt_rand($from, $to);
+    $Rolls --;
     $resultado = $isShiny ? "shiny" : "normal";
     $pity = $isShiny ? 0 : $pity + 1;
+            
 }
 
 // --- Obtener datos del Pokémon ---
@@ -126,8 +132,8 @@ $pokemon['Image'] = $isShiny
 $pokemon['Is_Shiny'] = $isShiny ? 1 : 0;
 
 // --- Actualizar pity del usuario ---
-$stmt = $conexion->prepare("UPDATE users SET Pity = ? WHERE Id_User = ?");
-$stmt->bind_param("ii", $pity, $_SESSION['user_id']);
+$stmt = $conexion->prepare("UPDATE users SET Pity = ?, Rolls = ? WHERE Id_User = ?");
+$stmt->bind_param("iii", $pity, $Rolls ,$_SESSION['user_id']);
 $stmt->execute();
 
 // --- Respuesta final ---
@@ -138,4 +144,5 @@ echo json_encode([
     'idPokemon' => $idPokemon,
     'resultado' => $resultado,
     'pity' => $pity,
+    'Rolls' => $Rolls
 ]);
