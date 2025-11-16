@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../CSS/cssPreguntas.css">
+<link rel="stylesheet" href="../CSS/cssPreguntas.css"!important>
 <div>
 <button id="preguntasAleatorias">Preguntas Aleatorias</button>
 

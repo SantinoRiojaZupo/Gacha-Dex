@@ -14,3 +14,5 @@
 <div id="barraFinal">
     <p><a href="../views/index.php?page=creadores">Sobre nosotros</a></p>
 </div>
+<script src="../JS/musica.js">
+</script>

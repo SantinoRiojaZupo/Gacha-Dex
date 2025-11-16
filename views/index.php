@@ -9,9 +9,11 @@ $page = $_GET['page'] ?? "main";
 switch ($page) {
   case 'preguntas2':
     $vista = VIEWS_PATH . 'preguntasMolde.php';
+    $vistafooter = VIEWS_PATH . 'footer.php';
   break;
   case 'preguntas':
     $vista = VIEWS_PATH . 'preguntas.php';
+    $vistafooter = VIEWS_PATH . 'footer.php';
     break;
   case 'chat':
     $vista = VIEWS_PATH . 'chat.php';
