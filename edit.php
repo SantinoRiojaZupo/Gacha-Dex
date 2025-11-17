@@ -1,5 +1,10 @@
 <?php
-include 'conexion.php';
+require_once __DIR__ . '/config/conexion.php';
+if (!isset($conexion) || !$conexion) {
+    http_response_code(500);
+    echo json_encode(['error' => true, 'mensaje' => 'Error de conexión a la base de datos']);
+    exit();
+}
 
 // Solo aceptar POST con JSON
 $metodo = $_SERVER['REQUEST_METHOD'];
@@ -57,8 +62,10 @@ if (isset($data['Name_User']) && strlen(trim($data['Name_User'])) > 0) {
 // Si se envía contraseña no vacía, hashearla
 if (isset($data['User_Password']) && strlen($data['User_Password']) > 0) {
     $fields[] = 'User_Password = ?';
-    $hashed = password_hash($data['User_Password'], PASSWORD_DEFAULT);
-    $params[] = $hashed;
+    // Guardar la contraseña tal y como se envía (texto plano) — el equipo pidió que no se encriptara
+    // ADVERTENCIA: esto es inseguro en producción. Se está guardando exactamente lo que el usuario escribe.
+    $plain = $data['User_Password'];
+    $params[] = $plain;
     $types .= 's';
 }
 
@@ -84,10 +91,10 @@ $sql = 'UPDATE users SET ' . implode(', ', $fields) . ' WHERE Id_User = ?';
 $params[] = $id;
 $types .= 'i';
 
-$stmt = mysqli_prepare($conn, $sql);
+$stmt = mysqli_prepare($conexion, $sql);
 if (!$stmt) {
     http_response_code(500);
-    echo json_encode(['error' => true, 'mensaje' => 'Error en la preparación: ' . mysqli_error($conn)]);
+    echo json_encode(['error' => true, 'mensaje' => 'Error en la preparación: ' . mysqli_error($conexion)]);
     exit();
 }
 
@@ -111,7 +118,7 @@ if (mysqli_stmt_execute($stmt)) {
     }
 } else {
     http_response_code(500);
-    echo json_encode(['error' => true, 'mensaje' => 'Error al ejecutar la actualización']);
+    echo json_encode(['error' => true, 'mensaje' => 'Error al ejecutar la actualización: ' . mysqli_error($conexion)]);
 }
 
 mysqli_stmt_close($stmt);

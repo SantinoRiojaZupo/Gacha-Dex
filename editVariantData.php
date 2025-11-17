@@ -1,5 +1,10 @@
 <?php
-require_once __DIR__ . '/../config/conexion.php';
+require_once __DIR__ . '/config/conexion.php';
+if (!isset($conexion) || !$conexion) {
+    http_response_code(500);
+    echo json_encode(['error' => true, 'mensaje' => 'Error de conexión a la base de datos']);
+    exit();
+}
 
 // Solo aceptar POST con JSON
 $metodo = $_SERVER['REQUEST_METHOD'];
@@ -45,11 +50,17 @@ if (json_last_error() !== JSON_ERROR_NONE) {
 $id = isset($data['Id_Variant']) ? intval($data['Id_Variant']) : 0;
 if ($id <= 0) {
     http_response_code(400);
-    echo json_encode(['error' => true, 'mensaje' => 'Id de variante inválido']);
+    echo json_encode(['error' => true, 'mensaje' => 'Id de variante inválido', 'debug_id' => $id, 'data_received' => $data]);
     exit();
 }
 
-// Sanitizar campos
+// También necesitamos Id_Pokedex para identificar la variante de manera única
+$pokedex_id = isset($data['Id_Pokedex']) ? intval($data['Id_Pokedex']) : 0;
+if ($pokedex_id <= 0) {
+    http_response_code(400);
+    echo json_encode(['error' => true, 'mensaje' => 'Id de Pokedex requerido para identificar la variante', 'debug_pokedex_id' => $pokedex_id]);
+    exit();
+}
 $fieldsToSanitize = ['PokemonName','Type','Second_Type','Weaknesses','Description','Abilities','Second_Abilities','Abilities_Hidden','Image','Gender'];
 foreach ($fieldsToSanitize as $f) {
     $data[$f] = isset($data[$f]) ? trim($data[$f]) : null;
@@ -61,8 +72,8 @@ $fields = [];
 $params = [];
 $types = '';
 
+// No permitimos actualizar la clave primaria (Id_Pokedex / Id_Variant) aquí para evitar conflictos
 $fieldMappings = [
-    'Id_Pokedex' => 'i',
     'PokemonName' => 's',
     'Type' => 's',
     'Second_Type' => 's',
@@ -89,9 +100,10 @@ if (count($fields) === 0) {
     exit();
 }
 
-$sql = 'UPDATE variant_pokemon SET ' . implode(', ', $fields) . ' WHERE Id_Variant = ?';
+$sql = 'UPDATE variant_pokemon SET ' . implode(', ', $fields) . ' WHERE Id_Variant = ? AND Id_Pokedex = ?';
 $params[] = $id;
-$types .= 'i';
+$params[] = $pokedex_id;
+$types .= 'ii';
 
 $stmt = mysqli_prepare($conexion, $sql);
 if (!$stmt) {
@@ -112,7 +124,7 @@ call_user_func_array('mysqli_stmt_bind_param', array_merge([$stmt], $bind_names)
 if (mysqli_stmt_execute($stmt)) {
     $affected = mysqli_stmt_affected_rows($stmt);
     http_response_code(200);
-    echo json_encode(['error' => false, 'mensaje' => 'Variante actualizada', 'affected' => $affected]);
+    echo json_encode(['error' => false, 'mensaje' => 'Variante actualizada', 'affected' => $affected, 'debug_sql' => $sql, 'debug_id' => $id]);
 } else {
     http_response_code(500);
     echo json_encode(['error' => true, 'mensaje' => 'Error al ejecutar la actualización: ' . mysqli_error($conexion), 'sql' => $sql]);

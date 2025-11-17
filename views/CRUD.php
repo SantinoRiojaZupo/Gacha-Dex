@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const id = btn.dataset.id;
             const table = btn.dataset.table;
             try {
-                const resp = await fetch('borrarMensaje.php?id=' + encodeURIComponent(id) + '&table=' + encodeURIComponent(table));
+                const resp = await fetch('../borrarMensaje.php?id=' + encodeURIComponent(id) + '&table=' + encodeURIComponent(table));
                 const json = await resp.json();
                 if (!json.error) {
                     const row = btn.closest('tr');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('edit.php', {
+            const response = await fetch('../edit.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('editPokemonData.php', {
+            const response = await fetch('../editPokemonData.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -374,10 +374,10 @@ document.addEventListener('DOMContentLoaded', () => {
             . '<td>' . $gender . '</td>'
             . '<td>'
             . '<button class="edit-pokemon-btn" data-id="' . $id . '" data-name="' . $name . '" '
-            . 'data-type="' . $type . '" data-second-type="' . $second_type . '" '
+            . 'data-type="' . $type . '" data-secondType="' . $second_type . '" '
             . 'data-weaknesses="' . $weaknesses . '" data-description="' . $description . '" '
-            . 'data-abilities="' . $abilities . '" data-second-abilities="' . $second_abilities . '" '
-            . 'data-abilities-hidden="' . $abilities_hidden . '" data-gender="' . $gender . '">Edit</button> '
+            . 'data-abilities="' . $abilities . '" data-secondAbilities="' . $second_abilities . '" '
+            . 'data-abilitiesHidden="' . $abilities_hidden . '" data-gender="' . $gender . '">Edit</button> '
             . '</td>'
             . '</tr>';
     }
@@ -496,9 +496,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 . '<button class="edit-variant-btn" '
                 . 'data-id="' . $idv . '" data-pokedex="' . $idp . '" '
                 . 'data-name="' . $vname . '" data-type="' . $vtype . '" '
-                . 'data-second-type="' . $vsecond . '" data-weaknesses="' . $vweak . '" '
+                . 'data-secondType="' . $vsecond . '" data-weaknesses="' . $vweak . '" '
                 . 'data-description="' . $vdesc . '" data-abilities="' . $vab . '" '
-                . 'data-second-abilities="' . $vab2 . '" data-abilities-hidden="' . $vabh . '" '
+                . 'data-secondAbilities="' . $vab2 . '" data-abilitiesHidden="' . $vabh . '" '
                 . 'data-image="' . $vimg . '" data-gender="' . $vgender . '">Edit</button>'
                 . '</td>'
                 . '</tr>';
@@ -538,7 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnVSave.addEventListener('click', async () => {
         const data = {
             Id_Variant: document.getElementById('edit-variant-id').value,
-            Id_Pokedex: parseInt(document.getElementById('edit-variant-pokedex').value) || 0,
+            Id_Pokedex: parseInt(document.getElementById('edit-variant-pokedex').value) || 0,  // Necesario como identificador
             PokemonName: document.getElementById('edit-variant-name').value,
             Type: document.getElementById('edit-variant-type').value,
             Second_Type: document.getElementById('edit-variant-second-type').value,
@@ -552,7 +552,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('editVariantData.php', {
+            const response = await fetch('../editVariantData.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -562,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const row = document.querySelector(`tr[data-variant-id="${data.Id_Variant}"]`);
                 if (row) {
                     const cells = row.getElementsByTagName('td');
-                    cells[1].textContent = data.Id_Pokedex;
+                    // cells[1] es Id_Pokedex, no lo actualizamos
                     cells[2].textContent = data.PokemonName;
                     cells[3].textContent = data.Type;
                     cells[4].textContent = data.Second_Type;

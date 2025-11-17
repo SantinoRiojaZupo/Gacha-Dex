@@ -1,5 +1,13 @@
 <?php
-include 'conexion.php';
+require_once __DIR__ . '/config/conexion.php';
+if (!isset($conexion) || !$conexion) {
+    http_response_code(500);
+    echo json_encode([
+        "error" => true,
+        "mensaje" => "Error de conexión a la base de datos"
+    ]);
+    exit();
+}
 
 $id = isset($_GET["id"]) ? intval($_GET["id"]) : null;
 

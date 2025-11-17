@@ -1,5 +1,10 @@
 <?php
-include 'conexion.php';
+require_once __DIR__ . '/config/conexion.php';
+if (!isset($conexion) || !$conexion) {
+    http_response_code(500);
+    echo json_encode(['error' => true, 'mensaje' => 'Error de conexión a la base de datos']);
+    exit();
+}
 
 // Solo aceptar POST con JSON
 $metodo = $_SERVER['REQUEST_METHOD'];
@@ -66,7 +71,7 @@ $types = '';
 
 // Mapeo de campos a actualizar
 $fieldMappings = [
-    'Nombre_Pokemon' => 's',
+    'PokemonName' => 's',
     'Type' => 's',
     'Second_Type' => 's',
     'Weaknesses' => 's',
@@ -128,7 +133,7 @@ if (mysqli_stmt_execute($stmt)) {
     http_response_code(500);
     echo json_encode([
         'error' => true,
-        'mensaje' => 'Error al ejecutar la actualización: ' . mysqli_error($conn),
+        'mensaje' => 'Error al ejecutar la actualización: ' . mysqli_error($conexion),
         'sql' => $sql
     ]);
 }

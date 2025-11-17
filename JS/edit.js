@@ -1,7 +1,7 @@
 // Helper to send edition payload to edit.php
 async function enviarEdicion(payload) {
   // edit.php espera JSON en POST; ajusta si tu backend requiere PATCH u otro formato
-  const res = await fetch('edit.php', {
+  const res = await fetch('../edit.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
