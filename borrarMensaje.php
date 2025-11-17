@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+require_once __DIR__ . '/config/conexion.php';
 
 // Permitir GET o POST simple con ?id=...
 $id = isset($_GET['id']) ? intval($_GET['id']) : (isset($_POST['id']) ? intval($_POST['id']) : null);
