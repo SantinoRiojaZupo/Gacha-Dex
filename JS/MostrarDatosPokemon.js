@@ -1,5 +1,5 @@
 imagen = document.getElementById("0");
-variantes=document.getElementById("variantes");
+div=document.getElementById("btnVariantes");
 fetch("/Gacha-Dex/DetallesPokemon.php", {
     method: "POST",
     headers: {
@@ -20,17 +20,42 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
             document.getElementById("4").innerHTML = res[0].Weaknesses;
             document.getElementById("5").innerHTML = "&nbsp" + res[0].Abilities + "&nbsp" + res[0].Second_Abilities;
             i=0
-            res.forEach(pokemon => {
+            if (res[0].Abilities_Hidden) {
+                document.getElementById("6").innerHTML = res[0].Abilities_Hidden;
+            } else {
+                document.getElementById("6").innerHTML = "Malisimo, no tiene habilidad oculta <br>(a llorarlo)";
+            }
+            if(res[0].Id_Variant){
+                variantes=document.createElement("select")
+                res.forEach(pokemon => {
                hola=document.createElement("Option");
                 hola.value=i++;
                 hola.text=pokemon.PokemonName;
                 variantes.appendChild(hola);
-                console.log("hola");
             });
+            div.appendChild(variantes)
+            }
+            
             variantes.addEventListener('change',function(){
                 pokemon= this.value;
                 if(res[pokemon].Id_Variant>1){
-                imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/0"+res[pokemon].Id_Pokedex+"_f"+res[pokemon].Id_Variant+".png";
+                    if(res[pokemon].Id_Pokedex<10){
+                        imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/"+"00"+res[pokemon].Id_Pokedex+"_f"+res[pokemon].Id_Variant+".png";
+                    }
+                    else if(res[pokemon].Id_Pokedex<100){
+                   imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/"+"0"+res[pokemon].Id_Pokedex+"_f"+res[pokemon].Id_Variant+".png";
+                   if(res[pokemon].Id_Pokedex==80){
+                    imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/"+"0"+res[pokemon].Id_Pokedex+"_f"+3+".png";
+                   }
+                    
+                    }
+                    else{
+                         imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/"+res[pokemon].Id_Pokedex+"_f"+res[pokemon].Id_Variant+".png";
+                         if((res[pokemon].Id_Pokedex==555)&&(res[pokemon].Id_Variant>2)){
+                            res[pokemon].PokemonName=res[pokemon].PokemonName.toLowerCase()
+                            imagen.src = "https://img.pokemondb.net/artwork/large/"+res[pokemon].PokemonName+".jpg";
+                         }
+                    }
                 }
                 else{
                     imagen.src=res[pokemon].image
@@ -47,13 +72,6 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
                 document.getElementById("6").innerHTML = "Malisimo, no tiene habilidad oculta <br>(a llorarlo)";
             }
             })
-                
-
-            if (res[0].Abilities_Hidden) {
-                document.getElementById("6").innerHTML = res[0].Abilities_Hidden;
-            } else {
-                document.getElementById("6").innerHTML = "Malisimo, no tiene habilidad oculta <br>(a llorarlo)";
-            }
     }
     else{
 

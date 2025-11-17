@@ -1,9 +1,13 @@
    const espacioFavorito = document.getElementById('espacioFavorito');
    const espacioShiny= document.getElementById('espacioShiny');
 function cambiarDescripcion() {
-    nuevoNombre = document.querySelector('[name="nuevoNombre"]').value;
+    nuevoNombre = document.getElementById("nombre").value;
     bios = document.getElementById('bios');
-    restrincion=/[^A-Za-z0-9_-]/;
+    if((nuevoNombre===null)||(nuevoNombre===undefined)||(nuevoNombre==="")){
+    nuevoNombre=viejonombre
+    }
+    else{
+        restrincion=/[^A-Za-z0-9_-]/;
      if((nuevoNombre.length>=6)){
     for (let i = 0; i < nuevoNombre.length; i++) {
              let caracter = nuevoNombre.charAt(i);
@@ -35,7 +39,8 @@ function cambiarDescripcion() {
 }
 else{
     document.getElementById("errores").innerHTML="el nombre de usurio debe de ser de 6 caracteres de minimo"
-}
+}}
+    
 }
 
 function mostrarMensaje(mensaje, exito) {
@@ -54,7 +59,6 @@ function pokedexUsuario(idUsuario) {
 fetch('/Gacha-Dex/pokemonUsuario.php?id=' + encodeURIComponent(idUsuario))
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         const inventory = document.getElementById("sidebar");
         inventory.innerHTML = '';
         data.forEach(pokemon => {
@@ -83,10 +87,10 @@ function cargarPokemones(idUsuario) {
     fetch(`/Gacha-Dex/inventario.php?id=${encodeURIComponent(idUsuario)}`)
         .then(res => res.text())
         .then(texto => {
-            console.log("Respuesta cruda del servidor:", texto);
+           // console.log("Respuesta cruda del servidor:", texto);
             try {
                 const data = JSON.parse(texto);
-                console.log("JSON parseado correctamente:", data);
+              //  console.log("JSON parseado correctamente:", data);
                 if (!data.ok) {
                     contenedor.innerHTML = `<p>${data.error || "Error al obtener los Pokémon."}</p>`;
                     return;
@@ -94,12 +98,12 @@ function cargarPokemones(idUsuario) {
                 pokemonesUsuario = data.pokemones || [];
                 mostrarPokemones(pokemonesUsuario);
             } catch (e) {
-                console.error("❌ Error al parsear JSON:", e);
+              //  console.error("❌ Error al parsear JSON:", e);
                 contenedor.innerHTML = `<pre>${texto}</pre>`;
             }
         })
         .catch(err => {
-            console.error(err);
+          //  console.error(err);
             contenedor.innerHTML = "<p>Error al cargar los Pokémon.</p>";
         });
         mostrarPokemones
@@ -161,7 +165,7 @@ function mostrarImagenPerfil(idUsuario){
 fetch('/Gacha-Dex/usuarioImagen.php?id=' + encodeURIComponent(idUsuario))
 .then(res => res.json())
 .then(data => { 
-    console.log(data)
+   // console.log(data)
     if (data.error) {
         console.error("Error al obtener la imagen de perfil:", data.error);
         return;
