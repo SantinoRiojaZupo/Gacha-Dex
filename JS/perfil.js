@@ -12,6 +12,7 @@ function cambiarDescripcion() {
              let caracter = nuevoNombre.charAt(i);
              if(restrincion.test(caracter)){
                 document.getElementById("errores").innerHTML="unicos carcteres especiales permitido son - _"
+                console.log("hola")
                 return
              }
             }
