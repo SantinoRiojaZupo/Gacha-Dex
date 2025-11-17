@@ -30,6 +30,7 @@ function cambiarDescripcion() {
                     mostrarMensaje(res.msj, false);
                 } else {
                     mostrarMensaje("Cambio de nombre exitoso.", true);
+                    document.getElementById("errores").innerHTML="combio exitoso"
                 }
             });
     } else {
@@ -50,7 +51,6 @@ function mostrarMensaje(mensaje, exito) {
     // Crea y agrega el nuevo mensaje
     const div = document.createElement("div");
     div.className = exito ? "success-message" : "error-message";
-    console.log(mensaje)
     div.innerHTML = `<p>${mensaje}</p>`;
     container.appendChild(div);
 }

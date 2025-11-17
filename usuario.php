@@ -33,6 +33,7 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
             //print_r($_SESSION);
             session_write_close();
             echo json_encode(["msj" => "Cambio de nombre exitoso."]);
+            die;
         } else {
             echo json_encode(["error" => "Fallo la consulta", "msj" => "Fallo la consulta"]);
         }
