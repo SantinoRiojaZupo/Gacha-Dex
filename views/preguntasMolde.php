@@ -78,6 +78,7 @@ div.addEventListener('click', () => {
         div.classList.add('correcta'); 
         
         document.getElementById("acertasteONo").innerHTML = "acertaste"
+        fetch("../agregarRoll.php");
         fetch("../obtenerTipoPregunta.php?pregunta=1")
 setTimeout(() => {
  location.reload();
@@ -145,6 +146,7 @@ function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
                 if (divRespuesta.dataset.correcta === "true") {
                     divRespuesta.classList.add('correcta');
                     document.getElementById("acertasteONo").innerHTML = "acertaste";
+                    fetch("../agregarRoll.php");
                     fetch("../obtenerTipoPregunta.php?pregunta=2");
                     setTimeout(() => location.reload(), 1500);
                 } else {
@@ -203,6 +205,7 @@ div.addEventListener('click', () => {
         div.classList.add('correcta'); 
         
         document.getElementById("acertasteONo").innerHTML = "acertaste"
+        fetch("../agregarRoll.php");
         fetch("../obtenerTipoPregunta.php?pregunta=3")
 setTimeout(() => {
  location.reload();
