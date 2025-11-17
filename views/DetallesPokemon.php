@@ -19,12 +19,12 @@
 
 <div class="detalles-page">
   <header class="header">
-    <button id="botonMenu">Menú</button>
-    <ul id="menu">
-      <li id="li1">Pagina Principal</li>
-      <li id="li2">Pokedex</a></li>
-      <li id="li3">Chat</a></li>
-    </ul>
+   <button id="botonMenuDP">Menú</button>
+  <ul id="menuDP">
+    <li id="dp1">Pagina Principal</li>
+    <li id="dp2">Pokedex</li>
+    <li id="dp3">Chat</li>
+  </ul>
     <div class="search-section">
       <input type="text" placeholder="Buscar Pokemon..." id="buscarPokemonDP">
       <button class="search-btn" id="buscarPokemonDPbtn" onclick="buscarPokemon()">Busca ya!</button>
@@ -60,8 +60,8 @@
 </script>
 <script src="../JS/MostrarDatosPokemon.js">
 </script>
-<script src="../JS/botonMenu.js">
+<script src="../JS/botonMenuDP.js">
 </script>
-<script src="../JS/menuOpciones.js">
+<script src="../JS/menuOpcionesDP.js">
 </script>
 <script src="../JS/buscarPokemon.js">
