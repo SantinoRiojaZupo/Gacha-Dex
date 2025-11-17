@@ -3,6 +3,7 @@ let li2=document.getElementById("li2")
 let li3=document.getElementById("li3")
 let li4=document.getElementById("li4")
 let li5=document.getElementById("li5")
+let li6 = document.getElementById("li6")
 li1.addEventListener('click', ()=>{
 window.location.href = "index.php?page=main"
 });
@@ -21,3 +22,10 @@ li5.addEventListener('click', ()=>{
 window.location.href = "index.php?page=Login"  
 })
 }
+if(li6){
+li6.addEventListener('click', ()=>{
+window.location.href = "index.php?page=CRUD"  
+})
+}
+
+
