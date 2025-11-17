@@ -11,7 +11,7 @@ $metodo = $_SERVER['REQUEST_METHOD'];
 header('Content-Type: application/json; charset=utf-8');
 
 if ($metodo !== 'POST') {
-    // Si se pide con GET y viene id, mostrar la página de edición simple (retrocompatibilidad)
+    // Si se pide con GET y viene id, mostrar la página de edición simple
     if ($metodo === 'GET' && isset($_GET['id'])) {
         $id = intval($_GET['id']);
         $res = mysqli_query($conexion, "SELECT * FROM users WHERE Id_User = $id");
@@ -59,11 +59,10 @@ if (isset($data['Name_User']) && strlen(trim($data['Name_User'])) > 0) {
     $types .= 's';
 }
 
-// Si se envía contraseña no vacía, hashearla
+
 if (isset($data['User_Password']) && strlen($data['User_Password']) > 0) {
     $fields[] = 'User_Password = ?';
-    // Guardar la contraseña tal y como se envía (texto plano) — el equipo pidió que no se encriptara
-    // ADVERTENCIA: esto es inseguro en producción. Se está guardando exactamente lo que el usuario escribe.
+    
     $plain = $data['User_Password'];
     $params[] = $plain;
     $types .= 's';

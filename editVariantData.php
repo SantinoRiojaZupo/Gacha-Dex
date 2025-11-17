@@ -72,7 +72,7 @@ $fields = [];
 $params = [];
 $types = '';
 
-// No permitimos actualizar la clave primaria (Id_Pokedex / Id_Variant) aquí para evitar conflictos
+// No permite actualizar la clave primaria (Id_Pokedex / Id_Variant) para evitar conflictos
 $fieldMappings = [
     'PokemonName' => 's',
     'Type' => 's',

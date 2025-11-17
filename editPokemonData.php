@@ -11,7 +11,7 @@ $metodo = $_SERVER['REQUEST_METHOD'];
 header('Content-Type: application/json; charset=utf-8');
 
 if ($metodo !== 'POST') {
-    // Si se pide con GET y viene id, mostrar la página de edición simple (retrocompatibilidad)
+    // Si se pide con GET y viene id, mostrar la página de edición simple
     if ($metodo === 'GET' && isset($_GET['id'])) {
         $id = intval($_GET['id']);
         $res = mysqli_query($conexion, "SELECT * FROM datapokemonall WHERE Id_Pokedex = $id");
@@ -53,7 +53,7 @@ if ($id <= 0) {
     exit();
 }
 
-// Sanitizar los campos
+
 $data['PokemonName'] = isset($data['PokemonName']) ? trim($data['PokemonName']) : '';
 $data['Type'] = isset($data['Type']) ? trim($data['Type']) : '';
 $data['Second_Type'] = isset($data['Second_Type']) ? trim($data['Second_Type']) : '';

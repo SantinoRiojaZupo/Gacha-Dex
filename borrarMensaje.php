@@ -13,7 +13,7 @@ if (!$id) {
     exit();
 }
 
-// Nombre de la tabla y columna que asumimos; ajusta si en tu DB se llama diferente
+// Nombre de la tabla y columna que asumimos
 $tableParam = isset($_GET['table']) ? preg_replace('/[^a-zA-Z0-9_]/', '', $_GET['table']) : (isset($_POST['table']) ? preg_replace('/[^a-zA-Z0-9_]/', '', $_POST['table']) : null);
 
 $tableCandidates = ['messages', 'mensajes', 'chat', 'messages_table'];
