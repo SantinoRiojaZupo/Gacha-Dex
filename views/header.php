@@ -18,6 +18,9 @@ require_once "../config/conexion.php";
         <?php endif; ?>
         <li id="li2">Pokedex</a></li>
         <li id="li3">Chat</a></li>
+        <?php if($_SESSION['Rol'] == 1):?>
+        <li id="li6">CRUD</a></li>
+        <?php endif; ?>
     </ul>
    
 </div>

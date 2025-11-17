@@ -1,12 +1,39 @@
 <?php
 require_once __DIR__ . '/../config/conexion.php';
 
+if (!isset($_SESSION['Rol'])) {
+    header("Location: login.php");
+    exit;
+}
+
+
+
 // Verificar que la conexión se creó correctamente antes de ejecutar consultas
 if (!isset($conexion) || $conexion === false) {
     echo '<p style="color:red">Error: no se pudo conectar a la base de datos. Revisa <code>config/conexion.php</code>.</p>';
     return; // detener el procesamiento para evitar llamadas a métodos sobre null
 }
+if($_SESSION['Rol'] !== 1){
+    header("Location: main.php");
+    echo json_encode(["msj" => "no sos admin pa"]);
+    
+    exit;
+}
 ?>
+<style>
+    body {
+        background-color:white;
+        background-size: cover;      /* ajusta la imagen al tamaño de la pantalla */
+        background-repeat: no-repeat; 
+        background-position: center; /* centra la imagen */
+    }
+    body, table, td, th, input, label, button, h1, h3 {
+        color: black !important;
+    }
+    body, table, td, th, input, label, button, h1, h3 {
+        background-color:white;
+    }
+</style>
 <h1>CRUD DEMO</h1>
 
 <!-- Sección de Usuarios -->
