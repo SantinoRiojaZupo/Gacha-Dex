@@ -87,6 +87,7 @@ function guardarPokemon(pokemon) {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body:
+      "pokemonName=" + encodeURIComponent(pokemon.PokemonName) +
       "Id_Pokedex=" + encodeURIComponent(pokemon.Id_Pokedex) +
       "&Is_Shiny=" + (pokemon.Is_Shiny ? 1 : 0)
   })
@@ -195,7 +196,6 @@ function cargarUltimosPokemones() {
       if (!data.ok) return console.error("Error cargando últimos:", data.error);
       const contenedor = document.getElementById("pokemonesConseguidos");
       contenedor.innerHTML = "";
-      console.log(data.Rolls  );
        Roles= data.Rolls;
       if (data.pity !== undefined) pityBox.innerHTML = `"${data.pity}"`;
       if (data.Rolls !== undefined) rollsBox.innerHTML = `"${data.Rolls}"`;

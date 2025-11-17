@@ -114,7 +114,9 @@ if ($isLegendario) {
 }
 
 // --- Obtener datos del Pokémon ---
-$stmt = $conexion->prepare("SELECT variant_pokemon.Id_Variant,datapokemonall.Id_Pokedex, variant_pokemon.PokemonName FROM datapokemonall inner join variant_pokemon on datapokemonall.Id_Pokedex=variant_pokemon.Id_Pokedex WHERE datapokemonall.Id_Pokedex = ? and variant_pokemon.Id_Variant = rand() limit 1");
+$stmt = $conexion->prepare("SELECT variant_pokemon.Id_Variant,datapokemonall.Id_Pokedex, variant_pokemon.PokemonName
+ FROM datapokemonall inner join variant_pokemon on datapokemonall.Id_Pokedex=variant_pokemon.Id_Pokedex 
+ WHERE datapokemonall.Id_Pokedex = ? order by rand() limit 1");
 $stmt->bind_param("i", $idPokemon);
 $stmt->execute();
 $pokemon = $stmt->get_result()->fetch_assoc();
