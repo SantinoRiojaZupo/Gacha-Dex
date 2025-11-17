@@ -8,7 +8,8 @@ const TRACKS = {
     "1": '1-35. Vermilion City.mp3',
     "2": '1-15. Pewter City.mp3',
     "3": '1-40 Slateport City.mp3',
-    "4": '1-21. Pokémon Center.mp3'
+    "4": '1-21. Pokémon Center.mp3',
+    "5": 'La Chona - Los Tucanes de Tijuana - Letra . la chona letra.mp3'
 };
 
 function buildAudioFromTrackId(id) {

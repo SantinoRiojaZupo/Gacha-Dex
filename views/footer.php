@@ -9,6 +9,7 @@
                 <option value="2">Pewter City</option>
                 <option value="3">Slateport City</option>
                 <option value="4">pokemon Center</option>
+                <option value="5"> La Chona</option>
                 </select>
 </div>
 <div id="barraFinal">
