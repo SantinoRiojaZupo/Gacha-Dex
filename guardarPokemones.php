@@ -1,68 +1,59 @@
 <?php
-// guardarPokemones.php
-ob_start();                 // capturamos cualquier salida accidental
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 require_once __DIR__ . '/config/conexion.php';
 session_start();
 
 header('Content-Type: application/json; charset=utf-8');
 
-function finish($resp) {
-    $buf = ob_get_clean();
-    if (!empty($buf)) $resp['debug'] = $buf;
-    echo json_encode($resp, JSON_UNESCAPED_UNICODE);
+function error($msg) {
+    echo json_encode(['error' => $msg]);
     exit;
 }
 
-$response = ['ok' => false];
-
-//  chequear conexion (ajustá si tu variable de conexión tiene otro nombre)
+//  Chequear conexión
 if (!isset($conexion) || !($conexion instanceof mysqli)) {
-    $response['error'] = 'No DB connection (variable $conexion no encontrada)';
-    finish($response);
+    error('No DB connection ($conexion no encontrado)');
 }
 
-//  sesión
+//  Chequear sesión
 if (!isset($_SESSION['user_id'])) {
-    $response['error'] = 'Debes iniciar sesión';
-    finish($response);
+    error('Debes iniciar sesión');
 }
 
-//  validar POST
-if (!isset($_POST['Id_Pokedex']) || !is_numeric($_POST['Id_Pokedex'])) {
-    $response['error'] = 'Id_Pokedex inválido o ausente';
-    finish($response);
+//  Validar datos
+
+if (!isset($_POST['Is_Shiny'])) {
+    error('Is_Shiny ausente');
 }
 
-$idUser = (int) $_SESSION['user_id'];
+$idUser    = (int) $_SESSION['user_id'];
 $idPokedex = (int) $_POST['Id_Pokedex'];
-$is_Shiny = (int) $_POST['Is_Shiny'];
+$isShiny   = (int) $_POST['Is_Shiny'];
 
-//  insertar
+//  Insertar captura
+$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex, Is_Shiny)
+        VALUES (?, ?, ?)";
+$stmt = $conexion->prepare($sql);
 
-$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex, Is_Shiny) VALUES (?, ?, ?)";
-$stmt = mysqli_prepare($conexion, $sql);
 if (!$stmt) {
-    $response['error'] = 'Error preparando query: ' . mysqli_error($conexion);
-    finish($response);
+    error('Error preparando query: ' . $conexion->error);
 }
 
-mysqli_stmt_bind_param($stmt, "iii", $idUser, $idPokedex, $is_Shiny);
-$executed = mysqli_stmt_execute($stmt);
-if (!$executed) {
-    $response['error'] = 'Error al ejecutar INSERT: ' . mysqli_error($conexion);
-    $response['errno'] = mysqli_errno($conexion);
-    finish($response);
+if (!$stmt->bind_param("iii", $idUser, $idPokedex, $isShiny)) {
+    error('Error en bind_param: ' . $stmt->error);
 }
 
-//  éxito
-$response['ok'] = true;
-$response['mensaje'] = 'Pokémon guardado correctamente';
-$response['insert_id'] = mysqli_insert_id($conexion);
+if (!$stmt->execute()) {
+    error('Error al ejecutar INSERT: ' . $stmt->error);
+}
 
-mysqli_stmt_close($stmt);
-mysqli_close($conexion);
+$response = [
+    'ok'        => true,
+    'mensaje'   => 'Pokémon guardado correctamente',
+    'insert_id' => $stmt->insert_id
+];
 
-finish($response);
+$stmt->close();
+$conexion->close();
+
+echo json_encode($response, JSON_UNESCAPED_UNICODE);
+exit;

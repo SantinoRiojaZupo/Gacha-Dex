@@ -87,7 +87,6 @@ function guardarPokemon(pokemon) {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body:
-      "pokemonName=" + encodeURIComponent(pokemon.PokemonName) +
       "Id_Pokedex=" + encodeURIComponent(pokemon.Id_Pokedex) +
       "&Is_Shiny=" + (pokemon.Is_Shiny ? 1 : 0)
   })
