@@ -1,5 +1,12 @@
 imagen = document.getElementById("0");
 variantes=document.getElementById("variantes");
+volverBoton= document.getElementById("volver")
+if (volverBoton){
+    volverBoton.addEventListener("click", ()=> {
+        console.log("xdxdxdx")
+     window.history.back();
+    })
+}
 fetch("/Gacha-Dex/DetallesPokemon.php", {
     method: "POST",
     headers: {

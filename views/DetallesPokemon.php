@@ -33,6 +33,7 @@
 
     <link rel="stylesheet" href="../CSS/estilosDetallespokemon.css" />
   </header>
+  <button id="volver">volver</button>
 </div>
 <button id="anterior"></button>
 <button id="posterior"></button>
