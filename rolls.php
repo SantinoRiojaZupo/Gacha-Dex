@@ -35,6 +35,7 @@ $legendariosPorGen = [
     9 => [ 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015,1016,1017,1024,1025]
 ];
 
+
 //  Obtener generación seleccionada
 $gen = isset($_POST['gen']) ? intval($_POST['gen']) : 0;
 if ($gen === 0) {
@@ -113,11 +114,16 @@ if ($isLegendario) {
 }
 
 // --- Obtener datos del Pokémon ---
-$stmt = $conexion->prepare("SELECT Id_Pokedex, PokemonName, image FROM datapokemonall WHERE Id_Pokedex = ?");
+$stmt = $conexion->prepare("SELECT variant_pokemon.Id_Variant,datapokemonall.Id_Pokedex, variant_pokemon.PokemonName FROM datapokemonall inner join variant_pokemon on datapokemonall.Id_Pokedex=variant_pokemon.Id_Pokedex WHERE datapokemonall.Id_Pokedex = ? and variant_pokemon.Id_Variant = rand() limit 1");
 $stmt->bind_param("i", $idPokemon);
 $stmt->execute();
 $pokemon = $stmt->get_result()->fetch_assoc();
-
+if (empty($pokemon)){
+  $stmt = $conexion->prepare("SELECT Id_Pokedex,PokemonName FROM datapokemonall WHERE datapokemonall.Id_Pokedex = ? ");
+$stmt->bind_param("i", $idPokemon);
+$stmt->execute();
+$pokemon = $stmt->get_result()->fetch_assoc();
+}
 if (!$pokemon) {
     echo json_encode(['error' => 'No se encontró Pokémon válido']);
     exit;
