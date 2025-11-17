@@ -31,8 +31,8 @@ $legendariosPorGen = [
     5 => [638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649],
     6 => [716, 717, 718],
     7 => [772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 801, 802, 807],
-    8 => [888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898],
-    9 => [984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+    8 => [888, 889, 890, 891, 892, 894, 895, 896, 897, 898,905],
+    9 => [ 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015,1016,1017,1024]
 ];
 
 //  Obtener generación seleccionada
@@ -60,7 +60,7 @@ $Rolls = intval($userData['Rolls'] ?? 0);
 $rangeSize = $to - $from + 1;
 $pityFactor = $rangeSize / 1025;
 $probShinyBase = 0.01;         // 3% base
-$probLegendarioBase = 0.03;    // 3% base
+$probLegendarioBase = 10.03;    // 3% base
 $probShiny = $probShinyBase + ($pity * 0.001 * $pityFactor);
 $probLegendario = $probLegendarioBase + ($pity * 0.002 * $pityFactor);
 
