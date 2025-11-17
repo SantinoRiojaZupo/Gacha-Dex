@@ -1,4 +1,5 @@
 imagen = document.getElementById("0");
+variantes=document.getElementById("variantes");
 fetch("/Gacha-Dex/DetallesPokemon.php", {
     method: "POST",
     headers: {
@@ -11,20 +12,48 @@ fetch("/Gacha-Dex/DetallesPokemon.php", {
     if (res.error) {
         console.log(res.error);
     } else if (res.length > 0){
-        res.forEach(pokemon => {
-            imagen.src = pokemon.image;
-            document.getElementById("1").innerHTML = pokemon.PokemonName;
-            document.getElementById("2").innerHTML = pokemon.Description;
-            document.getElementById("3").innerHTML = "&nbsp" + pokemon.Type + "&nbsp" + pokemon.Second_type;
-            document.getElementById("4").innerHTML = pokemon.Weaknesses;
-            document.getElementById("5").innerHTML = "&nbsp" + pokemon.Abilities + "&nbsp" + pokemon.Second_Abilities;
-
-            if (pokemon.Abilities_Hidden) {
-                document.getElementById("6").innerHTML = pokemon.Abilities_Hidden;
+        console.log(res[0])
+            imagen.src = res[0].image;
+            document.getElementById("1").innerHTML = res[0].PokemonName;
+            document.getElementById("2").innerHTML = res[0].Description;
+            document.getElementById("3").innerHTML = "&nbsp" + res[0].Type + "&nbsp" + res[0].Second_type;
+            document.getElementById("4").innerHTML = res[0].Weaknesses;
+            document.getElementById("5").innerHTML = "&nbsp" + res[0].Abilities + "&nbsp" + res[0].Second_Abilities;
+            i=0
+            res.forEach(pokemon => {
+               hola=document.createElement("Option");
+                hola.value=i++;
+                hola.text=pokemon.PokemonName;
+                variantes.appendChild(hola);
+                console.log("hola");
+            });
+            variantes.addEventListener('change',function(){
+                pokemon= this.value;
+                if(res[pokemon].Id_Variant>1){
+                imagen.src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/0"+res[pokemon].Id_Pokedex+"_f"+res[pokemon].Id_Variant+".png";
+                }
+                else{
+                    imagen.src=res[pokemon].image
+                }
+                console.log(imagen.src)
+            document.getElementById("1").innerHTML = res[pokemon].PokemonName;
+            document.getElementById("2").innerHTML = res[pokemon].Description;
+            document.getElementById("3").innerHTML = "&nbsp" + res[pokemon].Type + "&nbsp" + res[pokemon].Second_type;
+            document.getElementById("4").innerHTML = res[pokemon].Weaknesses;
+            document.getElementById("5").innerHTML = "&nbsp" + res[pokemon].Abilities + "&nbsp" + res[pokemon].Second_Abilities;
+            if (res[pokemon].Abilities_Hidden) {
+                document.getElementById("6").innerHTML = res[pokemon].Abilities_Hidden;
             } else {
                 document.getElementById("6").innerHTML = "Malisimo, no tiene habilidad oculta <br>(a llorarlo)";
             }
-        });
+            })
+                
+
+            if (res[0].Abilities_Hidden) {
+                document.getElementById("6").innerHTML = res[0].Abilities_Hidden;
+            } else {
+                document.getElementById("6").innerHTML = "Malisimo, no tiene habilidad oculta <br>(a llorarlo)";
+            }
     }
     else{
 
