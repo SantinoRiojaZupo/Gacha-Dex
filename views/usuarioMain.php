@@ -192,7 +192,10 @@ if (!empty($_SESSION['user_id'])) {
       <?php if ($_SESSION['user_id'] == $idPerfil): ?>
         <button onclick="cambiarDescripcion()">Guardar cambios</button>
       <?php endif; ?>
+      <button id="botonCerrarSesion" onclick="cerrarSesion()">Cerrar sesion</button>
+      
   </div>
+  
   <div class="pokemons">
     <div id="espacioShiny">
       <h3>Pokémon Shiny:</h3>
@@ -203,12 +206,14 @@ if (!empty($_SESSION['user_id'])) {
       <p></p>
     </div>
   </div>
+  
 
   <div id="sidebar" class="sidebar">
     <div class="sprite-box"><img src="" alt="img pkmn"></div>
     <div class="sprite-box"><img src="" alt="img pkmn"></div>
     <div class="sprite-box"><img src="" alt="img pkmn"></div>
     <div class="sprite-box"><img src="" alt="img pkmn"></div>
+  
   </div>
   <script>
     const nombreUsuario = <?php echo json_encode((string)$idPerfilNombre); ?>;
@@ -280,7 +285,9 @@ window.addEventListener('load', () => {
     }
 });
 
-
+function cerrarSesion(){
+  window.location.href="../logout.php"
+}
   </script>
  <script>viejonombre=<?php echo json_encode($_SESSION['username']); ?></script>
 

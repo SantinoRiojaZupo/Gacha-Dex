@@ -26,7 +26,7 @@ if (!empty($_POST["nuevoNombre"]) && !empty($_SESSION["user_id"]) || !empty($_PO
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
     } else { //
         // Actualizar el nombre del usuario actual
-        $sql = $conexion->prepare("UPDATE users SET name_user = ?, Bio= ?  WHERE id_user = ?");
+        $sql = $conexion->prepare("UPDATE users SET Name_User = ?, Bio= ? WHERE id_user = ?;");
         $sql->bind_param("ssi", $usuario, $bios, $user_id);
         if ($sql->execute()) {
             $_SESSION['username'] = $usuario;
@@ -87,6 +87,7 @@ if (mysqli_num_rows($result) > 0) {
 
 // Si el array tiene datos, los devuelve en formato JSON
 if ($arr) {
+    echo $arr[0];
     echo json_encode($arr);
 }
 // Si no hay datos, devuelve un mensaje de error

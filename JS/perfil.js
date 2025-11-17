@@ -6,8 +6,7 @@ function cambiarDescripcion() {
     if((nuevoNombre===null)||(nuevoNombre===undefined)||(nuevoNombre==="")){
     nuevoNombre=viejonombre
     }
-    else{
-        restrincion=/[^A-Za-z0-9_-]/;
+    restrincion=/[^A-Za-z0-9_-]/;
      if((nuevoNombre.length>=6)){
     for (let i = 0; i < nuevoNombre.length; i++) {
              let caracter = nuevoNombre.charAt(i);
@@ -39,8 +38,7 @@ function cambiarDescripcion() {
 }
 else{
     document.getElementById("errores").innerHTML="el nombre de usurio debe de ser de 6 caracteres de minimo"
-}}
-    
+}
 }
 
 function mostrarMensaje(mensaje, exito) {
@@ -52,6 +50,7 @@ function mostrarMensaje(mensaje, exito) {
     // Crea y agrega el nuevo mensaje
     const div = document.createElement("div");
     div.className = exito ? "success-message" : "error-message";
+    console.log(mensaje)
     div.innerHTML = `<p>${mensaje}</p>`;
     container.appendChild(div);
 }
