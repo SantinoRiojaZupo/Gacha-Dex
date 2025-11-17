@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2025 a las 15:59:01
+-- Tiempo de generación: 17-11-2025 a las 15:59:57
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -726,7 +726,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (675, 'Pangoro', 'Fighting', 'Dark', 'Fighting, Flying, Fairy(X4)', 'Este Pokémon de carácter agresivo lo soluciona todo a golpes. Desata su espíritu combativo al enfrentarse a los Obstagoon.', 'Iron Fist', 'Mold Breaker', 'Scrappy', '.', 'Male/Female'),
 (676, 'Furfrou', 'Normal', '', 'Fighting', 'Hubo una época en la que los aristócratas competían entre ellos procurando que el corte de pelo de su Furfrou fuera el mejor de todos.', 'Fur Coat', '', '', '.', 'Male/Female'),
 (677, 'Espurr', 'Psychic', '', 'Bug, Ghost, Dark', 'Pliega las orejas en un esfuerzo por contener el inmenso poder psíquico en su interior, pero, si acumula demasiado, pierde la consciencia.', 'Keen Eye', 'Infiltrator', 'Own Tempo', '.', 'Male/Female'),
-(678, 'Meowstic', 'Psychic', '', 'Bug, Ghost, Dark', 'Su poder psíquico podría mandar volando a cualquier rival, pero prefiere emplearlo para proteger a los suyos antes que para atacar.', 'Keen Eye', 'Infiltrator', 'Prankster', '.', 'Male/Female'),
+(678, 'Meowstic', 'Psychic', '', 'Bug, Ghost, Dark', 'Su poder psíquico podría mandar volando a cualquier rival, pero prefiere emplearlo para proteger a los suyos antes que para atacar.', 'Keen Eye', 'Infiltrator', 'Prankster', '.', 'Male'),
 (679, 'Honedge', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su alma es la de un ser humano que poseyó la misma espada que lo abatió en tiempos remotos.', 'No Guard', '', '', '.', 'Male/Female'),
 (680, 'Doublade', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Su espada se duplicó durante su proceso de evolución. Intimida a los rivales con el chirrido metálico que produce al frotar ambas hojas.', 'No Guard', '', '', '.', 'Male/Female'),
 (681, 'Aegislash', 'Steel', 'Ghost', 'Fire, Ground, Ghost, Dark', 'Gracias a su cuerpo de acero y a una barrera de poder espectral, crea una defensa que le permite mitigar prácticamente cualquier ataque.', 'Stance Change', '', '', '.', 'Male/Female'),
@@ -898,7 +898,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (846, 'Arrokuda', 'Water', '', 'Grass, Electric', 'Solo puede nadar rápido en línea recta. Las bandadas de Wattrel atacan primero a los que les cuesta moverse por haber comido de más.', 'Swift Swim', '', 'Propeller Tail', '.', 'Male/Female'),
 (847, 'Barraskewda', 'Water', '', 'Grass, Electric', 'Hace girar la aleta caudal para impulsarse fuera del agua y devorar con violencia a los Wingull que anden volando cerca de la superficie.', 'Swift Swim', '', 'Propeller Tail', '.', 'Male/Female'),
 (848, 'Toxel', 'Electric', 'Poison', 'Ground(X4), Psychic', 'Puede beber aguas emponzoñadas sin problema. Las filtra mediante un órgano interno para crear un veneno al que él mismo es inmune.', 'Rattled', 'Static', 'Klutz', '.', 'Male/Female'),
-(849, 'Toxtricity', 'Electric', 'Poison', 'Ground(X4), Psychic', 'Muchos jóvenes lo admiran por la impavidez y aparente indiferencia que muestra al entablar un combate, sea cual sea el oponente.', 'Punk Rock', 'Plus', 'Technician', '.', 'Male/Female'),
+(849, 'Toxtricity-Low-Key', 'Electric', 'Poison', 'Ground(X4), Psychic', 'Muchos jóvenes lo admiran por la impavidez y aparente indiferencia que muestra al entablar un combate, sea cual sea el oponente.', 'Punk Rock', 'Minus', 'Technician', '.', 'Male/Female'),
 (850, 'Sizzlipede', 'Fire', 'Bug', 'Water, Flying, Rock(X4)', 'Genera calor consumiendo el gas inflamable que almacena en su cuerpo. Los círculos amarillos del abdomen están particularmente calientes.', 'Flash Fire', 'White Smoke', 'Flame Body', '.', 'Male/Female'),
 (851, 'Centiskorch', 'Fire', 'Bug', 'Water, Flying, Rock(X4)', 'Cuando genera calor, su temperatura corporal alcanza aproximadamente los 800 °C. Usa el cuerpo a modo de látigo para lanzarse al ataque.', 'Flash Fire', 'White Smoke', 'Flame Body', '.', 'Male/Female'),
 (852, 'Clobbopus', 'Fighting', '', 'Flying, Psychic, Fairy', 'Emerge a tierra firme en busca de alimento. Su extrema curiosidad lo induce a golpear con los tentáculos todo lo que entra en su campo visual.', 'Limber', '', 'Technician', '.', 'Male/Female'),
@@ -925,7 +925,7 @@ INSERT INTO `datapokemonall` (`Id_Pokedex`, `PokemonName`, `Type`, `Second_Type`
 (873, 'Frosmoth', 'Ice', 'Bug', 'Fire(X4), Flying, Rock(X4), Steel', 'Puede percibir con sus antenas las corrientes atmosféricas. Impregna sus escamas de frío y las hace caer como si fuera nieve.', 'Shield Dust', '', 'Ice Scales', '.', 'Male/Female'),
 (874, 'Stonjourner', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Los elementos que componen las rocas de su cuerpo se han encontrado en lechos de roca muy alejados de su hábitat.', 'Power Spot', '', '', '.', 'Male/Female'),
 (875, 'Eiscue', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'En días calurosos, se reúne con sus congéneres y juntan el hielo de la cabeza para refrescarse los unos a los otros.', 'Ice Face', '', '', '.', 'Male/Female'),
-(876, 'Indeedee', 'Psychic', 'Normal', 'Bug, Dark', 'Percibe con los cuernos los sentimientos positivos de otros seres vivos y los utiliza como energía.', 'Inner Focus', 'Synchronize', 'Psychic Surge', '.', 'Male/Female'),
+(876, 'Indeedee', 'Psychic', 'Normal', 'Bug, Dark', 'Percibe con los cuernos los sentimientos positivos de otros seres vivos y los utiliza como energía.', 'Inner Focus', 'Synchronize', 'Psychic Surge', '.', 'Male'),
 (877, 'Morpeko', 'Electric', 'Dark', 'Fighting, Ground, Bug, Fairy', 'Come semillas continuamente para aplacar el apetito, pero, cuando tiene demasiada hambre, pierde los estribos y se pone hecho una furia.', 'Hunger Switch', '', '', '.', 'Male/Female'),
 (878, 'Cufant', 'Steel', '', 'Fire, Fighting, Ground', 'Raspa con la trompa puntiaguda las rocas duras para alimentarse de ellas. Es dócil y presta ayuda a los humanos con tareas que requieran fuerza.', 'Sheer Force', '', 'Heavy Metal', '.', 'Male/Female'),
 (879, 'Copperajah', 'Steel', '', 'Fire, Fighting, Ground', 'Llegó a Paldea hace mucho tiempo gracias a personas de una tierra lejana. Con su fuerza, puede arrastrar un avión sin problemas.', 'Sheer Force', '', 'Heavy Metal', '.', 'Male/Female'),
@@ -1233,10 +1233,26 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (1, 571, 'Zoroark', 'Dark', '', 'Fighting, Bug, Fairy', 'Se dice que Zoroark atrapa en un mundo de ilusiones a quien lo intenta capturar y que, de esta manera, lo castiga.', 'Illusion', '', '', '.', 'Male/Female'),
 (1, 618, 'Stunfisk', 'Ground', 'Electric', 'Water, Grass, Ice, Ground', 'Ni un pisotón de un luchador de sumo lo aplastaría gracias a su piel sólida. Sonríe al soltar descargas eléctricas.', 'Static', 'Limber', 'Sand Veil', '.', 'Male/Female'),
 (1, 628, 'Braviary', 'Normal', 'Flying', 'Electric, Ice, Rock', 'Guerrero avezado de los cielos. Su número de cicatrices es directamente proporcional al respeto que recibe de los suyos.', 'Keen Eye', 'Sheer Force', 'Defiant', '.', 'Male'),
+(1, 641, 'Tornadus', 'Flying', '', 'Electric, Ice, Rock', 'La parte inferior de su cuerpo, similar a una nube, está recubierta de un campo de energía. Vuela a 300 km/h.', 'Prankster', '', 'Defiant', '.', 'Male'),
+(1, 642, 'Thundurus', 'Electric', 'Flying', 'Ice, Rock', 'Lanza descargas eléctricas por las púas de su cola. Sobrevuela Teselia dejando caer rayos.', 'Prankster', '', 'Defiant', '.', 'Male'),
+(1, 645, 'Landorus', 'Fire', 'Flying', 'Water, Ice(X4)', 'Lo consideran una deidad de las cosechas porque los cultivos crecen en abundancia en las tierras por las que pasa.', 'Sand Force', '', 'Sheer Force', '.', 'Male'),
+(1, 646, 'Kyurem', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Pokémon legendario que aguarda al héroe que compense el vacío de su cuerpo de hielo con verdad e ideales.', 'Pressure', '', '', '.', 'N/A'),
+(1, 658, 'Greninja', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'Puede detectar enemigos fuera de su campo visual al captar los movimientos del aire con su larga lengua enroscada alrededor del cuello.', 'Torrent', '', 'Protean', '.', 'Male/Female'),
+(1, 678, 'Meowstic', 'Psychic', '', 'Bug, Ghost, Dark', 'Su poder psíquico podría mandar volando a cualquier rival, pero prefiere emplearlo para proteger a los suyos antes que para atacar.', 'Keen Eye', 'Infiltrator', 'Prankster', '.', 'Male'),
 (1, 705, 'Sliggoo', 'Dragon', '', 'Ice, Dragon, Fairy', 'La protuberancia en forma de espiral que tiene en el lomo contiene su cerebro y su corazón, así como el resto de sus órganos vitales.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
 (1, 706, 'Goodra', 'Dragon', '', 'Ice, Dragon, Fairy', 'Es común verlo pasear por campos y montañas bajo su adorada lluvia. Posee un carácter sereno.', 'Sap Sipper', 'Hydration', 'Gooey', '.', 'Male/Female'),
 (1, 713, 'Avalugg', 'Ice', '', 'Fire, Fighting, Rock, Steel', 'Suele toparse con manadas de Cetitan mientras camina con algún Bergmite en el lomo, pero prefiere pasar de largo para evitar disputas.', 'Own Tempo', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(1, 718, 'Zygarde', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Esta es la forma que adopta este pokemon al reunir el 50% de sus células. Su cometido consiste en vigilar el ecosistema.', 'Aura Break', 'Power Construct', '', '.', 'N/A'),
+(1, 720, 'Hoopa', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'En su forma original, este Pokémon posee una fuerza descomunal. Una leyenda cuenta que una vez robó un tesoro del interior de una fortaleza.', 'Magician', '', '', '.', 'N/A'),
 (1, 724, 'Decidueye', 'Grass', 'Ghost', 'Fire, Ice, Flying, Ghost, Dark', 'Las plumas de las alas le sirven de flechas que dispara con la precisión suficiente para perforar un guijarro a 100 m.', 'Overgrow', '', 'Long Reach', '.', 'Male/Female'),
+(1, 741, 'Oricorio', 'Fire', 'Flying', 'Water, Electric, Rock(X4)', 'Es increíblemente popular, tal vez gracias a que sus apasionados bailes encajan a la perfección con el carácter de los habitantes de Paldea.', 'Dancer', '', '', '.', 'Male/Female'),
+(1, 745, 'Lycanroc', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Ataca a sus presas con sus afilados colmillos y garras. Solo obedece las órdenes de aquellos Entrenadores que logran ganarse su confianza.', 'Keen Eye', 'Sand Rush', 'Steadfast', '.', 'Male/Female'),
+(1, 746, 'Wishiwashi', 'Water', '', 'Grass, Electric', 'Debido a su manifiesta debilidad cuando van solos, han adquirido la capacidad de agruparse en bancos a la hora de enfrentarse a un enemigo.', 'Schooling', '', '', '.', 'Male/Female'),
+(1, 800, 'Necrozma', 'Psychic', '', 'Bug, Ghost, Dark', 'La luz es su fuente de energía y la busca con tal desespero que da la impresión de que sufre. Parece ser una criatura de otro mundo.', 'Prism Armor', '', '', '.', 'N/A'),
+(1, 849, 'Toxtricity-Low-Key', 'Electric', 'Poison', 'Ground(X4), Psychic', 'Muchos jóvenes lo admiran por la impavidez y aparente indiferencia que muestra al entablar un combate, sea cual sea el oponente.', 'Punk Rock', 'Minus', 'Technician', '.', 'Male/Female'),
+(1, 876, 'Indeedee', 'Psychic', 'Normal', 'Bug, Dark', 'Percibe con los cuernos los sentimientos positivos de otros seres vivos y los utiliza como energía.', 'Inner Focus', 'Synchronize', 'Psychic Surge', '.', 'Male'),
+(1, 892, 'Urshifu', 'Fighting', 'Dark', 'Fighting, Flying, Fairy(X4)', 'Su estilo de lucha se basa en abatir a sus rivales de un solo golpe. Se abalanza sobre ellos con su puño cincelado por el entrenamiento.', 'Unseen Fist', '', '', '.', 'Male/Female'),
+(1, 898, 'Calyrex', 'Psychic', 'Grass', 'Fire, Ice, Poison, Flying, Bug(X4), Ghost, Dark', 'Un Pokémon muy compasivo agraciado con el poder de la curación. Reinó en Galar en tiempos remotos.', 'Unnerve', '', '', '.', 'N/A'),
 (2, 19, 'Rattata-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Sus bigotes son órganos olfativos muy agudos que le permiten localizar el alimento ipso facto, aunque esté oculto.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 20, 'Raticate-Alolan', 'Dark', 'Normal', 'Fighting(X4), Bug, Fairy', 'Obliga a los Rattata a llevar comida a su madriguera. Solo acepta los manjares más deliciosos y nutritivos.', 'Gluttony', 'Hustle', 'Thick Fat', '.', 'Male/Female'),
 (2, 26, 'Raichu-Alolan', 'Electric', 'Psychic', 'Ground, Bug, Ghost, Dark', 'Se cree que Raichu adoptó esta forma en Alola debido a las distintas condiciones topográficas, meteorológicas y alimentarias de la región.', 'Surge Surfer', '', 'Lightning Rod', '.', 'Male/Female'),
@@ -1296,10 +1312,26 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (2, 571, 'Zoroark-Hisuian', 'Normal', 'Ghost', 'Dark', 'La revuelta melena blanca le hace parecer la personificación de la muerte. Abate a sus rivales sin consideración por su vida valiéndose de un profundo rencor que también daña su cuerpo.', 'Illusion', '', '', '.', 'Male/Female'),
 (2, 618, 'Stunfisk-Galarian', 'Ground', 'Steel', 'Fire, Water, Fighting, Ground', 'Al vivir en lodo rico en hierro, su cuerpo ha alcanzado la dureza del acero.', 'Mimicry', '', '', '.', 'Male/Female'),
 (2, 628, 'Braviary-Hisuian', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Esta enorme ave emite un espeluznante graznido de guerra cuando sale de caza. Lanza ondas contra los lagos y atrapa a las presas que afloran a la superficie.', 'Keen Eye', 'Sheer Force', 'Tinted Lens', '.', 'Male'),
+(2, 641, 'Tornadus-Therian', 'Flying', '', 'Electric, Ice, Rock', 'La parte inferior de su cuerpo, similar a una nube, está recubierta de un campo de energía. Vuela a 300 km/h.', 'Regenerator', '', '', '.', 'Male'),
+(2, 642, 'Thundurus-Therian', 'Electric', 'Flying', 'Ice, Rock', 'Lanza descargas eléctricas por las púas de su cola. Sobrevuela Teselia dejando caer rayos.', 'Volt Absorb', '', '', '.', 'Male'),
+(2, 645, 'Landorus-Therian', 'Fire', 'Flying', 'Water, Ice(X4)', 'Lo consideran una deidad de las cosechas porque los cultivos crecen en abundancia en las tierras por las que pasa.', 'Intimidate', '', '', '.', 'Male'),
+(2, 646, 'Kyurem-White', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Pokémon legendario que aguarda al héroe que compense el vacío de su cuerpo de hielo con verdad e ideales.', 'Turboblaze', '', '', '.', 'N/A'),
+(2, 658, 'Greninja-Ash', 'Water', 'Dark', 'Grass, Electric, Fighting, Bug, Fairy', 'Comprime el agua y crea estrellas ninja con las que ataca al enemigo. Cuando las hace girar a gran velocidad cortan en dos hasta el metal.', 'Battle Bond', '', '', '.', 'Male'),
+(2, 678, 'Meowstic-Female', 'Psychic', '', 'Bug, Ghost, Dark', 'Las hembras son más agresivas que los machos. Pese a la potencia de los poderes psíquicos que utilizan, su expresión permanece impasible.', 'Keen Eye', 'Infiltrator', 'Competitive', '.', 'Female'),
 (2, 705, 'Sliggoo-Hisuian', 'Steel', 'Dragon', 'Fighting, Ground', 'Adolece de una personalidad lúgubre. Sospecho que su concha metálica se formó mediante una reacción entre la mucosidad que recubre su piel y el contenido férreo del agua de Hisui.', 'Sap Sipper', 'Shell Armor', 'Gooey', '.', 'Male/Female'),
 (2, 706, 'Goodra-Hisuian', 'Steel', 'Dragon', 'Fighting, Ground', 'Puede alterar la dureza de su caparazón metálico a voluntad. De carácter dependiente, detesta la soledad y monta en cólera si lo abandona alguien a quien profese gran afecto.', 'Sap Sipper', 'Shell Armor', 'Gooey', '.', 'Male/Female'),
 (2, 713, 'Avalugg-Hisuian', 'Ice', 'Rock', 'Water, Grass, Fighting(X4), Ground, Rock, Steel(X4)', 'La coraza de hielo que cubre su mandíbula es más dura que el acero y le permite triturar rocas con facilidad. Avanza veloz por escarpados senderos montañosos apartando la nieve a su paso.', 'Strong Jaw', 'Ice Body', 'Sturdy', '.', 'Male/Female'),
+(2, 718, 'Zygarde-10', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Este pokemon asume esta forma al reunir el 10% de sus células. Se abalanza sobre su oponente y lo hace trizas con sus afilados colmillos.', 'Aura Break', 'Power Construct', '', '.', 'N/A'),
+(2, 720, 'Hoopa-Unbound', 'Psychic', 'Dark', 'Bug(X4), Fairy', 'En su forma original, este Pokémon posee una fuerza descomunal. Una leyenda cuenta que una vez robó un tesoro del interior de una fortaleza.', 'Magician', '', '', '.', 'N/A'),
 (2, 724, 'Decidueye-Hisuian', 'Grass', 'Fighting', 'Fire, Ice, Poison, Flying(X4), Psychic, Fairy', 'Almacena aire en el raquis de las plumas, lo que le permite aguantar las gélidas temperaturas de Hisui. Un claro ejemplo de cómo el entorno puede influir en la evolución de los Pokémon.', 'Overgrow', '', 'Scrappy', '.', 'Male/Female'),
+(2, 741, 'Oricorio-Pom-Pom', 'Electric', 'Flying', 'Ice, Rock', 'Forma que toma este pokemon al libar Néctar Amarillo. Se acerca a sus rivales con ágiles pasos de baile y los noquea con puñetazos eléctricos.', 'Dancer', '', '', '.', 'Male/Female'),
+(2, 745, 'Lycanroc-Midnight', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Ataca a sus presas con sus afilados colmillos y garras. Solo obedece las órdenes de aquellos Entrenadores que logran ganarse su confianza.', 'Keen Eye', 'Vital Spirit', 'No Guard', '.', 'Male/Female'),
+(2, 746, 'Wishiwashi-School', 'Water', '', 'Grass, Electric', 'Debido a su manifiesta debilidad cuando van solos, han adquirido la capacidad de agruparse en bancos a la hora de enfrentarse a un enemigo.', 'Schooling', '', '', '.', 'Male/Female'),
+(2, 800, 'Necrozma-Dusk-Mane', 'Psychic', 'Steel', 'Fire, Ground, Ghost, Dark', 'Forma que adopta tras alimentarse de la luz de Solgaleo. Se lanza sobre su oponente y lo desgarra sin piedad.', 'Prism Armor', '', '', '.', 'N/A'),
+(2, 849, 'Toxtricity-Amped', 'Electric', 'Poison', 'Ground(X4), Psychic', 'Cuando segrega su sudor venenoso a la vez que libera electricidad, reverbera a su alrededor un sonido que recuerda al de una guitarra.', 'Punk Rock', 'Plus', 'Technician', '.', 'Male/Female'),
+(2, 876, 'Indeedee-Female', 'Psychic', 'Normal', 'Bug, Dark', 'Detesta los conflictos, por lo que ahuyenta a quienes los inicien en su territorio empleando sus poderes psíquicos para lanzarles cosas.', 'Own Tempo', 'Synchronize', 'Psychic Surge', '.', 'Female'),
+(2, 892, 'Urshifu-Rapid-Strike', 'Fighting', 'Water', 'Grass, Electric, Flying, Psychic, Fairy', 'Se considera que su estilo de lucha, a veces intenso y a veces comedido, se inspira en el fluir de la corriente de los ríos.', 'Unseen Fist', '', '', '.', 'Male/Female'),
+(2, 898, 'Calyrex-Ice-Rider', 'Psychic', 'Ice', 'Fire, Bug, Rock, Ghost, Dark, Steel', 'No tenía piedad con quienes se interponían en su camino, pero se sabe también que curaba a sus rivales tras enfrentarse a ellos en combate.', 'As One', '', '', '.', 'N/A'),
 (3, 52, 'Meowth-Galarian', 'Steel', '', 'Fire, Fighting, Ground', 'Algunas partes de su cuerpo se volvieron metálicas tras una larga convivencia con aguerrida gente del mar.', 'Pickup', 'Tough Claws', 'Unnerve', '.', 'Male/Female'),
 (3, 128, 'Tauros-Paldean-Blaze', 'Fighting', 'Fire', 'Water, Ground, Flying, Psychic', 'Sus cuernos alcanzan los 1000 ºC cuando los calienta con energía ígnea. Quienes reciben una de sus cornadas sufren heridas y quemaduras.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
 (3, 386, 'Deoxys-Defense', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
@@ -1308,10 +1340,18 @@ INSERT INTO `variant_pokemon` (`Id_Variant`, `Id_Pokedex`, `PokemonName`, `Type`
 (3, 479, 'Rotom-Wash', 'Electric', 'Water', 'Grass, Ground', 'Con su cuerpo eléctrico puede infiltrarse en algunos aparatos para controlarlos y hacer travesuras.', 'Levitate', '', '', '.', 'N/A'),
 (3, 550, 'Basculin-White-Striped', 'Water', '', 'Grass, Electric', 'Forman bancos en mares de aguas gélidas y comparten la comida entre ellos. Llegado el momento, regresan al río en el que nacieron.', 'Rattled', 'Adaptability', 'Mold Breaker', '.', 'Male/Female'),
 (3, 555, 'Darmanitan-Zen', 'Fire', 'Psychic', 'Water, Ground, Rock, Ghost, Dark', 'Cuando resulta gravemente herido, se endurece como una piedra y medita para agudizar la mente.', 'Sheer Force', '', 'Zen Mode', '.', 'Male/Female'),
+(3, 646, 'Kyurem-Black', 'Dragon', 'Ice', 'Fighting, Rock, Dragon, Steel, Fairy', 'Pokémon legendario que aguarda al héroe que compense el vacío de su cuerpo de hielo con verdad e ideales.', 'Teravolt', '', '', '.', 'N/A'),
+(3, 718, 'Zygarde-Complete', 'Dragon', 'Ground', 'Ice(X4), Dragon, Fairy', 'Esta es la forma definitiva de este pokemon. Por la boca de su pecho emite una potente energía que arrasa con todo.', 'Power Construct', '', '', '.', 'N/A'),
+(3, 741, 'Oricorio-Pau', 'Psychic', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Su delicada danza es beneficiosa para la salud y, por ello, goza de gran popularidad. Sin embargo, es un Pokémon difícil de encontrar en Paldea.', 'Dancer', '', '', '.', 'Male/Female'),
+(3, 745, 'Lycanroc-Dusk', 'Rock', '', 'Water, Grass, Fighting, Ground, Steel', 'Ataca a sus presas con sus afilados colmillos y garras. Solo obedece las órdenes de aquellos Entrenadores que logran ganarse su confianza.', 'Tough Claws', '', '', '.', 'Male/Female'),
+(3, 800, 'Necrozma-Dawn-Wings', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'En esta forma, Lunala no goza de voluntad propia. Necrozma tiene control absoluto y absorbe su energía poco a poco.', 'Prism Armor', '', '', '.', 'N/A'),
+(3, 898, 'Calyrex-Shadow-Rider', 'Psychic', 'Ghost', 'Ghost(X4), Dark(X4)', 'Cuenta la leyenda que recorrió Galar junto a un Pokémon al que le unía un fuerte vínculo para convertir todo páramo en un frondoso vergel.', 'As One', '', '', '.', 'N/A'),
 (4, 128, 'Tauros-Paldean-Aqua', 'Fighting', 'Water', 'Grass, Electric, Flying, Psychic, Fairy', 'Perfora a sus rivales lanzando chorros de agua a alta presión por la cavidad que tiene en la punta de los cuernos.', 'Intimidate', 'Anger Point', 'Cud Chew', '.', 'Male'),
 (4, 386, 'Deoxys-Speed', 'Psychic', '', 'Bug, Ghost, Dark', 'Tras estar expuesto a un rayo láser, el ADN de un virus espacial sufrió una mutación y dio origen a Deoxys. Según parece, el órgano cristalino que este Pokémon tiene en el torso es el cerebro.', 'Pressure', '', '', '.', 'N/A'),
 (4, 479, 'Rotom-Frost', 'Electric', 'Ice', 'Fire, Fighting, Ground, Rock', 'Asume esta forma cuando toma posesión de un frigorífico. Congela todo a su alrededor con aire gélido para acto seguido brincar de alegría.', 'Levitate', '', '', '.', 'N/A'),
 (4, 555, 'Darmanitan-Galarian-Zen', 'Ice', 'Fire', 'Water, Ground, Rock(X4), Fighting, Steel', 'Transporta su alimento en la bola de nieve de la cabeza. Los días de ventisca desciende hasta las zonas habitadas por los humanos.', 'Gorilla Tactics', '', 'Zen Mode', '.', 'Male/Female'),
+(4, 741, 'Oricorio-Sensu', 'Ghost', 'Flying', 'Electric, Ice, Rock, Ghost, Dark', 'Forma que toma este pokemon al libar Néctar Violeta. Invoca a los espíritus de los difuntos con su danza hechizante.', 'Dancer', '', '', '.', 'Male/Female'),
+(4, 800, 'Necrozma-Ultra', 'Psychic', 'Dragon', 'Ice, Bug, Ghost, Dragon, Dark, Fairy', 'Esta forma es el resultado de haber absorbido una gran cantidad de energía luminosa. Emite rayos láser por todo el cuerpo.', 'Neuroforce', '', '', '.', 'N/A'),
 (5, 479, 'Rotom-Fan', 'Electric', 'Flying', 'Ice, Rock', 'Asume esta forma cuando toma posesión de un ventilador. Hace volar por los aires los objetos que tiene alrededor y acto seguido ríe para sí.', 'Levitate', '', '', '.', 'N/A'),
 (6, 479, 'Rotom-Mow', 'Electric', 'Grass', 'Fire, Ice, Poison, Bug', 'El cortacésped es uno de los aparatos que impulsaron el desarrollo de la RotomDex.', 'Levitate', '', '', '.', 'N/A');
 
@@ -1355,12 +1395,6 @@ ALTER TABLE `variant_pokemon`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `datapokemonall`
---
-ALTER TABLE `datapokemonall`
-  MODIFY `Id_Pokedex` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1026;
 
 --
 -- AUTO_INCREMENT de la tabla `messages`
