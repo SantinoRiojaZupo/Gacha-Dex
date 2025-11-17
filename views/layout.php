@@ -25,7 +25,7 @@ $vistafooter = $vistafooter ?? "";
     <title>Gacha-Dex</title>
     
     <!-- Archivos HEAD opcionales -->
-    <?php if (!empty($vistaHead)) include $vistaHead; ?>
+    <?php if (!empty($vistaHead)) include $vistaHead;?>
 </head>
 
 <body>
