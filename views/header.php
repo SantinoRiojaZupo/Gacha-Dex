@@ -16,9 +16,13 @@ require_once "../config/conexion.php";
         <li id="li4">Registro</li>
         <li id="li5">INICIO DE SESION</li>
         <?php endif; ?>
+        <?php if(isset($_SESSION['user_id'])): ?>
         <li id="li2">Pokedex</a></li>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['user_id'])): ?>
         <li id="li3">Chat</a></li>
-        <?php if($_SESSION['Rol'] == 1):?>
+<?php endif; ?>
+        <?php if(isset($_SESSION['Rol']) == 1):?>
         <li id="li6">CRUD</a></li>
         <?php endif; ?>
     </ul>
