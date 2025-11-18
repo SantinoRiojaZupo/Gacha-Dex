@@ -29,7 +29,7 @@ function buscarPokemon(){
             const li = document.createElement('li');
             li.classList.add('resultado')
             const nombreCodificado = encodeURIComponent(element.PokemonName);
-            li.innerHTML = `<a href="index.php?page=DetallesPokemon&idpokemon=${element.Id_Pokedex}">${element.PokemonName}</a>`;
+            li.innerHTML = `<button><a href="index.php?page=DetallesPokemon&idpokemon=${element.Id_Pokedex}">${element.PokemonName}</a></button>`;
             resultados.appendChild(li)
          });
         })
