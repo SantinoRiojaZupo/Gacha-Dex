@@ -33,7 +33,7 @@
 
     <link rel="stylesheet" href="../CSS/estilosDetallespokemon.css" />
   </header>
-  <button id="volver">volver</button>
+  <button id="volver" onclick="volver()">volver</button>
 </div>
 <button id="anterior"></button>
 <button id="posterior"></button>
@@ -57,6 +57,9 @@
 </div>
 <script>
   var idpokemon = <?php echo json_encode($_GET['idpokemon']); ?>;
+  function volver(){
+   window.history.back()
+  }
 </script>
 <script src="../JS/MostrarDatosPokemon.js">
 </script>

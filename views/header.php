@@ -52,6 +52,6 @@ require_once "../config/conexion.php";
     </div>
     <?php endif; ?>
 
-
+<script src="../JS/buscarUsuario.js"></script>
 </div>
 </div>

@@ -55,5 +55,7 @@ const idUsuarioLogueado = <?php echo json_encode($_SESSION['user_id']);?>;
   <script src="../JS/AgregarChat.js"> 
  
   </script>
+  <script src="../JS/menuOpciones.js"></script>
+  
 </body>
 </html>
