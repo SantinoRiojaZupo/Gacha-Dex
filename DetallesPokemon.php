@@ -47,7 +47,7 @@ if ($arr) {
 }
 }
 else{
-  $sql1 = "SELECT PokemonName, Type,  Second_type, Weaknesses, Description, Abilities, Second_Abilities, Abilities_Hidden, image, datapokemonall.Id_Pokedex FROM datapokemonall inner join pokemoncatched on datapokemonall.Id_Pokedex=pokemoncatched.Id_Pokedex  and Id_User=?  where datapokemonall.Id_Pokedex=?;";
+  $sql1 = "SELECT datapokemonall.PokemonName, Type,  Second_type, Weaknesses, Description, Abilities, Second_Abilities, Abilities_Hidden, image, datapokemonall.Id_Pokedex FROM datapokemonall inner join pokemoncatched on datapokemonall.Id_Pokedex=pokemoncatched.Id_Pokedex  and Id_User=?  where datapokemonall.Id_Pokedex=?;";
 $stmt = mysqli_prepare($conexion, $sql1);
 mysqli_stmt_bind_param($stmt, "ii",$user_id, $idpokemon);
 mysqli_execute($stmt);
