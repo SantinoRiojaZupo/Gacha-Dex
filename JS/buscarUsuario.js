@@ -41,7 +41,10 @@ function buscarUsuarios(){
             const li = document.createElement('li');
             li.classList.add('resultado')
             
-            li.innerHTML = `<a href="index.php?page=perfil&id=${element.Id_User}&nombre=${element.Name_User}">${element.Name_User}</a>`; //aca esta lo q dije
+            li.innerHTML = element.Name_User
+               li.addEventListener("click", () => {
+                window.location.href = `index.php?page=perfil&id=${element.Id_User}&nombre=${element.Name_User}`
+               }) 
             resultados.appendChild(li)
          });
         })
