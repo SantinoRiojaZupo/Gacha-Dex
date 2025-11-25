@@ -20,7 +20,7 @@ if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
     } else {
         // Hashear la contraseña antes de guardar
         $sql = "INSERT INTO users (Name_User, User_Password) VALUES (?, ?)";
-        $stmt = mysqli_prepare($conexion, $sql1);
+        $stmt = mysqli_prepare($conexion, $sql);
         mysqli_stmt_bind_param($stmt, "ss", $usuario, $contraseña);
         if (mysqli_stmt_execute($stmt)) {
             echo json_encode(["msj" => "Todo bien"]);
@@ -33,4 +33,3 @@ if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
     $stmt->close();
     $conexion->close();
 }
-?>
