@@ -28,17 +28,18 @@ if (!isset($_POST['Is_Shiny'])) {
 $idUser    = (int) $_SESSION['user_id'];
 $idPokedex = (int) $_POST['Id_Pokedex'];
 $isShiny   = (int) $_POST['Is_Shiny'];
+$pokemonName =  $_POST['PokemonName'];
 
 //  Insertar captura
-$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex, Is_Shiny)
-        VALUES (?, ?, ?)";
+$sql = "INSERT INTO pokemoncatched (Id_User, Id_Pokedex, Is_Shiny, PokemonName)
+        VALUES (?, ?, ?, ? )";
 $stmt = $conexion->prepare($sql);
 
 if (!$stmt) {
     error('Error preparando query: ' . $conexion->error);
 }
 
-if (!$stmt->bind_param("iii", $idUser, $idPokedex, $isShiny)) {
+if (!$stmt->bind_param("iiis", $idUser, $idPokedex, $isShiny , $pokemonName)) {
     error('Error en bind_param: ' . $stmt->error);
 }
 

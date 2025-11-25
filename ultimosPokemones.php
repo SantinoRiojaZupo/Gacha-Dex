@@ -19,7 +19,7 @@ $sql = "
         pc.Id_PokemonCatched, 
         pc.Id_Pokedex,
         pc.Is_Shiny, 
-        d.PokemonName, 
+        pc.PokemonName, 
         d.Image
     FROM pokemoncatched pc
     INNER JOIN datapokemonall d 

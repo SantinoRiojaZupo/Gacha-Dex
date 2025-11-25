@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-11-2025 a las 15:59:57
+-- Tiempo de generación: 25-11-2025 a las 03:31:34
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1102,17 +1102,28 @@ CREATE TABLE `pokemoncatched` (
   `Id_User` int(11) NOT NULL,
   `Id_Pokedex` int(11) NOT NULL,
   `Favorite_Pokemon` int(11) NOT NULL DEFAULT 0,
-  `Is_Shiny` tinyint(1) DEFAULT 0
+  `Is_Shiny` tinyint(1) DEFAULT 0,
+  `PokemonName` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pokemoncatched`
 --
 
-INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`) VALUES
-(141, 12, 154, 0, 0),
-(142, 12, 383, 0, 0),
-(143, 1, 679, 0, 0);
+INSERT INTO `pokemoncatched` (`Id_PokemonCatched`, `Id_User`, `Id_Pokedex`, `Favorite_Pokemon`, `Is_Shiny`, `PokemonName`) VALUES
+(158, 1, 631, 0, 0, 'Heatmor'),
+(159, 1, 135, 0, 0, 'Jolteon'),
+(160, 1, 102, 0, 0, 'Exeggcute'),
+(161, 1, 98, 0, 0, 'Krabby'),
+(162, 1, 33, 0, 0, 'Nidorino'),
+(163, 1, 42, 0, 0, 'Golbat'),
+(164, 1, 55, 0, 0, 'Golduck'),
+(165, 1, 131, 0, 0, 'Lapras'),
+(166, 1, 144, 0, 0, 'Articuno-Galarian'),
+(167, 1, 128, 0, 0, 'Tauros-Paldean-Blaze'),
+(168, 1, 729, 0, 0, 'Brionne'),
+(169, 1, 44, 0, 0, 'Gloom'),
+(170, 1, 869, 0, 0, 'Alcremie');
 
 -- --------------------------------------------------------
 
@@ -1136,7 +1147,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id_User`, `Name_User`, `User_Password`, `Bio`, `Profile_Photo`, `Pity`, `Rol`, `Rolls`) VALUES
-(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 1, 1, 10),
+(1, 'laranamagica333', 'sapo333', 'He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Santi.png', 4, 1, 9768847),
 (2, 'BenjaMuiXd', 'chufo', ' He has a passion for programming and teamwork.He is in charge of the organization and developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/Benja.png', 0, 1, 10),
 (3, 'Significado', 'Significado', 'He has a passion for programming, doing conecctions and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-dex/imagenes/emiliano.png', 0, 1, 10),
 (4, 'AgustinCS', 'agus123', 'He has a passion for programming and teamwork.He is in charge of the developement of the project Gacha-Dex.', 'http://localhost/gacha-Dex/imagenes/Agus.png', NULL, 0, 10),
@@ -1406,7 +1417,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT de la tabla `pokemoncatched`
 --
 ALTER TABLE `pokemoncatched`
-  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `Id_PokemonCatched` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

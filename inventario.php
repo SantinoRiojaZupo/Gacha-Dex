@@ -39,17 +39,18 @@ function obtenerGeneracion($id) {
     return null;
 }
 
-//  Consulta
+// Consulta: Obtiene los pokémon atrapados por el usuario, incluyendo información de tipo, imagen, si es favorito o shiny, y nombre.
+// El resultado contiene: id_pokedex, tipo, tipo_secundario, imagen_normal, favorito, shiny, atrapado, nombre.
 $sql = "
     SELECT 
         d.Id_Pokedex AS id_pokedex,
-        d.PokemonName AS nombre,
         d.Type AS tipo,
         d.Second_Type AS tipo_secundario,
         d.Image AS imagen_normal,
         c.Favorite_Pokemon AS favorito,
         c.Is_Shiny AS shiny,
-        c.Id_PokemonCatched AS atrapado
+        c.Id_PokemonCatched AS atrapado,
+        c.PokemonName AS nombre
     FROM pokemoncatched c
     INNER JOIN datapokemonall d ON c.Id_Pokedex = d.Id_Pokedex
     WHERE c.Id_User = ?

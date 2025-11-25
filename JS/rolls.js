@@ -83,12 +83,14 @@ function mostrarPokemon(pokemon, resultado) {
 
 // Guardar en base
 function guardarPokemon(pokemon) {
+  console.log("Guardando Pokémon:", pokemon.PokemonName);
   fetch("/Gacha-Dex/guardarPokemones.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body:
       "Id_Pokedex=" + encodeURIComponent(pokemon.Id_Pokedex) +
-      "&Is_Shiny=" + (pokemon.Is_Shiny ? 1 : 0)
+      "&Is_Shiny=" + (pokemon.Is_Shiny ? 1 : 0) +
+      "&PokemonName=" + encodeURIComponent(pokemon.PokemonName)
   })
     .then(res => res.json())
     .then(res => {
