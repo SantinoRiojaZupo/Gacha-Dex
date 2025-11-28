@@ -22,9 +22,7 @@ require_once "../config/conexion.php";
         <?php if(isset($_SESSION['user_id'])): ?>
         <li id="li3">Chat</a></li>
 <?php endif; ?>
-        <?php if(isset($_SESSION['Rol']) == 1):?>
-        <li id="li6">CRUD</a></li>
-        <?php endif; ?>
+        
     </ul>
    
 </div>
