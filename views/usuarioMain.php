@@ -163,6 +163,15 @@ if (!empty($_SESSION['user_id'])) {
             <div><button onclick="ponerFotoPerfil(1)"><img src=../imagenes/fotoPerfil1.jpg alt="Imagen 1" id="1"></button></div>
             <div><button onclick="ponerFotoPerfil(2)"><img src=../imagenes/fotoPerfil2.jpg alt="Imagen 2" id="2"></div>
             <div><button onclick="ponerFotoPerfil(3)"><img src=../imagenes/fotoPerfil3.jpg alt="Imagen 3" id="3"></div>
+            <div><button onclick="ponerFotoPerfil(4)"><img src=../imagenes/fotoPerfil4.jpeg alt="Imagen 4" id="4"></div>
+            <div><button onclick="ponerFotoPerfil(5)"><img src=../imagenes/fotoPerfil5.jpeg alt="Imagen 5" id="5"></div>
+            <div><button onclick="ponerFotoPerfil(6)"><img src=../imagenes/fotoPerfil6.jpeg alt="Imagen 6" id="6"></div>
+            <div><button onclick="ponerFotoPerfil(7)"><img src=../imagenes/fotoPerfil7.jpeg alt="Imagen 7" id="7"></div>
+            <div><button onclick="ponerFotoPerfil(8)"><img src=../imagenes/fotoPerfil8.jpeg alt="Imagen 8" id="8"></div>
+            <div><button onclick="ponerFotoPerfil(9)"><img src=../imagenes/fotoPerfil9.jpeg alt="Imagen 9" id="9"></div>
+            <div><button onclick="ponerFotoPerfil(10)"><img src=../imagenes/fotoPerfil10.jpeg alt="Imagen 10" id="10"></div>
+            <div><button onclick="ponerFotoPerfil(11)"><img src=../imagenes/fotoPerfil11.jpeg alt="Imagen 11" id="11"></div>
+            <div><button onclick="ponerFotoPerfil(12)"><img src=../imagenes/fotoPerfil12.jpeg alt="Imagen 12" id="12"></div>
           </div>
           <button id="cerrarBtn" onclick="cerrarPanel()">Cerrar</button>
         </div>
