@@ -6,7 +6,9 @@
     <div class="side-box left-box">
         <h2>Breve explicación</h2>
         <p>Aprete el boton de rolls para buscar un pokemon</p>
+        <?php if(isset($_SESSION['user_id'])):?>
         <button id="preguntas">Cuestionario</button>
+        <?php endif;?>
     </div>
     <div class="center-boxes">
         <div class="center-box">

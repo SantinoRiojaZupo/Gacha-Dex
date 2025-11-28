@@ -77,7 +77,7 @@ div.addEventListener('click', () => {
     if(div.dataset.correcta === "true"){
         div.classList.add('correcta'); 
         
-        document.getElementById("acertasteONo").innerHTML = "acertaste"
+        document.getElementById("acertasteONo").innerHTML = "Bien :D"
         fetch("../agregarRoll.php");
         fetch("../obtenerTipoPregunta.php?pregunta=1")
 setTimeout(() => {
@@ -87,7 +87,7 @@ setTimeout(() => {
     else {
         div.classList.add('incorrecta'); 
    
-         document.getElementById("acertasteONo").innerHTML = "fraca"
+         document.getElementById("acertasteONo").innerHTML = "Incorrecto :c"
              document.querySelectorAll('.opcion').forEach(btn => {
             if(btn.dataset.correcta === "true") {
                 btn.classList.add('correcta');
@@ -145,18 +145,18 @@ function funcionNuevaPreguntaDescripcion(correcto, incorrectos) {
                   document.querySelectorAll('.opcion').forEach(btn => btn.style.pointerEvents = 'none');
                 if (divRespuesta.dataset.correcta === "true") {
                     divRespuesta.classList.add('correcta');
-                    document.getElementById("acertasteONo").innerHTML = "acertaste";
+                    document.getElementById("acertasteONo").innerHTML = "Bien :D";
                     fetch("../agregarRoll.php");
                     fetch("../obtenerTipoPregunta.php?pregunta=2");
                     setTimeout(() => location.reload(), 1500);
                 } else {
                     divRespuesta.classList.add('incorrecta'); 
-                    document.getElementById("acertasteONo").innerHTML = "fraca"
+                    document.getElementById("acertasteONo").innerHTML = "Incorrecto :c"
              document.querySelectorAll('.opcion').forEach(btn => {
             if(btn.dataset.correcta === "true") {
                 btn.classList.add('correcta');
              }})
-                    document.getElementById("acertasteONo").innerHTML = "fraca";
+                    document.getElementById("acertasteONo").innerHTML = "Incorrecto :c";
                     fetch("../obtenerTipoPregunta.php?pregunta=2");
                     setTimeout(() => location.reload(), 1500);
                 }
@@ -204,7 +204,7 @@ div.addEventListener('click', () => {
     if(div.dataset.correcta === "true"){
         div.classList.add('correcta'); 
         
-        document.getElementById("acertasteONo").innerHTML = "acertaste"
+        document.getElementById("acertasteONo").innerHTML = "Bien :D"
         fetch("../agregarRoll.php");
         fetch("../obtenerTipoPregunta.php?pregunta=3")
 setTimeout(() => {
@@ -214,7 +214,7 @@ setTimeout(() => {
     else {
         div.classList.add('incorrecta'); 
    
-         document.getElementById("acertasteONo").innerHTML = "fraca"
+         document.getElementById("acertasteONo").innerHTML = "Incorrecto :c"
              document.querySelectorAll('.opcion').forEach(btn => {
             if(btn.dataset.correcta === "true") {
                 btn.classList.add('correcta');

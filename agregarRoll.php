@@ -6,7 +6,7 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 $sql = "UPDATE users
-SET Rolls = Rolls + 1
+SET Rolls = Rolls + 3
 WHERE Id_User = ?;";
 
 $stmt = mysqli_prepare($conexion, $sql);
