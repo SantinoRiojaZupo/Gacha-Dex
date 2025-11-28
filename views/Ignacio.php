@@ -19,12 +19,12 @@
             style="width:100%;height:340px;object-fit:cover;border-radius:10px 10px 0 0;">
         <h2>Ignacio Gonzalez</h2>
         <p>Roles: DataBase Designer</p>
-        <p>Description: He has a passion for programming and teamwork.He is in charge of the organization and
-            developement of the project Gacha-Dex.</p>
+        <p>Description: I enjoy working with databases because they allow me to organize information clearly and efficiently.
+        I like how data can be structured, connected, and queried to reveal insights that would be difficult to see otherwise.</p>
         <div style="margin-top:15px;">
-            <a href="https://github.com/DarioBenjaminMontero" target="_blank" class="btn-link">GitHub</a>
-            <a href="mailto:dariomontero2008@gmail.com" class="btn-link">Email:dariomontero2008@gmail.com</a>
-            <a href="https://www.linkedin.com/in/santino-rioja-zupo-44208b327" target="_blank"
+            <a href="https://github.com/Ignacio-Gonzalez1" target="_blank" class="btn-link">GitHub</a>
+            <a href="mailto:ignaciorubengonzalezfleitas@gmail.com" class="btn-link">Email:ignaciorubengonzalezfleitas@gmail.com</a>
+            <a href="https://ar.linkedin.com/in/juanfleitas" target="_blank"
                 class="btn-link">Linkedin</a>
             <!-- se pueden agregar mas links si queremos, el linkedin es temporal porque nose los suyos -->
         </div>
