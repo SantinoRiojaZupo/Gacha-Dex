@@ -8,7 +8,7 @@ volver.addEventListener('click', () => {
     window.location.href = 'index.php?page=main'
 })
 
-
+if(botonPreguntaAleatoria){
 botonPreguntaAleatoria.addEventListener('click', () => {
     let numeroAleatorio = Math.floor(Math.random() * 3) + 1;
     fetch('../obtenerTipoPregunta.php?pregunta=' + numeroAleatorio)
@@ -18,7 +18,7 @@ botonPreguntaAleatoria.addEventListener('click', () => {
 
         })
 })
-
+}
 
 botonPreguntaImagenes.addEventListener('click', () => {
     fetch('../obtenerTipoPregunta.php?pregunta=' + 1)
