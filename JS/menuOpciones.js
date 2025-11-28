@@ -7,12 +7,16 @@ let li6 = document.getElementById("li6")
 li1.addEventListener('click', ()=>{
 window.location.href = "index.php?page=main"
 });
+if(li2){
 li2.addEventListener('click', ()=>{
 window.location.href = "index.php?page=pokedex"
 });
+}
+if(li3){
 li3.addEventListener('click', ()=>{
 window.location.href = "index.php?page=chat"  
 })
+}
 if(li4 && li5){
 li4.addEventListener('click', ()=>{
 window.location.href = "index.php?page=registro"  
