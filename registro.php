@@ -18,7 +18,7 @@ if (!empty($_POST["Usuario"]) && !empty($_POST["contraseña"])) {
     if ($fila && $usuario == $fila['Name_User']) {
         echo json_encode(["error" => "El usuario ya existe", "msj" => "El usuario ya existe"]);
     } else {
-        // Hashear la contraseña antes de guardar
+        
         $sql = "INSERT INTO users (Name_User, User_Password) VALUES (?, ?)";
         $stmt = mysqli_prepare($conexion, $sql);
         mysqli_stmt_bind_param($stmt, "ss", $usuario, $contraseña);

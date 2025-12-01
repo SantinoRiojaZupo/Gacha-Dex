@@ -3,6 +3,7 @@ function registrarse(){
     const Contra = document.querySelector('[name="contraseña"]').value;
     const Contra2 = document.querySelector('[name="contraseña-2"]').value;
     restrincion=/[^A-Za-z0-9_-]/
+    
     if (Usua && Contra) {
         if((Usua.length>=6)&&(Contra.length>=6)&&(Contra2.length>=6)){
             for (let i = 0; i <  Usua.length; i++) {
