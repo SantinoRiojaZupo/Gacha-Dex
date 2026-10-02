@@ -9,6 +9,7 @@
         <?php if(isset($_SESSION['user_id'])):?>
         <button id="preguntas">Cuestionario</button>
         <?php endif;?>
+        
     </div>
     <div class="center-boxes">
         <div class="center-box">
@@ -43,10 +44,7 @@
  
 </main>
 <script>
-
-
-
-
+  const id = <?php echo json_encode($_SESSION['user_id'] ?? null); ?>;
 </script>
 <script src="../JS/botonPreguntas.js"></script>
 <script src="../JS/rolls.js"></script>

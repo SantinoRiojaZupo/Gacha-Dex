@@ -146,6 +146,10 @@ sonido.addEventListener("ended", () => {
 
 // Roll
 rollsBtn.addEventListener("click", function () {
+  if (typeof id === "undefined" || !id) {
+    alert("¡Inicia sesión primero!");
+    return;
+  }
   if (Roles <= 0) {
     console.log("No te quedan rolls disponibles.");
     alert("No te quedan rolls disponibles. ¡Consigue más en Cuestionario!");
