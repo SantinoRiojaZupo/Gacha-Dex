@@ -1,183 +1,67 @@
 <?php
-
 session_start();
 define('VIEWS_PATH', __DIR__ . DIRECTORY_SEPARATOR);
-
 $page = $_GET['page'] ?? "main";
+switch($page){
 
-
-switch ($page) {
-  case 'CRUD':
-    $vista = VIEWS_PATH . 'CRUD.php';
+case 'main':
+    $vista = './main.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssMain.css';
+break;
+case 'creadores':
+    $vista = './sobre-nosotros.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssMain.css';
+break;
+case 'producto':
+    $vista = './producto.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssProducto.css';
+break;
+case 'categoria':
+    $vista = './productos.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssCategoria.css';
+ $script = '../JS/cargarProductosPorCategoria.js'; 
+break;
+case 'pagar':
+    $vista = './pagar.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/pagar.css';
+ $script = '../JS/pagar.js'; 
+break;
+case 'Login':
+    $vista = './Login.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssLogin.css';
     break;
-  case 'preguntas2':
-    $vista = VIEWS_PATH . 'preguntasMolde.php';
-    $vistafooter = VIEWS_PATH . 'footer.php';
-  break;
-  case 'preguntas':
-    $vista = VIEWS_PATH . 'preguntas.php';
-    $vistafooter = VIEWS_PATH . 'footer.php';
+    case 'Registro':
+    $vista = './Register.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssRegister.css';
     break;
-  case 'chat':
-    $vista = VIEWS_PATH . 'chat.php';
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistaBotonPerfil = "../JS/botonPerfil.js";
-    $vistaChatMandar = "../JS/mandarMensaje.js";
-    $vistaChatCargar = "../JS/cargarMensajes.js";
-    $vistaMenuOpciones="../JS/menuOpciones.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-  case 'pokedex':
-    $vista = VIEWS_PATH . 'pokedex.php';
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistaBotonPerfil = "../JS/botonPerfil.js";
-    $vistaPokedexFunciones = "../JS/pokedex.js";
-    $vistaMenuOpciones="../JS/menuOpciones.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-  case 'main':
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    $vista = VIEWS_PATH . 'main.php';
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistaBotonPerfil = "../JS/botonPerfil.js";
-    $vistaBuscarUsuario = "../JS/buscarUsuario.js";
-    $vistaMenuOpciones="../JS/menuOpciones.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-
-  case 'registro':
-    $vista = VIEWS_PATH . 'registro.php';
-    $vistaJsBoton = "../JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    break;
-
-  default:
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistafooter = "footer.php";
-    $vistaMenuOpciones="../JS/menuOpciones.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-
-  case 'Login':
-    $vista = VIEWS_PATH . 'Login.php';
-    $vistaJsBoton = "../JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    break;
-
-  case 'perfil':
-    $vista = VIEWS_PATH . 'usuarioMain.php';
-    $vistaHeader = VIEWS_PATH . 'header.php';
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $registroFunciones = "../JS/registro-js.js";
-    $vistaBotonLogin = "../JS/botonLogin.js";
-    $vistaBotonPerfil = "../JS/botonPerfil.js";
-    $vistaBuscarUsuario = "../JS/buscarUsuario.js";
-    $vistaIniciarChat = "../JS/botonIniciarChat.js";
-    $vistaMenuOpciones="../JS/menuOpciones.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-
-  case 'DetallesPokemon':
-    $vista = VIEWS_PATH . 'DetallesPokemon.php';
-    $vistaJsBoton = "/Gacha-Dex/JS/botonMenu.js";
-    $vistaBotonRegistro = "/Gacha-Dex/JS/botonRegistro.js";
-    $vistaBotonPerfil = "../JS/botonPerfil.js";
-    $vistaBuscarUsuario = "../JS/buscarUsuario.js";
-    $vistafooter = VIEWS_PATH . 'footer.php';
-    break;
-
-
-  case 'inventario':
-    $idUsuarioPerfil = isset($_GET['id']) ? intval($_GET['id']) : ($_SESSION['user_id'] ?? 0);
-    $vista = VIEWS_PATH . 'inventario.php';
-    $vistaHeader = VIEWS_PATH . 'inventarioHeader.php';
-    $vistafooter = VIEWS_PATH . 'footer.php';
-
-
-    break;
-
-
-  case 'creadores':
-    $vista = 'creadores.php';
-    break;
-
-  case 'benja':
-    $vista = 'benja.php';
-    break;
-  case 'santi':
-    $vista = 'santi.php';
-    break;
-  case 'emiliano':
-    $vista = 'emiliano.php';
-    break;
-  case 'agus':
-    $vista = 'agus.php';
-    break;
-  case 'thiago':
-    $vista = 'thiago.php';
-    break;
-  case 'samuel':
-    $vista = 'samuel.php';
-    break;
-  case 'gael':
-    $vista = 'gael.php';
-    break;
-  case 'ignacio':
-    $vista = 'ignacio.php';
+    case 'Perfil':
+    $vista = './Perfil.php';
+    $vistaHeader = './header.php';
+    $head = './head.php';
+    $footer = './footer.php';
+    $css = '../CSS/cssPerfil.css';
     break;
 }
-
-$pageHeader = $_GET['header'] ?? "header";
-
-// switch ($pageHeader) {
-//   case 'header':
-//     $vistaHeader = VIEWS_PATH . 'header.php';
-//     break;
-//     default: 
-//     $vistaHeader = VIEWS_PATH . 'header.php';
-//     break;
-// }
-
-$pageHead = $_GET['head'] ?? "head";
-
-switch ($pageHead) {
-  case 'head':
-    $vistaHead = VIEWS_PATH . 'head.php';
-    break;
-  default:
-    $vistaHead = VIEWS_PATH . 'head.php';
-    break;
-}
-
-$pagefooter = $_GET['footer'] ?? "footer";
-
-//switch ($pagefooter) {
- // case 'footer':
-   // $vistafooter = VIEWS_PATH . 'footer.php';
-   // break;
-  //default:
-  //  $vistafooter = VIEWS_PATH . 'footer.php';
- //   break;
-//}
-
-
 include(VIEWS_PATH . 'layout.php');
+?>

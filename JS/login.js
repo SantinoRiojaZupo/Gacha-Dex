@@ -1,29 +1,24 @@
-document.getElementById("boton-Login").addEventListener("click", () => {
-    console.log("click en login");
-    usuarioLogin = document.getElementById( "emLogin").value;
-    passwordLogin = document.getElementById( "passwordLogin").value;
-    if (usuarioLogin && passwordLogin) {
-        fetch("/Gacha-Dex/login.php", {
+const botonLogin = document.getElementById("boton-Login");
+botonLogin.addEventListener("click", () => {
+    console.log("click");
+    let usuarioPuesto = document.getElementById("Usuario").value;
+    let contraseñaPuesta = document.getElementById("contraseña").value;
+    if (usuarioPuesto && contraseñaPuesta) {
+        fetch("../login.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: "UsuarioLogin=" + encodeURIComponent(usuarioLogin) + "&contraseñaLogin=" + encodeURIComponent(passwordLogin)
-        }) //POST
-        .then(res=>res.json())
-        .then(res=>{
-            if(res.error){
-                console.log(res.error + ": " + res.msj);
-                document.getElementById("errores").innerHTML="esta mal escrito en nombre del usuario o la contraseña"
-            }
-            else{
-                console.log(res.msj);
-                console.log(res);
-                window.location.href = "index.php?page=main"; //redirige a main si todo ok 
-            }
+            body: "Usuario=" + encodeURIComponent(usuarioPuesto) + "&contraseña=" + encodeURIComponent(contraseñaPuesta)
+        }).then(res => res.json()).then(res => {
+            if (res.success) {
+    window.location.href = "index.php?page=main";
+} else {
+    document.getElementById("errores").innerHTML = res.error;
+}
         } )
     }
     else {
         console.log("Escribi algo");
     }
- })
+ });

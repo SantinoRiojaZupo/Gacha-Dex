@@ -1,50 +1,28 @@
-<div>
-                <h1>Gacha-Dex</h1>
-            </div>
-<main class="main-layout">
-    
-    <div class="side-box left-box">
-        <h2>Breve explicación</h2>
-        <p>Aprete el boton de rolls para buscar un pokemon</p>
-        <?php if(isset($_SESSION['user_id'])):?>
-        <button id="preguntas">Cuestionario</button>
-        <?php endif;?>
-        
-    </div>
-    <div class="center-boxes">
-        <div class="center-box">
-            <h2>Suerte:</h2>
-            <p id="probabilidad"><!--de tener Shiny/Legendario --></p>
-            <h2>Rolls:</h2>
-            <p id=rollsCant><!--Cantidad de rolls que tiene el usuario --></p>
-        </div>
-        <div class="center-box">
-            <div id="pokemonDisplay"><!--Aca va a aparecer el pokemon--></div>
-        </div>
-        <div class="center-box">
-            <button id="rolls">Roll</button>
-                  <select id="generacionSelect">
-                <option value="0" selected>Todas las generaciones</option>
-                <option value="1">Generación 1</option>
-                <option value="2">Generación 2</option>
-                <option value="3">Generación 3</option>
-                <option value="4">Generación 4</option>
-                <option value="5">Generación 5</option>
-                <option value="6">Generación 6</option>
-                <option value="7">Generación 7</option>
-                <option value="8">Generación 8</option>
-                <option value="9">Generación 9</option>
-            </select>
-        </div>
-    </div>
-    <div class="side-box right-box">
-        <h2>Últimos PKMN conseguidos</h2>
-        <div id="pokemonesConseguidos"><!--Aca van a apareces los nombres o x cosa de los pokemons conseguidos--></div>
-    </div>
- 
-</main>
-<script>
-  const id = <?php echo json_encode($_SESSION['user_id'] ?? null); ?>;
-</script>
-<script src="../JS/botonPreguntas.js"></script>
-<script src="../JS/rolls.js"></script>
+<div class="burbujaCategorias">
+
+    <button class="categoria" data-categoria="alfajores"></button>
+
+    <button class="categoria" data-categoria="panaderia"></button>
+
+    <button class="categoria" data-categoria="galletas"></button>
+
+    <button class="categoria" data-categoria="budines"></button>
+
+    <button class="categoria" data-categoria="postres"></button>
+
+    <button class="categoria" data-categoria="comidas"></button>
+
+    <button class="categoria" data-categoria="promociones"></button>
+
+    <button class="categoria" data-categoria="jugos"></button>
+
+</div>
+
+<div id="recomendaciones">
+
+</div>
+
+<div id="masVendidos">
+
+</div>
+<script src = "../JS/entrarACategoria.js"></script>
